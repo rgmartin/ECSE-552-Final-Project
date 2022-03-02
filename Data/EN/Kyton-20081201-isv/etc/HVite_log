@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0302.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence I PULLED SUDDENLY WITH ALL MY MIGHT silence  ==  [386 frames] -46.8681 [Ac=-18091.1 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0303.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence HERE WE ALLOW OUR SOLICITORS TO LOOK AFTER OUR LEGAL WORK silence  ==  [524 frames] -51.4429 [Ac=-26956.1 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0304.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HIS PREVIOUS WIVES HAD NEVER LIVED LONG ENOUGH TO BEAR HIM CHILDREN silence  ==  [549 frames] -49.6401 [Ac=-27252.4 LM=0.0] (Act=13.5)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0305.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence IT WAS OUR RIVER EMERGING LIKE OURSELVES FROM THE GREAT SWAMP silence  ==  [549 frames] -50.8231 [Ac=-27901.9 LM=0.0] (Act=12.2)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0306.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence CAMERON LOOKED AT HIS HANDS WITH THEIR LONG SINEWY FINGERS silence  ==  [549 frames] -49.0141 [Ac=-26908.7 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0307.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WE GOT FEW VEGETABLES AND FRUITS AND BECAME FISH EATERS silence  ==  [537 frames] -50.7982 [Ac=-27278.6 LM=0.0] (Act=12.2)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0308.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WE NEVER MADE ANOTHER MIGRATION silence  ==  [336 frames] -48.8690 [Ac=-16420.0 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0309.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence NOR WAS ELAM HARNISH AN EXCEPTION silence  ==  [411 frames] -49.8224 [Ac=-20477.0 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0310.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence A LITTLE TREATMENT MASSAGE WITH SOME HELP FROM THE DOCTOR silence  ==  [549 frames] -48.2724 [Ac=-26501.5 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/Kyton-20081201-isv/mfc/b0311.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THE TWENTY NINTH VERY FOGGY silence  ==  [386 frames] -47.4399 [Ac=-18311.8 LM=0.0] (Act=11.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

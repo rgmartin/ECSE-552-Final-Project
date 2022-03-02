@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0453.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence EIGHTEEN HUNDRED HE CALCULATED silence  ==  [433 frames] -41.8006 [Ac=-18099.7 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0454.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THE SHARP VOICE OF WOLF LARSEN AROUSED ME silence  ==  [476 frames] -46.2338 [Ac=-22007.3 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0455.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I OBEYED AND A MINUTE OR TWO LATER THEY STOOD BEFORE HIM silence  ==  [544 frames] -48.8728 [Ac=-26586.8 LM=0.0] (Act=21.2)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0456.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence BUT IT WON'T CONTINUE SHE SAID WITH EASY CONFIDENCE silence  ==  [493 frames] -46.8270 [Ac=-23085.7 LM=0.0] (Act=14.3)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0457.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence WHAT I SAW I COULD NOT AT FIRST BELIEVE silence  ==  [416 frames] -44.4410 [Ac=-18487.5 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0458.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THE STOUT WOOD WAS CRUSHED LIKE AN EGGSHELL silence  ==  [433 frames] -45.3153 [Ac=-19621.5 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0459.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THERE'S TOO MUCH OF THE SCHOOLBOY IN ME silence  ==  [467 frames] -43.9831 [Ac=-20540.1 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0460.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence I HAD FORGOTTEN THEIR EXISTENCE silence  ==  [391 frames] -43.1742 [Ac=-16881.1 LM=0.0] (Act=6.5)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0461.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AH WE WERE VERY CLOSE TOGETHER IN THAT MOMENT silence  ==  [442 frames] -45.3095 [Ac=-20026.8 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-twq/mfc/a0462.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BUT SHE SWUNG OBEDIENTLY ON HER HEEL INTO THE WIND silence  ==  [476 frames] -47.8448 [Ac=-22774.1 LM=0.0] (Act=10.2)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

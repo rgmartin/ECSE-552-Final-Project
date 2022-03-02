@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0023.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence A COMBINATION OF CANADIAN CAPITAL QUICKLY ORGANIZED AND PETITIONED FOR THE SAME PRIVILEGES silence  ==  [757 frames] -49.1987 [Ac=-37243.4 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0024.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT WAS MY REPORTS FROM THE NORTH WHICH CHIEFLY INDUCED PEOPLE TO BUY silence  ==  [672 frames] -46.0907 [Ac=-30972.9 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0025.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I WAS ABOUT TO DO THIS WHEN COOLER JUDGMENT PREVAILED silence  ==  [544 frames] -43.7284 [Ac=-23788.2 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0026.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence IT OCCURRED TO ME THAT THERE WOULD HAVE TO BE AN ACCOUNTING silence  ==  [553 frames] -41.7815 [Ac=-23105.1 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0027.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence TO MY SURPRISE HE BEGAN TO SHOW ACTUAL ENTHUSIASM IN MY FAVOR silence  ==  [621 frames] -45.4833 [Ac=-28245.1 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0028.mfc
+Created lattice with 5 nodes / 4 arcs from label file
+silence ROBBERY BRIBERY FRAUD silence  ==  [416 frames] -41.5882 [Ac=-17300.7 LM=0.0] (Act=6.0)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0029.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THEIR FORCES WERE ALREADY MOVING INTO THE NORTH COUNTRY silence  ==  [561 frames] -43.9998 [Ac=-24683.9 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0030.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence I HAD FAITH IN THEM silence  ==  [391 frames] -37.0621 [Ac=-14491.3 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0031.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEY WERE THREE HUNDRED YARDS APART silence  ==  [433 frames] -40.6940 [Ac=-17620.5 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/Ertain-20100728-euy/mfc/a0032.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence SINCE THEN SOME MYSTERIOUS FORCE HAS BEEN FIGHTING US AT EVERY STEP silence  ==  [578 frames] -47.3306 [Ac=-27357.1 LM=0.0] (Act=8.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

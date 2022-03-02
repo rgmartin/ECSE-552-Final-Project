@@ -1,0 +1,46 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 38 physical / 38 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Muuker-20080129-onw/mfc/a0027.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence TO MY SURPRISE HE BEGAN TO SHOW ACTUAL ENTHUSIASM IN MY FAVOR silence  ==  [612 frames] -53.0735 [Ac=-32481.0 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/Muuker-20080129-onw/mfc/a0028.mfc
+Created lattice with 5 nodes / 4 arcs from label file
+silence ROBBERY BRIBERY FRAUD silence  ==  [236 frames] -53.5203 [Ac=-12630.8 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/Muuker-20080129-onw/mfc/a0031.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEY WERE THREE HUNDRED YARDS APART silence  ==  [324 frames] -52.4402 [Ac=-16990.6 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/Muuker-20080129-onw/mfc/a0035.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HE STOPPED AND PHILIP NODDED AT THE HORRIFIED QUESTION IN HIS EYES silence  ==  [474 frames] -54.0443 [Ac=-25617.0 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Muuker-20080129-onw/mfc/a0036.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence SHE TURNED IN AT THE HOTEL silence  ==  [299 frames] -49.3884 [Ac=-14767.1 LM=0.0] (Act=9.2)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

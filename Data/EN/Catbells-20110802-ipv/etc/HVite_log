@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/XQIqZNqeCU/words.mlf -i /tmp/XQIqZNqeCU/aligned.out -S /tmp/XQIqZNqeCU/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0427.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END THE SUNSETS GROW MORE BIZARRE AND SPECTACULAR OFF THIS COAST OF THE ARGENTINE SENT-END  ==  [686 frames] -58.9224 [Ac=-40420.8 LM=0.0] (Act=15.0)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0428.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THE HISTORY OF OUR WESTWARD-FARING RACE IS WRITTEN IN IT SENT-END  ==  [548 frames] -55.8382 [Ac=-30599.3 LM=0.0] (Act=12.0)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0429.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END AND THE EURASIAN CHINESE-ENGLISHMAN BOWED HIMSELF AWAY SENT-END  ==  [573 frames] -56.5662 [Ac=-32412.4 LM=0.0] (Act=12.5)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0430.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THEY WERE BABBLING AND CHATTERING ALL TOGETHER SENT-END  ==  [373 frames] -55.8304 [Ac=-20824.7 LM=0.0] (Act=10.8)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0431.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END TOO MUCH HE TOLD ME WITH OMINOUS ROLLING HEAD SENT-END  ==  [473 frames] -55.7455 [Ac=-26367.6 LM=0.0] (Act=11.2)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0432.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HE IS A CANDIDATE RISING FROM THE SERF CLASS TO OUR CLASS SENT-END  ==  [523 frames] -58.8859 [Ac=-30797.3 LM=0.0] (Act=15.4)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0433.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END WE ARE COOKING ON THE COAL STOVE AND ON THE OIL BURNERS SENT-END  ==  [436 frames] -57.4219 [Ac=-25036.0 LM=0.0] (Act=12.4)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0434.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END THE STEWARD HAS JUST TENDERED ME A RESPECTFUL BIT OF ADVICE SENT-END  ==  [498 frames] -57.6459 [Ac=-28707.7 LM=0.0] (Act=14.9)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0435.wav
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END WELL DID THEY EAT SENT-END  ==  [273 frames] -53.1532 [Ac=-14510.8 LM=0.0] (Act=8.0)
+Aligning File: /tmp/XQIqZNqeCU/Catbells-20110802-ipv/b0436.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END FAMINE HAD BEEN MY GREAT ALLY SENT-END  ==  [323 frames] -55.3144 [Ac=-17866.5 LM=0.0] (Act=10.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

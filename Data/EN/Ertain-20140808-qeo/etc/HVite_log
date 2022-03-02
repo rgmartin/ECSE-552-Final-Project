@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/H4ATZX2MKi/words.mlf -i /tmp/H4ATZX2MKi/aligned.out -S /tmp/H4ATZX2MKi/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0212.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END DEATH IS AND HAS BEEN EVER SINCE OLD MAUI DIED SENT-END  ==  [486 frames] -57.4600 [Ac=-27925.6 LM=0.0] (Act=9.2)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0213.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END SOME BOY SHE LAUGHED ACQUIESCENCE SENT-END  ==  [398 frames] -55.8217 [Ac=-22217.1 LM=0.0] (Act=6.2)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0214.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END LET US TALK IT OVER AND FIND A WAY OUT SENT-END  ==  [373 frames] -56.2337 [Ac=-20975.2 LM=0.0] (Act=9.2)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0215.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END IT IS A GOOD PROPERTY AND WORTH MORE THAN THAT SENT-END  ==  [436 frames] -57.8786 [Ac=-25235.1 LM=0.0] (Act=10.8)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0216.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I WISH YOU WERE MORE ADAPTABLE JOAN RETORTED SENT-END  ==  [461 frames] -58.4009 [Ac=-26922.8 LM=0.0] (Act=9.6)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0217.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END SUCH IS MY PASSAGE ENGAGED ON THE STEAMER SENT-END  ==  [411 frames] -57.8958 [Ac=-23795.2 LM=0.0] (Act=8.4)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0218.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END THE ISSUE WAS NOT IN DOUBT SENT-END  ==  [348 frames] -54.3542 [Ac=-18915.3 LM=0.0] (Act=6.8)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0219.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END WELL THERE ARE BETTER MEN IN HAWAII THAT'S ALL SENT-END  ==  [498 frames] -57.3914 [Ac=-28580.9 LM=0.0] (Act=8.0)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0220.wav
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END HARRY BANCROFT DAVE LIED SENT-END  ==  [398 frames] -56.5724 [Ac=-22515.8 LM=0.0] (Act=6.7)
+Aligning File: /tmp/H4ATZX2MKi/Ertain-20140808-qeo/b0221.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END IT'S A YANKEE JOAN CRIED SENT-END  ==  [373 frames] -57.1458 [Ac=-21315.4 LM=0.0] (Act=7.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

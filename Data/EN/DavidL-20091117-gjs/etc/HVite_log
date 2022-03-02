@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0184.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence SUCH THINGS IN HER BRAIN WERE LIKE SO MANY OATHS ON HER LIPS silence  ==  [562 frames] -46.9115 [Ac=-26364.3 LM=0.0] (Act=14.9)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0185.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence YOUR BEING WRECKED HERE HAS BEEN A GODSEND TO ME silence  ==  [612 frames] -44.9417 [Ac=-27504.3 LM=0.0] (Act=15.7)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0186.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence I CAN'T GO ELSEWHERE BY YOUR OWN ACCOUNT silence  ==  [562 frames] -44.7435 [Ac=-25145.8 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0187.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HER ACHIEVEMENTS WITH COCOANUTS WERE A REVELATION silence  ==  [674 frames] -43.9466 [Ac=-29620.0 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0188.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE GLANCED DOWN AT HER HELPLESSLY AND MOISTENED HIS LIPS silence  ==  [637 frames] -44.3926 [Ac=-28278.1 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0189.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THAT IS WHAT DISTINGUISHES ALL OF US FROM THE LOWER ANIMALS silence  ==  [662 frames] -45.1786 [Ac=-29908.2 LM=0.0] (Act=9.6)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0190.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence IDEALISM LED HIM TO PHILOSOPHIC ANARCHY AND HIS FAMILY THREW HIM OFF silence  ==  [837 frames] -47.7560 [Ac=-39971.8 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0191.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HE ALSO CONTENDED THAT BETTER CONFIDENCE WAS ESTABLISHED BY CARRYING NO WEAPONS silence  ==  [762 frames] -48.8730 [Ac=-37241.2 LM=0.0] (Act=13.8)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0192.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence OUTSIDERS ARE ALLOWED FIVE MINUTE SPEECHES THE SICK MAN URGED silence  ==  [737 frames] -47.3364 [Ac=-34887.0 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-gjs/mfc/b0193.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence SO WAS PACKARD'S FINISH SUICIDE silence  ==  [512 frames] -44.5729 [Ac=-22821.3 LM=0.0] (Act=8.2)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

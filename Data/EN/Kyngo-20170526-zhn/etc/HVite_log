@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Nightly_Builds/AcousticModel-2021-01-07/HTK/16kHz_16bit/MFCC_O_D/macros -H /data/svn-mirror/Nightly_Builds/AcousticModel-2021-01-07/HTK/16kHz_16bit/MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /data/temp/j2fOuESb6M/words.mlf -i /data/temp/j2fOuESb6M/aligned.out -S /data/temp/j2fOuESb6M/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Nightly_Builds/AcousticModel-2021-01-07/HTK/16kHz_16bit/MFCC_O_D/tiedlist 
+ 
+ HTK Configuration Parameters[11]
+   Module/Tool     Parameter                  Value
+ #                 NUMCEPS                       12
+ #                 CEPLIFTER                     22
+ #                 NUMCHANS                      26
+ #                 PREEMCOEF               0.970000
+ #                 USEHAMMING                  TRUE
+ #                 WINDOWSIZE         250000.000000
+ #                 SAVEWITHCRC                 TRUE
+ #                 SAVECOMPRESSED              TRUE
+ #                 TARGETRATE         100000.000000
+ #                 TARGETKIND          MFCC_D_N_Z_0
+ #                 SOURCEFORMAT                 WAV
+ 
+ Read 15954 physical / 24402 logical HMMs
+ Processing data directly from the input filesLabel file will be used to align each file
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0257.wav
+ Created lattice with 5 nodes / 4 arcs from label file
+ SENT-END LET ME KNOW SENT-END  ==  [261 frames] -49.2484 [Ac=-12853.8 LM=0.0] (Act=6.5)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0258.wav
+ Created lattice with 15 nodes / 14 arcs from label file
+ SENT-END ATTACHED IS A SUMMARY OF THE MAJOR PROVISIONS IN THE TAX CUT CONFERENCE SENT-END  ==  [586 frames] -56.2202 [Ac=-32945.1 LM=0.0] (Act=16.9)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0259.wav
+ Created lattice with 14 nodes / 13 arcs from label file
+ SENT-END WE HAVE HISTORICALLY ONLY BOOKED INTEREST RATE SWAPS WITH THEM UNTIL NOW SENT-END  ==  [673 frames] -55.8895 [Ac=-37613.6 LM=0.0] (Act=14.2)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0260.wav
+ Created lattice with 17 nodes / 16 arcs from label file
+ SENT-END THIS IS CERTAINLY A PROJECT THAT WILL MAKE OUR LIVES MORE DIFFICULT FOR A WHILE SENT-END  ==  [523 frames] -57.0726 [Ac=-29849.0 LM=0.0] (Act=19.2)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0261.wav
+ Created lattice with 11 nodes / 10 arcs from label file
+ SENT-END BUT WILL BE WORTH IT IN THE LONG RUN SENT-END  ==  [411 frames] -54.0245 [Ac=-22204.1 LM=0.0] (Act=14.3)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0262.wav
+ Created lattice with 14 nodes / 13 arcs from label file
+ SENT-END THANKS FOR TRYING TO CALL I AM NOT SURPRISED BY THIS OUTCOME SENT-END  ==  [561 frames] -55.6556 [Ac=-31222.8 LM=0.0] (Act=13.5)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0263.wav
+ Created lattice with 6 nodes / 5 arcs from label file
+ SENT-END I GUESS WERE BARGAINING SENT-END  ==  [298 frames] -51.1385 [Ac=-15239.3 LM=0.0] (Act=8.0)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0264.wav
+ Created lattice with 9 nodes / 8 arcs from label file
+ SENT-END CHRISTIAN PLEASE PROVIDE YOUR INPUT TO HOLLY SENT-END  ==  [423 frames] -53.3380 [Ac=-22562.0 LM=0.0] (Act=11.5)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0265.wav
+ Created lattice with 7 nodes / 6 arcs from label file
+ SENT-END CONSIDERING THE NO THRESHOLD ISSUE SENT-END  ==  [373 frames] -53.2136 [Ac=-19848.7 LM=0.0] (Act=10.3)
+ Aligning File: /data/temp/j2fOuESb6M/Kyngo-20170526-zhn/en-0266.wav
+ Created lattice with 13 nodes / 12 arcs from label file
+ SENT-END WHERE A BUYER OR SELLER WILL BE ABLE TO MORE EASILY SENT-END  ==  [511 frames] -55.9414 [Ac=-28586.0 LM=0.0] (Act=13.1)
+ 
+ HTK Configuration Parameters[11]
+   Module/Tool     Parameter                  Value
+                   NUMCEPS                       12
+                   CEPLIFTER                     22
+                   NUMCHANS                      26
+                   PREEMCOEF               0.970000
+                   USEHAMMING                  TRUE
+                   WINDOWSIZE         250000.000000
+                   SAVEWITHCRC                 TRUE
+                   SAVECOMPRESSED              TRUE
+                   TARGETRATE         100000.000000
+                   TARGETKIND          MFCC_D_N_Z_0
+                   SOURCEFORMAT                 WAV
+ 

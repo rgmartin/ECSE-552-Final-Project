@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0208.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence YOUTH HAD COME BACK TO HER FREED FROM THE YOKE OF OPPRESSION silence  ==  [468 frames] -51.2148 [Ac=-23968.5 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0209.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence IT WAS NOT A LARGE LAKE AND ALMOST ROUND silence  ==  [383 frames] -51.7876 [Ac=-19834.6 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0210.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence ITS DIAMETER WAS NOT MORE THAN TWO HUNDRED YARDS silence  ==  [391 frames] -52.2498 [Ac=-20429.7 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0211.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence IT DROWNED ALL SOUND THAT BRUTE AGONY AND DEATH MAY HAVE MADE silence  ==  [485 frames] -53.3802 [Ac=-25889.4 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0212.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence FRESH CASES STILL ABLE TO WALK THEY CLUSTERED ABOUT THE SPOKESMAN silence  ==  [494 frames] -52.4443 [Ac=-25907.5 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0213.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence BETWEEN HIM AND THE BEACH WAS THE CANE-GRASS FENCE OF THE COMPOUND silence  ==  [434 frames] -52.9778 [Ac=-22992.4 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0214.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BESIDES HE WAS PAID ONE CASE OF TOBACCO PER HEAD silence  ==  [400 frames] -50.0034 [Ac=-20001.4 LM=0.0] (Act=6.1)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0215.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THEY DIE OUT OF SPITE silence  ==  [203 frames] -51.4245 [Ac=-10439.2 LM=0.0] (Act=6.8)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0216.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE OTHER FELT A SUDDEN WAVE OF IRRITATION RUSH THROUGH HIM silence  ==  [417 frames] -52.8438 [Ac=-22035.9 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-dbl/mfc/a0217.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence OPPRESSIVE AS THE HEAT HAD BEEN IT WAS NOW EVEN MORE OPPRESSIVE silence  ==  [477 frames] -51.0821 [Ac=-24366.2 LM=0.0] (Act=8.1)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

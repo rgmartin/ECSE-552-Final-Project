@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/RII4hZ6Wh_/words.mlf -i /tmp/RII4hZ6Wh_/aligned.out -S /tmp/RII4hZ6Wh_/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-06.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END YOU HAVE NO MORE MIND THAN A BLADE OF GRASS SENT-END  ==  [818 frames] -49.9332 [Ac=-40845.4 LM=0.0] (Act=11.5)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-07.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END ONE RAINY DAY THE RATS HEARD A GREAT NOISE IN THE LOFT SENT-END  ==  [870 frames] -51.2039 [Ac=-44547.4 LM=0.0] (Act=12.8)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-08.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END THE PINE RAFTERS WERE ALL ROTTEN SO THAT THE BARN WAS RATHER UNSAFE SENT-END  ==  [1040 frames] -52.4014 [Ac=-54497.5 LM=0.0] (Act=17.6)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-09.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AT LAST THE JOISTS GAVE WAY AND FELL TO THE GROUND SENT-END  ==  [818 frames] -51.4940 [Ac=-42122.1 LM=0.0] (Act=13.3)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-10.wav
+Created lattice with 17 nodes / 16 arcs from label file
+SENT-END THE WALLS SHOOK AND ALL THE RATS HAIR STOOD ON END WITH FEAR AND HORROR SENT-END  ==  [1001 frames] -52.9541 [Ac=-53007.1 LM=0.0] (Act=12.6)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-11.wav
+Created lattice with 18 nodes / 17 arcs from label file
+SENT-END THIS WON'T DO SAID THE CAPTAIN I'LL SEND OUT SCOUTS TO SEARCH FOR A NEW HOME SENT-END  ==  [1040 frames] -52.7577 [Ac=-54868.0 LM=0.0] (Act=17.4)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-12.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END WITHIN FIVE HOURS THE TEN SCOUTS CAME BACK AND SAID SENT-END  ==  [883 frames] -51.5073 [Ac=-45480.9 LM=0.0] (Act=13.0)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-13.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END WE FOUND A STONE HOUSE WHERE THERE IS ROOM FOR US ALL SENT-END  ==  [844 frames] -51.7014 [Ac=-43636.0 LM=0.0] (Act=12.0)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-14.wav
+Created lattice with 20 nodes / 19 arcs from label file
+SENT-END THERE IS A KINDLY HORSE NAMED NELLY A COW A CALF AND A GARDEN WITH AN ELM TREE SENT-END  ==  [1144 frames] -54.3238 [Ac=-62146.4 LM=0.0] (Act=10.3)
+Aligning File: /tmp/RII4hZ6Wh_/CNJ-20120417-jbe/ar-15.wav
+Created lattice with 19 nodes / 18 arcs from label file
+SENT-END THE RATS CRAWLED OUT OF THEIR LITTLE HOUSES AND STOOD ON THE FLOOR IN A LONG LINE SENT-END  ==  [1040 frames] -53.5151 [Ac=-55655.7 LM=0.0] (Act=14.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

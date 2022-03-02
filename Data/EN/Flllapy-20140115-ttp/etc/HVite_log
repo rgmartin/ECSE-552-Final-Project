@@ -1,0 +1,65 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/EJ73Bms2AZ/words.mlf -i /tmp/EJ73Bms2AZ/aligned.out -S /tmp/EJ73Bms2AZ/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0080.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END WHAT IF JEANNE FAILED HIM SENT-END  ==  [486 frames] -61.8795 [Ac=-30073.4 LM=0.0] (Act=8.2)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0081.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END WHAT IF SHE DID NOT COME TO THE ROCK SENT-END  ==  [386 frames] -65.8141 [Ac=-25404.3 LM=0.0] (Act=11.6)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0082.wav
+Created lattice with 8 nodes / 7 arcs from label file
+No tokens survived to final node of network at beam 250.0
+SENT-END HIS FACE WAS STREAMING WITH BLOOD SENT-END  ==  [311 frames] -68.3146 [Ac=-21245.8 LM=0.0] (Act=17.3)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0083.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END A SHADOW WAS CREEPING OVER PIERRE'S EYES SENT-END  ==  [336 frames] -70.4971 [Ac=-23687.0 LM=0.0] (Act=11.3)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0084.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END SCARCELY HAD HE UTTERED THE NAME WHEN PIERRE'S CLOSING EYES SHOT OPEN SENT-END  ==  [498 frames] -74.6432 [Ac=-37172.3 LM=0.0] (Act=14.9)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0085.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END A TRICKLE OF FRESH BLOOD RAN OVER HIS FACE SENT-END  ==  [361 frames] -72.9223 [Ac=-26324.9 LM=0.0] (Act=13.8)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0086.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END DEATH HAD COME WITH TERRIBLE SUDDENNESS SENT-END  ==  [336 frames] -71.5293 [Ac=-24033.9 LM=0.0] (Act=15.3)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0087.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END PHILIP BENT LOWER AND STARED INTO THE FACE OF THE DEAD MAN SENT-END  ==  [398 frames] -73.9648 [Ac=-29438.0 LM=0.0] (Act=21.3)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0088.wav
+Created lattice with 14 nodes / 13 arcs from label file
+No tokens survived to final node of network at beam 250.0
+SENT-END HE MADE SURE THAT THE MAGAZINE WAS LOADED AND RESUMED HIS PADDLING SENT-END  ==  [436 frames] -75.9500 [Ac=-33114.2 LM=0.0] (Act=25.0)
+Aligning File: /tmp/EJ73Bms2AZ/Flllapy-20140115-ttp/a0089.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THE NIGHTGLOW WAS TREACHEROUS TO SHOOT BY SENT-END  ==  [298 frames] -70.1844 [Ac=-20915.0 LM=0.0] (Act=11.5)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

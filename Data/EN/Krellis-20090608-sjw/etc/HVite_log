@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0479.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I TRIED TO READ GEORGE MOORE LAST NIGHT AND WAS DREADFULLY BORED silence  ==  [449 frames] -58.8916 [Ac=-26442.3 LM=0.0] (Act=11.0)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0480.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence TOM SPINK HAS A HARPOON silence  ==  [286 frames] -53.7774 [Ac=-15380.4 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0481.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence NIMROD REPLIED WITH A SLIGHT MANIFESTATION OF SENSITIVENESS silence  ==  [474 frames] -55.8050 [Ac=-26451.6 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0482.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence AND THEIR CHIEF VIRTUE LIES IN THAT THEY WILL NEVER WEAR OUT silence  ==  [424 frames] -56.1233 [Ac=-23796.3 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0483.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence BEYOND DISPUTE CORRY HUTCHINSON HAD MARRIED MABEL HOLMES silence  ==  [499 frames] -54.0059 [Ac=-26948.9 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0484.mfc
+Created lattice with 3 nodes / 2 arcs from label file
+silence NO-SIR-EE silence  ==  [223 frames] -50.7835 [Ac=-11324.7 LM=0.0] (Act=6.1)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0485.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence EACH INSULT ADDED TO THE VALUE OF THE CLAIM silence  ==  [386 frames] -54.7312 [Ac=-21126.2 LM=0.0] (Act=12.3)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0486.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence FOR THE REST HE WAS A MERE AUTOMATON silence  ==  [361 frames] -53.6507 [Ac=-19367.9 LM=0.0] (Act=9.7)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0487.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE RIVER BARED ITS BOSOM AND SNORTING STEAMBOATS CHALLENGED THE WILDERNESS silence  ==  [562 frames] -56.7533 [Ac=-31895.3 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090608-sjw/mfc/a0488.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEIR LOVE BURNED WITH INCREASING BRIGHTNESS silence  ==  [399 frames] -52.9874 [Ac=-21142.0 LM=0.0] (Act=9.1)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

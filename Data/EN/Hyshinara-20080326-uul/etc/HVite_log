@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0317.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE DID NOT BELIEVE IN THE BURNING OF DAYLIGHT FOR SUCH A LUXURY silence  ==  [449 frames] -58.2043 [Ac=-26133.7 LM=0.0] (Act=11.7)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0318.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence AGAIN HE HAD DONE THE BIG THING silence  ==  [249 frames] -56.9375 [Ac=-14177.4 LM=0.0] (Act=10.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0319.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence DAYLIGHT WAS TIRED PROFOUNDLY TIRED silence  ==  [311 frames] -57.1076 [Ac=-17760.5 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0320.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE REGRET IN HIS VOICE WAS PROVOCATIVE OF A SECOND BURST OF LAUGHTER silence  ==  [512 frames] -58.8361 [Ac=-30124.1 LM=0.0] (Act=10.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0321.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence INSTEAD HE ARRIVED ON THE NIGHT OF THE SECOND DAY silence  ==  [374 frames] -56.7115 [Ac=-21210.1 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0322.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEIR SUPPLY OF GRUB WAS GONE silence  ==  [211 frames] -58.2065 [Ac=-12281.6 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0323.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence CRICKETS BEGAN TO CHIRP AND MORE GEESE AND DUCKS FLEW OVERHEAD silence  ==  [461 frames] -58.0355 [Ac=-26754.3 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0324.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence NOT TILL THE TWENTIETH OF MAY DID THE RIVER BREAK silence  ==  [286 frames] -61.8613 [Ac=-17692.3 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0325.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS A GIGANTIC INADEQUACY silence  ==  [249 frames] -60.0693 [Ac=-14957.3 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-uul/mfc/b0326.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence OUR MR HOWISON WILL CALL UPON YOU AT YOUR HOTEL silence  ==  [411 frames] -57.4241 [Ac=-23601.3 LM=0.0] (Act=9.2)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

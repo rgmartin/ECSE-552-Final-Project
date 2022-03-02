@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0108.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence IT WAS A MIRACLE AND I OWE YOU MY LIFE silence  ==  [511 frames] -48.4615 [Ac=-24763.8 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0109.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence PHILIP ATE LIGHTLY OF THE FOOD WHICH PIERRE HAD READY FOR HIM silence  ==  [631 frames] -51.0175 [Ac=-32192.0 LM=0.0] (Act=10.6)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0110.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence SUCH MEN BELIEVE WHEN THEY COME TOGETHER silence  ==  [503 frames] -50.3410 [Ac=-25321.5 LM=0.0] (Act=11.0)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0111.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THE JOURNEY WAS CONTINUED AT DAWN silence  ==  [426 frames] -49.4435 [Ac=-21062.9 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0112.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence JEANNE AND PIERRE BOTH GAZED TOWARD THE GREAT ROCK silence  ==  [554 frames] -49.5992 [Ac=-27478.0 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0113.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THERE WAS SOMETHING PATHETIC IN THE GIRL'S ATTITUDE NOW silence  ==  [485 frames] -51.1170 [Ac=-24791.8 LM=0.0] (Act=9.6)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0114.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE MOVED HIS POSITION AND THE ILLUSION WAS GONE silence  ==  [537 frames] -49.0209 [Ac=-26324.2 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0115.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence FOR TWO HOURS NOT A WORD PASSED BETWEEN THEM silence  ==  [494 frames] -50.5385 [Ac=-24966.0 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0116.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence I HAVE HUNTED ALONG THIS RIDGE REPLIED PHILIP silence  ==  [511 frames] -49.0142 [Ac=-25046.2 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/Brittishenglishscottish20yomale-20091005-nty/mfc/b0117.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THAT'S THORPE'S SAID THE YOUNG ENGINEER silence  ==  [434 frames] -49.1881 [Ac=-21347.6 LM=0.0] (Act=8.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 43 physical / 43 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0203.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THEY WERE FOLLOWING THE SHORE OF A LAKE silence  ==  [498 frames] -45.9522 [Ac=-22884.2 LM=0.0] (Act=11.0)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0204.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THE WOLF-DOG THRUST HIS GAUNT MUZZLE TOWARD HIM silence  ==  [636 frames] -46.1352 [Ac=-29342.0 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0205.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence FROM NOW ON WE'RE PALS silence  ==  [386 frames] -44.3036 [Ac=-17101.2 LM=0.0] (Act=11.3)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0206.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE SAYS HE BOUGHT HIM OF JACQUES LE BEAU silence  ==  [448 frames] -49.1274 [Ac=-22009.1 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0207.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence HOW MUCH WAS IT silence  ==  [386 frames] -43.6382 [Ac=-16844.4 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0208.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence YOUTH HAD COME BACK TO HER FREED FROM THE YOKE OF OPPRESSION silence  ==  [648 frames] -45.7886 [Ac=-29671.0 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0209.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence IT WAS NOT A LARGE LAKE AND ALMOST ROUND silence  ==  [536 frames] -47.5626 [Ac=-25493.6 LM=0.0] (Act=14.2)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0210.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence ITS DIAMETER WAS NOT MORE THAN TWO HUNDRED YARDS silence  ==  [486 frames] -50.4047 [Ac=-24496.7 LM=0.0] (Act=15.0)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0211.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence IT DROWNED ALL SOUND THAT BRUTE AGONY AND DEATH MAY HAVE MADE silence  ==  [611 frames] -48.3983 [Ac=-29571.3 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Jeremy-20100627-fbz/mfc/a0212.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence FRESH CASES STILL ABLE TO WALK THEY CLUSTERED ABOUT THE SPOKESMAN silence  ==  [973 frames] -46.1779 [Ac=-44931.1 LM=0.0] (Act=9.0)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

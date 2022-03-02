@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/aiUWeq5RV2/words.mlf -i /tmp/aiUWeq5RV2/aligned.out -S /tmp/aiUWeq5RV2/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0154.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THAT IS THE STRANGE PART OF IT SENT-END  ==  [584 frames] -55.0678 [Ac=-32159.6 LM=0.0] (Act=9.9)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0155.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END HIS FRESHLY CAUGHT FURS HE FLUNG TO THE FLOOR SENT-END  ==  [831 frames] -57.1206 [Ac=-47467.2 LM=0.0] (Act=13.5)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0156.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END FOR THAT REASON LE BEAU HAD CHOSEN HIM TO FIGHT THE BIG FIGHT SENT-END  ==  [1053 frames] -56.5276 [Ac=-59523.5 LM=0.0] (Act=14.0)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0157.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END IN THE CRIB THE BABY SAT UP AND BEGAN TO PRATTLE SENT-END  ==  [909 frames] -55.7644 [Ac=-50689.8 LM=0.0] (Act=11.6)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0158.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END SHE OBEYED SHRINKING BACK WITH THE BABY IN HER ARMS SENT-END  ==  [922 frames] -56.0031 [Ac=-51634.8 LM=0.0] (Act=14.2)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0159.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END HIS TEETH SHUT WITH A LAST CLICK SENT-END  ==  [844 frames] -53.2650 [Ac=-44955.7 LM=0.0] (Act=10.0)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0160.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END IT WAS OVER WHEN HE MADE HIS WAY THROUGH THE RING OF SPECTATORS SENT-END  ==  [1040 frames] -56.7266 [Ac=-58995.6 LM=0.0] (Act=12.4)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0161.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END IN A FLASH HE WAS ON HIS FEET FACING HIM SENT-END  ==  [740 frames] -56.2258 [Ac=-41607.1 LM=0.0] (Act=9.8)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0162.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END HE THOUGHT HE SAW A SHUDDER PASS THROUGH THE FACTOR'S SHOULDERS SENT-END  ==  [975 frames] -57.3052 [Ac=-55872.6 LM=0.0] (Act=13.5)
+Aligning File: /tmp/aiUWeq5RV2/Eibriel-20120211-grr/b0163.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THE MOON HAD ALREADY BEGUN ITS WESTWARD DECLINE SENT-END  ==  [936 frames] -55.6230 [Ac=-52063.1 LM=0.0] (Act=13.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

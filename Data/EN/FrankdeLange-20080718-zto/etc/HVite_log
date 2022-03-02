@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0083.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence A SHADOW WAS CREEPING OVER PIERRE'S EYES silence  ==  [314 frames] -55.1029 [Ac=-17302.3 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0084.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence SCARCELY HAD HE UTTERED THE NAME WHEN PIERRE'S CLOSING EYES SHOT OPEN silence  ==  [434 frames] -57.9643 [Ac=-25156.5 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0085.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence A TRICKLE OF FRESH BLOOD RAN OVER HIS FACE silence  ==  [331 frames] -54.6892 [Ac=-18102.1 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0086.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence DEATH HAD COME WITH TERRIBLE SUDDENNESS silence  ==  [314 frames] -53.6927 [Ac=-16859.5 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0087.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence PHILIP BENT LOWER AND STARED INTO THE FACE OF THE DEAD MAN silence  ==  [417 frames] -57.0964 [Ac=-23809.2 LM=0.0] (Act=9.7)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0088.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HE MADE SURE THAT THE MAGAZINE WAS LOADED AND RESUMED HIS PADDLING silence  ==  [391 frames] -58.8206 [Ac=-22998.8 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0089.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE NIGHTGLOW WAS TREACHEROUS TO SHOOT BY silence  ==  [297 frames] -55.5101 [Ac=-16486.5 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0090.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THE SINGING VOICE APPROACHED RAPIDLY silence  ==  [306 frames] -55.4978 [Ac=-16982.3 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0091.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HIS BLOOD GREW HOT WITH RAGE AT THE THOUGHT silence  ==  [314 frames] -57.0980 [Ac=-17928.8 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-zto/mfc/a0092.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence HE WENT DOWN IN MIDSTREAM SEARCHING THE SHADOWS OF BOTH SHORES silence  ==  [426 frames] -57.8023 [Ac=-24623.8 LM=0.0] (Act=9.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

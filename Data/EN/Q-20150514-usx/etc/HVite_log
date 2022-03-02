@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/bl6_FIz7yU/words.mlf -i /tmp/bl6_FIz7yU/aligned.out -S /tmp/bl6_FIz7yU/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 7579 physical / 8398 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0430.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END NEVERTHELESS WE FOUND OURSELVES ONCE MORE IN THE HIGH SEAT OF ABUNDANCE SENT-END  ==  [886 frames] -58.7386 [Ac=-52042.4 LM=0.0] (Act=14.7)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0431.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END WADA AND NAKATA WERE IN A BIT OF A FUNK SENT-END  ==  [723 frames] -58.7368 [Ac=-42466.7 LM=0.0] (Act=12.6)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0432.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THE BOY AT THE WHEEL LOST HIS HEAD SENT-END  ==  [586 frames] -55.0770 [Ac=-32275.1 LM=0.0] (Act=11.1)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0433.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END TO HER THE BRIDGE WAS TAMBO WHICH IS THE NATIVE FOR TABOO SENT-END  ==  [811 frames] -57.8749 [Ac=-46936.6 LM=0.0] (Act=14.2)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0434.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END A HALF A CASE OF TOBACCO WAS WORTH THREE POUNDS SENT-END  ==  [836 frames] -56.8259 [Ac=-47506.5 LM=0.0] (Act=14.7)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0435.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END WHAT DO YOU MEAN BY THIS OUTRAGEOUS CONDUCT SENT-END  ==  [548 frames] -58.6555 [Ac=-32143.2 LM=0.0] (Act=11.5)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0436.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END BUT MARTIN SMILED A SUPERIOR SMILE SENT-END  ==  [536 frames] -57.3038 [Ac=-30714.8 LM=0.0] (Act=12.0)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0437.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END BY THAT ANSWER MY PROFESSIONAL MEDICAL PRESTIGE STOOD OR FELL SENT-END  ==  [773 frames] -58.0079 [Ac=-44840.1 LM=0.0] (Act=13.5)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0438.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END AT SEA MONDAY MARCH SIXTEENTH NINETEEN OH EIGHT SENT-END  ==  [898 frames] -58.4061 [Ac=-52448.6 LM=0.0] (Act=9.4)
+Aligning File: /tmp/bl6_FIz7yU/Q-20150514-usx/a0439.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END AT SEA WEDNESDAY MARCH EIGHTEENTH NINETEEN OH EIGHT SENT-END  ==  [798 frames] -58.7460 [Ac=-46879.3 LM=0.0] (Act=13.4)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0474.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE WAS MANIFESTLY DISTRESSED BY MY COMING silence  ==  [311 frames] -57.5418 [Ac=-17895.5 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0475.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence NOT A WHEEL MOVED IN HIS EMPIRE silence  ==  [261 frames] -58.6685 [Ac=-15312.5 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0476.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE REORGANIZATION OF THESE COUNTRIES TOOK THE FORM OF REVOLUTION silence  ==  [411 frames] -58.6908 [Ac=-24121.9 LM=0.0] (Act=11.5)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0477.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence YOU'RE GOING IN FOR GRAB SHARING silence  ==  [249 frames] -59.6225 [Ac=-14846.0 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0478.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE OLIGARCHY WILL ENCOURAGE SUCH AMBITION AND THE CONSEQUENT COMPETITION silence  ==  [449 frames] -61.8860 [Ac=-27786.8 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0479.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence VIOLATION OF THIS LAW WAS MADE A HIGH MISDEMEANOR AND PUNISHED ACCORDINGLY silence  ==  [549 frames] -60.2219 [Ac=-33061.8 LM=0.0] (Act=9.6)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0480.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence WITHOUT DISCUSSION IT WAS THE AGENTS PROVOCATEURS WHO CAUSED THE PEASANT REVOLT silence  ==  [499 frames] -61.9585 [Ac=-30917.3 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0481.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE TASK WE SET OURSELVES WAS THREEFOLD silence  ==  [374 frames] -55.2990 [Ac=-20681.8 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0482.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence MANY OTHER SIMILAR DISCONCERTING OMISSIONS WILL BE NOTICED IN THE MANUSCRIPT silence  ==  [574 frames] -60.7818 [Ac=-34888.7 LM=0.0] (Act=13.2)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vre/mfc/b0483.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE FLOWER OF THE ARTISTIC AND INTELLECTUAL WORLD WERE REVOLUTIONISTS silence  ==  [587 frames] -59.1939 [Ac=-34746.8 LM=0.0] (Act=10.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/mKmujB96zs/words.mlf -i /tmp/mKmujB96zs/aligned.out -S /tmp/mKmujB96zs/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0090.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END THE CHURCHILL NARROWED AND ITS CURRENT BECAME SWIFTER AS THEY PROGRESSED SENT-END  ==  [511 frames] -61.2836 [Ac=-31315.9 LM=0.0] (Act=9.6)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0091.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END FOR A FULL HALF MINUTE JEANNE LOOKED AT HIM WITHOUT SPEAKING SENT-END  ==  [498 frames] -59.2214 [Ac=-29492.2 LM=0.0] (Act=11.8)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0092.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END I WANT TO DIE IN IT SENT-END  ==  [386 frames] -53.2884 [Ac=-20569.3 LM=0.0] (Act=6.3)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0093.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END DARKNESS HID HIM FROM JEANNE SENT-END  ==  [473 frames] -54.3321 [Ac=-25699.1 LM=0.0] (Act=8.4)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0094.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AND YET IF SHE CAME HE HAD NO WORDS TO SAY SENT-END  ==  [498 frames] -57.8180 [Ac=-28793.4 LM=0.0] (Act=8.5)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0095.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HE HEARD A SOUND WHICH BROUGHT HIM QUICKLY INTO CONSCIOUSNESS OF DAY SENT-END  ==  [523 frames] -59.5159 [Ac=-31126.8 LM=0.0] (Act=9.5)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0096.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END WITHIN HIMSELF HE CALLED IT NO LONGER HIS OWN SENT-END  ==  [486 frames] -57.5736 [Ac=-27980.8 LM=0.0] (Act=7.5)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0097.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END BESIDES THAT NOISE MAKES ME DEAF SENT-END  ==  [461 frames] -55.0436 [Ac=-25375.1 LM=0.0] (Act=7.1)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0098.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END PHILIP LOOKED BACK FROM THE CREST AND SAW JEANNE LEANING OVER THE CANOE SENT-END  ==  [548 frames] -60.6555 [Ac=-33239.2 LM=0.0] (Act=13.5)
+Aligning File: /tmp/mKmujB96zs/Ertain-20140808-lyt/b0099.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END FIFTY YARDS AHEAD OF HER WERE THE FIRST OF THE ROCKS SENT-END  ==  [448 frames] -58.5228 [Ac=-26218.2 LM=0.0] (Act=11.4)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

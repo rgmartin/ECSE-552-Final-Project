@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0241.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence I THINK IT'S MUCH NICER TO QUARREL silence  ==  [436 frames] -44.7730 [Ac=-19521.0 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0242.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence I SAW IT WHEN SHE ROLLED silence  ==  [487 frames] -42.2220 [Ac=-20562.1 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0243.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence I ONLY READ THE QUOTATIONS silence  ==  [487 frames] -43.3646 [Ac=-21118.6 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0244.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE WAS THE SOUL OF DEVOTION TO HIS EMPLOYERS silence  ==  [537 frames] -45.7190 [Ac=-24551.1 LM=0.0] (Act=6.9)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0245.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence OUT OF HIS EIGHTEEN HUNDRED HE LAID ASIDE SIXTEEN HUNDRED EACH YEAR silence  ==  [775 frames] -47.9359 [Ac=-37150.3 LM=0.0] (Act=17.9)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0246.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence YOU HAVE HEARD ALWAYS HOW HE WAS THE LOVER OF THE PRINCESS NAOMI silence  ==  [624 frames] -46.6545 [Ac=-29112.4 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0247.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THEY OUGHT TO PASS HERE SOME TIME TODAY silence  ==  [549 frames] -42.9008 [Ac=-23552.5 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0248.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence I HAD BEEN SAD TOO LONG ALREADY silence  ==  [587 frames] -41.2190 [Ac=-24195.5 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0249.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence ALL EYES HOWEVER WERE STARING AT HIM IN CERTITUDE OF EXPECTANCY silence  ==  [712 frames] -45.2300 [Ac=-32203.7 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-yll/mfc/a0250.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE HAD OBSERVED THE BUSINESS LIFE OF HAWAII AND DEVELOPED A VAULTING AMBITION silence  ==  [812 frames] -46.8257 [Ac=-38022.4 LM=0.0] (Act=8.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/tk9a4S1gCD/words.mlf -i /tmp/tk9a4S1gCD/aligned.out -S /tmp/tk9a4S1gCD/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0227.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END IT WAS THE SAME WAY WITH OUR REVOLVERS AND RIFLES SENT-END  ==  [461 frames] -56.1245 [Ac=-25873.4 LM=0.0] (Act=10.4)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0228.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END BUT IT CONTRIBUTED TO THE SMASH SENT-END  ==  [336 frames] -55.2304 [Ac=-18557.4 LM=0.0] (Act=11.7)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0229.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THE LAST ONE I KNEW WAS AN OVERSEER SENT-END  ==  [411 frames] -56.0044 [Ac=-23017.8 LM=0.0] (Act=10.4)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0230.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END DO YOU KNOW ANY GOOD LAND AROUND HERE SENT-END  ==  [411 frames] -52.8568 [Ac=-21724.1 LM=0.0] (Act=9.3)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0231.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THE RESIDENT COMMISSIONER IS AWAY IN AUSTRALIA SENT-END  ==  [498 frames] -56.6337 [Ac=-28203.6 LM=0.0] (Act=11.1)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0232.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END I CANNOT FOLLOW YOU SHE SAID SENT-END  ==  [411 frames] -57.1585 [Ac=-23492.2 LM=0.0] (Act=8.8)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0233.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END I NEVER ALLOW WHAT CAN'T BE CHANGED TO ANNOY ME SENT-END  ==  [461 frames] -55.6070 [Ac=-25634.8 LM=0.0] (Act=9.6)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0234.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END WHY THE AVERAGE REVIEW IS MORE NAUSEATING THAN COD LIVER OIL SENT-END  ==  [573 frames] -59.1832 [Ac=-33912.0 LM=0.0] (Act=11.2)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0235.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END HIS VOICE WAS PASSIONATELY REBELLIOUS SENT-END  ==  [373 frames] -58.1335 [Ac=-21683.8 LM=0.0] (Act=9.9)
+Aligning File: /tmp/tk9a4S1gCD/Akram-20101102-qax/a0236.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END DON'T YOU SEE I HATE YOU SENT-END  ==  [336 frames] -55.0862 [Ac=-18509.0 LM=0.0] (Act=9.4)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

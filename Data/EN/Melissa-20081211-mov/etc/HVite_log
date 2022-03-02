@@ -1,0 +1,59 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0306.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence CAMERON LOOKED AT HIS HANDS WITH THEIR LONG SINEWY FINGERS silence  ==  [612 frames] -50.8220 [Ac=-31103.0 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0307.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WE GOT FEW VEGETABLES AND FRUITS AND BECAME FISH EATERS silence  ==  [587 frames] -50.4902 [Ac=-29637.7 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0308.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WE NEVER MADE ANOTHER MIGRATION silence  ==  [487 frames] -45.5038 [Ac=-22160.4 LM=0.0] (Act=6.4)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0309.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence NOR WAS ELAM HARNISH AN EXCEPTION silence  ==  [512 frames] -47.7590 [Ac=-24452.6 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0310.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence A LITTLE TREATMENT MASSAGE WITH SOME HELP FROM THE DOCTOR silence  ==  [674 frames] -47.8897 [Ac=-32277.6 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0311.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THE TWENTY NINTH VERY FOGGY silence  ==  [411 frames] -45.8808 [Ac=-18857.0 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0312.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence DIG IN YOU'RE SURE GOOD WAS DAYLIGHT'S ANSWER silence  ==  [562 frames] -50.2600 [Ac=-28246.1 LM=0.0] (Act=15.7)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0314.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE HAD BEEN BORN WITH THIS ENDOWMENT silence  ==  [599 frames] -41.9461 [Ac=-25125.7 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/Melissa-20081211-mov/mfc/b0315.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND THIS WAS THEIR SOLE CONVERSATION THROUGHOUT THE MEAL silence  ==  [512 frames] -51.0692 [Ac=-26147.4 LM=0.0] (Act=10.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

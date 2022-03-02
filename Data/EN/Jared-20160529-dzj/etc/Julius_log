@@ -1,0 +1,3 @@
+ERROR: m_chkparam: cannot access /data/svn-mirror/Main/VoxForge//data/svn-mirror/Nightly_Builds/AcousticModel-2016-05-29/HTK/16kHz_16bit/MFCC_O_D/hmmdefs
+ERROR: m_chkparam: cannot access /data/svn-mirror/Main/VoxForge//data/svn-mirror/Nightly_Builds/AcousticModel-2016-05-29/HTK/16kHz_16bit/MFCC_O_D/tiedlist
+ERROR: m_chkparam: could not pass parameter check

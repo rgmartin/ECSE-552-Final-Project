@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0258.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence SOAKED IN SEAWATER THEY OFFSET THE HEAT RAYS silence  ==  [349 frames] -55.9919 [Ac=-19541.2 LM=0.0] (Act=7.0)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0259.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THINK OF INVESTING IN SUCH AN ADVENTURE silence  ==  [236 frames] -59.4031 [Ac=-14019.1 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0260.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence NOBODY KNEW HIS HISTORY THEY OF THE JUNTA LEAST OF ALL silence  ==  [361 frames] -61.1014 [Ac=-22057.6 LM=0.0] (Act=12.6)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0261.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence I HAVE BEEN DOUBLY BAPTIZED silence  ==  [211 frames] -59.9672 [Ac=-12653.1 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0262.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEY WOULDN'T BE SWEEPING A BIG VESSEL LIKE THE MARTHA silence  ==  [324 frames] -57.9390 [Ac=-18772.2 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0263.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence JOAN LOOKED TRIUMPHANTLY AT SHELDON WHO BOWED silence  ==  [324 frames] -63.4363 [Ac=-20553.4 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0264.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence AND I HOPE YOU'VE GOT PLENTY OF CHAIN OUT CAPTAIN YOUNG silence  ==  [349 frames] -60.0995 [Ac=-20974.7 LM=0.0] (Act=11.0)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0265.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE DISCOVERY SEEMED TO HAVE BEEN MADE ON THE SPUR OF THE MOMENT silence  ==  [386 frames] -57.3284 [Ac=-22128.8 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0266.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THEY HANDLED TWO MEN ALREADY BOTH GRUB-THIEVES silence  ==  [436 frames] -56.6475 [Ac=-24698.3 LM=0.0] (Act=6.9)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-vdn/mfc/a0267.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence ELI HARDING ASKED AS SHUNK STARTED TO FOLLOW silence  ==  [474 frames] -57.7296 [Ac=-27363.8 LM=0.0] (Act=11.9)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

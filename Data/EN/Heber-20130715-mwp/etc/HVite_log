@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/d4O6J4o3tY/words.mlf -i /tmp/d4O6J4o3tY/aligned.out -S /tmp/d4O6J4o3tY/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0551.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END ALL AN APPEARANCE CAN KNOW IS MIRAGE SENT-END  ==  [423 frames] -60.8511 [Ac=-25740.0 LM=0.0] (Act=11.2)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0552.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END YET HE DREAMS HE IS IMMORTAL I ARGUE FEEBLY SENT-END  ==  [611 frames] -60.0655 [Ac=-36700.0 LM=0.0] (Act=11.4)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0553.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I AM WRITING THESE LINES IN HONOLULU HAWAII SENT-END  ==  [486 frames] -61.6941 [Ac=-29983.3 LM=0.0] (Act=9.8)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0554.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END JACK LONDON WAIKIKI BEACH HONOLULU OAHU SENT-END  ==  [611 frames] -60.9066 [Ac=-37214.0 LM=0.0] (Act=11.2)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0555.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END JERRY WAS SO SECURE IN HIS NOOK THAT HE DID NOT ROLL AWAY SENT-END  ==  [536 frames] -62.7973 [Ac=-33659.4 LM=0.0] (Act=12.5)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0556.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END WHY HE'S BOUGHT FORTY POUNDS OF GOODS FROM YOU ALREADY SENT-END  ==  [486 frames] -60.0033 [Ac=-29161.6 LM=0.0] (Act=11.8)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0557.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END THE LAST REFUGEE HAD PASSED SENT-END  ==  [436 frames] -58.0203 [Ac=-25296.9 LM=0.0] (Act=10.4)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0558.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AND THE FOUNDATION STONE OF SERVICE IN HIS CASE WAS OBEDIENCE SENT-END  ==  [561 frames] -64.1240 [Ac=-35973.5 LM=0.0] (Act=12.5)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0559.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END PEACE BE UNTO YOU AND GRACE BEFORE THE LORD SENT-END  ==  [448 frames] -61.9836 [Ac=-27768.7 LM=0.0] (Act=10.1)
+Aligning File: /tmp/d4O6J4o3tY/Heber-20130715-mwp/a0560.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END HIS MOUTH OPENED WORDS SHAPED VAINLY ON HIS LIPS SENT-END  ==  [411 frames] -64.5776 [Ac=-26541.4 LM=0.0] (Act=12.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

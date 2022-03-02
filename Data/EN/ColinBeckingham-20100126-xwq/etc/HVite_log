@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0300.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence FROM MY EARLIEST RECOLLECTION MY SLEEP WAS A PERIOD OF TERROR silence  ==  [647 frames] -54.2285 [Ac=-35085.9 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0301.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence BUT ALL MY DREAMS VIOLATED THIS LAW silence  ==  [544 frames] -51.2653 [Ac=-27888.3 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0302.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence IT IS VERY PLAUSIBLE TO SUCH PEOPLE A MOST CONVINCING HYPOTHESIS silence  ==  [792 frames] -54.6478 [Ac=-43281.0 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0303.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BUT THEY MAKE THE MISTAKE OF IGNORING THEIR OWN DUALITY silence  ==  [664 frames] -52.1401 [Ac=-34621.0 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0304.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence I GRADUATED LAST OF MY CLASS silence  ==  [587 frames] -50.4526 [Ac=-29615.7 LM=0.0] (Act=6.6)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0305.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THEY HAD NO FIXED VALUES TO BE ALTERED BY ADJECTIVES AND ADVERBS silence  ==  [783 frames] -54.9162 [Ac=-42999.4 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0306.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE WAS PRESSING BEYOND THE LIMITS OF HIS VOCABULARY silence  ==  [629 frames] -53.7189 [Ac=-33789.2 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0307.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence VERY EARLY IN MY LIFE I SEPARATED FROM MY MOTHER silence  ==  [664 frames] -51.3879 [Ac=-34121.6 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0308.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HIS INFERNAL CHATTERING WORRIES ME EVEN NOW AS I THINK OF IT silence  ==  [817 frames] -51.3873 [Ac=-41983.5 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100126-xwq/mfc/a0309.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WHITE LEGHORNS SAID MRS MORTIMER silence  ==  [604 frames] -50.1818 [Ac=-30309.8 LM=0.0] (Act=7.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

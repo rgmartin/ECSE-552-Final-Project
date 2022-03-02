@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0008.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence BURKE HIMSELF HAD CRITICIZED IT BECAUSE OF THE SMILE silence  ==  [762 frames] -47.1244 [Ac=-35908.8 LM=0.0] (Act=11.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0009.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I'D SAY THERE WAS GOING TO BE A GLORIOUS SCRAP silence  ==  [637 frames] -45.5946 [Ac=-29043.8 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0010.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE TURNED THE MAP TO GREGSON POINTING WITH HIS FINGER silence  ==  [662 frames] -45.7780 [Ac=-30305.1 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0011.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HIS EYES NEVER TOOK THEMSELVES FOR AN INSTANT FROM HIS COMPANION'S FACE silence  ==  [912 frames] -45.2415 [Ac=-41260.3 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0012.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence SOMETHING THAT WHITTEMORE HAD NOT YET SAID THRILLED HIM silence  ==  [574 frames] -48.0644 [Ac=-27589.0 LM=0.0] (Act=13.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0013.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence LAKES AND RIVERS HUNDREDS OF THEM THOUSANDS OF THEM silence  ==  [825 frames] -43.8880 [Ac=-36207.6 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0014.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WHITEFISH GREGSON WHITEFISH AND TROUT silence  ==  [800 frames] -43.9949 [Ac=-35195.9 LM=0.0] (Act=6.8)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0015.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THEY ROBBED ME A FEW YEARS LATER silence  ==  [725 frames] -41.4515 [Ac=-30052.3 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0016.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HE CHUCKLED AS HE PULLED OUT HIS PIPE AND BEGAN FILLING IT silence  ==  [725 frames] -45.7763 [Ac=-33187.8 LM=0.0] (Act=18.3)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-wnf/mfc/b0017.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence EVERYTHING WAS WORKING SMOOTHLY BETTER THAN I HAD EXPECTED silence  ==  [762 frames] -45.3222 [Ac=-34535.5 LM=0.0] (Act=13.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

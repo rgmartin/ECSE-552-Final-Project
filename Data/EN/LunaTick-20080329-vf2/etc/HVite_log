@@ -1,0 +1,151 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-1.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence MEANWHILE I'LL GO OUT TO BREATHE A SPELL silence  ==  [369 frames] -53.3656 [Ac=-19691.9 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-2.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HOW COULD HE EXPLAIN HIS POSSESSION OF THE SKETCH silence  ==  [464 frames] -51.0371 [Ac=-23681.2 LM=0.0] (Act=6.0)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-3.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT SEEMED NEARER TO HIM SINCE HE HAD SEEN AND TALKED WITH GREGSON silence  ==  [517 frames] -55.0375 [Ac=-28454.4 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-4.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HER OWN BETRAYAL OF HERSELF WAS LIKE TONIC TO PHILIP silence  ==  [479 frames] -52.9827 [Ac=-25378.7 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-5.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE MOVED AWAY AS QUIETLY AS HE HAD COME silence  ==  [444 frames] -51.7112 [Ac=-22959.8 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-6.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE GIRL FACED HIM HER EYES SHINING WITH SUDDEN FEAR silence  ==  [524 frames] -52.0506 [Ac=-27274.5 LM=0.0] (Act=6.7)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-7.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence CLOSE BESIDE HIM GLEAMED THE WHITE FANGS OF THE WOLF-DOG silence  ==  [534 frames] -52.5734 [Ac=-28074.2 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-8.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE LOOKED AT THE HANDKERCHIEF MORE CLOSELY silence  ==  [469 frames] -51.1859 [Ac=-24006.2 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-9.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence GREGSON WAS ASLEEP WHEN HE RE-ENTERED THE CABIN silence  ==  [421 frames] -52.6070 [Ac=-22147.6 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-10.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence IN SPITE OF THEIR ABSURDITY THE WORDS AFFECTED PHILIP CURIOUSLY silence  ==  [662 frames] -51.4071 [Ac=-34031.5 LM=0.0] (Act=6.5)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-11.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THE LACE WAS OF A DELICATE IVORY COLOR FAINTLY TINTED WITH YELLOW silence  ==  [577 frames] -54.8590 [Ac=-31653.6 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-12.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS A CURIOUS COINCIDENCE silence  ==  [391 frames] -52.5015 [Ac=-20528.1 LM=0.0] (Act=6.5)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-13.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence SUDDENLY HIS FINGERS CLOSED TIGHTLY OVER THE HANDKERCHIEF silence  ==  [504 frames] -53.2498 [Ac=-26837.9 LM=0.0] (Act=6.6)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-14.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THERE WAS NOTHING ON THE ROCK silence  ==  [361 frames] -51.3691 [Ac=-18544.3 LM=0.0] (Act=11.0)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-15.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence PHILIP STOOD UNDECIDED HIS EARS STRAINED TO CATCH THE SLIGHTEST SOUND silence  ==  [679 frames] -56.3522 [Ac=-38263.1 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-16.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence PEARCE'S LITTLE EYES WERE FIXED ON HIM SHREWDLY silence  ==  [476 frames] -51.4429 [Ac=-24486.8 LM=0.0] (Act=6.7)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-17.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence I HAVE NO IDEA REPLIED PHILIP silence  ==  [406 frames] -53.0478 [Ac=-21537.4 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-18.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence I CAME FOR INFORMATION MORE OUT OF CURIOSITY THAN ANYTHING ELSE silence  ==  [534 frames] -55.4593 [Ac=-29615.3 LM=0.0] (Act=7.3)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-19.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence HIS IMMACULATE APPEARANCE WAS GONE silence  ==  [341 frames] -52.8676 [Ac=-18027.9 LM=0.0] (Act=6.4)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-20.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence ANYWAY NO ONE SAW HER LIKE THAT silence  ==  [386 frames] -51.7466 [Ac=-19974.2 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-21.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence PHILIP SNATCHED AT THE LETTER WHICH GREGSON HELD OUT TO HIM silence  ==  [479 frames] -55.5909 [Ac=-26628.0 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-22.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE MEN STARED INTO EACH OTHER'S FACE silence  ==  [522 frames] -50.5782 [Ac=-26401.8 LM=0.0] (Act=6.2)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-23.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence YES IT WAS A MAN WHO ASKED A STRANGER silence  ==  [451 frames] -53.0469 [Ac=-23924.2 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-24.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THE FOURTH AND FIFTH DAYS PASSED WITHOUT ANY DEVELOPMENTS silence  ==  [524 frames] -52.3877 [Ac=-27451.1 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-25.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THEY CLOSED NOW UNTIL HIS FINGERS WERE LIKE CORDS OF STEEL silence  ==  [547 frames] -55.2307 [Ac=-30211.2 LM=0.0] (Act=6.6)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-26.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE SAW JEANNE FALTER FOR A MOMENT silence  ==  [371 frames] -49.8254 [Ac=-18485.2 LM=0.0] (Act=6.8)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-27.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence SURELY I WILL EXCUSE YOU SHE CRIED silence  ==  [466 frames] -51.6999 [Ac=-24092.1 LM=0.0] (Act=6.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-28.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence IN A FLASH PHILIP FOLLOWED ITS DIRECTION silence  ==  [414 frames] -51.4647 [Ac=-21306.4 LM=0.0] (Act=6.9)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-29.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence IT WAS HIS INTENTION TO RETURN TO EILEEN AND HER FATHER silence  ==  [522 frames] -52.2008 [Ac=-27248.8 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-30.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence HE WOULD FIRST HUNT UP GREGSON AND BEGIN HIS WORK THERE silence  ==  [534 frames] -52.1481 [Ac=-27847.1 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-31.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence WHAT WAS THE OBJECT OF YOUR LITTLE SENSATION silence  ==  [479 frames] -54.5107 [Ac=-26110.6 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-32.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence BUT WHO WAS EILEEN'S DOUBLE silence  ==  [329 frames] -50.3294 [Ac=-16558.4 LM=0.0] (Act=6.3)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-33.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE PROMOTER'S EYES WERE HEAVY WITH LITTLE PUFFY BAGS UNDER THEM silence  ==  [572 frames] -51.2919 [Ac=-29338.9 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-34.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND NOW DOWN THERE EILEEN WAS WAITING FOR HIM silence  ==  [587 frames] -50.3810 [Ac=-29573.7 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-35.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THERE HAS BEEN A CHANGE SHE INTERRUPTED HIM silence  ==  [441 frames] -50.4592 [Ac=-22252.5 LM=0.0] (Act=7.0)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-36.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE GRAY EYES FALTERED THE FLUSH DEEPENED silence  ==  [482 frames] -50.2379 [Ac=-24214.7 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-37.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence IT IS THE FIRE PARTLY SHE SAID silence  ==  [482 frames] -49.6099 [Ac=-23912.0 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-38.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THEN AND AT SUPPER HE TRIED TO FATHOM HER silence  ==  [534 frames] -49.5964 [Ac=-26484.5 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-39.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS A LARGE CANOE silence  ==  [326 frames] -48.8989 [Ac=-15941.0 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/LunaTick-20080329-vf2/mfc/vf2-40.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WHAT IF JEANNE FAILED HIM silence  ==  [296 frames] -50.2479 [Ac=-14873.4 LM=0.0] (Act=6.7)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0352.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence NOW JUST WHAT DO YOU WANT TO KNOW silence  ==  [498 frames] -44.6553 [Ac=-22238.3 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0353.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence I WANT TO KNOW HOW ALL THIS IS POSSIBLE silence  ==  [623 frames] -44.5179 [Ac=-27734.7 LM=0.0] (Act=6.8)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0354.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence IT'S THAT MUCH JUNK silence  ==  [411 frames] -45.1439 [Ac=-18554.2 LM=0.0] (Act=11.3)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0355.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THERE WAS PROPER DIVISION OF LABOR IN THE WORK THEY INDIVIDUALLY PERFORMED silence  ==  [773 frames] -49.2372 [Ac=-38060.3 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0356.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence HE LOVED TO PLAY CHINESE LOTTERY silence  ==  [511 frames] -44.0254 [Ac=-22497.0 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0357.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THE LAW OF CLUB AND FANG silence  ==  [448 frames] -44.0370 [Ac=-19728.6 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0358.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE TEMPERATURE DROPPED TO FIFTY BELOW ZERO AND REMAINED THERE THE WHOLE TRIP silence  ==  [723 frames] -49.6990 [Ac=-35932.4 LM=0.0] (Act=11.9)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0359.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND AS NEVER BEFORE HE WAS READY TO OBEY silence  ==  [598 frames] -45.5864 [Ac=-27260.6 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0360.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THIS STATE OF MIND COMES OF AN UNDUE PROMINENCE OF THE EGO silence  ==  [698 frames] -46.6666 [Ac=-32573.3 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/GusSCalabrese-20100331-eik/mfc/b0361.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THERE ARE THE CANALS OF CHINA AND THE YANGTSE RIVER silence  ==  [711 frames] -44.8651 [Ac=-31899.1 LM=0.0] (Act=9.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

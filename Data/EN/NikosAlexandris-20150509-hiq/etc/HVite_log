@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/S60d1_Uqty/words.mlf -i /tmp/S60d1_Uqty/aligned.out -S /tmp/S60d1_Uqty/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 7579 physical / 8398 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0205.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END YOU WERE DESTROYING MY LIFE SENT-END  ==  [343 frames] -56.0045 [Ac=-19209.5 LM=0.0] (Act=9.1)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0206.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HORSES AND RIFLES HAD BEEN HER TOYS CAMP AND TRAIL HER NURSERY SENT-END  ==  [581 frames] -58.5953 [Ac=-34043.9 LM=0.0] (Act=15.2)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0207.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I'M AS GOOD AS A MAN SHE URGED SENT-END  ==  [318 frames] -59.3583 [Ac=-18875.9 LM=0.0] (Act=10.7)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0208.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END YOU READ THE QUOTATIONS IN TODAY'S PAPER SENT-END  ==  [398 frames] -59.7788 [Ac=-23792.0 LM=0.0] (Act=12.9)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0209.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END HE'S TERRIBLY TOUCHY ABOUT HIS BLACK WARDS AS HE CALLS THEM SENT-END  ==  [473 frames] -60.0490 [Ac=-28403.2 LM=0.0] (Act=16.6)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0210.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END WHATEVER HE GUESSED HE LOCKED AWAY IN THE TABOO ROOM OF NAOMI SENT-END  ==  [556 frames] -58.2829 [Ac=-32405.3 LM=0.0] (Act=15.4)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0211.wav
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END THIS IS EIGHTEEN EIGHTY SENT-END  ==  [343 frames] -53.3364 [Ac=-18294.4 LM=0.0] (Act=9.0)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0212.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END DEATH IS AND HAS BEEN EVER SINCE OLD MAUI DIED SENT-END  ==  [468 frames] -58.9946 [Ac=-27609.5 LM=0.0] (Act=12.6)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0213.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END SOME BOY SHE LAUGHED ACQUIESCENCE SENT-END  ==  [448 frames] -53.7971 [Ac=-24101.1 LM=0.0] (Act=8.5)
+Aligning File: /tmp/S60d1_Uqty/NikosAlexandris-20150509-hiq/b0214.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END LET US TALK IT OVER AND FIND A WAY OUT SENT-END  ==  [423 frames] -55.3023 [Ac=-23392.9 LM=0.0] (Act=12.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 43 physical / 43 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0056.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I'LL GIVE A THOUSAND IF YOU PRODUCE HER RETORTED GREGSON silence  ==  [686 frames] -52.3560 [Ac=-35916.2 LM=0.0] (Act=9.7)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0057.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THEY HAVE WON POPULAR SENTIMENT THROUGH THE NEWSPAPERS silence  ==  [598 frames] -51.9180 [Ac=-31046.9 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0058.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence WE MUST ACHIEVE OUR OWN SALVATION silence  ==  [536 frames] -48.8869 [Ac=-26203.4 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0059.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence IN MOMENTS OF MENTAL ENERGY PHILIP WAS RESTLESS silence  ==  [636 frames] -50.8354 [Ac=-32331.3 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0060.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE WOULD KEEP HIS FAITH WITH GREGSON FOR THE PROMISED DAY OR TWO silence  ==  [698 frames] -51.9795 [Ac=-36281.7 LM=0.0] (Act=12.6)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0061.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence SOMETHING ABOUT IT SEEMED TO FASCINATE HIM TO CHALLENGE HIS PRESENCE silence  ==  [686 frames] -53.9767 [Ac=-37028.0 LM=0.0] (Act=12.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0062.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence NOW IT WAS MISSING FROM THE WALL silence  ==  [523 frames] -49.4471 [Ac=-25860.8 LM=0.0] (Act=11.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0063.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE BOILED HIMSELF SOME COFFEE AND SAT DOWN TO WAIT silence  ==  [686 frames] -49.2357 [Ac=-33775.7 LM=0.0] (Act=13.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0064.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence I'M GOING DOWN THERE WITH YOU AND I'M GOING TO FIGHT silence  ==  [686 frames] -49.1457 [Ac=-33714.0 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091213-dnz/mfc/b0065.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence NOW HAVE YOU GOT ANYTHING TO SAY AGAINST ME MR PHILIP silence  ==  [748 frames] -51.6669 [Ac=-38646.8 LM=0.0] (Act=12.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0149.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence FOR AN INSTANT HE SAW PIERRE DRAWN LIKE A SILHOUETTE AGAINST THE SKY silence  ==  [487 frames] -56.7418 [Ac=-27633.3 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0150.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence GOODBYE PIERRE HE SHOUTED silence  ==  [249 frames] -57.4361 [Ac=-14301.6 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0151.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence AND MACDOUGALL WAS BEYOND THE TRAIL WITH THREE WEEKS TO SPARE silence  ==  [461 frames] -58.5690 [Ac=-27000.3 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0152.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence PHILIP THRUST HIMSELF AGAINST IT AND ENTERED silence  ==  [374 frames] -58.3465 [Ac=-21821.6 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0153.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence MACDOUGALL TAPPED HIS FOREHEAD SUSPICIOUSLY WITH A STUBBY FOREFINGER silence  ==  [461 frames] -57.3959 [Ac=-26459.5 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0154.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE WAS SMOOTH-SHAVEN AND HIS HAIR AND EYES WERE BLACK silence  ==  [386 frames] -58.3377 [Ac=-22518.4 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0155.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WON'T YOU DRAW UP GENTLEMEN silence  ==  [261 frames] -58.0271 [Ac=-15145.1 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0156.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence A STRANGE FIRE BURNED IN HIS EYES WHEN THORPE TURNED silence  ==  [411 frames] -57.6850 [Ac=-23708.5 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0157.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE HAD WORSHIPED HER AS DANTE MIGHT HAVE WORSHIPED BEATRICE silence  ==  [411 frames] -57.5564 [Ac=-23655.7 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-cfp/mfc/a0158.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence DOES THAT LOOK GOOD silence  ==  [173 frames] -58.7163 [Ac=-10157.9 LM=0.0] (Act=10.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

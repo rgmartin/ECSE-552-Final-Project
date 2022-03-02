@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/6oED9RFaVH/words.mlf -i /tmp/6oED9RFaVH/aligned.out -S /tmp/6oED9RFaVH/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0568.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END HE WAS JUST BURSTING WITH JOY JOY OVER WHAT SENT-END  ==  [661 frames] -55.6535 [Ac=-36787.0 LM=0.0] (Act=9.4)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0569.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AT LAKE LINDERMAN I HAD ONE CANOE VERY GOOD PETERBOROUGH CANOE SENT-END  ==  [911 frames] -57.8040 [Ac=-52659.5 LM=0.0] (Act=11.7)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0570.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END BEHIND HIM LAY THE THOUSAND-YEARS-LONG ROAD ACROSS ALL SIBERIA AND RUSSIA SENT-END  ==  [1036 frames] -57.3844 [Ac=-59450.2 LM=0.0] (Act=10.6)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0571.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE HAD FORGOTTEN TO BUILD A FIRE AND THAW OUT SENT-END  ==  [548 frames] -57.5468 [Ac=-31535.6 LM=0.0] (Act=9.7)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0572.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END I NEVER SAW ANYTHING LIKE HER IN MY LIFE SENT-END  ==  [523 frames] -56.8445 [Ac=-29729.7 LM=0.0] (Act=9.7)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0573.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END THERE WAS NO LAW ON THE YUKON SAVE WHAT THEY MADE FOR THEMSELVES SENT-END  ==  [686 frames] -56.9135 [Ac=-39042.6 LM=0.0] (Act=10.6)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0574.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END GOOD BUSINESS MAN CURLY O'BRIEN WAS SAYING SENT-END  ==  [598 frames] -59.0170 [Ac=-35292.2 LM=0.0] (Act=9.5)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0575.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END THERE WEREN'T ANY MISSIONS AND HE WAS THE MAN TO KNOW SENT-END  ==  [648 frames] -57.4100 [Ac=-37201.6 LM=0.0] (Act=11.6)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0576.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END AND THE BIG PERSIAN KNEW OF HIS EXISTENCE BEFORE HE DID OF HERS SENT-END  ==  [773 frames] -57.9783 [Ac=-44817.2 LM=0.0] (Act=12.4)
+Aligning File: /tmp/6oED9RFaVH/GaylandGGump-20141207-awo/a0577.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END ONCE THE JEWS HARP BEGAN EMITTING ITS BARBARIC RHYTHMS MICHAEL WAS HELPLESS SENT-END  ==  [873 frames] -58.8289 [Ac=-51357.7 LM=0.0] (Act=10.9)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

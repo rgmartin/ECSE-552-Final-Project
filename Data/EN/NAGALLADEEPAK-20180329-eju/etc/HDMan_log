@@ -1,0 +1,52 @@
+WARNING: no script file ./lib/AcousticModel/HTK/AMCreate_scripts/input_files/global.ded
+WARNING: no script file ./lib/AcousticModel/HTK/AMCreate_scripts/input_files/VoxForgeDict.ded
+
+Dictionary Usage Statistics
+---------------------------
+  Dictionary    TotalWords WordsUsed  TotalProns PronsUsed
+VoxForgeDict    266986         67     266986         67
+        dict        67         67         67         67
+
+67 words required, 0 missing
+
+New Phone Usage Counts
+---------------------
+  1. ah    :    23
+  2. ey    :     5
+  3. b     :    10
+  4. l     :    13
+  5. jh    :     1
+  6. eh    :    12
+  7. n     :    19
+  8. d     :     8
+  9. ae    :     9
+ 10. m     :     9
+ 11. aa    :     7
+ 12. r     :    22
+ 13. g     :     4
+ 14. ih    :    17
+ 15. ng    :     7
+ 16. iy    :     7
+ 17. aw    :     4
+ 18. ch    :     3
+ 19. y     :     5
+ 20. uh    :     2
+ 21. k     :    14
+ 22. t     :    13
+ 23. s     :    16
+ 24. ay    :     6
+ 25. er    :     8
+ 26. ao    :     6
+ 27. p     :    10
+ 28. uw    :     4
+ 29. z     :     7
+ 30. f     :     2
+ 31. hh    :     3
+ 32. ow    :     3
+ 33. v     :     4
+ 34. sh    :     6
+ 35. th    :     3
+ 36. dh    :     4
+ 37. w     :     5
+
+Dictionary /data/UserSubmissions/Quarantine/NAGALLADEEPAK-20180329-eju/dict created

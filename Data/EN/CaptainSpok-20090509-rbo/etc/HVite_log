@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0319.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence DAYLIGHT WAS TIRED PROFOUNDLY TIRED silence  ==  [261 frames] -50.1316 [Ac=-13084.3 LM=0.0] (Act=6.9)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0320.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE REGRET IN HIS VOICE WAS PROVOCATIVE OF A SECOND BURST OF LAUGHTER silence  ==  [353 frames] -53.4953 [Ac=-18883.9 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0321.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence INSTEAD HE ARRIVED ON THE NIGHT OF THE SECOND DAY silence  ==  [261 frames] -52.1219 [Ac=-13603.8 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0322.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEIR SUPPLY OF GRUB WAS GONE silence  ==  [234 frames] -49.9725 [Ac=-11693.6 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0323.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence CRICKETS BEGAN TO CHIRP AND MORE GEESE AND DUCKS FLEW OVERHEAD silence  ==  [399 frames] -51.1818 [Ac=-20421.5 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0324.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence NOT TILL THE TWENTIETH OF MAY DID THE RIVER BREAK silence  ==  [336 frames] -50.6540 [Ac=-17019.8 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0325.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS A GIGANTIC INADEQUACY silence  ==  [239 frames] -52.1394 [Ac=-12461.3 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0326.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence OUR MR HOWISON WILL CALL UPON YOU AT YOUR HOTEL silence  ==  [336 frames] -54.5883 [Ac=-18341.7 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0327.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence HE HAD BEEN SO EASY silence  ==  [211 frames] -51.1629 [Ac=-10795.4 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/CaptainSpok-20090509-rbo/mfc/b0328.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence CHANGE CHAIRS DAYLIGHT COMMANDED silence  ==  [236 frames] -51.9997 [Ac=-12271.9 LM=0.0] (Act=6.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

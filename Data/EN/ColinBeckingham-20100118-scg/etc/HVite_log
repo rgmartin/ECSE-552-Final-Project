@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0287.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence KEEP AN EYE ON HIM silence  ==  [382 frames] -49.8309 [Ac=-19035.4 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0288.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THOSE ARE MY OYSTERS HE SAID AT LAST silence  ==  [561 frames] -51.4277 [Ac=-28850.9 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0289.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THEY ARE NOT REGULAR OYSTER PIRATES NICHOLAS CONTINUED silence  ==  [638 frames] -55.0584 [Ac=-35127.2 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0290.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence ONE BY ONE THE BOYS WERE CAPTURED silence  ==  [476 frames] -52.4981 [Ac=-24989.1 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0291.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THE WEEKS HAD GONE BY AND NO OVERT ACTS HAD BEEN ATTEMPTED silence  ==  [715 frames] -53.6027 [Ac=-38325.9 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0292.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence HERE IN THE MIDMORNING THE FIRST CASUALTY OCCURRED silence  ==  [629 frames] -52.7944 [Ac=-33207.7 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0293.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THEY WERE DEEP IN THE PRIMEVAL FOREST silence  ==  [493 frames] -52.3019 [Ac=-25784.8 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0294.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE HAD BEEN FOILED IN HIS ATTEMPT TO ESCAPE silence  ==  [587 frames] -51.5035 [Ac=-30232.5 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0295.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND TWENTY MEN COULD HOLD IT WITH SPEARS AND ARROWS silence  ==  [689 frames] -53.1753 [Ac=-36637.8 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20100118-scg/mfc/a0296.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence BASSETT WAS A FASTIDIOUS MAN silence  ==  [527 frames] -49.0627 [Ac=-25856.1 LM=0.0] (Act=8.7)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/0Aq30zDjaP/words.mlf -i /tmp/0Aq30zDjaP/aligned.out -S /tmp/0Aq30zDjaP/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0477.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END WADA LOUIS AND THE STEWARD ARE SERVANTS OF ASIATIC BREED SENT-END  ==  [561 frames] -58.1999 [Ac=-32650.1 LM=0.0] (Act=14.1)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0478.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END ALSO SHE HAS FORBIDDEN THEM SMOKING THEIR PIPES IN THE AFTER-ROOM SENT-END  ==  [611 frames] -57.7170 [Ac=-35265.1 LM=0.0] (Act=10.4)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0479.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END I TRIED TO READ GEORGE MOORE LAST NIGHT AND WAS DREADFULLY BORED SENT-END  ==  [661 frames] -58.7803 [Ac=-38853.8 LM=0.0] (Act=12.4)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0480.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END TOM SPINK HAS A HARPOON SENT-END  ==  [336 frames] -56.2266 [Ac=-18892.2 LM=0.0] (Act=8.1)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0481.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END NIMROD REPLIED WITH A SLIGHT MANIFESTATION OF SENSITIVENESS SENT-END  ==  [548 frames] -58.0397 [Ac=-31805.8 LM=0.0] (Act=9.4)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0482.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END AND THEIR CHIEF VIRTUE LIES IN THAT THEY WILL NEVER WEAR OUT SENT-END  ==  [586 frames] -57.1729 [Ac=-33503.3 LM=0.0] (Act=13.2)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0483.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END BEYOND DISPUTE CORRY HUTCHINSON HAD MARRIED MABEL HOLMES SENT-END  ==  [586 frames] -58.2079 [Ac=-34109.9 LM=0.0] (Act=9.8)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0484.wav
+Created lattice with 3 nodes / 2 arcs from label file
+SENT-END NO-SIR-EE SENT-END  ==  [311 frames] -54.1289 [Ac=-16834.1 LM=0.0] (Act=5.3)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0485.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END EACH INSULT ADDED TO THE VALUE OF THE CLAIM SENT-END  ==  [436 frames] -60.2530 [Ac=-26270.3 LM=0.0] (Act=14.3)
+Aligning File: /tmp/0Aq30zDjaP/Coren-20141121-kxj/a0486.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END FOR THE REST HE WAS A MERE AUTOMATON SENT-END  ==  [436 frames] -56.5118 [Ac=-24639.1 LM=0.0] (Act=9.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,64 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/WuogiISfbQ/words.mlf -i /tmp/WuogiISfbQ/aligned.out -S /tmp/WuogiISfbQ/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0481.wav
+Created lattice with 9 nodes / 8 arcs from label file
+No tokens survived to final node of network at beam 250.0
+SENT-END THE TASK WE SET OURSELVES WAS THREEFOLD SENT-END  ==  [511 frames] -63.0385 [Ac=-32212.7 LM=0.0] (Act=16.5)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0482.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END MANY OTHER SIMILAR DISCONCERTING OMISSIONS WILL BE NOTICED IN THE MANUSCRIPT SENT-END  ==  [586 frames] -62.2265 [Ac=-36464.8 LM=0.0] (Act=14.4)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0483.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THE FLOWER OF THE ARTISTIC AND INTELLECTUAL WORLD WERE REVOLUTIONISTS SENT-END  ==  [623 frames] -60.6902 [Ac=-37810.0 LM=0.0] (Act=13.9)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0484.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THIS THE IRON HEEL FORESAW AND LAID ITS SCHEMES ACCORDINGLY SENT-END  ==  [586 frames] -60.1721 [Ac=-35260.8 LM=0.0] (Act=9.8)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0485.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THE MOB CAME ON BUT IT COULD NOT ADVANCE SENT-END  ==  [561 frames] -57.0581 [Ac=-32009.6 LM=0.0] (Act=10.8)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0486.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END BUT WHY CONTINUE THE TIRADE FOR TIRADE IT WAS SENT-END  ==  [586 frames] -58.1653 [Ac=-34084.9 LM=0.0] (Act=10.4)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0487.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END AFTER ALL SUPERFLUOUS FLESH IS GONE WHAT IS LEFT IS STRINGY AND RESISTANT SENT-END  ==  [673 frames] -61.3803 [Ac=-41308.9 LM=0.0] (Act=12.0)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0488.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END BEYOND REFUSING TO SELL US FOOD THEY LEFT US TO OURSELVES SENT-END  ==  [598 frames] -59.1139 [Ac=-35350.1 LM=0.0] (Act=10.5)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0489.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE WAS A MERRY MONARCH ESPECIALLY SO FOR AN ASIATIC SENT-END  ==  [548 frames] -59.9279 [Ac=-32840.5 LM=0.0] (Act=9.9)
+Aligning File: /tmp/WuogiISfbQ/MahaIbrahim-20110924-eco/b0490.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END WHAT AN EXCITED WHISPERING AND CONFERRING TOOK PLACE SENT-END  ==  [523 frames] -63.3925 [Ac=-33154.3 LM=0.0] (Act=9.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

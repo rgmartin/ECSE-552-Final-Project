@@ -1,0 +1,63 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/rp-30.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence THIS IS A VERY COMMON TYPE OF BOW ONE SHOWING MAINLY RED AND YELLOW silence  ==  [737 frames] -45.8784 [Ac=-33812.4 LM=0.0] (Act=13.0)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/rp-31.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence WITH LITTLE OR NO GREEN OR BLUE silence  ==  [512 frames] -42.4713 [Ac=-21745.3 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-01.mfc
+Created lattice with 17 nodes / 16 arcs from label file
+silence ONCE THERE WAS A YOUNG RAT NAMED ARTHUR WHO NEVER COULD MAKE UP HIS MIND silence  ==  [737 frames] -47.6475 [Ac=-35116.2 LM=0.0] (Act=24.9)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-02.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence WHENEVER HIS FRIENDS ASKED HIM IF HE WOULD LIKE TO GO OUT WITH THEM silence  ==  [587 frames] -46.0829 [Ac=-27050.6 LM=0.0] (Act=22.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-03.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence HE WOULD ONLY ANSWER I DON'T KNOW HE WOULDN'T SAY YES OR NO EITHER silence  ==  [850 frames] -44.3773 [Ac=-37720.7 LM=0.0] (Act=30.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-04.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE WOULD ALWAYS SHIRK MAKING A CHOICE HIS AUNT HELEN SAID TO HIM silence  ==  [775 frames] -47.1519 [Ac=-36542.7 LM=0.0] (Act=15.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-05.mfc
+Created lattice with 19 nodes / 18 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence NOW LOOK HERE NO ONE IS GOING TO CARE FOR YOU IF YOU CARRY ON LIKE THIS silence  ==  [725 frames] -48.8413 [Ac=-35410.0 LM=0.0] (Act=19.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-06.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence YOU HAVE NO MORE MIND THAN A BLADE OF GRASS silence  ==  [687 frames] -45.0356 [Ac=-30939.4 LM=0.0] (Act=13.5)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-07.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence ONE RAINY DAY THE RATS HEARD A GREAT NOISE IN THE LOFT silence  ==  [687 frames] -46.1667 [Ac=-31716.5 LM=0.0] (Act=13.0)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-goj/mfc/ar-08.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence THE PINE RAFTERS WERE ALL ROTTEN SO THAT THE BARN WAS RATHER UNSAFE silence  ==  [812 frames] -47.3233 [Ac=-38426.5 LM=0.0] (Act=18.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 39 physical / 39 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0039.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE SHIP SHOULD BE IN WITHIN A WEEK OR TEN DAYS silence  ==  [374 frames] -55.5906 [Ac=-20790.9 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0040.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I SUPPOSE YOU WONDER WHY SHE IS COMING UP HERE silence  ==  [311 frames] -56.2655 [Ac=-17498.6 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0041.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence MEANWHILE I'LL GO OUT TO BREATHE A SPELL silence  ==  [261 frames] -55.4802 [Ac=-14480.3 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0042.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HOW COULD HE EXPLAIN HIS POSSESSION OF THE SKETCH silence  ==  [361 frames] -56.2135 [Ac=-20293.1 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0043.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT SEEMED NEARER TO HIM SINCE HE HAD SEEN AND TALKED WITH GREGSON silence  ==  [424 frames] -57.3278 [Ac=-24307.0 LM=0.0] (Act=10.6)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0044.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HER OWN BETRAYAL OF HERSELF WAS LIKE TONIC TO PHILIP silence  ==  [461 frames] -53.0086 [Ac=-24437.0 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0045.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE MOVED AWAY AS QUIETLY AS HE HAD COME silence  ==  [374 frames] -52.2362 [Ac=-19536.4 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0046.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE GIRL FACED HIM HER EYES SHINING WITH SUDDEN FEAR silence  ==  [449 frames] -53.5339 [Ac=-24036.7 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0047.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence CLOSE BESIDE HIM GLEAMED THE WHITE FANGS OF THE WOLF-DOG silence  ==  [411 frames] -57.0449 [Ac=-23445.4 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/Nathan-20090324-ova/mfc/a0048.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE LOOKED AT THE HANDKERCHIEF MORE CLOSELY silence  ==  [374 frames] -53.5471 [Ac=-20026.6 LM=0.0] (Act=11.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

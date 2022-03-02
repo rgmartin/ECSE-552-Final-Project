@@ -1,0 +1,538 @@
+STAT: jconf successfully finalized
+STAT: *** loading AM00 _default
+Stat: init_phmm: Reading in HMM definition
+Stat: rdhmmdef: ascii format HMM definition
+Stat: rdhmmdef: limit check passed
+Stat: check_hmm_restriction: an HMM with several arcs from initial state found: "sp"
+Stat: rdhmmdef: this HMM requires multipath handling at decoding
+Stat: init_phmm: defined HMMs:  8073
+Stat: init_phmm: loading ascii hmmlist
+Stat: init_phmm: logical names:  9417 in HMMList
+Stat: init_phmm: base phones:    44 used in logical
+Stat: init_phmm: finished reading HMM definitions
+STAT: m_fusion: force multipath HMM handling by user request
+STAT: making pseudo bi/mono-phone for IW-triphone
+Stat: hmm_lookup: 1085 pseudo phones are added to logical HMM list
+STAT: *** AM00 _default loaded
+STAT: *** loading LM00 _default
+STAT: reading [/tmp/fLSesiFhng/MP-20120704-okq.dfa] and [/tmp/fLSesiFhng/MP-20120704-okq.dict]...
+Stat: init_voca: read 56 words
+STAT: done
+STAT: Gram #0 MP-20120704-okq registered
+STAT: Gram #0 MP-20120704-okq: new grammar loaded, now mash it up for recognition
+STAT: Gram #0 MP-20120704-okq: extracting category-pair constraint for the 1st pass
+STAT: Gram #0 MP-20120704-okq: installed
+STAT: Gram #0 MP-20120704-okq: turn on active
+STAT: grammar update completed
+STAT: *** LM00 _default loaded
+STAT: ------
+STAT: All models are ready, go for final fusion
+STAT: [1] create MFCC extraction instance(s)
+STAT: *** create MFCC calculation modules from AM
+STAT: AM 0 _default: create a new module MFCC01
+STAT: 1 MFCC modules created
+STAT: [2] create recognition processing instance(s) with AM and LM
+STAT: composing recognizer instance SR00 _default (AM00 _default, LM00 _default)
+STAT: Building HMM lexicon tree
+STAT: lexicon size: 694 nodes
+STAT: coordination check passed
+STAT: wchmm (re)build completed
+STAT: SR00 _default composed
+STAT: [3] initialize for acoustic HMM calculation
+Stat: outprob_init: state-level mixture PDFs, use calc_mix()
+Stat: addlog: generating addlog table (size = 1953 kB)
+Stat: addlog: addlog table generated
+STAT: [4] prepare MFCC storage(s)
+STAT: All init successfully done
+
+STAT: ###### initialize input device
+----------------------- System Information begin ---------------------
+JuliusLib rev.4.2 (fast)
+
+Engine specification:
+ -  Base setup   : fast
+ -  Supported LM : DFA, N-gram, Word
+ -  Extension    :
+ -  Compiled by  : gcc -O6 -fomit-frame-pointer
+
+------------------------------------------------------------
+Configuration of Modules
+
+ Number of defined modules: AM=1, LM=1, SR=1
+
+ Acoustic Model (with input parameter spec.):
+ - AM00 "_default"
+	hmmfilename=/data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs
+	hmmmapfilename=/data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist
+
+ Language Model:
+ - LM00 "_default"
+	grammar #1:
+	    dfa  = /tmp/fLSesiFhng/MP-20120704-okq.dfa
+	    dict = /tmp/fLSesiFhng/MP-20120704-okq.dict
+
+ Recognizer:
+ - SR00 "_default" (AM00, LM00)
+
+------------------------------------------------------------
+Speech Analysis Module(s)
+
+[MFCC01]  for [AM00 _default]
+
+ Acoustic analysis condition:
+	       parameter = MFCC_0_D_N_Z (25 dim. from 12 cepstrum + c0, abs energy supressed with CMN)
+	sample frequency = 16000 Hz
+	   sample period =  625  (1 = 100ns)
+	     window size =  400 samples (25.0 ms)
+	     frame shift =  160 samples (10.0 ms)
+	    pre-emphasis = 0.97
+	    # filterbank = 24
+	   cepst. lifter = 22
+	      raw energy = False
+	energy normalize = False
+	    delta window = 2 frames (20.0 ms) around
+	     hi freq cut = OFF
+	     lo freq cut = OFF
+	 zero mean frame = OFF
+	       use power = OFF
+	             CVN = OFF
+	            VTLN = OFF
+    spectral subtraction = off
+  cepstral normalization = sentence CMN
+	 base setup from = Julius defaults
+
+------------------------------------------------------------
+Acoustic Model(s)
+
+[AM00 "_default"]
+
+ HMM Info:
+    8073 models, 6341 states, 6341 mpdfs, 6341 Gaussians are defined
+	      model type = context dependency handling ON
+      training parameter = MFCC_N_D_Z_0
+	   vector length = 25
+	number of stream = 1
+	     stream info = [0-24]
+	cov. matrix type = DIAGC
+	   duration type = NULLD
+	max mixture size = 1 Gaussians
+     max length of model = 5 states
+     logical base phones = 44
+       model skip trans. = exist, require multi-path handling
+      skippable models = sp (1 model(s))
+
+ AM Parameters:
+        Gaussian pruning = none (full computation)  (-gprune)
+    short pause HMM name = "sp" specified, "sp" applied (physical)  (-sp)
+  cross-word CD on pass1 = handle by approx. (use average prob. of same LC)
+   sp transition penalty = -1.0
+
+------------------------------------------------------------
+Language Model(s)
+
+[LM00 "_default"] type=grammar
+
+ DFA grammar info:
+      65 nodes, 73 arcs, 56 terminal(category) symbols
+      category-pair matrix: 328 bytes (5312 bytes allocated)
+
+ Vocabulary Info:
+        vocabulary size  = 56 words, 194 models
+        average word len = 3.5 models, 10.4 states
+       maximum state num = 24 nodes per word
+       transparent words = not exist
+       words under class = not exist
+
+ Parameters:
+   found sp category IDs =
+
+------------------------------------------------------------
+Recognizer(s)
+
+[SR00 "_default"]  AM00 "_default"  +  LM00 "_default"
+
+ Lexicon tree:
+	 total node num =    694
+	  root node num =     56
+	  leaf node num =     56
+
+	(-penalty1) IW penalty1 = +0.0
+	(-penalty2) IW penalty2 = +0.0
+	(-cmalpha)CM alpha coef = 0.050000
+
+ Search parameters: 
+	    multi-path handling = yes, multi-path mode enabled
+	(-b) trellis beam width = 500
+	(-bs)score pruning thres= disabled
+	(-n)search candidate num= 1
+	(-s)  search stack size = 500
+	(-m)    search overflow = after 2000 hypothesis poped
+	        2nd pass method = searching sentence, generating N-best
+	(-b2)  pass2 beam width = 500
+	(-lookuprange)lookup range= 5  (tm-5 <= t <tm+5)
+	(-sb)2nd scan beamthres = 80.0 (in logscore)
+	(-n)        search till = 1 candidates found
+	(-output)    and output = 1 candidates out of above
+	 IWCD handling:
+	   1st pass: approximation (use average prob. of same LC)
+	   2nd pass: loose (apply when hypo. is popped and scanned)
+	 all possible words will be expanded in 2nd pass
+	 build_wchmm2() used
+	 lcdset limited by word-pair constraint
+	short pause segmentation = off
+	fall back on search fail = off, returns search failure
+
+------------------------------------------------------------
+Decoding algorithm:
+
+	1st pass input processing = (forced) buffered, batch
+	1st pass method = 1-best approx. generating indexed trellis
+	output word confidence measure based on search-time scores
+
+------------------------------------------------------------
+FrontEnd:
+
+ Input stream:
+	             input type = waveform
+	           input source = waveform file
+	          input filelist = /tmp/fLSesiFhng/fileList
+	          sampling freq. = 16000 Hz required
+	         threaded A/D-in = supported, off
+	   zero frames stripping = on
+	         silence cutting = off
+	    long-term DC removal = off
+	      reject short input = off
+
+----------------------- System Information end -----------------------
+
+------
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0077.wav
+Warning: strip: sample 9518-9534 has zero value, stripped
+Warning: strip: sample 55527-55543 has zero value, stripped
+Warning: strip: sample 55989-56010 has zero value, stripped
+Warning: strip: sample 56188-56205 has zero value, stripped
+Warning: strip: sample 56611-56629 has zero value, stripped
+Warning: strip: sample 60135-60152 has zero value, stripped
+Warning: strip: sample 61890-61905 has zero value, stripped
+Warning: strip: sample 69504-69522 has zero value, stripped
+Warning: strip: sample 71550-71566 has zero value, stripped
+Warning: strip: sample 73556-73571 has zero value, stripped
+STAT: 79821 samples (4.99 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> HIS FACE WAS CREEPING OVER HIS FACE WAS STREAMING WITH
+pass1_best_wordseq: 0 31 32 18 37 38 31 32 18 33 34
+pass1_best_phonemeseq: sil | hh ih z | f ey s | w aa z | k r iy p ix ng | ow v er | hh ih z | f ey s | w aa z | s t r iy m ix ng | w ih dh
+pass1_best_score: -14981.295898
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 0 sentences have been found
+WARNING: 00 _default: got no candidates, search failed
+STAT: 00 _default: 33 generated, 33 pushed, 33 nodes popped in 497
+<search failed>
+
+
+------
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0078.wav
+Warning: strip: sample 49-64 has zero value, stripped
+Warning: strip: sample 8521-8536 has zero value, stripped
+Warning: strip: sample 10938-10953 has zero value, stripped
+Warning: strip: sample 13297-13313 has zero value, stripped
+Warning: strip: sample 15526-15541 has zero value, stripped
+Warning: strip: sample 15870-15896 has zero value, stripped
+Warning: strip: sample 17782-17797 has zero value, stripped
+Warning: strip: sample 19241-19257 has zero value, stripped
+Warning: strip: sample 20873-20890 has zero value, stripped
+Warning: strip: sample 22608-22624 has zero value, stripped
+Warning: strip: sample 23182-23202 has zero value, stripped
+Warning: strip: sample 29706-29722 has zero value, stripped
+Warning: strip: sample 29751-29768 has zero value, stripped
+Warning: strip: sample 30091-30108 has zero value, stripped
+Warning: strip: sample 30185-30206 has zero value, stripped
+Warning: strip: sample 32782-32798 has zero value, stripped
+Warning: strip: sample 33037-33052 has zero value, stripped
+Warning: strip: sample 135789-135804 has zero value, stripped
+Warning: strip: sample 136493-136508 has zero value, stripped
+Warning: strip: sample 138340-138356 has zero value, stripped
+Warning: strip: sample 140348-140365 has zero value, stripped
+STAT: 141628 samples (8.85 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> DEATH HAD COME TO THE FIRE PARTLY SHE DID NOT COME TO THE FIRE PARTLY SHE SAID <s>
+pass1_best_wordseq: 0 53 42 29 15 4 5 6 7 27 28 29 15 4 5 6 7 8 1
+pass1_best_phonemeseq: sil | d eh th | hh ae d | k ah m | t uw | dh ax | f ay er | p aa r t l iy | sh iy | d ih d | n aa t | k ah m | t uw | dh ax | f ay er | p aa r t l iy | sh iy | s eh d | sil
+pass1_best_score: -25564.990234
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 51 generated, 51 pushed, 46 nodes popped in 883
+sentence1: <s> THEN AND AT SUPPER HE TRIED TO FATHOM HER <s>
+wseq1: 0 9 10 11 12 13 14 15 16 17 1
+phseq1: sil | dh eh n | ae n d | ae t | s ah p er | hh iy | t r ay d | t uw | f ae dh ax m | hh er | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.001 1.000
+score1: -25763.359375
+
+
+------
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0079.wav
+Warning: strip: sample 791-806 has zero value, stripped
+Warning: strip: sample 7710-7728 has zero value, stripped
+Warning: strip: sample 8767-8782 has zero value, stripped
+Warning: strip: sample 10211-10226 has zero value, stripped
+Warning: strip: sample 11499-11522 has zero value, stripped
+Warning: strip: sample 11548-11565 has zero value, stripped
+Warning: strip: sample 11807-11822 has zero value, stripped
+Warning: strip: sample 12065-12081 has zero value, stripped
+Warning: strip: sample 19014-19033 has zero value, stripped
+Warning: strip: sample 19220-19236 has zero value, stripped
+Warning: strip: sample 19624-19640 has zero value, stripped
+Warning: strip: sample 20100-20124 has zero value, stripped
+Warning: strip: sample 20126-20142 has zero value, stripped
+Warning: strip: sample 20335-20351 has zero value, stripped
+Warning: strip: sample 20721-20740 has zero value, stripped
+Warning: strip: sample 23583-23598 has zero value, stripped
+Warning: strip: sample 63632-63649 has zero value, stripped
+Warning: strip: sample 66187-66203 has zero value, stripped
+Warning: strip: sample 68386-68401 has zero value, stripped
+Warning: strip: sample 70589-70604 has zero value, stripped
+STAT: 75642 samples (4.73 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> IT WAS A LARGE CANOE <s>
+pass1_best_wordseq: 0 2 18 19 20 21 1
+pass1_best_phonemeseq: sil | ih t | w aa z | ax | l aa r jh | k ax n uw | sil
+pass1_best_score: -12584.871094
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 16 generated, 16 pushed, 8 nodes popped in 471
+sentence1: <s> IT WAS A LARGE CANOE <s>
+wseq1: 0 2 18 19 20 21 1
+phseq1: sil | ih t | w aa z | ax | l aa r jh | k ax n uw | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 0.765 1.000
+score1: -12580.262695
+
+
+------
+.......................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0080.wav
+Warning: strip: sample 2163-2181 has zero value, stripped
+Warning: strip: sample 5086-5101 has zero value, stripped
+Warning: strip: sample 74742-74757 has zero value, stripped
+Warning: strip: sample 74868-74884 has zero value, stripped
+Warning: strip: sample 75079-75094 has zero value, stripped
+Warning: strip: sample 76824-76839 has zero value, stripped
+Warning: strip: sample 77821-77837 has zero value, stripped
+Warning: strip: sample 79061-79076 has zero value, stripped
+STAT: 85867 samples (5.37 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> IT WAS CREEPING OVER HIS FACE WAS A
+pass1_best_wordseq: 0 2 18 37 38 31 32 18 19
+pass1_best_phonemeseq: sil | ih t | w aa z | k r iy p ix ng | ow v er | hh ih z | f ey s | w aa z | ax
+pass1_best_score: -16374.406250
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 34 generated, 34 pushed, 28 nodes popped in 535
+sentence1: <s> WHAT IF SHE DID NOT COME TO THE ROCK <s>
+wseq1: 0 22 23 7 27 28 29 15 4 30 1
+phseq1: sil | w ah t | ih f | sh iy | d ih d | n aa t | k ah m | t uw | dh ax | r aa k | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.000 1.000
+score1: -16574.076172
+
+
+------
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0081.wav
+Warning: strip: sample 303-320 has zero value, stripped
+Warning: strip: sample 78429-78450 has zero value, stripped
+Warning: strip: sample 81415-81434 has zero value, stripped
+Warning: strip: sample 81555-81576 has zero value, stripped
+Warning: strip: sample 82042-82057 has zero value, stripped
+Warning: strip: sample 82581-82603 has zero value, stripped
+Warning: strip: sample 83561-83576 has zero value, stripped
+Warning: strip: sample 85751-85766 has zero value, stripped
+Warning: strip: sample 86396-86414 has zero value, stripped
+Warning: strip: sample 86880-86904 has zero value, stripped
+STAT: 87803 samples (5.49 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> WHAT IF SHE DID NOT COME TO THE ROCK <s>
+pass1_best_wordseq: 0 22 23 7 27 28 29 15 4 30 1
+pass1_best_phonemeseq: sil | w ah t | ih f | sh iy | d ih d | n aa t | k ah m | t uw | dh ax | r aa k | sil
+pass1_best_score: -16703.845703
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 20 generated, 20 pushed, 12 nodes popped in 547
+sentence1: <s> WHAT IF SHE DID NOT COME TO THE ROCK <s>
+wseq1: 0 22 23 7 27 28 29 15 4 30 1
+phseq1: sil | w ah t | ih f | sh iy | d ih d | n aa t | k ah m | t uw | dh ax | r aa k | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -16681.351562
+
+
+------
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0082.wav
+Warning: strip: sample 265-280 has zero value, stripped
+Warning: strip: sample 58820-58835 has zero value, stripped
+Warning: strip: sample 60525-60546 has zero value, stripped
+Warning: strip: sample 63465-63484 has zero value, stripped
+Warning: strip: sample 71048-71064 has zero value, stripped
+Warning: strip: sample 71213-71231 has zero value, stripped
+Warning: strip: sample 71464-71486 has zero value, stripped
+Warning: strip: sample 74095-74111 has zero value, stripped
+Warning: strip: sample 78185-78200 has zero value, stripped
+Warning: strip: sample 78690-78705 has zero value, stripped
+Warning: strip: sample 78920-78935 has zero value, stripped
+STAT: 83802 samples (5.24 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> HIS FACE WAS CREEPING OVER HIS FACE <s>
+pass1_best_wordseq: 0 31 32 18 37 38 31 32 1
+pass1_best_phonemeseq: sil | hh ih z | f ey s | w aa z | k r iy p ix ng | ow v er | hh ih z | f ey s | sil
+pass1_best_score: -14993.084961
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 34 generated, 34 pushed, 29 nodes popped in 522
+sentence1: <s> A SHADOW WAS CREEPING OVER PIERRE'S EYES <s>
+wseq1: 0 19 36 18 37 38 39 40 1
+phseq1: sil | ax | sh ae d ow | w aa z | k r iy p ix ng | ow v er | p iy eh r z | ay z | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.114 1.000
+score1: -15196.190430
+
+
+------
+............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0083.wav
+Warning: strip: sample 6939-6956 has zero value, stripped
+Warning: strip: sample 7049-7066 has zero value, stripped
+Warning: strip: sample 7531-7546 has zero value, stripped
+Warning: strip: sample 10922-10939 has zero value, stripped
+Warning: strip: sample 82148-82167 has zero value, stripped
+Warning: strip: sample 88919-88934 has zero value, stripped
+Warning: strip: sample 90305-90320 has zero value, stripped
+Warning: strip: sample 91297-91312 has zero value, stripped
+STAT: 91862 samples (5.74 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> A SHADOW WAS CREEPING OVER PIERRE'S EYES <s>
+pass1_best_wordseq: 0 19 36 18 37 38 39 40 1
+pass1_best_phonemeseq: sil | ax | sh ae d ow | w aa z | k r iy p ix ng | ow v er | p iy eh r z | ay z | sil
+pass1_best_score: -16587.195312
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 18 generated, 18 pushed, 10 nodes popped in 572
+sentence1: <s> A SHADOW WAS CREEPING OVER PIERRE'S EYES <s>
+wseq1: 0 19 36 18 37 38 39 40 1
+phseq1: sil | ax | sh ae d ow | w aa z | k r iy p ix ng | ow v er | p iy eh r z | ay z | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.998 1.000
+score1: -16581.068359
+
+
+------
+................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0084.wav
+Warning: strip: sample 286-301 has zero value, stripped
+Warning: strip: sample 1625-1644 has zero value, stripped
+Warning: strip: sample 2611-2629 has zero value, stripped
+Warning: strip: sample 4078-4096 has zero value, stripped
+Warning: strip: sample 6457-6479 has zero value, stripped
+Warning: strip: sample 12251-12266 has zero value, stripped
+Warning: strip: sample 13347-13363 has zero value, stripped
+Warning: strip: sample 89205-89220 has zero value, stripped
+Warning: strip: sample 128423-128441 has zero value, stripped
+Warning: strip: sample 132310-132326 has zero value, stripped
+Warning: strip: sample 132414-132430 has zero value, stripped
+Warning: strip: sample 136082-136098 has zero value, stripped
+Warning: strip: sample 138352-138370 has zero value, stripped
+Warning: strip: sample 140946-140964 has zero value, stripped
+Warning: strip: sample 141051-141068 has zero value, stripped
+Warning: strip: sample 141820-141838 has zero value, stripped
+Warning: strip: sample 142667-142683 has zero value, stripped
+STAT: 143692 samples (8.98 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> SCARCELY HAD HE UTTERED THE NAME WHEN PIERRE'S CLOSING EYES SHOT OPEN <s>
+pass1_best_wordseq: 0 41 42 13 43 4 44 45 39 46 40 47 48 1
+pass1_best_phonemeseq: sil | s k eh r s l iy | hh ae d | hh iy | ah dx er d | dh ax | n ey m | w eh n | p iy eh r z | k l ow z ix ng | ay z | sh aa t | ow p ax n | sil
+pass1_best_score: -26946.103516
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 23 generated, 23 pushed, 15 nodes popped in 896
+sentence1: <s> SCARCELY HAD HE UTTERED THE NAME WHEN PIERRE'S CLOSING EYES SHOT OPEN <s>
+wseq1: 0 41 42 13 43 4 44 45 39 46 40 47 48 1
+phseq1: sil | s k eh r s l iy | hh ae d | hh iy | ah dx er d | dh ax | n ey m | w eh n | p iy eh r z | k l ow z ix ng | ay z | sh aa t | ow p ax n | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -26919.097656
+
+
+------
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0085.wav
+Warning: strip: sample 3310-3325 has zero value, stripped
+Warning: strip: sample 4062-4080 has zero value, stripped
+Warning: strip: sample 4231-4246 has zero value, stripped
+Warning: strip: sample 7089-7114 has zero value, stripped
+Warning: strip: sample 9595-9611 has zero value, stripped
+Warning: strip: sample 11533-11551 has zero value, stripped
+Warning: strip: sample 11701-11718 has zero value, stripped
+Warning: strip: sample 18114-18132 has zero value, stripped
+Warning: strip: sample 18525-18544 has zero value, stripped
+Warning: strip: sample 19157-19172 has zero value, stripped
+Warning: strip: sample 19417-19433 has zero value, stripped
+Warning: strip: sample 79073-79090 has zero value, stripped
+Warning: strip: sample 79470-79487 has zero value, stripped
+Warning: strip: sample 80595-80612 has zero value, stripped
+Warning: strip: sample 81010-81027 has zero value, stripped
+Warning: strip: sample 81884-81905 has zero value, stripped
+Warning: strip: sample 83268-83288 has zero value, stripped
+Warning: strip: sample 83823-83839 has zero value, stripped
+Warning: strip: sample 84088-84103 has zero value, stripped
+Warning: strip: sample 86633-86655 has zero value, stripped
+Warning: strip: sample 87133-87152 has zero value, stripped
+Warning: strip: sample 87433-87451 has zero value, stripped
+STAT: 87587 samples (5.47 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> IT WAS A TRICKLE OF FRESH BLOOD RAN OVER HIS FACE <s>
+pass1_best_wordseq: 0 2 18 19 49 50 51 35 52 38 31 32 1
+pass1_best_phonemeseq: sil | ih t | w aa z | ax | t r ih k ax l | ah v | f r eh sh | b l ah d | r ae n | ow v er | hh ih z | f ey s | sil
+pass1_best_score: -15188.343750
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 20 generated, 20 pushed, 12 nodes popped in 545
+sentence1: <s> A TRICKLE OF FRESH BLOOD RAN OVER HIS FACE <s>
+wseq1: 0 19 49 50 51 35 52 38 31 32 1
+phseq1: sil | ax | t r ih k ax l | ah v | f r eh sh | b l ah d | r ae n | ow v er | hh ih z | f ey s | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 0.999 1.000
+score1: -15190.830078
+
+
+------
+.............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/fLSesiFhng/MP-20120704-okq/a0086.wav
+Warning: strip: sample 278-297 has zero value, stripped
+Warning: strip: sample 833-849 has zero value, stripped
+Warning: strip: sample 1060-1075 has zero value, stripped
+Warning: strip: sample 1493-1509 has zero value, stripped
+Warning: strip: sample 4695-4711 has zero value, stripped
+Warning: strip: sample 5010-5027 has zero value, stripped
+Warning: strip: sample 6950-6969 has zero value, stripped
+Warning: strip: sample 8232-8248 has zero value, stripped
+Warning: strip: sample 9918-9933 has zero value, stripped
+Warning: strip: sample 12667-12685 has zero value, stripped
+Warning: strip: sample 14894-14909 has zero value, stripped
+Warning: strip: sample 75209-75224 has zero value, stripped
+STAT: 81791 samples (5.11 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> DEATH HAD COME WITH TERRIBLE SUDDENNESS <s>
+pass1_best_wordseq: 0 53 42 29 34 54 55 1
+pass1_best_phonemeseq: sil | d eh th | hh ae d | k ah m | w ih dh | t eh r ax b ax l | s ah d ax n n ax s | sil
+pass1_best_score: -14298.768555
+### Recognition: 2nd pass (RL heuristic best-first)
+STAT: 00 _default: 17 generated, 17 pushed, 9 nodes popped in 509
+sentence1: <s> DEATH HAD COME WITH TERRIBLE SUDDENNESS <s>
+wseq1: 0 53 42 29 34 54 55 1
+phseq1: sil | d eh th | hh ae d | k ah m | w ih dh | t eh r ax b ax l | s ah d ax n n ax s | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -14282.864258
+
+
+------
+10 files processed
+### read waveform input

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 44 physical / 44 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-18.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE ROOF MAY NOT COME DOWN YET silence  ==  [448 frames] -47.9525 [Ac=-21482.7 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-19.mfc
+Created lattice with 19 nodes / 18 arcs from label file
+silence WELL SAID THE OLD RAT WE CAN'T WAIT FOR YOU TO JOIN US RIGHT ABOUT FACE MARCH silence  ==  [936 frames] -53.9597 [Ac=-50506.3 LM=0.0] (Act=14.7)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-20.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence ARTHUR STOOD AND WATCHED THEM HURRY AWAY silence  ==  [536 frames] -48.4035 [Ac=-25944.3 LM=0.0] (Act=6.9)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-21.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence I THINK I'LL GO TOMORROW HE SAID CALMLY TO HIMSELF BUT THEN AGAIN I DON'T KNOW silence  ==  [773 frames] -53.7548 [Ac=-41552.4 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-22.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT'S SO NICE AND SNUG HERE THAT NIGHT THERE WAS A BIG CRASH silence  ==  [661 frames] -53.3784 [Ac=-35283.1 LM=0.0] (Act=11.5)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-23.mfc
+Created lattice with 20 nodes / 19 arcs from label file
+silence IN THE FOGGY MORNING SOME MEN WITH SOME BOYS AND GIRLS RODE UP AND LOOKED AT THE BARN silence  ==  [848 frames] -53.1889 [Ac=-45104.2 LM=0.0] (Act=12.8)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/ar-24.mfc
+Created lattice with 22 nodes / 21 arcs from label file
+silence ONE OF THEM MOVED A BOARD AND SAW A RAT QUITE DEAD HALF IN AND HALF OUT OF HIS HOLE silence  ==  [823 frames] -55.4261 [Ac=-45615.7 LM=0.0] (Act=12.4)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/rb-01.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HAND-HELD DEVICES SUCH AS PERSONAL DIGITAL ASSISTANTS AND SMARTPHONES ARE QUITE SMALL silence  ==  [861 frames] -56.7050 [Ac=-48823.0 LM=0.0] (Act=14.6)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/rb-02.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence MOST OF THEM USE EITHER A TOUCH SCREEN INTERFACE OR A MINIATURIZED KEYBOARD FOR USER INPUT silence  ==  [948 frames] -56.2399 [Ac=-53315.4 LM=0.0] (Act=11.7)
+Aligning File: /data/UserSubmissions/Quarantine/Airwings-20101216-vqx/mfc/rb-03.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence BUILT-IN KEYBOARDS ARE USUALLY OPERATED WITH THE THUMBS SINCE TOUCH TYPING AND silence  ==  [898 frames] -54.8642 [Ac=-49268.1 LM=0.0] (Act=12.0)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

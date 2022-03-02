@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/i6g07pYBsn/words.mlf -i /tmp/i6g07pYBsn/aligned.out -S /tmp/i6g07pYBsn/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0145.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END I HAVE TO BE CAREFUL OF THEM AS THEY TEAR VERY EASILY SENT-END  ==  [473 frames] -57.2257 [Ac=-27067.7 LM=0.0] (Act=13.0)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0146.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END OF COURSE THAT IS UNINTERESTING SHE CONTINUED SENT-END  ==  [398 frames] -56.3729 [Ac=-22436.4 LM=0.0] (Act=10.9)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0147.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END A MOMENT BEFORE HE WAS INTOXICATED BY A JOY THAT WAS ALMOST MADNESS SENT-END  ==  [536 frames] -58.4490 [Ac=-31328.7 LM=0.0] (Act=14.1)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0148.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END NOW THESE THINGS HAD BEEN STRUCK DEAD WITHIN HIM SENT-END  ==  [436 frames] -55.7961 [Ac=-24327.1 LM=0.0] (Act=9.8)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0149.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END FOR AN INSTANT HE SAW PIERRE DRAWN LIKE A SILHOUETTE AGAINST THE SKY SENT-END  ==  [536 frames] -58.5286 [Ac=-31371.3 LM=0.0] (Act=10.1)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0150.wav
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END GOODBYE PIERRE HE SHOUTED SENT-END  ==  [386 frames] -51.9548 [Ac=-20054.5 LM=0.0] (Act=6.8)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0151.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AND MACDOUGALL WAS BEYOND THE TRAIL WITH THREE WEEKS TO SPARE SENT-END  ==  [511 frames] -59.3784 [Ac=-30342.4 LM=0.0] (Act=11.9)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0152.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END PHILIP THRUST HIMSELF AGAINST IT AND ENTERED SENT-END  ==  [461 frames] -56.4683 [Ac=-26031.9 LM=0.0] (Act=8.8)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0153.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END MACDOUGALL TAPPED HIS FOREHEAD SUSPICIOUSLY WITH A STUBBY FOREFINGER SENT-END  ==  [548 frames] -57.5714 [Ac=-31549.2 LM=0.0] (Act=9.8)
+Aligning File: /tmp/i6g07pYBsn/PacketCollision-20120324-veq/a0154.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE WAS SMOOTH-SHAVEN AND HIS HAIR AND EYES WERE BLACK SENT-END  ==  [461 frames] -56.9420 [Ac=-26250.2 LM=0.0] (Act=11.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

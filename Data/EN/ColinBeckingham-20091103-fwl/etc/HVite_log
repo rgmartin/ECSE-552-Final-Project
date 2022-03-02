@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 44 physical / 44 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/ar-20.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence ARTHUR STOOD AND WATCHED THEM HURRY AWAY silence  ==  [562 frames] -53.7436 [Ac=-30203.9 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/ar-21.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence I THINK I'LL GO TOMORROW HE SAID CALMLY TO HIMSELF BUT THEN AGAIN I DON'T KNOW silence  ==  [800 frames] -56.2605 [Ac=-45008.4 LM=0.0] (Act=11.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/ar-22.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT'S SO NICE AND SNUG HERE THAT NIGHT THERE WAS A BIG CRASH silence  ==  [725 frames] -55.4372 [Ac=-40192.0 LM=0.0] (Act=14.5)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/ar-23.mfc
+Created lattice with 20 nodes / 19 arcs from label file
+silence IN THE FOGGY MORNING SOME MEN WITH SOME BOYS AND GIRLS RODE UP AND LOOKED AT THE BARN silence  ==  [912 frames] -55.7795 [Ac=-50870.9 LM=0.0] (Act=13.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/ar-24.mfc
+Created lattice with 22 nodes / 21 arcs from label file
+silence ONE OF THEM MOVED A BOARD AND SAW A RAT QUITE DEAD HALF IN AND HALF OUT OF HIS HOLE silence  ==  [950 frames] -56.6555 [Ac=-53822.7 LM=0.0] (Act=14.9)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/rb-01.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HAND-HELD DEVICES SUCH AS PERSONAL DIGITAL ASSISTANTS AND SMARTPHONES ARE QUITE SMALL silence  ==  [925 frames] -56.0631 [Ac=-51858.4 LM=0.0] (Act=14.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/rb-02.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence MOST OF THEM USE EITHER A TOUCH SCREEN INTERFACE OR A MINIATURIZED KEYBOARD FOR USER INPUT silence  ==  [975 frames] -57.6631 [Ac=-56221.5 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/rb-03.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence BUILT-IN KEYBOARDS ARE USUALLY OPERATED WITH THE THUMBS SINCE TOUCH TYPING AND silence  ==  [937 frames] -55.0309 [Ac=-51564.0 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/rb-04.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence HUNT AND PECK TYPING USING THE FINGERS ARE PRETTY MUCH OUT OF THE QUESTION silence  ==  [812 frames] -56.0620 [Ac=-45522.4 LM=0.0] (Act=11.9)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-fwl/mfc/rb-05.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence DEVICES WITH A TOUCH SCREEN INTERFACE OFTEN USE AN ON-SCREEN KEYBOARD OR HANDWRITING silence  ==  [975 frames] -56.2205 [Ac=-54815.0 LM=0.0] (Act=11.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

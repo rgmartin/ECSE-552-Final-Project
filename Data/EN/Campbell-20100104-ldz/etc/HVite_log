@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 43 physical / 43 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0471.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I SAW MR PIKE NOD HIS HEAD GRIMLY AND SARCASTICALLY silence  ==  [501 frames] -57.4374 [Ac=-28776.1 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0472.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence HE IS TOO KEENLY INTELLIGENT TOO SHARPLY SENSITIVE SUCCESSFULLY TO ENDURE silence  ==  [621 frames] -60.8902 [Ac=-37812.8 LM=0.0] (Act=12.1)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0473.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THE NIGHT WAS CALM AND SNOWY silence  ==  [382 frames] -53.7320 [Ac=-20525.6 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0474.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I SAILED THIRD MATE IN THE LITTLE VAMPIRE BEFORE YOU WERE BORN silence  ==  [484 frames] -57.4181 [Ac=-27790.4 LM=0.0] (Act=11.3)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0475.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HIS OUTSTRETCHED ARM DROPPED TO HIS SIDE AND HE PAUSED silence  ==  [519 frames] -55.5611 [Ac=-28836.2 LM=0.0] (Act=11.7)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0476.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AT THIS MOMENT I FELT A STIR AT MY SHOULDER silence  ==  [459 frames] -52.8778 [Ac=-24270.9 LM=0.0] (Act=10.1)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0477.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WADA LOUIS AND THE STEWARD ARE SERVANTS OF ASIATIC BREED silence  ==  [578 frames] -55.5008 [Ac=-32079.5 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0478.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence ALSO SHE HAS FORBIDDEN THEM SMOKING THEIR PIPES IN THE AFTER-ROOM silence  ==  [536 frames] -55.5111 [Ac=-29753.9 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0479.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I TRIED TO READ GEORGE MOORE LAST NIGHT AND WAS DREADFULLY BORED silence  ==  [544 frames] -55.5007 [Ac=-30192.4 LM=0.0] (Act=11.7)
+Aligning File: /data/UserSubmissions/Quarantine/Campbell-20100104-ldz/mfc/a0480.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence TOM SPINK HAS A HARPOON silence  ==  [356 frames] -50.8599 [Ac=-18106.1 LM=0.0] (Act=8.1)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/iY2sbfY85s/words.mlf -i /tmp/iY2sbfY85s/aligned.out -S /tmp/iY2sbfY85s/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0270.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END AND AFTER THE BATH A SHAVE WOULD NOT BE BAD SENT-END  ==  [548 frames] -57.2530 [Ac=-31374.7 LM=0.0] (Act=11.5)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0271.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END NOW PLEASE GIVE A PLAIN STATEMENT OF WHAT OCCURRED SENT-END  ==  [511 frames] -58.5658 [Ac=-29927.1 LM=0.0] (Act=10.6)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0272.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END YOU CAN TAKE A VACATION ON PAY SENT-END  ==  [436 frames] -55.7709 [Ac=-24316.1 LM=0.0] (Act=9.5)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0273.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THEY ARE BIG TREES AND REQUIRE PLENTY OF ROOM SENT-END  ==  [436 frames] -60.7622 [Ac=-26492.3 LM=0.0] (Act=12.2)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0274.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END AND RAOUL LISTENED AGAIN TO THE TALE OF THE HOUSE SENT-END  ==  [461 frames] -58.9400 [Ac=-27171.3 LM=0.0] (Act=11.9)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0275.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THERE ARE NO KIDDIES AND HALF GROWN YOUTHS AMONG THEM SENT-END  ==  [498 frames] -60.5672 [Ac=-30162.5 LM=0.0] (Act=11.6)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0276.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END OOLONG ATOLL WAS ONE HUNDRED AND FORTY MILES IN CIRCUMFERENCE SENT-END  ==  [673 frames] -61.6990 [Ac=-41523.4 LM=0.0] (Act=13.0)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0277.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END MCCOY FOUND A STIFLING POISONOUS ATMOSPHERE IN THE PENT CABIN SENT-END  ==  [673 frames] -59.4596 [Ac=-40016.3 LM=0.0] (Act=10.5)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0278.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END IT WOULD GIVE ME NERVOUS PROSTRATION SENT-END  ==  [436 frames] -56.3758 [Ac=-24579.8 LM=0.0] (Act=8.5)
+Aligning File: /tmp/iY2sbfY85s/DantheDentalman-20130406-wbj/a0279.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END SHE SAID WITH CHATTERING TEETH SENT-END  ==  [373 frames] -57.4421 [Ac=-21425.9 LM=0.0] (Act=7.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/VF7gSZAm5O/words.mlf -i /tmp/VF7gSZAm5O/aligned.out -S /tmp/VF7gSZAm5O/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0042.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END TEN MINUTES HAD NOT ELAPSED SINCE HE HAD DROPPED THE HANDKERCHIEF SENT-END  ==  [661 frames] -56.1850 [Ac=-37138.3 LM=0.0] (Act=11.4)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0043.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END IT WON'T BE FOR SALE SENT-END  ==  [411 frames] -52.1088 [Ac=-21416.7 LM=0.0] (Act=6.7)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0044.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END FOR A FEW MOMENTS HE ATE IN SILENCE SENT-END  ==  [536 frames] -54.3558 [Ac=-29134.7 LM=0.0] (Act=8.1)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0045.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END PHILIP DID NOT PURSUE THE SUBJECT SENT-END  ==  [436 frames] -54.9125 [Ac=-23941.9 LM=0.0] (Act=9.2)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0046.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END PHILIP PRODUCED A COUPLE OF CIGARS AND TOOK A CHAIR OPPOSITE HIM SENT-END  ==  [573 frames] -57.4891 [Ac=-32941.3 LM=0.0] (Act=12.0)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0047.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END SUPPOSE YOU SAW ME AT WORK THROUGH THE WINDOW SENT-END  ==  [511 frames] -56.4143 [Ac=-28827.7 LM=0.0] (Act=9.2)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0048.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END HE LOOKED LIKE ONE WHO HAD PASSED THROUGH AN UNCOMFORTABLE HOUR OR TWO SENT-END  ==  [661 frames] -58.5671 [Ac=-38712.9 LM=0.0] (Act=12.6)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0049.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THERE WAS NOTHING MORE EXCEPT A LARGE INK BLOT UNDER THE WORDS SENT-END  ==  [823 frames] -56.3307 [Ac=-46360.2 LM=0.0] (Act=9.3)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0050.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END ALL THIS DAY GREGSON REMAINED IN THE CABIN SENT-END  ==  [536 frames] -54.9341 [Ac=-29444.7 LM=0.0] (Act=9.2)
+Aligning File: /tmp/VF7gSZAm5O/KalikiCEO-20130402-cfx/b0051.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THE SIXTH DAY HE SPENT IN THE CABIN WITH GREGSON SENT-END  ==  [536 frames] -55.5219 [Ac=-29759.7 LM=0.0] (Act=10.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

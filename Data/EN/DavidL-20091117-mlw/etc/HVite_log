@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-22.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THAT ALLOWS THE END USER TO ISSUE A WIDER ARRAY OF COMMANDS silence  ==  [737 frames] -48.1105 [Ac=-35457.5 LM=0.0] (Act=12.3)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-23.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence IN PRACTICE THIS WILL ALLOW END USERS TO ISSUE COMMANDS SUCH AS GO TO PREVIOUS PARAGRAPH silence  ==  [1013 frames] -49.5257 [Ac=-50169.5 LM=0.0] (Act=16.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-24.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence GO UP ONE PARAGRAPH OR EVEN I WANT TO EDIT THE PREVIOUS PARAGRAPH silence  ==  [837 frames] -46.6117 [Ac=-39014.0 LM=0.0] (Act=11.8)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-25.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence WHERE ALL THESE COMMANDS MIGHT LEAD TO THE SAME RESULT ON THAT POWERFUL PC silence  ==  [900 frames] -47.7913 [Ac=-43012.2 LM=0.0] (Act=13.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-26.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE SOFTWARE ON A HAND-HELD DEVICE MIGHT ONLY RESPOND TO ONE SPECIFIC COMMAND silence  ==  [825 frames] -49.9529 [Ac=-41211.1 LM=0.0] (Act=14.8)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-27.mfc
+Created lattice with 16 nodes / 15 arcs from label file
+silence THE SAME WOULD BE THE CASE FOR OTHER TASKS SUCH AS BROWSING THE WEB silence  ==  [737 frames] -47.5069 [Ac=-35012.6 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-28.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence SEARCHING FOR DOCUMENTS IN THE FILE BROWSER AND STARTING OR CLOSING PROGRAMS silence  ==  [837 frames] -48.3542 [Ac=-40472.4 LM=0.0] (Act=15.2)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-29.mfc
+Created lattice with 17 nodes / 16 arcs from label file
+silence THEREFORE BEHIND YOUR PC GO ONLINE START MY WEB BROWSER OR VISIT MY HOME PAGE silence  ==  [1075 frames] -48.4864 [Ac=-52122.9 LM=0.0] (Act=19.4)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-30.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence MIGHT ALL BE VALID COMMANDS silence  ==  [549 frames] -44.9489 [Ac=-24676.9 LM=0.0] (Act=12.6)
+Aligning File: /data/UserSubmissions/Quarantine/DavidL-20091117-mlw/mfc/rb-31.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence WHEREAS ON YOUR MOBILE PHONE YOU WOULD HAVE TO STICK TO RUN BROWSER silence  ==  [837 frames] -46.3632 [Ac=-38806.0 LM=0.0] (Act=12.4)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

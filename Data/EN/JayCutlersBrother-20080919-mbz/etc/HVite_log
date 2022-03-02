@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0069.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence IT WAS HIS INTENTION TO RETURN TO EILEEN AND HER FATHER silence  ==  [411 frames] -60.8788 [Ac=-25021.2 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0070.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence HE WOULD FIRST HUNT UP GREGSON AND BEGIN HIS WORK THERE silence  ==  [336 frames] -60.0687 [Ac=-20183.1 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0071.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence WHAT WAS THE OBJECT OF YOUR LITTLE SENSATION silence  ==  [411 frames] -52.9604 [Ac=-21766.7 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0072.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence BUT WHO WAS EILEEN'S DOUBLE silence  ==  [223 frames] -56.6597 [Ac=-12635.1 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0073.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE PROMOTER'S EYES WERE HEAVY WITH LITTLE PUFFY BAGS UNDER THEM silence  ==  [461 frames] -55.6804 [Ac=-25668.7 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0074.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND NOW DOWN THERE EILEEN WAS WAITING FOR HIM silence  ==  [487 frames] -54.5406 [Ac=-26561.3 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0075.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THERE HAS BEEN A CHANGE SHE INTERRUPTED HIM silence  ==  [311 frames] -55.8419 [Ac=-17366.8 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0076.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE GRAY EYES FALTERED THE FLUSH DEEPENED silence  ==  [480 frames] -53.1883 [Ac=-25530.4 LM=0.0] (Act=6.6)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0077.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence IT IS THE FIRE PARTLY SHE SAID silence  ==  [474 frames] -51.1673 [Ac=-24253.3 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/JayCutlersBrother-20080919-mbz/mfc/a0078.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THEN AND AT SUPPER HE TRIED TO FATHOM HER silence  ==  [587 frames] -50.8664 [Ac=-29858.5 LM=0.0] (Act=10.9)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

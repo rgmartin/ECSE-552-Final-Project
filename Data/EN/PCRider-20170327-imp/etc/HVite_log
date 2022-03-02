@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-04-04/HTK/16kHz_16bit/MFCC_O_D/macros -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-04-04/HTK/16kHz_16bit/MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/cAhhaDbJDC/words.mlf -i /tmp/cAhhaDbJDC/aligned.out -S /tmp/cAhhaDbJDC/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Nightly_Builds/AcousticModel-2017-04-04/HTK/16kHz_16bit/MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 15977 physical / 24402 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0624.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END IN CLOSING THANK YOU VERY MUCH FOR THE EFFORT SENT-END  ==  [611 frames] -55.4380 [Ac=-33872.6 LM=0.0] (Act=10.7)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0625.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THAT YOU HAVE EXPENDED ON THIS PROJECT THUS FAR SENT-END  ==  [711 frames] -56.6587 [Ac=-40284.3 LM=0.0] (Act=12.1)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0626.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END IS THERE ANYTHING THAT I CAN DO TO HELP YOU SENT-END  ==  [511 frames] -57.5996 [Ac=-29433.4 LM=0.0] (Act=10.1)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0627.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END I AM ATTACHING MY REPORT SENT-END  ==  [436 frames] -53.6648 [Ac=-23397.8 LM=0.0] (Act=9.1)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0628.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END BUT WILL BE UNABLE TO JOIN THE MEETING SENT-END  ==  [511 frames] -57.1366 [Ac=-29196.8 LM=0.0] (Act=11.5)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0629.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END AS I HAVE A REGULARLY SCHEDULED MEETING AT THAT TIME SENT-END  ==  [761 frames] -56.5289 [Ac=-43018.5 LM=0.0] (Act=13.2)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0630.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END THEREAFTER WE WILL HAVE IT SIGNED SENT-END  ==  [473 frames] -56.4191 [Ac=-26686.2 LM=0.0] (Act=9.4)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0631.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END AND WILL RETURN A FULLY EXECUTED COPY TO YOU SENT-END  ==  [748 frames] -55.7899 [Ac=-41730.9 LM=0.0] (Act=10.2)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0632.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THANK YOU FOR TAKING CARE OF THIS SENT-END  ==  [461 frames] -54.5759 [Ac=-25159.5 LM=0.0] (Act=8.9)
+Aligning File: /tmp/cAhhaDbJDC/PCRider-20170327-imp/en-0633.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END I REALLY APPRECIATE YOUR PRO ACTIVE INVOLVEMENT WITH THE NEW HIRES SENT-END  ==  [711 frames] -58.7274 [Ac=-41755.2 LM=0.0] (Act=12.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

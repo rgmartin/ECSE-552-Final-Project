@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 39 physical / 39 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0121.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence I WANT MY MEN TO WORK BY THEMSELVES silence  ==  [411 frames] -42.8094 [Ac=-17594.7 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0122.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence PHILIP SAW MACDOUGALL SOON AFTER HIS SHORT TALK WITH THORPE silence  ==  [612 frames] -45.4367 [Ac=-27807.3 LM=0.0] (Act=11.2)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0123.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence NEITHER COULD THEY UNDERSTAND THE GROWING DISAFFECTION AMONG THORPE'S MEN silence  ==  [537 frames] -48.8599 [Ac=-26237.8 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0124.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence TWO WEEKS PASSED AND IN THAT TIME THORPE LEFT CAMP THREE TIMES silence  ==  [537 frames] -47.9353 [Ac=-25741.3 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0125.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence IT WAS THE THIRD OR FOURTH TIME THAT PHILIP HAD HEARD MACDOUGALL SWEAR silence  ==  [662 frames] -43.2383 [Ac=-28623.7 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0126.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BLOOD WAS OOZING SLOWLY FROM THE WOUNDED MAN'S RIGHT BREAST silence  ==  [574 frames] -45.9530 [Ac=-26377.0 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0127.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE DESTROYED EVERYTHING THAT HAD BELONGED TO THE WOMAN silence  ==  [436 frames] -43.6320 [Ac=-19023.5 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0128.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence PHILIP BENT LOW OVER PIERRE silence  ==  [361 frames] -40.3658 [Ac=-14572.1 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0129.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence DID THORPE GO TO SEE ANY ONE IN CHURCHILL silence  ==  [399 frames] -47.2996 [Ac=-18872.5 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-ked/mfc/b0130.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence SHE SAW THE ANSWER IN HIS FACE silence  ==  [324 frames] -49.1100 [Ac=-15911.6 LM=0.0] (Act=6.7)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

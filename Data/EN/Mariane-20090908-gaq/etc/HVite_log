@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0128.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THIS ONE HOPE WAS DESTROYED AS QUICKLY AS IT WAS BORN silence  ==  [512 frames] -53.5354 [Ac=-27410.1 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0129.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence HER FACE WAS AGAINST HIS BREAST silence  ==  [349 frames] -53.4734 [Ac=-18662.2 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0130.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence SHE WAS HIS NOW FOREVER silence  ==  [411 frames] -49.5144 [Ac=-20350.4 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0131.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence PROVIDENCE HAD DELIVERED HIM THROUGH THE MAELSTROM silence  ==  [499 frames] -51.3918 [Ac=-25644.5 LM=0.0] (Act=11.3)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0132.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence A CRY OF JOY BURST FROM PHILIP'S LIPS silence  ==  [411 frames] -53.7495 [Ac=-22091.1 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0133.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence PHILIP BEGAN TO FEEL THAT HE HAD FOOLISHLY OVERESTIMATED HIS STRENGTH silence  ==  [762 frames] -53.4919 [Ac=-40760.9 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0134.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE OBEYED THE PRESSURE OF HER HAND silence  ==  [386 frames] -48.9166 [Ac=-18881.8 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0135.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I AM GOING TO SURPRISE FATHER AND YOU WILL GO WITH PIERRE silence  ==  [587 frames] -51.2868 [Ac=-30105.4 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0136.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence ABOUT HIM EVERYWHERE WERE THE EVIDENCES OF LUXURY AND OF AGE silence  ==  [687 frames] -53.8192 [Ac=-36973.8 LM=0.0] (Act=11.6)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090908-gaq/mfc/a0137.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEN HE STEPPED BACK WITH A LOW CRY OF PLEASURE silence  ==  [499 frames] -49.6846 [Ac=-24792.6 LM=0.0] (Act=12.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

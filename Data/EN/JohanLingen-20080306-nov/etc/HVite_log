@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0557.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THE LAST REFUGEE HAD PASSED silence  ==  [289 frames] -48.7132 [Ac=-14078.1 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0558.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence AND THE FOUNDATION STONE OF SERVICE IN HIS CASE WAS OBEDIENCE silence  ==  [485 frames] -52.1290 [Ac=-25282.6 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0559.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence PEACE BE UNTO YOU AND GRACE BEFORE THE LORD silence  ==  [331 frames] -51.9304 [Ac=-17188.9 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0560.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HIS MOUTH OPENED WORDS SHAPED VAINLY ON HIS LIPS silence  ==  [400 frames] -53.1269 [Ac=-21250.8 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0561.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence BILL LINGERED CONTEMPLATING HIS WORK WITH ARTISTIC APPRECIATION silence  ==  [485 frames] -52.8324 [Ac=-25623.7 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0562.mfc
+Created lattice with 5 nodes / 4 arcs from label file
+silence WHAT THE FLAMING silence  ==  [178 frames] -48.6720 [Ac=-8663.6 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0563.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence MRS MCFEE'S JAWS BROUGHT TOGETHER WITH A SNAP silence  ==  [383 frames] -52.4390 [Ac=-20084.1 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0564.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEN IT IS AS I SAID WOMBLE ANNOUNCED WITH FINALITY silence  ==  [374 frames] -52.6926 [Ac=-19707.0 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0565.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence WITH THEM WERE INDIANS ALSO THREE OTHER MEN silence  ==  [349 frames] -52.5204 [Ac=-18329.6 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/JohanLingen-20080306-nov/mfc/a0566.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence DENNIN'S HANDS WERE RELEASED LONG ENOUGH FOR HIM TO SIGN THE DOCUMENT silence  ==  [426 frames] -55.5285 [Ac=-23655.1 LM=0.0] (Act=11.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

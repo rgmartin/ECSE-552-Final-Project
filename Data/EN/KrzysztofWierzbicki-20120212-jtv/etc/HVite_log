@@ -1,0 +1,60 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/mb1KaV6ZZw/words.mlf -i /tmp/mb1KaV6ZZw/aligned.out -S /tmp/mb1KaV6ZZw/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0391.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END BUT HE RECONCILED HIMSELF TO IT BY AN ACT OF FAITH SENT-END  ==  [648 frames] -56.0192 [Ac=-36300.4 LM=0.0] (Act=12.3)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0392.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THERE IS THAT MAGNIFICENT BOB EATING HIS HEAD OFF IN THE STABLE SENT-END  ==  [636 frames] -58.3595 [Ac=-37116.6 LM=0.0] (Act=14.9)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0393.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END ALREADY HE HAD BEGUN BORROWING FROM THE BANKS SENT-END  ==  [461 frames] -57.7669 [Ac=-26630.6 LM=0.0] (Act=11.4)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0394.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END IT'S THE STRAP HANGERS THAT'LL KEEP US FROM GOING UNDER SENT-END  ==  [623 frames] -57.6937 [Ac=-35943.2 LM=0.0] (Act=12.8)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0395.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END AS FOR HIMSELF WEREN'T THE STREET RAILWAY EARNINGS INCREASING STEADILY SENT-END  ==  [836 frames] -55.5818 [Ac=-46466.4 LM=0.0] (Act=11.1)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0396.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END A RISING TIDE OF FAT HAD SUBMERGED THEM SENT-END  ==  [598 frames] -54.2654 [Ac=-32450.7 LM=0.0] (Act=9.8)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0397.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END CALL ME THAT AGAIN HE MURMURED ECSTATICALLY SENT-END  ==  [636 frames] -54.5616 [Ac=-34701.2 LM=0.0] (Act=11.7)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0398.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END IN THE CAR WERE UNWIN AND HARRISON WHILE JONES SAT WITH THE CHAUFFEUR SENT-END  ==  [761 frames] -56.0232 [Ac=-42633.6 LM=0.0] (Act=13.9)
+Aligning File: /tmp/mb1KaV6ZZw/KrzysztofWierzbicki-20120212-jtv/a0399.wav
+Created lattice with 6 nodes / 5 arcs from label file
+SENT-END AND HERE'S ANOTHER IDEA SENT-END  ==  [411 frames] -52.3110 [Ac=-21499.8 LM=0.0] (Act=8.1)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

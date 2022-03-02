@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0281.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence I DO NOT BLAME YOU FOR ANYTHING REMEMBER THAT silence  ==  [537 frames] -54.9730 [Ac=-29520.5 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0282.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence IF YOU MEAN TO INSINUATE BRENTWOOD BEGAN HOTLY silence  ==  [674 frames] -55.7691 [Ac=-37588.4 LM=0.0] (Act=12.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0283.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE WOMAN IN YOU IS ONLY INCIDENTAL ACCIDENTAL AND IRRELEVANT silence  ==  [725 frames] -57.3113 [Ac=-41550.7 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0284.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THERE WAS NO FORECASTING THIS STRANGE GIRL'S PROCESSES silence  ==  [612 frames] -55.4650 [Ac=-33944.6 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0285.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence BUT WHAT THEY WANT WITH YOUR TOOTHBRUSH IS MORE THAN I CAN IMAGINE silence  ==  [624 frames] -55.3198 [Ac=-34519.5 LM=0.0] (Act=13.7)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0286.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence GIVE THEM THEIR CHOICE BETWEEN A FINE OR AN OFFICIAL WHIPPING silence  ==  [662 frames] -54.9118 [Ac=-36351.6 LM=0.0] (Act=12.5)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0287.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence KEEP AN EYE ON HIM silence  ==  [449 frames] -48.2021 [Ac=-21642.7 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0288.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THOSE ARE MY OYSTERS HE SAID AT LAST silence  ==  [562 frames] -51.0004 [Ac=-28662.2 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0289.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THEY ARE NOT REGULAR OYSTER PIRATES NICHOLAS CONTINUED silence  ==  [712 frames] -53.9896 [Ac=-38440.6 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/ColinBeckingham-20091103-zvt/mfc/a0290.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence ONE BY ONE THE BOYS WERE CAPTURED silence  ==  [599 frames] -49.3372 [Ac=-29553.0 LM=0.0] (Act=8.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

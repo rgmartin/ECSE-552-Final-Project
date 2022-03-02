@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/ppwjWfyEA_/words.mlf -i /tmp/ppwjWfyEA_/aligned.out -S /tmp/ppwjWfyEA_/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0451.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END YOU USED TO JOYRIDE LIKE THE VERY DEVIL SENT-END  ==  [611 frames] -55.6599 [Ac=-34008.2 LM=0.0] (Act=11.9)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0452.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THEY SAW EACH OTHER FOR THE FIRST TIME IN BOSTON SENT-END  ==  [636 frames] -55.8506 [Ac=-35521.0 LM=0.0] (Act=8.8)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0453.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END ISAAC FORD THE AUSTERE SOLDIER OF THE LORD THE OLD HYPOCRITE SENT-END  ==  [811 frames] -58.9093 [Ac=-47775.4 LM=0.0] (Act=11.9)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0454.wav
+Created lattice with 5 nodes / 4 arcs from label file
+SENT-END EIGHTEEN HE ADDED SENT-END  ==  [473 frames] -51.4612 [Ac=-24341.2 LM=0.0] (Act=7.2)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0455.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END HIS REWARD SHOULD HAVE BEEN PEACE AND REPOSE SENT-END  ==  [586 frames] -57.2747 [Ac=-33563.0 LM=0.0] (Act=9.1)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0456.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END HE WAS AN AMPHIBIAN AND A MOUNTAINEER SENT-END  ==  [648 frames] -54.2319 [Ac=-35142.3 LM=0.0] (Act=9.5)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0457.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END IT WAS SANCTIFICATION AND SALVATION SENT-END  ==  [511 frames] -57.2280 [Ac=-29243.5 LM=0.0] (Act=9.5)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0458.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THE HISTORY OF THE EIGHTEENTH CENTURY IS WRITTEN ERNEST PROMPTED SENT-END  ==  [748 frames] -57.6311 [Ac=-43108.0 LM=0.0] (Act=12.9)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0459.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END THEY ARE NOT BIOLOGISTS NOR SOCIOLOGISTS SENT-END  ==  [611 frames] -57.0381 [Ac=-34850.3 LM=0.0] (Act=9.7)
+Aligning File: /tmp/ppwjWfyEA_/GaylandGGump-20141207-trp/b0460.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THE MORE HIS OPPONENTS GREW EXCITED THE MORE ERNEST DELIBERATELY EXCITED THEM SENT-END  ==  [1023 frames] -56.6486 [Ac=-57951.5 LM=0.0] (Act=11.4)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

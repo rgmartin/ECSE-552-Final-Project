@@ -1,0 +1,76 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes1.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence DIALECT AND ACCENT COLLECTION VOLUME ONE silence  ==  [340 frames] -54.6531 [Ac=-18582.0 LM=0.0] (Act=7.5)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes2.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THE NORTH WIND AND THE SUN ATTRIBUTED TO AESOP silence  ==  [319 frames] -55.1781 [Ac=-17601.8 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes3.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence READ FOR LIBRIVOX DOT ORG BY ZONIA IN A GERMAN ACCENT silence  ==  [431 frames] -54.6355 [Ac=-23547.9 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes4.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THE NORTH WIND AND THE SUN WERE DISPUTING WHICH WAS THE STRONGER silence  ==  [450 frames] -55.1910 [Ac=-24836.0 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes5.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WHEN A TRAVELER CAME ALONG WRAPPED IN A WARM CLOAK silence  ==  [370 frames] -55.1094 [Ac=-20390.5 LM=0.0] (Act=12.1)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes6.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence THEY AGREED THAT THE ONE WHO FIRST SUCCEEDED IN MAKING THE TRAVELER TAKE HIS CLOAK OFF silence  ==  [540 frames] -54.8904 [Ac=-29640.8 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes7.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence SHOULD BE CONSIDERED STRONGER THAN THE OTHER silence  ==  [312 frames] -53.4599 [Ac=-16679.5 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes8.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEN THE NORTH WIND BLEW AS HARD AS HE COULD silence  ==  [370 frames] -53.2025 [Ac=-19684.9 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes9.mfc
+Created lattice with 18 nodes / 17 arcs from label file
+silence BUT THE MORE HE BLEW THE MORE CLOSELY DID THE TRAVELER FOLD HIS CLOAK AROUND HIM silence  ==  [495 frames] -54.3939 [Ac=-26925.0 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes10.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND AT LAST THE NORTH WIND GAVE UP THE ATTEMPT silence  ==  [370 frames] -53.5534 [Ac=-19814.8 LM=0.0] (Act=7.9)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes11.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEN THE SUN SHONE OUT WARMLY silence  ==  [303 frames] -52.2166 [Ac=-15821.6 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes12.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence AND IMMEDIATELY THE TRAVELER TOOK OFF HIS CLOAK silence  ==  [287 frames] -54.4921 [Ac=-15639.2 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes13.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND SO THE NORTH WIND WAS OBLIGED TO CONFESS silence  ==  [328 frames] -55.7519 [Ac=-18286.6 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes14.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THAT THE SUN WAS THE STRONGER OF THE TWO silence  ==  [293 frames] -51.6151 [Ac=-15123.2 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/Raeubertochter-20090911/mfc/aes15.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence END OF TEXT THIS RECORDING IS IN THE PUBLIC DOMAIN silence  ==  [412 frames] -55.0540 [Ac=-22682.2 LM=0.0] (Act=9.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

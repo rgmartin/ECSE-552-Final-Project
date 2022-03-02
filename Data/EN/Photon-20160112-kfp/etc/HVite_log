@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/vrxPMlDkw_/words.mlf -i /tmp/vrxPMlDkw_/aligned.out -S /tmp/vrxPMlDkw_/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 7579 physical / 8398 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-07.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END THE KEYBOARD WHETHER IT'S AN ON-SCREEN VERSION OR NOT STRONGLY REDUCES SENT-END  ==  [623 frames] -62.4932 [Ac=-38933.3 LM=0.0] (Act=15.0)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-08.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END THE AMOUNT OF AVAILABLE SCREEN REAL-ESTATE SENT-END  ==  [461 frames] -61.2195 [Ac=-28222.2 LM=0.0] (Act=16.8)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-09.wav
+Created lattice with 18 nodes / 17 arcs from label file
+SENT-END ON TOP OF THAT THUMBING OR THUMB TYPING PUTS A LOT OF STRAIN ON THE THUMB SENT-END  ==  [773 frames] -62.0201 [Ac=-47941.6 LM=0.0] (Act=21.4)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-10.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END WHICH IS NOT AS DEXTEROUS AS THE FINGERS ARE SENT-END  ==  [561 frames] -59.1982 [Ac=-33210.2 LM=0.0] (Act=13.2)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-11.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END A GOOD SOLUTION WOULD BE TO USE SPEECH RECOGNITION SENT-END  ==  [498 frames] -61.4477 [Ac=-30600.9 LM=0.0] (Act=19.6)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-12.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END ESPECIALLY SINCE MOST OF THESE DEVICES OFTEN ALREADY HAVE A BUILT-IN MICROPHONE SENT-END  ==  [698 frames] -62.5754 [Ac=-43677.6 LM=0.0] (Act=20.9)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-13.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END MANY PHONES ALREADY OFFER THE POSSIBILITY OF SO-CALLED VOICE DIALING SENT-END  ==  [636 frames] -62.1172 [Ac=-39506.5 LM=0.0] (Act=26.1)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-14.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END A MAJOR STUMBLING BLOCK IS THE STILL LIMITED COMPUTING POWER OF THESE PHONES SENT-END  ==  [648 frames] -63.0951 [Ac=-40885.7 LM=0.0] (Act=22.8)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-15.wav
+Created lattice with 18 nodes / 17 arcs from label file
+SENT-END ONE WAY TO DEAL WITH THIS IS TO USE ONLY A LIMITED NUMBER OF AVAILABLE COMMANDS SENT-END  ==  [648 frames] -63.6020 [Ac=-41214.1 LM=0.0] (Act=23.1)
+Aligning File: /tmp/vrxPMlDkw_/Photon-20160112-kfp/rb-16.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THAT WAY THE SOFTWARE ONLY NEEDS TO COMPARE SENT-END  ==  [436 frames] -61.2561 [Ac=-26707.7 LM=0.0] (Act=17.9)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

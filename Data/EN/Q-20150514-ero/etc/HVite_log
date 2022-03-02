@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/Ylrw3SYWE6/words.mlf -i /tmp/Ylrw3SYWE6/aligned.out -S /tmp/Ylrw3SYWE6/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2015-05-26_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 7579 physical / 8398 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/b0535.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END HE READ HIS FRAGMENTS ALOUD SENT-END  ==  [423 frames] -57.0969 [Ac=-24152.0 LM=0.0] (Act=9.5)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/b0536.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END TYPHOID DID I TELL YOU SENT-END  ==  [348 frames] -57.4974 [Ac=-20009.1 LM=0.0] (Act=9.4)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/b0537.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END BUT SHE HAD BECOME AN AUTOMATON SENT-END  ==  [386 frames] -56.5062 [Ac=-21811.4 LM=0.0] (Act=12.3)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/b0538.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END AT THE BEST THEY WERE NECESSARY ACCESSORIES SENT-END  ==  [498 frames] -59.9321 [Ac=-29846.2 LM=0.0] (Act=13.6)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/b0539.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END YOU WERE MAKING THEM TALK SHOP RUTH CHARGED HIM SENT-END  ==  [548 frames] -59.5973 [Ac=-32659.3 LM=0.0] (Act=13.0)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/rp-01.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END WHEN THE SUNLIGHT STRIKES RAINDROPS IN THE AIR SENT-END  ==  [423 frames] -61.5789 [Ac=-26047.9 LM=0.0] (Act=15.3)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/rp-02.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THEY ACT AS A PRISM AND FORM A RAINBOW SENT-END  ==  [411 frames] -61.2232 [Ac=-25162.7 LM=0.0] (Act=15.2)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/rp-03.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THE RAINBOW IS A DIVISION OF WHITE LIGHT INTO MANY BEAUTIFUL COLORS SENT-END  ==  [523 frames] -63.9518 [Ac=-33446.8 LM=0.0] (Act=16.7)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/rp-04.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END THESE TAKE THE SHAPE OF A LONG ROUND ARCH WITH ITS PATH HIGH ABOVE SENT-END  ==  [711 frames] -61.5560 [Ac=-43766.3 LM=0.0] (Act=15.9)
+Aligning File: /tmp/Ylrw3SYWE6/Q-20150514-ero/rp-05.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END AND ITS TWO ENDS APPARENTLY BEYOND THE HORIZON SENT-END  ==  [461 frames] -62.4149 [Ac=-28773.3 LM=0.0] (Act=16.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0239.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence AND THERE WAS A DOG THAT BARKED silence  ==  [237 frames] -56.4440 [Ac=-13377.2 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0240.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THERE ARE FOUR ALL LOW MCCOY ANSWERED silence  ==  [349 frames] -56.8819 [Ac=-19851.8 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0241.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THE WOMEN THEY CARRIED AWAY WITH THEM TO THE BIG VALLEY silence  ==  [349 frames] -58.8178 [Ac=-20527.4 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0242.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE JAPANESE UNDERSTOOD AS WE COULD NEVER SCHOOL OURSELVES OR HOPE TO UNDERSTAND silence  ==  [520 frames] -60.1527 [Ac=-31279.4 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0243.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THEY HAD BEEN ON THE SAME LAY AS OURSELVES silence  ==  [323 frames] -52.2246 [Ac=-16868.6 LM=0.0] (Act=7.0)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0244.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence YOU ARE POSITIVELY SOULLESS HE SAID SAVAGELY silence  ==  [366 frames] -56.9179 [Ac=-20832.0 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0245.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence HARRISON IS STILL MY CHAUFFEUR silence  ==  [255 frames] -55.1119 [Ac=-14053.5 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0246.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THE BOY GREW AND PROSPERED silence  ==  [289 frames] -53.9203 [Ac=-15583.0 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0247.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE WANTED TO GIVE THE FINISH TO THIS FOE ALREADY SO FAR GONE silence  ==  [400 frames] -59.6318 [Ac=-23852.7 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrankdeLange-20080718-xkd/mfc/b0248.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence EXCITING TIMES ARE THE LOT OF THE FISH PATROL silence  ==  [323 frames] -59.1378 [Ac=-19101.5 LM=0.0] (Act=10.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

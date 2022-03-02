@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/ToaWzfK6CC/words.mlf -i /tmp/ToaWzfK6CC/aligned.out -S /tmp/ToaWzfK6CC/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0116.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I HAVE HUNTED ALONG THIS RIDGE REPLIED PHILIP SENT-END  ==  [873 frames] -53.4246 [Ac=-46639.6 LM=0.0] (Act=12.2)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0117.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END THAT'S THORPE'S SAID THE YOUNG ENGINEER SENT-END  ==  [573 frames] -54.1088 [Ac=-31004.4 LM=0.0] (Act=10.5)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0118.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END WE SAW YOUR LIGHT AND THOUGHT YOU WOULDN'T MIND A CALL SENT-END  ==  [686 frames] -55.2794 [Ac=-37921.7 LM=0.0] (Act=11.3)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0119.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END BILLINGER MAY ARRIVE IN TIME SENT-END  ==  [486 frames] -53.5403 [Ac=-26020.6 LM=0.0] (Act=9.2)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0120.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THERE'S THE HITCH REPLIED THORPE ROLLING A CIGARETTE SENT-END  ==  [623 frames] -55.5557 [Ac=-34611.2 LM=0.0] (Act=12.1)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0121.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I WANT MY MEN TO WORK BY THEMSELVES SENT-END  ==  [498 frames] -54.7926 [Ac=-27286.7 LM=0.0] (Act=10.5)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0122.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END PHILIP SAW MACDOUGALL SOON AFTER HIS SHORT TALK WITH THORPE SENT-END  ==  [686 frames] -57.0648 [Ac=-39146.5 LM=0.0] (Act=12.4)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0123.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END NEITHER COULD THEY UNDERSTAND THE GROWING DISAFFECTION AMONG THORPE'S MEN SENT-END  ==  [661 frames] -58.7182 [Ac=-38812.7 LM=0.0] (Act=13.7)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0124.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END TWO WEEKS PASSED AND IN THAT TIME THORPE LEFT CAMP THREE TIMES SENT-END  ==  [648 frames] -57.9805 [Ac=-37571.4 LM=0.0] (Act=11.8)
+Aligning File: /tmp/ToaWzfK6CC/LuisManuelPradoMoreno-20130104-wna/b0125.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END IT WAS THE THIRD OR FOURTH TIME THAT PHILIP HAD HEARD MACDOUGALL SWEAR SENT-END  ==  [623 frames] -58.6227 [Ac=-36522.0 LM=0.0] (Act=12.5)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0167.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence I WAS NEAR THE CABIN AND SAW YOU silence  ==  [386 frames] -45.6948 [Ac=-17638.2 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0168.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence LOW BUSH WHIPPED HIM IN THE FACE AND LEFT NO STING silence  ==  [511 frames] -49.5792 [Ac=-25335.0 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0169.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence SUDDENLY JEANNE STOPPED FOR AN INSTANT silence  ==  [511 frames] -45.3533 [Ac=-23175.6 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0170.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THERE WAS NONE OF THE JOY OF MEETING IN HIS FACE silence  ==  [598 frames] -45.1135 [Ac=-26977.9 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0171.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence AND WHEN YOU COME BACK IN A FEW DAYS BRING EILEEN silence  ==  [636 frames] -46.0548 [Ac=-29290.8 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0172.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence GREGSON HAD LEFT THE OUTER DOOR SLIGHTLY AJAR silence  ==  [511 frames] -48.7248 [Ac=-24898.4 LM=0.0] (Act=9.7)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0173.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE DATE WAS NEARLY EIGHTEEN YEARS OLD silence  ==  [511 frames] -47.4986 [Ac=-24271.8 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0174.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEY WERE THE PRESAGE OF STORM silence  ==  [373 frames] -48.1370 [Ac=-17955.1 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0175.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence DOWN THERE THE EARTH WAS ALREADY SWELLING WITH LIFE silence  ==  [486 frames] -47.2523 [Ac=-22964.6 LM=0.0] (Act=10.4)
+Aligning File: /data/UserSubmissions/Quarantine/AnnaKarpelevich-20091129-til/mfc/a0176.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence FOR THE FIRST TIME IN HIS LIFE HE WAS YEARNING FOR A SCRAP silence  ==  [586 frames] -48.2842 [Ac=-28294.5 LM=0.0] (Act=12.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0251.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEY MUST HAVE BEEN SWEPT AWAY BY THE CHAOTIC CURRENTS silence  ==  [487 frames] -42.9564 [Ac=-20919.8 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0252.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence IT RESEMBLED TEA LESS THAN LAGER BEER RESEMBLES CHAMPAGNE silence  ==  [524 frames] -43.2662 [Ac=-22671.5 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0253.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THE VERY OPPOSITE IS TRUE THEY ARE DISCOURAGED VAGABONDS silence  ==  [537 frames] -42.5618 [Ac=-22855.7 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0254.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence AT THE SAME TIME SPEARS AND ARROWS BEGAN TO FALL AMONG THE INVADERS silence  ==  [637 frames] -42.2759 [Ac=-26929.7 LM=0.0] (Act=12.4)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0255.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THEN AGAIN TUDOR HAD SUCH AN IRRITATING WAY ABOUT HIM silence  ==  [599 frames] -41.4889 [Ac=-24851.8 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0256.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence OUTWARDLY HE MAINTAINED A CALM AND SMILING ASPECT silence  ==  [474 frames] -40.7017 [Ac=-19292.6 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0257.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence TUDOR SURVEYED HIM WITH WITHERING DISGUST silence  ==  [436 frames] -45.1004 [Ac=-19663.8 LM=0.0] (Act=7.1)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0258.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence YOU FIRED ME OUT OF YOUR HOUSE IN SHORT silence  ==  [386 frames] -42.8315 [Ac=-16533.0 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0259.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HER MOUTH OPENED BUT INSTEAD OF SPEAKING SHE DREW A LONG SIGH silence  ==  [612 frames] -40.0665 [Ac=-24520.7 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Eresus-20090416-zdx/mfc/b0260.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence IT'S WORTH EIGHT DOLLARS silence  ==  [349 frames] -39.3455 [Ac=-13731.6 LM=0.0] (Act=8.1)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

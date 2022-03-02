@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/KcAw8SHl9u/words.mlf -i /tmp/KcAw8SHl9u/aligned.out -S /tmp/KcAw8SHl9u/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0182.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THIS TIME HE DID NOT YAP FOR MERCY SENT-END  ==  [436 frames] -58.3517 [Ac=-25441.3 LM=0.0] (Act=7.7)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0183.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END AND THE AIR WAS GROWING CHILLY SENT-END  ==  [398 frames] -57.5638 [Ac=-22910.4 LM=0.0] (Act=8.5)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0184.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END DON'T YOU SEE I'M CHEWING THIS THING IN TWO SENT-END  ==  [436 frames] -58.7945 [Ac=-25634.4 LM=0.0] (Act=8.7)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0185.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THE QUESTIONS MAY HAVE COME VAGUELY IN HIS MIND SENT-END  ==  [461 frames] -57.5591 [Ac=-26534.7 LM=0.0] (Act=9.0)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0186.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END LIKE A FLASH HE LAUNCHED HIMSELF INTO THE FEATHERED MASS OF THE OWL SENT-END  ==  [573 frames] -60.1045 [Ac=-34439.9 LM=0.0] (Act=10.0)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0187.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END AHEAD OF THEM THEY SAW A GLIMMER OF SUNSHINE SENT-END  ==  [461 frames] -58.2661 [Ac=-26860.7 LM=0.0] (Act=8.7)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0188.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END TWO GIGANTIC OWLS WERE TEARING AT THE CARCASS SENT-END  ==  [436 frames] -60.9148 [Ac=-26558.8 LM=0.0] (Act=9.9)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0189.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END THE BIG-EYED CLUCKING MOOSE-BIRDS WERE MOST ANNOYING SENT-END  ==  [511 frames] -58.3012 [Ac=-29791.9 LM=0.0] (Act=8.4)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0190.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END NEXT TO THEM THE CANADA JAYS WERE MOST PERSISTENT SENT-END  ==  [498 frames] -58.2801 [Ac=-29023.5 LM=0.0] (Act=10.1)
+Aligning File: /tmp/KcAw8SHl9u/Dcoetzee-20110429-dac/a0191.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END FOR A TIME THE EXCITING THRILL OF HIS ADVENTURE WAS GONE SENT-END  ==  [523 frames] -59.5533 [Ac=-31146.4 LM=0.0] (Act=9.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 39 physical / 39 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-15.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THE NORSEMEN CONSIDERED THE RAINBOW AS A BRIDGE silence  ==  [449 frames] -53.3357 [Ac=-23947.7 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-16.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence OVER WHICH THE GODS PASSED FROM EARTH TO THEIR HOME IN THE SKY silence  ==  [524 frames] -53.7369 [Ac=-28158.1 LM=0.0] (Act=12.7)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-17.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence OTHERS HAVE TRIED TO EXPLAIN THE PHENOMENON PHYSICALLY silence  ==  [512 frames] -53.6072 [Ac=-27446.9 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-18.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence ARISTOTLE THOUGHT THAT THE RAINBOW WAS CAUSED BY silence  ==  [461 frames] -54.6257 [Ac=-25182.4 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-19.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence REFLECTION OF THE SUN'S RAYS BY THE RAIN silence  ==  [399 frames] -53.0575 [Ac=-21170.0 LM=0.0] (Act=13.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-20.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence SINCE THEN PHYSICISTS HAVE FOUND THAT IT IS NOT REFLECTION silence  ==  [587 frames] -51.1960 [Ac=-30052.1 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-21.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence BUT REFRACTION BY THE RAINDROPS WHICH CAUSES THE RAINBOWS silence  ==  [699 frames] -51.4766 [Ac=-35982.1 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-22.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence MANY COMPLICATED IDEAS ABOUT THE RAINBOW HAVE BEEN FORMED silence  ==  [699 frames] -49.1417 [Ac=-34350.1 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-23.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence THE DIFFERENCE IN THE RAINBOW DEPENDS CONSIDERABLY UPON THE SIZE OF THE DROPS silence  ==  [737 frames] -51.3753 [Ac=-37863.6 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090907-ogq/mfc/rp-24.mfc
+Created lattice with 17 nodes / 16 arcs from label file
+silence AND THE WIDTH OF THE COLORED BAND INCREASES AS THE SIZE OF THE DROPS INCREASES silence  ==  [800 frames] -54.2209 [Ac=-43376.7 LM=0.0] (Act=12.8)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

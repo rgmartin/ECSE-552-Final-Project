@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/iYHfZoz4wl/words.mlf -i /tmp/iYHfZoz4wl/aligned.out -S /tmp/iYHfZoz4wl/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0079.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END IT WAS A LARGE CANOE SENT-END  ==  [711 frames] -51.2570 [Ac=-36443.7 LM=0.0] (Act=7.1)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0080.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END WHAT IF JEANNE FAILED HIM SENT-END  ==  [586 frames] -51.8352 [Ac=-30375.5 LM=0.0] (Act=7.8)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0081.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END WHAT IF SHE DID NOT COME TO THE ROCK SENT-END  ==  [673 frames] -54.1202 [Ac=-36422.9 LM=0.0] (Act=9.0)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0082.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END HIS FACE WAS STREAMING WITH BLOOD SENT-END  ==  [573 frames] -54.7566 [Ac=-31375.5 LM=0.0] (Act=7.9)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0083.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END A SHADOW WAS CREEPING OVER PIERRE'S EYES SENT-END  ==  [611 frames] -58.0759 [Ac=-35484.4 LM=0.0] (Act=7.7)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0084.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END SCARCELY HAD HE UTTERED THE NAME WHEN PIERRE'S CLOSING EYES SHOT OPEN SENT-END  ==  [936 frames] -58.8729 [Ac=-55105.0 LM=0.0] (Act=9.6)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0085.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END A TRICKLE OF FRESH BLOOD RAN OVER HIS FACE SENT-END  ==  [723 frames] -56.4033 [Ac=-40779.6 LM=0.0] (Act=9.1)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0086.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END DEATH HAD COME WITH TERRIBLE SUDDENNESS SENT-END  ==  [611 frames] -55.1273 [Ac=-33682.8 LM=0.0] (Act=9.4)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0087.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END PHILIP BENT LOWER AND STARED INTO THE FACE OF THE DEAD MAN SENT-END  ==  [798 frames] -56.9121 [Ac=-45415.8 LM=0.0] (Act=11.1)
+Aligning File: /tmp/iYHfZoz4wl/GaylandGGump-20141207-pdo/a0088.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HE MADE SURE THAT THE MAGAZINE WAS LOADED AND RESUMED HIS PADDLING SENT-END  ==  [861 frames] -57.1268 [Ac=-49186.1 LM=0.0] (Act=12.8)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

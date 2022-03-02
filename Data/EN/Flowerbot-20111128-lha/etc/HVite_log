@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/ZxnFO8ua4m/words.mlf -i /tmp/ZxnFO8ua4m/aligned.out -S /tmp/ZxnFO8ua4m/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0483.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THE FLOWER OF THE ARTISTIC AND INTELLECTUAL WORLD WERE REVOLUTIONISTS SENT-END  ==  [723 frames] -57.6753 [Ac=-41699.2 LM=0.0] (Act=14.5)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0484.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THIS THE IRON HEEL FORESAW AND LAID ITS SCHEMES ACCORDINGLY SENT-END  ==  [598 frames] -57.2589 [Ac=-34240.8 LM=0.0] (Act=13.5)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0485.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END THE MOB CAME ON BUT IT COULD NOT ADVANCE SENT-END  ==  [511 frames] -55.7166 [Ac=-28471.2 LM=0.0] (Act=11.1)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0486.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END BUT WHY CONTINUE THE TIRADE FOR TIRADE IT WAS SENT-END  ==  [511 frames] -57.1446 [Ac=-29200.9 LM=0.0] (Act=10.7)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0487.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END AFTER ALL SUPERFLUOUS FLESH IS GONE WHAT IS LEFT IS STRINGY AND RESISTANT SENT-END  ==  [761 frames] -58.6603 [Ac=-44640.5 LM=0.0] (Act=14.4)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0488.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END BEYOND REFUSING TO SELL US FOOD THEY LEFT US TO OURSELVES SENT-END  ==  [586 frames] -57.8199 [Ac=-33882.5 LM=0.0] (Act=15.0)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0489.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE WAS A MERRY MONARCH ESPECIALLY SO FOR AN ASIATIC SENT-END  ==  [586 frames] -57.6047 [Ac=-33756.4 LM=0.0] (Act=12.8)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0490.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END WHAT AN EXCITED WHISPERING AND CONFERRING TOOK PLACE SENT-END  ==  [561 frames] -57.1299 [Ac=-32049.9 LM=0.0] (Act=11.2)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0491.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END JACOB BRINKER WHO WAS HIS ROADMATE BROUGHT THE NEWS SENT-END  ==  [598 frames] -57.2408 [Ac=-34230.0 LM=0.0] (Act=11.2)
+Aligning File: /tmp/ZxnFO8ua4m/Flowerbot-20111128-lha/b0492.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THUS HE TURNED THE TENETS AND JARGON OF PSYCHOLOGY BACK ON ME SENT-END  ==  [623 frames] -56.6614 [Ac=-35300.1 LM=0.0] (Act=14.5)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

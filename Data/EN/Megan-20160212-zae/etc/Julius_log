@@ -1,0 +1,31 @@
+ERROR: Error in loading model
+STAT: jconf successfully finalized
+STAT: *** loading AM00 _default
+Stat: init_phmm: Reading in HMM definition
+Stat: rdhmmdef: ascii format HMM definition
+Stat: rdhmmdef: limit check passed
+Stat: check_hmm_restriction: an HMM with several arcs from initial state found: "sp"
+Stat: rdhmmdef: this HMM requires multipath handling at decoding
+Stat: rdhmmdef: no <SID> embedded
+Stat: rdhmmdef: assign SID by the order of appearance
+Stat: init_phmm: defined HMMs:  7579
+Stat: init_phmm: loading ascii hmmlist
+Stat: init_phmm: logical names:  8398 in HMMList
+Stat: init_phmm: base phones:    41 used in logical
+Stat: init_phmm: finished reading HMM definitions
+STAT: m_fusion: force multipath HMM handling by user request
+STAT: making pseudo bi/mono-phone for IW-triphone
+Stat: hmm_lookup: 953 pseudo phones are added to logical HMM list
+STAT: *** AM00 _default loaded
+STAT: *** loading LM00 _default
+STAT: reading [/tmp/xdxEgaPdXE/Megan-20160212-zae.dfa] and [/tmp/xdxEgaPdXE/Megan-20160212-zae.dict]...
+Error: voca_load_htkdict: line 111: triphone "t-eh+g" not found
+Error: voca_load_htkdict: line 111: triphone "eh-g+r" not found
+Error: voca_load_htkdict: the line content was: 110	[INTEGRITY]	ih n t eh g r ah t iy
+Error: voca_load_htkdict: begin missing phones
+Error: voca_load_htkdict: eh-g+r
+Error: voca_load_htkdict: t-eh+g
+Error: voca_load_htkdict: end missing phones
+Error: init_voca: error in reading /tmp/xdxEgaPdXE/Megan-20160212-zae.dict: 1 words failed out of 113 words
+ERROR: failed to read dictionary "/tmp/xdxEgaPdXE/Megan-20160212-zae.dict"
+ERROR: m_fusion: some error occured in reading grammars

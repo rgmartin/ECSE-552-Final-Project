@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 43 physical / 43 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0226.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence YOUR FACE WAS THE PERSONIFICATION OF DUPLICITY silence  ==  [400 frames] -59.7786 [Ac=-23911.4 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0227.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence SHORTY TURNED TO THEIR EMPLOYERS silence  ==  [314 frames] -58.9422 [Ac=-18507.8 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0228.mfc
+Created lattice with 5 nodes / 4 arcs from label file
+silence YOU WERE ENGAGED silence  ==  [426 frames] -49.4741 [Ac=-21076.0 LM=0.0] (Act=7.3)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0229.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence I SAW IT ALL MYSELF AND IT WAS SPLENDID silence  ==  [451 frames] -56.0448 [Ac=-25276.2 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0230.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence NOW RUN ALONG AND TELL THEM TO HURRY silence  ==  [426 frames] -54.3049 [Ac=-23133.9 LM=0.0] (Act=16.2)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0231.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence WHAT'S THAT GRUB-THIEF GOT TO DO WITH IT silence  ==  [426 frames] -55.6349 [Ac=-23700.5 LM=0.0] (Act=13.6)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0232.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS A SUPERB PICTURE silence  ==  [349 frames] -51.2235 [Ac=-17877.0 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0233.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence SO SHE SAID THE IRATE SKIPPER DASHED ON silence  ==  [485 frames] -54.6764 [Ac=-26518.1 LM=0.0] (Act=9.9)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0234.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND WATCH OUT FOR WET FEET WAS HIS PARTING ADVICE silence  ==  [605 frames] -52.5987 [Ac=-31822.2 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/CarlFK-20080617-jii/mfc/b0235.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence RAOUL YELLED IN ORDER TO MAKE HIMSELF HEARD silence  ==  [494 frames] -56.0117 [Ac=-27669.8 LM=0.0] (Act=8.6)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

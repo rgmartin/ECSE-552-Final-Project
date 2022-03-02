@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-03-02/HTK/16kHz_16bit/MFCC_O_D/macros -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-03-02/HTK/16kHz_16bit/MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/dH0EtN8Uim/words.mlf -i /tmp/dH0EtN8Uim/aligned.out -S /tmp/dH0EtN8Uim/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Nightly_Builds/AcousticModel-2017-03-02/HTK/16kHz_16bit/MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 16007 physical / 24402 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0394.wav
+Created lattice with 18 nodes / 17 arcs from label file
+SENT-END PLEASE PROVIDE CONFIRMATION NUMBER AND POSITIVE ID AT THE GATE ONE HOUR PRIOR TO SCHEDULED DEPARTURE SENT-END  ==  [936 frames] -59.2414 [Ac=-55449.9 LM=0.0] (Act=13.5)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0395.wav
+Created lattice with 20 nodes / 19 arcs from label file
+SENT-END IF WE DO NOT PAY THESE INVOICES THEY CAN TERMINATE THIS CONTRACT AND FORCE US TO GO BACK SENT-END  ==  [886 frames] -58.9370 [Ac=-52218.2 LM=0.0] (Act=11.8)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0396.wav
+Created lattice with 28 nodes / 27 arcs from label file
+SENT-END GREAT I AM GLAD THAT YOUR TRIP IS POSTPONED THEN WE WILL BE ABLE TO GET TOGETHER CALL ME OR WRITE WHEN YOU GET THOSE DETAILS SENT-END  ==  [1161 frames] -60.3617 [Ac=-70079.9 LM=0.0] (Act=19.4)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0397.wav
+Created lattice with 23 nodes / 22 arcs from label file
+SENT-END HE HAS BEEN ON THIS TRAJECTORY FOR SEVERAL YEARS SOUNDING THE ALARM ON NUMEROUS OCCASIONS BOTH PRIVATELY AND IN THE PRESS SENT-END  ==  [1098 frames] -60.2250 [Ac=-66127.0 LM=0.0] (Act=11.8)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0398.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END THIS DECISION WAS REACHED IN COOPERATION WITH THE BOARD AND IS EFFECTIVE IMMEDIATELY SENT-END  ==  [848 frames] -56.7733 [Ac=-48143.7 LM=0.0] (Act=10.8)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0399.wav
+Created lattice with 23 nodes / 22 arcs from label file
+SENT-END GIVE ME A SHOUT AND TELL ME WHAT YOU THINK I'M GONNA GO AND QUICKLY CHECK ON MY PUPPY THIS AFTERNOON SENT-END  ==  [986 frames] -57.9355 [Ac=-57124.4 LM=0.0] (Act=15.2)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0400.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END RESEARCHERS AT HARVARD MEDICAL SCHOOL RECENTLY FOUND THAT IN MICE SENT-END  ==  [773 frames] -57.7077 [Ac=-44608.0 LM=0.0] (Act=10.2)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0401.wav
+Created lattice with 17 nodes / 16 arcs from label file
+SENT-END AS FOR RON I REALLY HAVE EGG ON MY FACE I TOTALLY FORGOT ABOUT RON SENT-END  ==  [823 frames] -57.5059 [Ac=-47327.3 LM=0.0] (Act=12.3)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0402.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END CREDIT WORTHINESS WILL BE ADDRESS IN THE TECHNICAL CONFERENCE SCHEDULED FOR LATER TODAY SENT-END  ==  [848 frames] -57.6504 [Ac=-48887.5 LM=0.0] (Act=11.5)
+Aligning File: /tmp/dH0EtN8Uim/GMP-20170301-qzc/e0403.wav
+Created lattice with 21 nodes / 20 arcs from label file
+SENT-END I RECEIVED THE DRAWINGS THEY LOOK GOOD AT FIRST GLANCE I WILL LOOK AT THEM IN DEPTH THIS WEEKEND SENT-END  ==  [911 frames] -58.6874 [Ac=-53464.3 LM=0.0] (Act=14.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

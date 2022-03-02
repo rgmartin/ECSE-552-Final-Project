@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0177.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HER GRAY EYES WERE FLASHING AND HER LIPS WERE QUIVERING silence  ==  [510 frames] -61.1752 [Ac=-31199.4 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0178.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence ALSO I WANT INFORMATION silence  ==  [274 frames] -61.3080 [Ac=-16798.4 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0179.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence LET THEM GO OUT AND EAT WITH MY BOYS silence  ==  [390 frames] -61.2062 [Ac=-23870.4 LM=0.0] (Act=11.8)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0180.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence I I BEG PARDON HE DRAWLED silence  ==  [393 frames] -58.2330 [Ac=-22885.6 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0181.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND YOU PREFERRED A CANNIBAL ISLE AND A CARTRIDGE BELT silence  ==  [465 frames] -62.9726 [Ac=-29282.2 LM=0.0] (Act=11.7)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0182.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence I WAS IN NEW YORK CRASH CAME silence  ==  [285 frames] -59.9541 [Ac=-17086.9 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0183.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence NO I DID NOT FALL AMONG THIEVES silence  ==  [234 frames] -64.6147 [Ac=-15119.8 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0184.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence SUCH THINGS IN HER BRAIN WERE LIKE SO MANY OATHS ON HER LIPS silence  ==  [552 frames] -62.3937 [Ac=-34441.3 LM=0.0] (Act=11.1)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0185.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence YOUR BEING WRECKED HERE HAS BEEN A GODSEND TO ME silence  ==  [469 frames] -62.5388 [Ac=-29330.7 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/LMA-20091008-uhh/mfc/b0186.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence I CAN'T GO ELSEWHERE BY YOUR OWN ACCOUNT silence  ==  [327 frames] -62.2619 [Ac=-20359.6 LM=0.0] (Act=9.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

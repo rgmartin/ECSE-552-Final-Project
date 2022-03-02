@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0313.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence BROKEN-TOOTH YELLED WITH FRIGHT AND PAIN silence  ==  [274 frames] -64.7572 [Ac=-17743.5 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0314.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THUS WAS MOMENTUM GAINED IN THE YOUNGER WORLD silence  ==  [286 frames] -62.9082 [Ac=-17991.7 LM=0.0] (Act=10.5)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0315.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence SAXON WAITED FOR SHE KNEW A FRESH IDEA HAD STRUCK BILLY silence  ==  [386 frames] -63.4576 [Ac=-24494.6 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0316.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WE HAD BEEN CHASED BY THEM OURSELVES MORE THAN ONCE silence  ==  [436 frames] -60.8838 [Ac=-26545.3 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0317.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence HE WAS A WISE HYENA silence  ==  [198 frames] -60.8614 [Ac=-12050.6 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0318.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence PRODUCTION IS DOUBLING AND QUADRUPLING UPON ITSELF silence  ==  [399 frames] -63.6137 [Ac=-25381.9 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0319.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND THE EDINBURGH EVENING NEWS SAYS WITH EDITORIAL GLOOM silence  ==  [386 frames] -63.9412 [Ac=-24681.3 LM=0.0] (Act=9.4)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0320.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence WITH MY STRENGTH I SLAMMED IT FULL INTO RED-EYE'S FACE silence  ==  [324 frames] -63.9156 [Ac=-20708.7 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0321.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THE LOG ON WHICH LOP-EAR WAS LYING GOT ADRIFT silence  ==  [274 frames] -65.7752 [Ac=-18022.4 LM=0.0] (Act=9.7)
+Aligning File: /data/UserSubmissions/Quarantine/PeterGarnett-20080107-abc/mfc/a0322.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence THIS IS A COMMON EXPERIENCE WITH ALL OF US silence  ==  [274 frames] -62.7900 [Ac=-17204.5 LM=0.0] (Act=9.0)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

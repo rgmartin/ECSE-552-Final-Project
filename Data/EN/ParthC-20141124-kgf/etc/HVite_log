@@ -1,0 +1,51 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/OTWTbn8efv/words.mlf -i /tmp/OTWTbn8efv/aligned.out -S /tmp/OTWTbn8efv/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0197.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END SUCH A DOG THE WISE DRIVER KILLS OR TURNS LOOSE SENT-END  ==  [448 frames] -55.9208 [Ac=-25052.5 LM=0.0] (Act=15.9)
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0198.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END SOMETIMES HER DREAMS WERE FILLED WITH VISIONS SENT-END  ==  [373 frames] -55.5161 [Ac=-20707.5 LM=0.0] (Act=14.8)
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0199.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END THUS HAD THE RAW WILDERNESS PREPARED HIM FOR THIS DAY SENT-END  ==  [436 frames] -55.6656 [Ac=-24270.2 LM=0.0] (Act=15.6)
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0200.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE LEAPT AGAIN AND THE CLUB CAUGHT HIM ONCE MORE SENT-END  ==  [373 frames] -56.3862 [Ac=-21032.0 LM=0.0] (Act=16.2)
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0201.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END HE CRIED AND SWUNG THE CLUB WILDLY SENT-END  ==  [348 frames] -55.0626 [Ac=-19161.8 LM=0.0] (Act=13.0)
+Aligning File: /tmp/OTWTbn8efv/ParthC-20141124-kgf/a0202.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END SHE TURNED FEARING THAT JACQUES MIGHT SEE WHAT WAS IN HER FACE SENT-END  ==  [498 frames] -56.8451 [Ac=-28308.8 LM=0.0] (Act=13.3)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

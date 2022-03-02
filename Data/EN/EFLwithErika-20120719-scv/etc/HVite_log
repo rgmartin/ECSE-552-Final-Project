@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/ooM6TwxR3S/words.mlf -i /tmp/ooM6TwxR3S/aligned.out -S /tmp/ooM6TwxR3S/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0004.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END WHEN I CAN'T SEE BEAUTY IN WOMAN I WANT TO DIE SENT-END  ==  [611 frames] -55.4345 [Ac=-33870.5 LM=0.0] (Act=13.9)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0005.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END HIS SLIM FINGERS CLOSED LIKE STEEL ABOUT PHILIP'S SENT-END  ==  [586 frames] -55.6458 [Ac=-32608.4 LM=0.0] (Act=14.8)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0006.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HE SEIZED GREGSON BY THE ARM AND LED HIM TO THE DOOR SENT-END  ==  [573 frames] -58.1445 [Ac=-33316.8 LM=0.0] (Act=14.4)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0007.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END HEAR THE INDIAN DOGS WAILING DOWN AT CHURCHILL SENT-END  ==  [486 frames] -56.2127 [Ac=-27319.4 LM=0.0] (Act=12.7)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0008.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END BURKE HIMSELF HAD CRITICIZED IT BECAUSE OF THE SMILE SENT-END  ==  [573 frames] -58.3524 [Ac=-33435.9 LM=0.0] (Act=15.5)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0009.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END I'D SAY THERE WAS GOING TO BE A GLORIOUS SCRAP SENT-END  ==  [523 frames] -56.1932 [Ac=-29389.0 LM=0.0] (Act=16.3)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0010.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END HE TURNED THE MAP TO GREGSON POINTING WITH HIS FINGER SENT-END  ==  [648 frames] -55.0733 [Ac=-35687.5 LM=0.0] (Act=12.7)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0011.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END HIS EYES NEVER TOOK THEMSELVES FOR AN INSTANT FROM HIS COMPANION'S FACE SENT-END  ==  [761 frames] -57.7554 [Ac=-43951.8 LM=0.0] (Act=18.3)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0012.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END SOMETHING THAT WHITTEMORE HAD NOT YET SAID THRILLED HIM SENT-END  ==  [673 frames] -56.9733 [Ac=-38343.0 LM=0.0] (Act=14.0)
+Aligning File: /tmp/ooM6TwxR3S/EFLwithErika-20120719-scv/b0013.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END LAKES AND RIVERS HUNDREDS OF THEM THOUSANDS OF THEM SENT-END  ==  [611 frames] -57.3294 [Ac=-35028.3 LM=0.0] (Act=14.0)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

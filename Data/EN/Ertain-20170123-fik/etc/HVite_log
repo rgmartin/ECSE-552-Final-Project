@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-01-31/HTK/16kHz_16bit/MFCC_O_D/macros -H /data/svn-mirror/Nightly_Builds/AcousticModel-2017-01-31/HTK/16kHz_16bit/MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/8zBCCwhj8q/words.mlf -i /tmp/8zBCCwhj8q/aligned.out -S /tmp/8zBCCwhj8q/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Nightly_Builds/AcousticModel-2017-01-31/HTK/16kHz_16bit/MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 16010 physical / 24402 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0098.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END THANKS FOR THE INFO I JUST NEED SIMPLE BASIC FRAMES NO DECORATIONS OR ANYTHING SENT-END  ==  [711 frames] -58.4807 [Ac=-41579.8 LM=0.0] (Act=13.2)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0099.wav
+Created lattice with 17 nodes / 16 arcs from label file
+SENT-END HOPE THE LONDON TRIP IS GOING WELL THANKS FOR THE SUGGESTION BELOW WHICH WAS PERFECT SENT-END  ==  [598 frames] -60.1850 [Ac=-35990.6 LM=0.0] (Act=14.8)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0100.wav
+Created lattice with 16 nodes / 15 arcs from label file
+SENT-END THERE IS FOR EXAMPLE NO ASSURANCE THAT THE POSTED PRICES REPRESENT PREVAILING MARKET PRICES SENT-END  ==  [673 frames] -62.4431 [Ac=-42024.2 LM=0.0] (Act=13.9)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0101.wav
+Created lattice with 22 nodes / 21 arcs from label file
+SENT-END VERY BELATED REPLY I AM CLEANING UP OLD E-MAILS TODAY AND CAME ACROSS THIS ONE THAT I HAD NOT ANSWERED SENT-END  ==  [761 frames] -60.1077 [Ac=-45741.9 LM=0.0] (Act=16.7)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0102.wav
+Created lattice with 20 nodes / 19 arcs from label file
+SENT-END THE POTENTIAL FOR FREEZING RAIN AND HAZARDOUS ROAD CONDITIONS MAY BE PRESENT THIS EVENING AND EARLY TOMORROW MORNING SENT-END  ==  [686 frames] -61.7689 [Ac=-42373.5 LM=0.0] (Act=15.3)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0103.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END JUST A NOTE TO CHECK IN ARE THERE ANY NEW DEVELOPMENTS SENT-END  ==  [536 frames] -57.0414 [Ac=-30574.2 LM=0.0] (Act=16.8)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0104.wav
+Created lattice with 18 nodes / 17 arcs from label file
+SENT-END HE SAID HE GAVE HER A PAY RAISE TO LURE HER TO STATE SERVICE IN APRIL SENT-END  ==  [673 frames] -58.6204 [Ac=-39451.5 LM=0.0] (Act=10.1)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0105.wav
+Created lattice with 24 nodes / 23 arcs from label file
+SENT-END I SPENT ALL DAY YESTERDAY GETTING THINGS IN ORDER AFTER THE THIEF CHARGED SIX THOUSAND DOLLARS ON MY CREDIT AND DEBIT CARDS SENT-END  ==  [836 frames] -61.8847 [Ac=-51735.6 LM=0.0] (Act=15.3)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0106.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END I SINCERELY HOPE THAT OUR PATHS IN LIFE WILL CROSS AGAIN VERY SOON SENT-END  ==  [598 frames] -57.8699 [Ac=-34606.2 LM=0.0] (Act=12.6)
+Aligning File: /tmp/8zBCCwhj8q/Ertain-20170123-fik/e0107.wav
+Created lattice with 21 nodes / 20 arcs from label file
+SENT-END EACH COMPANY WILL GIVE A TEN FIFTEEN MINUTE BUSINESS OVERVIEW IN A POWERPOINT FORMAT WITH BOOKS FOR AUDIENCE MEMBERS SENT-END  ==  [873 frames] -61.4979 [Ac=-53687.6 LM=0.0] (Act=13.6)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

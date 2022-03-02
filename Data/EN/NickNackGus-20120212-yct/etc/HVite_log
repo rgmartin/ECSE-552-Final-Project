@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/SIpOuaabQ3/words.mlf -i /tmp/SIpOuaabQ3/aligned.out -S /tmp/SIpOuaabQ3/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2010-04-16_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8073 physical / 9417 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0549.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END DO YOU KNOW THAT WE WEIGH EVERY POUND OF COAL WE BURN SENT-END  ==  [610 frames] -60.7015 [Ac=-37027.9 LM=0.0] (Act=10.1)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0550.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THIS ALSO BECAME PART OF THE DAILY SCHEDULE SENT-END  ==  [675 frames] -56.8417 [Ac=-38368.2 LM=0.0] (Act=10.1)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0551.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END ALL AN APPEARANCE CAN KNOW IS MIRAGE SENT-END  ==  [584 frames] -55.4661 [Ac=-32392.2 LM=0.0] (Act=11.1)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0552.wav
+Created lattice with 11 nodes / 10 arcs from label file
+SENT-END YET HE DREAMS HE IS IMMORTAL I ARGUE FEEBLY SENT-END  ==  [584 frames] -58.0356 [Ac=-33892.8 LM=0.0] (Act=12.0)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0553.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I AM WRITING THESE LINES IN HONOLULU HAWAII SENT-END  ==  [636 frames] -57.2587 [Ac=-36416.5 LM=0.0] (Act=9.5)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0554.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END JACK LONDON WAIKIKI BEACH HONOLULU OAHU SENT-END  ==  [636 frames] -60.7990 [Ac=-38668.2 LM=0.0] (Act=9.5)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0555.wav
+Created lattice with 15 nodes / 14 arcs from label file
+SENT-END JERRY WAS SO SECURE IN HIS NOOK THAT HE DID NOT ROLL AWAY SENT-END  ==  [649 frames] -60.2897 [Ac=-39128.0 LM=0.0] (Act=13.0)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0556.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END WHY HE'S BOUGHT FORTY POUNDS OF GOODS FROM YOU ALREADY SENT-END  ==  [610 frames] -57.9272 [Ac=-35335.6 LM=0.0] (Act=13.2)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0557.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END THE LAST REFUGEE HAD PASSED SENT-END  ==  [571 frames] -56.5252 [Ac=-32275.9 LM=0.0] (Act=10.6)
+Aligning File: /tmp/SIpOuaabQ3/NickNackGus-20120212-yct/a0558.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END AND THE FOUNDATION STONE OF SERVICE IN HIS CASE WAS OBEDIENCE SENT-END  ==  [675 frames] -60.5169 [Ac=-40848.9 LM=0.0] (Act=16.2)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

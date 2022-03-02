@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0306.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE WAS PRESSING BEYOND THE LIMITS OF HIS VOCABULARY silence  ==  [324 frames] -60.2179 [Ac=-19510.6 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0307.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence VERY EARLY IN MY LIFE I SEPARATED FROM MY MOTHER silence  ==  [361 frames] -58.7892 [Ac=-21222.9 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0308.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HIS INFERNAL CHATTERING WORRIES ME EVEN NOW AS I THINK OF IT silence  ==  [411 frames] -58.4205 [Ac=-24010.8 LM=0.0] (Act=8.3)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0309.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence WHITE LEGHORNS SAID MRS MORTIMER silence  ==  [336 frames] -57.9354 [Ac=-19466.3 LM=0.0] (Act=7.6)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0310.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence MASSAGE UNDER TENSION WAS THE CRYPTIC REPLY silence  ==  [336 frames] -59.5744 [Ac=-20017.0 LM=0.0] (Act=7.0)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0311.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THEREFORE HURRAH FOR THE GAME silence  ==  [249 frames] -57.2824 [Ac=-14263.3 LM=0.0] (Act=7.3)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0312.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence IT LIVED IN PERPETUAL APPREHENSION OF THAT QUARTER OF THE COMPASS silence  ==  [487 frames] -56.4320 [Ac=-27482.4 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0313.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence BROKEN-TOOTH YELLED WITH FRIGHT AND PAIN silence  ==  [286 frames] -57.5752 [Ac=-16466.5 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0314.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THUS WAS MOMENTUM GAINED IN THE YOUNGER WORLD silence  ==  [361 frames] -55.5319 [Ac=-20047.0 LM=0.0] (Act=8.1)
+Aligning File: /data/UserSubmissions/Quarantine/Hyshinara-20080326-zbx/mfc/a0315.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence SAXON WAITED FOR SHE KNEW A FRESH IDEA HAD STRUCK BILLY silence  ==  [436 frames] -57.4295 [Ac=-25039.3 LM=0.0] (Act=7.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

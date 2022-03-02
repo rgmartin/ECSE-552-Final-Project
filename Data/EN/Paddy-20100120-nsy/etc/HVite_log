@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 40 physical / 40 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0260.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence IT'S WORTH EIGHT DOLLARS silence  ==  [423 frames] -49.7347 [Ac=-21037.8 LM=0.0] (Act=6.7)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0261.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence AND HE DID HURT MY ARM silence  ==  [448 frames] -48.8525 [Ac=-21885.9 LM=0.0] (Act=7.8)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0262.mfc
+Created lattice with 6 nodes / 5 arcs from label file
+silence SAXON'S ONTO HER JOB silence  ==  [448 frames] -47.2640 [Ac=-21174.3 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0263.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence ONLY ONCE DID I CONFIDE THE STRANGENESS OF IT ALL TO ANOTHER silence  ==  [673 frames] -55.1805 [Ac=-37136.5 LM=0.0] (Act=14.6)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0264.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence BUT THIS TIME IT WAS SAXON WHO REBELLED silence  ==  [536 frames] -51.0242 [Ac=-27349.0 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0265.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence I WAS NOT TO CRY OUT IN THE FACE OF FEAR silence  ==  [598 frames] -51.6322 [Ac=-30876.1 LM=0.0] (Act=12.8)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0266.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND NOW PUT YOURSELF IN MY PLACE FOR A MOMENT silence  ==  [636 frames] -49.7004 [Ac=-31609.5 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0267.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence THE BOY THREW BACK HIS HEAD WITH PRIDE silence  ==  [536 frames] -53.2637 [Ac=-28549.3 LM=0.0] (Act=10.2)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0268.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence SAXON NODDED AND THE BOY FROWNED silence  ==  [573 frames] -49.4136 [Ac=-28314.0 LM=0.0] (Act=12.7)
+Aligning File: /data/UserSubmissions/Quarantine/Paddy-20100120-nsy/mfc/b0269.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence WHY NOT LIKE ANY RAILROAD STATION OR FERRY DEPOT silence  ==  [636 frames] -52.1751 [Ac=-33183.3 LM=0.0] (Act=13.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

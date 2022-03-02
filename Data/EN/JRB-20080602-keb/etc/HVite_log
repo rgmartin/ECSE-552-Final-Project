@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0460.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence I HAD FORGOTTEN THEIR EXISTENCE silence  ==  [286 frames] -55.9092 [Ac=-15990.0 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0461.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AH WE WERE VERY CLOSE TOGETHER IN THAT MOMENT silence  ==  [336 frames] -54.8635 [Ac=-18434.1 LM=0.0] (Act=9.5)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0462.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BUT SHE SWUNG OBEDIENTLY ON HER HEEL INTO THE WIND silence  ==  [261 frames] -59.8856 [Ac=-15630.1 LM=0.0] (Act=13.8)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0463.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence THEY ARE HIS TONGUE BY WHICH HE MAKES HIS KNOWLEDGE ARTICULATE silence  ==  [499 frames] -54.8354 [Ac=-27362.9 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0464.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence BETWEEN THE RUSH OF THE CASCADES STREAKS OF RUST SHOWED EVERYWHERE silence  ==  [549 frames] -54.9706 [Ac=-30178.9 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0465.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence HE'LL NEVER DO A TAP OF WORK THE WHOLE VOYAGE silence  ==  [361 frames] -53.0678 [Ac=-19157.5 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0466.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence CAPTAIN WEST MAY BE A SAMURAI BUT HE IS ALSO HUMAN silence  ==  [461 frames] -52.8210 [Ac=-24350.5 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0467.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence AND SO EARLY IN THE VOYAGE TOO silence  ==  [324 frames] -51.6094 [Ac=-16721.5 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0468.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence IN THE MATTER OF CURRY SHE IS A SHEER GENIUS silence  ==  [399 frames] -51.6009 [Ac=-20588.7 LM=0.0] (Act=9.6)
+Aligning File: /data/UserSubmissions/Quarantine/JRB-20080602-keb/mfc/a0469.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THE EASTERN HEAVENS WERE EQUALLY SPECTACULAR silence  ==  [399 frames] -55.7288 [Ac=-22235.8 LM=0.0] (Act=7.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

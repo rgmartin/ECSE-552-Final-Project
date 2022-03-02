@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0496.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I HAVE SEEN MYSELF THAT ONE MAN CONTEMPLATED BY PASCAL'S PHILOSOPHIC EYE silence  ==  [725 frames] -56.3969 [Ac=-40887.8 LM=0.0] (Act=10.9)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0497.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence ONE GREAT DRAWBACK TO FARMING IN CALIFORNIA IS OUR LONG DRY SUMMER silence  ==  [574 frames] -55.0244 [Ac=-31584.0 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0498.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I REMEMBERED THE RED WINE OF THE ITALIAN RANCHO AND SHUDDERED INWARDLY silence  ==  [624 frames] -54.2574 [Ac=-33856.6 LM=0.0] (Act=15.2)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0499.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence I SAID AND DISMISSED THE MATTER AS NOT WORTH THINKING ABOUT silence  ==  [499 frames] -55.1484 [Ac=-27519.0 LM=0.0] (Act=13.2)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0500.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence THEN CAME MY BOY CODE silence  ==  [223 frames] -53.9346 [Ac=-12027.4 LM=0.0] (Act=12.4)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0501.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence AND WHEREVER I RANGED THE WAY LAY ALONG ALCOHOL-DRENCHED ROADS silence  ==  [662 frames] -52.2434 [Ac=-34585.1 LM=0.0] (Act=9.2)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0502.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence AND AS WE HURRIED UP TOWN JOE GOOSE EXPLAINED silence  ==  [524 frames] -52.8275 [Ac=-27681.6 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0503.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE SCENTS OF STRANGE VEGETATION BLEW OFF THE TROPIC LAND silence  ==  [537 frames] -54.9077 [Ac=-29485.4 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0504.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE LIFE THERE WAS HEALTHFUL AND ATHLETIC BUT TOO JUVENILE silence  ==  [712 frames] -51.4482 [Ac=-36631.1 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/Mariane-20090910-pfb/mfc/b0505.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HOW VALIANTLY I WENT AT IT THAT FIRST DAY silence  ==  [461 frames] -52.6090 [Ac=-24252.7 LM=0.0] (Act=10.0)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

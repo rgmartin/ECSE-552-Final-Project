@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0522.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence NOR WOULD IT THAW OUT HIS HANDS AND FEET silence  ==  [436 frames] -48.8565 [Ac=-21301.4 LM=0.0] (Act=9.6)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0523.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE RUSSIAN MUSIC PLAYER THE COUNT WAS HER OBEDIENT SLAVE silence  ==  [687 frames] -47.8361 [Ac=-32863.4 LM=0.0] (Act=8.0)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0524.mfc
+Created lattice with 13 nodes / 12 arcs from label file
+silence SO FAR AS FLAGS WERE CONCERNED THEY WERE BEYOND ALL JURISDICTION silence  ==  [637 frames] -49.1242 [Ac=-31292.1 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0525.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence NEW IDEA HE VOLUNTEERED BRAND NEW IDEA silence  ==  [524 frames] -48.2372 [Ac=-25276.3 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0526.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THIRTY POUNDS SAID THE CAPTAIN WITH FINALITY silence  ==  [499 frames] -50.4605 [Ac=-25179.8 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0527.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THE VERY IDEA OF IT WAS PREPOSTEROUS silence  ==  [449 frames] -48.4900 [Ac=-21772.0 LM=0.0] (Act=9.0)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0528.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence CAPTAIN DOANE'S ORDERS WERE SWIFTLY OBEYED silence  ==  [524 frames] -47.9442 [Ac=-25122.8 LM=0.0] (Act=8.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0529.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence COME ON DEL MAR CHALLENGED silence  ==  [399 frames] -48.7378 [Ac=-19446.4 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0530.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence HE HAD A BIG CHIMPANZEE THAT WAS A WINNER silence  ==  [424 frames] -47.7518 [Ac=-20246.8 LM=0.0] (Act=10.3)
+Aligning File: /data/UserSubmissions/Quarantine/FrozenFire-20080827-mij/mfc/b0531.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence I AM SURE IT MUST HAVE BEEN SOME ADVENTURE silence  ==  [411 frames] -48.4126 [Ac=-19897.6 LM=0.0] (Act=10.5)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

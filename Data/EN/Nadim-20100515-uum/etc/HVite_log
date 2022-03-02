@@ -1,0 +1,62 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0364.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+No tokens survived to final node of network at beam 250.0
+silence IN THE BOHEMIAN CLUB OF SAN FRANCISCO THERE ARE SOME CRACK SAILORS silence  ==  [484 frames] -56.0578 [Ac=-27132.0 LM=0.0] (Act=18.9)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0365.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence MY AGE IN YEARS IS TWENTY TWO silence  ==  [373 frames] -51.5527 [Ac=-19229.2 LM=0.0] (Act=8.6)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0366.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence I FORGOT HOW EASILY I HAD TAUGHT MYSELF FROM THE PRINTED PAGE silence  ==  [442 frames] -52.7851 [Ac=-23331.0 LM=0.0] (Act=8.9)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0367.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence ANY AVERAGE YOUNG FELLOW CAN TEACH HIMSELF IN A WEEK silence  ==  [425 frames] -52.1530 [Ac=-22165.0 LM=0.0] (Act=7.7)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0368.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence PLEASE DO NOT THINK THAT I ALREADY KNOW IT ALL silence  ==  [382 frames] -53.8345 [Ac=-20564.8 LM=0.0] (Act=9.8)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0369.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence YOU SEE WE WERE TEACHING OURSELVES silence  ==  [382 frames] -51.9063 [Ac=-19828.2 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0370.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence AND NOW BEHOLD THE PERVERSITY OF THINGS silence  ==  [433 frames] -51.6788 [Ac=-22376.9 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0371.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence YIELD YOURSELF TO THE WATERS THAT ARE RIPPING AND TEARING AT YOU silence  ==  [459 frames] -53.9515 [Ac=-24763.7 LM=0.0] (Act=11.8)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0372.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence MR MCVEIGH TOLD ME ABOUT HIM silence  ==  [365 frames] -48.8911 [Ac=-17845.3 LM=0.0] (Act=6.1)
+Aligning File: /data/UserSubmissions/Quarantine/Nadim-20100515-uum/mfc/b0373.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence UNLIKE JOSHUA HE STOOD IN NO NEED OF DIVINE ASSISTANCE silence  ==  [476 frames] -52.4612 [Ac=-24971.5 LM=0.0] (Act=8.3)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

@@ -1,0 +1,63 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/NaA09VvHxG/words.mlf -i /tmp/NaA09VvHxG/aligned.out -S /tmp/NaA09VvHxG/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0335.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END WHOEVER LIVED ON THE RANCH DID THAT SENT-END  ==  [361 frames] -55.7046 [Ac=-20109.4 LM=0.0] (Act=10.3)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0336.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END HOW OLD ARE YOU MOTHER SENT-END  ==  [361 frames] -52.1817 [Ac=-18837.6 LM=0.0] (Act=7.6)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0337.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END HERE HE GOT A FRESH THRILL SENT-END  ==  [361 frames] -55.0850 [Ac=-19885.7 LM=0.0] (Act=8.4)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0338.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END IT WAS UNOBTRUSIVE YET IT WAS THERE SENT-END  ==  [398 frames] -57.7616 [Ac=-22989.1 LM=0.0] (Act=10.0)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0339.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END WELL I'LL BE PLUMB GOSH DARNED SENT-END  ==  [348 frames] -55.6778 [Ac=-19375.9 LM=0.0] (Act=9.6)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0340.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END THESE QUICK LITTLE JOYS OF HERS WERE SOURCES OF JOY TO HIM SENT-END  ==  [498 frames] -58.8441 [Ac=-29304.4 LM=0.0] (Act=11.7)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0341.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END I PLAY THAT CHOICE WIDE OPEN TO WIN SENT-END  ==  [411 frames] -55.9058 [Ac=-22977.3 LM=0.0] (Act=9.4)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0342.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END EACH IMPROVEMENT MAKES THE VALUE OF EVERYTHING ELSE PUMP UP SENT-END  ==  [498 frames] -57.0982 [Ac=-28434.9 LM=0.0] (Act=9.1)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0343.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END BUT HOW ARE YOU GOING TO DO IT SENT-END  ==  [311 frames] -56.9250 [Ac=-17703.7 LM=0.0] (Act=9.6)
+Aligning File: /tmp/NaA09VvHxG/EricHedekar-20140503-lev/b0344.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END LOTS OF MEN TAKE WOMEN BUGGY RIDING SENT-END  ==  [398 frames] -56.5498 [Ac=-22506.8 LM=0.0] (Act=9.3)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+

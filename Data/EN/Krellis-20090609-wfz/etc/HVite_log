@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 42 physical / 42 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0250.mfc
+Created lattice with 15 nodes / 14 arcs from label file
+silence HE HAD OBSERVED THE BUSINESS LIFE OF HAWAII AND DEVELOPED A VAULTING AMBITION silence  ==  [599 frames] -57.4665 [Ac=-34422.5 LM=0.0] (Act=12.0)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0251.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence I MAY MANAGE TO FREIGHT A CARGO BACK AS WELL silence  ==  [474 frames] -53.3091 [Ac=-25268.5 LM=0.0] (Act=10.8)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0252.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence O'BRIEN HAD BEEN A CLEAN LIVING YOUNG MAN WITH IDEALS silence  ==  [512 frames] -55.3980 [Ac=-28363.8 LM=0.0] (Act=11.5)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0253.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence HE IT WAS THAT LIVED TO FOUND THE FAMILY OF THE PATINO silence  ==  [499 frames] -54.6591 [Ac=-27274.9 LM=0.0] (Act=14.4)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0254.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence STRAIGHT OUT THEY SWAM THEIR HEADS GROWING SMALLER AND SMALLER silence  ==  [587 frames] -53.8018 [Ac=-31581.7 LM=0.0] (Act=9.3)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0255.mfc
+Created lattice with 11 nodes / 10 arcs from label file
+silence YOU WON'T DIE OF MALNUTRITION BE SURE OF THAT silence  ==  [487 frames] -52.2874 [Ac=-25464.0 LM=0.0] (Act=10.7)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0256.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence SEE THE LENGTH OF THE BODY AND THAT ELONGATED NECK silence  ==  [524 frames] -53.3133 [Ac=-27936.2 LM=0.0] (Act=12.5)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0257.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THEY ARE COMING ASHORE WHOEVER THEY ARE silence  ==  [474 frames] -49.8733 [Ac=-23640.0 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0258.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence SOAKED IN SEAWATER THEY OFFSET THE HEAT RAYS silence  ==  [487 frames] -52.2337 [Ac=-25437.8 LM=0.0] (Act=9.1)
+Aligning File: /data/UserSubmissions/Quarantine/Krellis-20090609-wfz/mfc/a0259.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence THINK OF INVESTING IN SUCH AN ADVENTURE silence  ==  [411 frames] -52.3649 [Ac=-21522.0 LM=0.0] (Act=12.2)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

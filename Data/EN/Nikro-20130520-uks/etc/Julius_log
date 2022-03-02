@@ -1,0 +1,420 @@
+STAT: jconf successfully finalized
+STAT: *** loading AM00 _default
+Stat: init_phmm: Reading in HMM definition
+Stat: rdhmmdef: ascii format HMM definition
+Stat: rdhmmdef: limit check passed
+Stat: check_hmm_restriction: an HMM with several arcs from initial state found: "sp"
+Stat: rdhmmdef: this HMM requires multipath handling at decoding
+Stat: init_phmm: defined HMMs:  8294
+Stat: init_phmm: loading ascii hmmlist
+Stat: init_phmm: logical names:  9429 in HMMList
+Stat: init_phmm: base phones:    44 used in logical
+Stat: init_phmm: finished reading HMM definitions
+STAT: m_fusion: force multipath HMM handling by user request
+STAT: making pseudo bi/mono-phone for IW-triphone
+Stat: hmm_lookup: 1086 pseudo phones are added to logical HMM list
+STAT: *** AM00 _default loaded
+STAT: *** loading LM00 _default
+STAT: reading [/tmp/yfXqaOXN8u/Nikro-20130520-uks.dfa] and [/tmp/yfXqaOXN8u/Nikro-20130520-uks.dict]...
+Stat: init_voca: read 73 words
+STAT: done
+STAT: Gram #0 Nikro-20130520-uks registered
+STAT: Gram #0 Nikro-20130520-uks: new grammar loaded, now mash it up for recognition
+STAT: Gram #0 Nikro-20130520-uks: extracting category-pair constraint for the 1st pass
+STAT: Gram #0 Nikro-20130520-uks: installed
+STAT: Gram #0 Nikro-20130520-uks: turn on active
+STAT: grammar update completed
+STAT: *** LM00 _default loaded
+STAT: ------
+STAT: All models are ready, go for final fusion
+STAT: [1] create MFCC extraction instance(s)
+STAT: *** create MFCC calculation modules from AM
+STAT: AM 0 _default: create a new module MFCC01
+STAT: 1 MFCC modules created
+STAT: [2] create recognition processing instance(s) with AM and LM
+STAT: composing recognizer instance SR00 _default (AM00 _default, LM00 _default)
+STAT: Building HMM lexicon tree
+STAT: lexicon size: 878 nodes
+STAT: coordination check passed
+STAT: wchmm (re)build completed
+STAT: SR00 _default composed
+STAT: [3] initialize for acoustic HMM calculation
+Stat: outprob_init: state-level mixture PDFs, use calc_mix()
+Stat: addlog: generating addlog table (size = 1953 kB)
+Stat: addlog: addlog table generated
+STAT: [4] prepare MFCC storage(s)
+STAT: All init successfully done
+
+STAT: ###### initialize input device
+----------------------- System Information begin ---------------------
+JuliusLib rev.4.2.1 (standard)
+
+Engine specification:
+ -  Base setup   : standard
+ -  Supported LM : DFA, N-gram, Word
+ -  Extension    : ShortWordTree StrictIWCD2
+ -  Compiled by  : gcc -O6 -fomit-frame-pointer
+
+------------------------------------------------------------
+Configuration of Modules
+
+ Number of defined modules: AM=1, LM=1, SR=1
+
+ Acoustic Model (with input parameter spec.):
+ - AM00 "_default"
+	hmmfilename=/data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs
+	hmmmapfilename=/data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist
+
+ Language Model:
+ - LM00 "_default"
+	grammar #1:
+	    dfa  = /tmp/yfXqaOXN8u/Nikro-20130520-uks.dfa
+	    dict = /tmp/yfXqaOXN8u/Nikro-20130520-uks.dict
+
+ Recognizer:
+ - SR00 "_default" (AM00, LM00)
+
+------------------------------------------------------------
+Speech Analysis Module(s)
+
+[MFCC01]  for [AM00 _default]
+
+ Acoustic analysis condition:
+	       parameter = MFCC_0_D_N_Z (25 dim. from 12 cepstrum + c0, abs energy supressed with CMN)
+	sample frequency = 16000 Hz
+	   sample period =  625  (1 = 100ns)
+	     window size =  400 samples (25.0 ms)
+	     frame shift =  160 samples (10.0 ms)
+	    pre-emphasis = 0.97
+	    # filterbank = 24
+	   cepst. lifter = 22
+	      raw energy = False
+	energy normalize = False
+	    delta window = 2 frames (20.0 ms) around
+	     hi freq cut = OFF
+	     lo freq cut = OFF
+	 zero mean frame = OFF
+	       use power = OFF
+	             CVN = OFF
+	            VTLN = OFF
+    spectral subtraction = off
+  cepstral normalization = sentence CMN
+	 base setup from = Julius defaults
+
+------------------------------------------------------------
+Acoustic Model(s)
+
+[AM00 "_default"]
+
+ HMM Info:
+    8294 models, 7236 states, 7236 mpdfs, 7236 Gaussians are defined
+	      model type = context dependency handling ON
+      training parameter = MFCC_N_D_Z_0
+	   vector length = 25
+	number of stream = 1
+	     stream info = [0-24]
+	cov. matrix type = DIAGC
+	   duration type = NULLD
+	max mixture size = 1 Gaussians
+     max length of model = 5 states
+     logical base phones = 44
+       model skip trans. = exist, require multi-path handling
+      skippable models = sp (1 model(s))
+
+ AM Parameters:
+        Gaussian pruning = none (full computation)  (-gprune)
+    short pause HMM name = "sp" specified, "sp" applied (physical)  (-sp)
+  cross-word CD on pass1 = handle by approx. (use average prob. of same LC)
+   sp transition penalty = -1.0
+
+------------------------------------------------------------
+Language Model(s)
+
+[LM00 "_default"] type=grammar
+
+ DFA grammar info:
+      80 nodes, 88 arcs, 73 terminal(category) symbols
+      category-pair matrix: 392 bytes (6876 bytes allocated)
+
+ Vocabulary Info:
+        vocabulary size  = 73 words, 244 models
+        average word len = 3.3 models, 10.0 states
+       maximum state num = 30 nodes per word
+       transparent words = not exist
+       words under class = not exist
+
+ Parameters:
+   found sp category IDs =
+
+------------------------------------------------------------
+Recognizer(s)
+
+[SR00 "_default"]  AM00 "_default"  +  LM00 "_default"
+
+ Lexicon tree:
+	 total node num =    878
+	  root node num =     73
+	  leaf node num =     73
+
+	(-penalty1) IW penalty1 = +0.0
+	(-penalty2) IW penalty2 = +0.0
+	(-cmalpha)CM alpha coef = 0.050000
+
+ Search parameters: 
+	    multi-path handling = yes, multi-path mode enabled
+	(-b) trellis beam width = 500
+	(-bs)score pruning thres= disabled
+	(-n)search candidate num= 10
+	(-s)  search stack size = 500
+	(-m)    search overflow = after 2000 hypothesis poped
+	        2nd pass method = searching sentence, generating N-best
+	(-b2)  pass2 beam width = 500
+	(-lookuprange)lookup range= 5  (tm-5 <= t <tm+5)
+	(-sb)2nd scan beamthres = 80.0 (in logscore)
+	(-n)        search till = 10 candidates found
+	(-output)    and output = 1 candidates out of above
+	 IWCD handling:
+	   1st pass: approximation (use average prob. of same LC)
+	   2nd pass: strict (apply when expanding hypo. )
+	 all possible words will be expanded in 2nd pass
+	 build_wchmm2() used
+	 lcdset limited by word-pair constraint
+	short pause segmentation = off
+	fall back on search fail = off, returns search failure
+
+------------------------------------------------------------
+Decoding algorithm:
+
+	1st pass input processing = (forced) buffered, batch
+	1st pass method = 1-best approx. generating indexed trellis
+	output word confidence measure based on search-time scores
+
+------------------------------------------------------------
+FrontEnd:
+
+ Input stream:
+	             input type = waveform
+	           input source = waveform file
+	          input filelist = /tmp/yfXqaOXN8u/fileList
+	          sampling freq. = 16000 Hz required
+	         threaded A/D-in = supported, off
+	   zero frames stripping = on
+	         silence cutting = off
+	    long-term DC removal = off
+	      reject short input = off
+
+----------------------- System Information end -----------------------
+
+------
+..................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0173.wav
+STAT: 54345 samples (3.40 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> THE DATE WAS NEARLY EIGHTEEN YEARS OLD <s>
+pass1_best_wordseq: 0 2 3 4 5 6 7 8 1
+pass1_best_phonemeseq: sil | dh ax | d ey t | w aa z | n ih r l iy | ey t iy n | y ih r z | ow l d | sil
+pass1_best_score: -8389.058594
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 30 generated, 30 pushed, 31 nodes popped in 338
+sentence1: <s> THE DATE WAS NEARLY EIGHTEEN YEARS OLD <s>
+wseq1: 0 2 3 4 5 6 7 8 1
+phseq1: sil | dh ax | d ey t | w aa z | n ih r l iy | ey t iy n | y ih r z | ow l d | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -8390.518555
+
+
+------
+......................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0174.wav
+STAT: 47300 samples (2.96 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> THEY WERE THE PRESAGE OF STORM <s>
+pass1_best_wordseq: 0 9 10 2 11 12 13 1
+pass1_best_phonemeseq: sil | dh ey | w er | dh ax | p r eh s ix jh | ah v | s t ao r m | sil
+pass1_best_score: -7394.924316
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 30 generated, 30 pushed, 31 nodes popped in 294
+sentence1: <s> THEY WERE THE PRESAGE OF STORM <s>
+wseq1: 0 9 10 2 11 12 13 1
+phseq1: sil | dh ey | w er | dh ax | p r eh s ix jh | ah v | s t ao r m | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -7394.931152
+
+
+------
+.................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0175.wav
+STAT: 90000 samples (5.62 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> DOWN THERE THE EARTH WAS ALREADY SWELLING WITH LIFE <s>
+pass1_best_wordseq: 0 14 15 2 16 4 17 18 19 20 1
+pass1_best_phonemeseq: sil | d aw n | dh eh r | dh ax | er th | w aa z | ao l r eh dx iy | s w eh l ix ng | w ih dh | l ay f | sil
+pass1_best_score: -13221.609375
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 27 generated, 27 pushed, 28 nodes popped in 561
+sentence1: <s> DOWN THERE THE EARTH WAS ALREADY SWELLING WITH LIFE <s>
+wseq1: 0 14 15 2 16 4 17 18 19 20 1
+phseq1: sil | d aw n | dh eh r | dh ax | er th | w aa z | ao l r eh dx iy | s w eh l ix ng | w ih dh | l ay f | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -13221.849609
+
+
+------
+...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0176.wav
+STAT: 98000 samples (6.12 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> THE FIRST TIME IN HIS LIFE HE WAS YEARNING FOR A SCRAP <s>
+pass1_best_wordseq: 0 2 22 23 24 25 20 26 4 27 21 28 29 1
+pass1_best_phonemeseq: sil | dh ax | f er s t | t ay m | ix n | hh ih z | l ay f | hh iy | w aa z | y er n ix ng | f ao r | ax | s k r ae p | sil
+pass1_best_score: -14688.528320
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 36 generated, 36 pushed, 37 nodes popped in 611
+sentence1: <s> FOR THE FIRST TIME IN HIS LIFE HE WAS YEARNING FOR A SCRAP <s>
+wseq1: 0 21 2 22 23 24 25 20 26 4 27 21 28 29 1
+phseq1: sil | f ao r | dh ax | f er s t | t ay m | ix n | hh ih z | l ay f | hh iy | w aa z | y er n ix ng | f ao r | ax | s k r ae p | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -14704.874023
+
+
+------
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0177.wav
+STAT: 72320 samples (4.52 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> SHE HAD BEEN THOROUGHLY AND EFFICIENTLY MAULED <s>
+pass1_best_wordseq: 0 30 31 32 33 34 35 36 1
+pass1_best_phonemeseq: sil | sh iy | hh ae d | b ih n | th er ow l iy | ae n d | ix f ih sh ax n t l iy | m ao l d | sil
+pass1_best_score: -11338.143555
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 35 generated, 35 pushed, 36 nodes popped in 450
+sentence1: <s> SHE HAD BEEN THOROUGHLY AND EFFICIENTLY MAULED <s>
+wseq1: 0 30 31 32 33 34 35 36 1
+phseq1: sil | sh iy | hh ae d | b ih n | th er ow l iy | ae n d | ix f ih sh ax n t l iy | m ao l d | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -11339.079102
+
+
+------
+..................................................................................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0178.wav
+STAT: 72329 samples (4.52 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> EVERY BONE IN HER AGED BODY SEEMED BROKEN OR DISLOCATED <s>
+pass1_best_wordseq: 0 37 38 24 39 40 41 42 43 44 45 1
+pass1_best_phonemeseq: sil | eh v er iy | b ow n | ix n | hh er | ey jh d | b aa dx iy | s iy m d | b r ow k ax n | ao r | d ih s l ow k ey dx ix d | sil
+pass1_best_score: -11481.778320
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 42 generated, 42 pushed, 43 nodes popped in 450
+sentence1: <s> EVERY BONE IN HER AGED BODY SEEMED BROKEN OR DISLOCATED <s>
+wseq1: 0 37 38 24 39 40 41 42 43 44 45 1
+phseq1: sil | eh v er iy | b ow n | ix n | hh er | ey jh d | b aa dx iy | s iy m d | b r ow k ax n | ao r | d ih s l ow k ey dx ix d | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -11481.778320
+
+
+------
+.....................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0179.wav
+STAT: 54886 samples (3.43 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> TOMORROW I'M GOING AFTER THAT BEAR HE SAID <s>
+pass1_best_wordseq: 0 46 47 48 49 50 51 26 52 1
+pass1_best_phonemeseq: sil | t ax m aa r ow | ay m | g ow ix ng | ae f t er | dh ae t | b eh r | hh iy | s eh d | sil
+pass1_best_score: -8664.920898
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 33 generated, 33 pushed, 34 nodes popped in 341
+sentence1: <s> TOMORROW I'M GOING AFTER THAT BEAR HE SAID <s>
+wseq1: 0 46 47 48 49 50 51 26 52 1
+phseq1: sil | t ax m aa r ow | ay m | g ow ix ng | ae f t er | dh ae t | b eh r | hh iy | s eh d | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -8665.664062
+
+
+------
+.........................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0180.wav
+STAT: 55549 samples (3.47 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> IF NOT LET'S SAY OUR PRAYERS AND GO TO BED <s>
+pass1_best_wordseq: 0 53 54 55 56 57 58 34 59 60 61 1
+pass1_best_phonemeseq: sil | ih f | n aa t | l eh t s | s ey | aw er | p r eh r z | ae n d | g ow | t uw | b eh d | sil
+pass1_best_score: -8660.041992
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 35 generated, 35 pushed, 36 nodes popped in 345
+sentence1: <s> IF NOT LET'S SAY OUR PRAYERS AND GO TO BED <s>
+wseq1: 0 53 54 55 56 57 58 34 59 60 61 1
+phseq1: sil | ih f | n aa t | l eh t s | s ey | aw er | p r eh r z | ae n d | g ow | t uw | b eh d | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -8662.952148
+
+
+------
+..................................................................................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0181.wav
+STAT: 62000 samples (3.88 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> SO CHEER UP AND GIVE US YOUR PAW <s>
+pass1_best_wordseq: 0 62 63 64 34 65 66 67 68 1
+pass1_best_phonemeseq: sil | s ow | ch ih r | ah p | ae n d | g ih v | ah s | y ao r | p ao | sil
+pass1_best_score: -9023.668945
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 34 generated, 34 pushed, 35 nodes popped in 386
+sentence1: <s> SO CHEER UP AND GIVE US YOUR PAW <s>
+wseq1: 0 62 63 64 34 65 66 67 68 1
+phseq1: sil | s ow | ch ih r | ah p | ae n d | g ih v | ah s | y ao r | p ao | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -9022.843750
+
+
+------
+.............................................................................................................................................................................................................................................................................................................................................### read waveform input
+Stat: adin_file: input speechfile: /tmp/yfXqaOXN8u/Nikro-20130520-uks/a0182.wav
+STAT: 53607 samples (3.35 sec.)
+STAT: ### speech analysis (waveform -> MFCC)
+### Recognition: 1st pass (LR beam)
+pass1_best: <s> THIS TIME HE DID NOT YAP FOR MERCY <s>
+pass1_best_wordseq: 0 69 23 26 70 54 71 21 72 1
+pass1_best_phonemeseq: sil | dh ih s | t ay m | hh iy | d ih d | n aa t | y ae p | f ao r | m er s iy | sil
+pass1_best_score: -8303.166992
+### Recognition: 2nd pass (RL heuristic best-first)
+WARNING: 00 _default: hypothesis stack exhausted, terminate search now
+STAT: 00 _default: 1 sentences have been found
+STAT: 00 _default: 32 generated, 32 pushed, 33 nodes popped in 333
+sentence1: <s> THIS TIME HE DID NOT YAP FOR MERCY <s>
+wseq1: 0 69 23 26 70 54 71 21 72 1
+phseq1: sil | dh ih s | t ay m | hh iy | d ih d | n aa t | y ae p | f ao r | m er s iy | sil
+cmscore1: 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000 1.000
+score1: -8289.549805
+
+
+------
+10 files processed
+### read waveform input

@@ -1,0 +1,61 @@
+HVite -A -D -T 1 -l * -o SWT -b silence -C /data/svn-mirror/Main/Trunk/Scripts/AcousticModel_scripts/HTK/AMCreate_scripts/input_files/config -H ./interim_files/hmm7/macros -H ./interim_files/hmm7/hmmdefs -i ./interim_files/aligned.mlf -m -t 250.0 150.0 1000.0 -y lab -a -I ./interim_files/words.mlf -S ./interim_files/train.scp ./interim_files/dict1 ./interim_files/monophones1 
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_0_D_N_Z
+
+Read 41 physical / 41 logical HMMs
+Label file will be used to align each file
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0454.mfc
+Created lattice with 5 nodes / 4 arcs from label file
+silence EIGHTEEN HE ADDED silence  ==  [323 frames] -45.5248 [Ac=-14704.5 LM=0.0] (Act=10.0)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0455.mfc
+Created lattice with 10 nodes / 9 arcs from label file
+silence HIS REWARD SHOULD HAVE BEEN PEACE AND REPOSE silence  ==  [434 frames] -49.9330 [Ac=-21670.9 LM=0.0] (Act=8.7)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0456.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence HE WAS AN AMPHIBIAN AND A MOUNTAINEER silence  ==  [357 frames] -48.2703 [Ac=-17232.5 LM=0.0] (Act=11.6)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0457.mfc
+Created lattice with 7 nodes / 6 arcs from label file
+silence IT WAS SANCTIFICATION AND SALVATION silence  ==  [357 frames] -50.3021 [Ac=-17957.9 LM=0.0] (Act=8.2)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0458.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence THE HISTORY OF THE EIGHTEENTH CENTURY IS WRITTEN ERNEST PROMPTED silence  ==  [545 frames] -49.2746 [Ac=-26854.6 LM=0.0] (Act=11.4)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0459.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence THEY ARE NOT BIOLOGISTS NOR SOCIOLOGISTS silence  ==  [537 frames] -47.6137 [Ac=-25568.6 LM=0.0] (Act=7.2)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0460.mfc
+Created lattice with 14 nodes / 13 arcs from label file
+silence THE MORE HIS OPPONENTS GREW EXCITED THE MORE ERNEST DELIBERATELY EXCITED THEM silence  ==  [665 frames] -50.1685 [Ac=-33362.0 LM=0.0] (Act=8.8)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0461.mfc
+Created lattice with 12 nodes / 11 arcs from label file
+silence BY VIRTUE OF THAT POWER WE SHALL REMAIN IN POWER silence  ==  [485 frames] -46.0628 [Ac=-22340.5 LM=0.0] (Act=7.4)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0462.mfc
+Created lattice with 8 nodes / 7 arcs from label file
+silence ONE GUESS WILL DO ERNEST RETORTED silence  ==  [366 frames] -48.0984 [Ac=-17604.0 LM=0.0] (Act=8.5)
+Aligning File: /data/UserSubmissions/Quarantine/CheesyBreed-20080413-rna/mfc/b0463.mfc
+Created lattice with 9 nodes / 8 arcs from label file
+silence TAKE MY ADVICE AND ACCEPT THE VACATION silence  ==  [443 frames] -46.8988 [Ac=-20776.2 LM=0.0] (Act=9.4)
+
+HTK Configuration Parameters[10]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_0_D_N_Z
+

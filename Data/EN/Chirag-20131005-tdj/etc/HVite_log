@@ -1,0 +1,60 @@
+/usr/local/bin/HVite -A -D -T 1 -l * -a -b SENT-END -m -C /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/wav_config -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/macros -H /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/hmmdefs -m -t 250.0 150.0 1000.0 -I /tmp/PbeZoEmGxQ/words.mlf -i /tmp/PbeZoEmGxQ/aligned.out -S /tmp/PbeZoEmGxQ/fileList /data/svn-mirror/SpeechCorpus/Trunk/Lexicon/VoxForge/VoxForgeDict /data/svn-mirror/Main/Trunk/Scripts/VoxForge/lib/Corpus/Quarantine/Submission/Audio/HTK_AcousticModel-2012-07-24_16kHz_16bit_MFCC_O_D/tiedlist 
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+#                 NUMCEPS                       12
+#                 CEPLIFTER                     22
+#                 NUMCHANS                      26
+#                 PREEMCOEF               0.970000
+#                 USEHAMMING                  TRUE
+#                 WINDOWSIZE         250000.000000
+#                 SAVEWITHCRC                 TRUE
+#                 SAVECOMPRESSED              TRUE
+#                 TARGETRATE         100000.000000
+#                 TARGETKIND          MFCC_D_N_Z_0
+#                 SOURCEFORMAT                 WAV
+
+Read 8294 physical / 9429 logical HMMs
+Label file will be used to align each file
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0373.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END UNLIKE JOSHUA HE STOOD IN NO NEED OF DIVINE ASSISTANCE SENT-END  ==  [698 frames] -60.0152 [Ac=-41890.6 LM=0.0] (Act=14.8)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0374.wav
+Created lattice with 14 nodes / 13 arcs from label file
+SENT-END TO SAY THE LEAST CAPTAIN COOK WAS A RATHER THOROUGH GOING EMPIRICIST SENT-END  ==  [736 frames] -59.0839 [Ac=-43485.7 LM=0.0] (Act=21.6)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0375.wav
+Created lattice with 7 nodes / 6 arcs from label file
+SENT-END MAN COULD NOT CONQUER THEM SENT-END  ==  [461 frames] -54.4479 [Ac=-25100.5 LM=0.0] (Act=9.0)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0376.wav
+Created lattice with 10 nodes / 9 arcs from label file
+SENT-END THOUGHT I AND A WORTHY FOOL HE PROVED SENT-END  ==  [573 frames] -54.9805 [Ac=-31503.8 LM=0.0] (Act=12.5)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0377.wav
+Created lattice with 8 nodes / 7 arcs from label file
+SENT-END A SCARLET LOINCLOTH COMPLETED HIS COSTUME SENT-END  ==  [686 frames] -56.5815 [Ac=-38814.9 LM=0.0] (Act=12.9)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0378.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END I LIKE TO SPECULATE UPON THE GLORIOUS FUTURE OF MAN SENT-END  ==  [611 frames] -56.7412 [Ac=-34668.9 LM=0.0] (Act=15.6)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0379.wav
+Created lattice with 12 nodes / 11 arcs from label file
+SENT-END CHRISTMAS IS AN EASY PROBLEM COMPARED WITH A POLYNESIAN GIVING-FEAST SENT-END  ==  [573 frames] -61.1448 [Ac=-35036.0 LM=0.0] (Act=19.5)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0380.wav
+Created lattice with 13 nodes / 12 arcs from label file
+SENT-END HE HAD PEELED OFF HIS SHIRT AND WAS WILDLY WAVING IT SENT-END  ==  [486 frames] -59.8802 [Ac=-29101.8 LM=0.0] (Act=17.2)
+Aligning File: /tmp/PbeZoEmGxQ/Chirag-20131005-tdj/b0381.wav
+Created lattice with 9 nodes / 8 arcs from label file
+SENT-END AND HOW WOULD WE EVER FIND OURSELVES SENT-END  ==  [573 frames] -59.1228 [Ac=-33877.3 LM=0.0] (Act=10.1)
+
+HTK Configuration Parameters[11]
+  Module/Tool     Parameter                  Value
+                  NUMCEPS                       12
+                  CEPLIFTER                     22
+                  NUMCHANS                      26
+                  PREEMCOEF               0.970000
+                  USEHAMMING                  TRUE
+                  WINDOWSIZE         250000.000000
+                  SAVEWITHCRC                 TRUE
+                  SAVECOMPRESSED              TRUE
+                  TARGETRATE         100000.000000
+                  TARGETKIND          MFCC_D_N_Z_0
+                  SOURCEFORMAT                 WAV
+
