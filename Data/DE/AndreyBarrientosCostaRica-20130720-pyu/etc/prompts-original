@@ -1,0 +1,10 @@
+de10-003 Die Darstellung von Bildern mit begleitendem Text ist tadellos. 
+de10-004 Der Text befindet sich nicht nur über und unter dem Bild, 
+de10-005 sondern auch rechts neben dem Bild. 
+de10-006 Kürzlich bin ich auf folgendes Problem hingewiesen worden. 
+de10-007 Wenn man einen Artikel ausdrucken will, 
+de10-008 dann wird der Text nicht rechts vom Bild dargestellt, sondern unterhalb vom Bild. 
+de10-009 Woran liegt das? Der Quellcode, die immer verwendet wird, 
+de10-010 ist auf dem Bildschirmfoto zu sehen. 
+de10-011 Wer hat eine Idee, wie man das Problem lösen kann? 
+de10-012 Die Bildunterschrift befindet sich immer unter dem Bild. 

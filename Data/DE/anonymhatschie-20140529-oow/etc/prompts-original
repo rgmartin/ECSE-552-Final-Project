@@ -1,0 +1,10 @@
+de9-058 1983 wurde der Algorithmus in den USA patentiert. 
+de9-059 Am 21. September 2000 ist das Patent abgelaufen. 
+de9-060 Wenn die Beschreibung vorher bekannt gemacht worden wäre, 
+de9-061 dann wäre eine Patentierung in den USA nicht möglich gewesen. 
+de9-062 RSA verwendet zwei Schlüssel, und zwar einen privaten 
+de9-063 und einen öffentlichen Schlüssel. 
+de9-064 Der öffentliche Schlüssel kann jedermann bekannt sein. 
+de9-065 Er wird verwendet, um die Mitteilungen zu verschlüsseln. 
+de9-066 Mit dem privaten Schlüssel können die Mitteilungen entschlüsselt werden. 
+de9-067 Jedermann kann eine Mitteilung verschlüsseln. 

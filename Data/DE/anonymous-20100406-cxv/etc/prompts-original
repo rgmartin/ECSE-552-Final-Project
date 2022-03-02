@@ -1,0 +1,10 @@
+de8-052 Hierbei findet eine spezifische Architektur Anwendung. 
+de8-053 Der Computer kann sich mit einem Server verbinden, 
+de8-054 der sich möglicherweise hinter einem Router befindet. 
+de8-055 Es ist nicht ganz einfach, dieses Konzept zu verstehen. 
+de8-056 Aus diesem Grund einige grundlegende Anmerkungen, 
+de8-057 die man einmal nachvollzogen haben sollte. 
+de8-058 Jeder Computer im Internet hat mindestens eine IP Adresse. 
+de8-059 Diese IP Adresse besteht aus einer Nummer, 
+de8-060 so dass der jeweilige Computer identifiziert werden kann. 
+de8-061 Jede IP Adresse wird in viele Ports unterteilt. 

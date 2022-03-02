@@ -1,0 +1,10 @@
+de4-02 Der unverschlüsselte Text wird Bit für Bit nacheinander verschlüsselt. 
+de4-03 Größere Blöcke von Bits werden bei der Blockverschlüsselung verschlüsselt. 
+de4-04 Zunächst müssen genügend Daten gesammelt werden, 
+de4-05 die danach verschlüsselt werden. 
+de4-06 Jede Datei kann über das ungesicherte Internet an den Empfänger gesendet werden. 
+de4-07 Bei einem symmetrischen Kryptosystem wird anders vorgegangen. 
+de4-08 Die Stromverschlüsselung wird üblicherweise mit einer höheren Geschwindigkeit durchgeführt. 
+de4-09 Erhebliche Sicherheitsmängel sind möglich, wenn die Software nicht korrekt eingesetzt wird. 
+de4-10 Auch theoretisch kann diese Art von Verschlüsselung nicht geknackt werden, 
+de4-11 das wurde im Jahr 1949 bewiesen. 

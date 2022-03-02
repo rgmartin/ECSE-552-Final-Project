@@ -1,0 +1,10 @@
+de9-040 Die Zuweisung kann zufälligerweise erfolgen 
+de9-041 oder nach einer festen Vereinbarung. 
+de9-042 Der Zeitraum für die Verwendung der IP Adresse wurde festgelegt. 
+de9-043 In privaten Netzwerken werden Adressen dynamisch zugewiesen. 
+de9-044 Dadurch werden statische IP Adressen simuliert. 
+de9-045 Die Adresse hat eine Länge von 24 Bit oder 4 Byte. 
+de9-046 Der freie Adressraum ist relativ stark eingeschränkt. 
+de9-047 Etwa 18 Millionen Adressen stehen den privaten Netzwerken zur Verfügung. 
+de9-048 Hierdurch wird die Zahl der verfügbaren Adressen erheblich reduziert. 
+de9-049 Dieses Protokoll wird noch nicht sehr häufig eingesetzt. 

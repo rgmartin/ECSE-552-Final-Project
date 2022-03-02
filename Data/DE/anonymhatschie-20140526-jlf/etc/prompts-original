@@ -1,0 +1,10 @@
+de9-028 Mehrere Clients können sich eine IP Adresse teilen. 
+de9-029 Die ursprüngliche IP Adresse wird dem Server gegenüber verschleiert. 
+de9-030 Menschen können sich an Namen besser erinnern als an Zahlen. 
+de9-031 IP Adressen können entweder permanent 
+de9-032 oder nur zeitweise zugewiesen werden. 
+de9-033 Der Webserver kann immer unter der gleichen Adresse gefunden werden. 
+de9-034 Typischerweise werden statische IP Adressen von Servern eingesetzt. 
+de9-035 Server sind grundsätzlich immer verfügbar 
+de9-036 und haben regelmäßig die gleiche IP Adresse. 
+de9-037 Durch dynamische IP Adressen können Geräte identifiziert werden. 

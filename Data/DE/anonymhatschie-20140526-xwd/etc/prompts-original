@@ -1,0 +1,10 @@
+de8-066 Der Router wartet auf Datenpakete aus dem Internet. 
+de8-067 Das Datenpaket ist an einem bestimmten Port angekommen. 
+de8-068 Das Datenpaket wurde an den Computer im Netzwerk weitergeleitet. 
+de8-069 Die Weiterleitung kann auch auf einen anderen Port im LAN erfolgen. 
+de8-070 Es entsteht nach außen hin der Eindruck, 
+de8-071 als ob der Router die Datenpakete senden würde. 
+de8-072 Hierbei wird der Router sozusagen als Server eingesetzt. 
+de8-073 Die Computer können sich auch innerhalb des LANs als Server betätigen. 
+de8-074 Eine IP Adresse wurde in zwei IP Adressen aufgeteilt. 
+de8-075 Die erste interne IP Adresse befindet sich am Router. 
