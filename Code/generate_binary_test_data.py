@@ -79,9 +79,9 @@ plt.legend()
 plt.show()
 
 train_dataframe = pd.DataFrame(X_train, columns=['x0', 'x1'])
-train_dataframe = train_dataframe.assign(label=y_train)
+train_dataframe = train_dataframe.assign(label=y_train.astype(int))
 validation_dataframe = pd.DataFrame(X_val, columns=['x0', 'x1'])
-validation_dataframe = train_dataframe.assign(label=y_val)
+validation_dataframe = train_dataframe.assign(label=y_val.astype(int))
 
 train_dataframe.to_csv('synthetic_train_data.csv', index=False)
 validation_dataframe.to_csv('synthetic_validation_data.csv', index=False)

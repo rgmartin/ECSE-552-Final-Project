@@ -60,12 +60,12 @@ def train_SimpleBinaryClassifier():
         axs[0].set_title("Train/Val Loss")
         axs[0].set_ylabel("Loss")
         axs[0].plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
-        axs[0].set_title('BinClass\nTrain/Val Loss Over Time')
+        axs[0].set_title('Simple Binary Classifer\nTrain/Val Loss Over Time')
         axs[0].set_xlabel("Epochs")
         axs[0].grid()
 
         axs[1].plot(logger.metrics['train_acc_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
-        axs[1].set_title("BinClass\nTrain/Val Accuracy")
+        axs[1].set_title("Simple Binary Classifer\nTrain/Val Accuracy")
         axs[1].set_ylabel("Accuracy")
         axs[1].plot(logger.metrics['val_acc_epoch'], lw=3, ms=10, marker='^', color='purple', label='Validation')
         axs[1].set_title('Simple Binary Classifier\nTrain/Val Accuracy Over Time')
@@ -105,12 +105,11 @@ def train_SimpleBinaryClassifier():
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_output_file)
 
     # Todo: Determine the impact and selection of the GPUs on Google Colab and make sure all tensors are on it
-    # if 'COLAB_GPU' in os.environ:
-    #     trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
-    # else:
-    #     trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
+    if 'COLAB_GPU' in os.environ:
+        trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
+    else:
+        trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
 
-    trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
     trainer.fit(model, train_loader, val_loader)
 
     plot_logger_metrics(logger, image_output_file)

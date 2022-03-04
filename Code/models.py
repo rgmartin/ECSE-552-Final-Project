@@ -36,7 +36,7 @@ class SimpleBinaryClassifier(pl.LightningModule):
         loss = torch.nn.functional.mse_loss(y_hat, y)
         self.log('train_loss', loss, on_step=False, on_epoch=True)
 
-        self.train_accuracy(y_hat, y.type(torch.IntTensor))
+        self.train_accuracy(y_hat, y.type(torch.int))
         self.log('train_acc_step', self.train_accuracy)
 
         return loss
@@ -48,7 +48,7 @@ class SimpleBinaryClassifier(pl.LightningModule):
         loss = torch.nn.functional.mse_loss(y_hat, y)
         self.log('val_loss', loss, on_step=False, on_epoch=True)
 
-        self.val_accuracy(y_hat, y.type(torch.IntTensor))
+        self.val_accuracy(y_hat, y.type(torch.int))
         self.log('val_acc_step', self.val_accuracy)
 
         return loss
@@ -60,7 +60,10 @@ class SimpleBinaryClassifier(pl.LightningModule):
         loss = torch.nn.functional.mse_loss(y_hat, y)
         self.log('test_loss', loss, on_step=False, on_epoch=True)
 
-        self.test_accuracy(y_hat, y.type(torch.IntTensor))
+        # The casting here should really be fixed earlier in terms of when the
+        # data is loaded but this is sufficient to prove things out from the
+        # data flow standpoint.
+        self.test_accuracy(y_hat, y.type(torch.int))
         self.log('test_acc_step', self.test_accuracy)
 
         return loss
