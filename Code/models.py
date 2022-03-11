@@ -7,7 +7,6 @@ import torch.nn as nn
 import pytorch_lightning as pl
 import torchmetrics
 from torchvision import transforms as transforms
-# from pl_bolts.models.autoencoders import VAE
 
 
 class SimpleBinaryClassifier(pl.LightningModule):
