@@ -4,6 +4,8 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+import tensorflow as tf
+import torchvision.transforms as transforms
 from torch.utils.data import TensorDataset, DataLoader
 from dict_logger import DictLogger
 from models import *
@@ -201,12 +203,12 @@ def train_SimpleAutoEncoder():
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
     val_labels = torch.Tensor(labelsrand[cutoff:])
-    dataset_train = TensorDataset(torch.Tensor(train_loader), train_labels)
-    dataset_val = TensorDataset(torch.Tensor(val_loader), val_labels)
+    train_loader = torch.Tensor(train_loader)
+    val_loader = torch.Tensor(val_loader)
 
     # Todo: Investigate how the num_workers parameter here affects efficiency
-    train_loader = DataLoader(dataset_train, batch_size=batch_size)
-    val_loader = DataLoader(dataset_val, batch_size=batch_size)
+    # train_loader = DataLoader(dataset_train, batch_size=batch_size)
+    # val_loader = DataLoader(dataset_val, batch_size=batch_size)
 
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_output_file)
 
