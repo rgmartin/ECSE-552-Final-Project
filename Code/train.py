@@ -191,7 +191,7 @@ def train_SimpleAutoEncoder():
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
-    cutoff = np.round(len(dataset.data[:])*0.8)
+    cutoff = int(np.round(len(dataset.data[:])*0.8))
     train_loader = datarand[:cutoff]
     val_loader = datarand[cutoff]
 
