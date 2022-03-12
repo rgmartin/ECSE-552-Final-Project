@@ -191,11 +191,13 @@ def train_SimpleAutoEncoder():
     srrand = []
     cutoff = int(np.round(len(dataset.data[:])*0.8))
     
+    print(len(dataset))
+    
     for ind in randind:
         if ind < cutoff:
-            train_loader = np.dstack(dataset.data[ind][0])
+            train_loader = np.dstack((train_loader,dataset.data[ind][0]))
         else:
-            val_loader = np.dstack(dataset.data[ind][0])
+            val_loader = np.dstack((train_loader,dataset.data[ind][0]))
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
