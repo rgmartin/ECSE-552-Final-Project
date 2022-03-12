@@ -180,7 +180,7 @@ def train_SimpleAutoEncoder():
     image_output_file = name + now + "Loss-Acc.png"
 
     # Todo: Investigate how the num_workers parameter here affects efficiency
-    data_folder_name = 'MyDrive/ECSE-552-FP/Data/Data_lang'
+    data_folder_name = '/content/drive/MyDrive/ECSE-552-FP/Data/Data_lang'
     dataset = AudioDataset(data_folder_name)
     randind = range(len(dataset.data[:]))
     random.shuffle(randind)
