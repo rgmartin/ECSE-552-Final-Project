@@ -136,3 +136,8 @@ cython_debug/
 .idea/misc.xml
 .idea/inspectionProfiles/profiles_settings.xml
 .idea/ECSE-552-Final-Project.iml
+
+# Audio files
+*.mp3
+*.wav
+*.aiff
