@@ -189,6 +189,8 @@ def train_SimpleAutoEncoder():
     datarand = []
     labelsrand = []
     srrand = []
+    train_loader = []
+    val_loader = []
     cutoff = int(np.round(len(dataset.data[:])*0.8))
     
     print(cutoff)
