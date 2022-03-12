@@ -185,10 +185,12 @@ def train_SimpleAutoEncoder():
     randind = list(range(len(dataset.data[:])))
     random.shuffle(randind)
     datarand = []
+    labelsrand = []
+    srrand = []
     for ind in randind:
         datarand.append(dataset.data[ind])
-    labelsrand = dataset.labels[randind]
-    srrand = dataset.sr[randind]
+        labelsrand.append(dataset.labels[ind])
+        srrand.append(dataset.sr[ind])
     cutoff = np.round(len(dataset.data[:])*0.8)
     train_loader = datarand[:cutoff]
     val_loader = datarand[cutoff]
