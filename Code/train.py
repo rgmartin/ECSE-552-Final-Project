@@ -189,19 +189,28 @@ def train_SimpleAutoEncoder():
     datarand = []
     labelsrand = []
     srrand = []
-    train_loader = []
-    val_loader = []
     cutoff = int(np.round(len(dataset.data[:])*0.8))
     
+    print(cutoff)
     print(len(dataset))
+    print(len(randind))
+    
+    count = 0
     for ind in randind:
-        if ind < cutoff:
-            train_loader = np.dstack((train_loader,dataset.data[ind][0]))
+        if count < cutoff:
+            if len(train_loader) == 0:
+                train_loader = dataset.data[ind][0]
+            else:    
+                train_loader = np.dstack((train_loader,dataset.data[ind][0]))
         else:
-            val_loader = np.dstack((train_loader,dataset.data[ind][0]))
+            if len(val_loader) == 0:
+                val_loader = dataset.data[ind][0]
+            else:
+                val_loader = np.dstack((train_loader,dataset.data[ind][0]))
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
+        count = count + 1
         
     newarray = datarand[0][0]
     print(len(a) for a in train_loader)
