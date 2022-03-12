@@ -184,7 +184,9 @@ def train_SimpleAutoEncoder():
     dataset = AudioDataset(data_folder_name)
     randind = list(range(len(dataset.data[:])))
     random.shuffle(randind)
-    datarand = dataset.data[randind]
+    datarand = []
+    for ind in randind:
+        datarand.append(dataset.data[ind])
     labelsrand = dataset.labels[randind]
     srrand = dataset.sr[randind]
     cutoff = np.round(len(dataset.data[:])*0.8)
