@@ -182,14 +182,14 @@ def train_SimpleAutoEncoder():
     # Todo: Investigate how the num_workers parameter here affects efficiency
     data_folder_name = '/content/drive/MyDrive/ECSE-552-FP/Data/Data_lang'
     dataset = AudioDataset(data_folder_name)
-    randind = range(len(dataset.data[:]))
+    randind = list(range(len(dataset.data[:])))
     random.shuffle(randind)
     datarand = dataset.data[randind]
     labelsrand = dataset.labels[randind]
     srrand = dataset.sr[randind]
     cutoff = np.round(len(dataset.data[:])*0.8)
-    train_loader = dataset.data[:cutoff]
-    val_loader = dataset.data[cutoff]
+    train_loader = datarand[:cutoff]
+    val_loader = datarand[cutoff]
 
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
