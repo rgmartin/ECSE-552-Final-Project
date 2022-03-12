@@ -187,13 +187,16 @@ def train_SimpleAutoEncoder():
     datarand = []
     labelsrand = []
     srrand = []
+    cutoff = int(np.round(len(dataset.data[:])*0.8))
+    
     for ind in randind:
+        if ind < cutoff:
+            train_loader = np.dstack(dataset.data[ind])
+        else:
+            val_loader = np.dstack(dataset.data[ind])
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
-    cutoff = int(np.round(len(dataset.data[:])*0.8))
-    train_loader = datarand[:cutoff]
-    val_loader = datarand[cutoff]
 
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
