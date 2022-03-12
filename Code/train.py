@@ -170,8 +170,8 @@ def train_SimpleAutoEncoder():
 
     # Set the model/parameters for the training loop here
     max_epochs = 10
-    batch_size = 2
-    model = Autoencoder(base_channel_size=32, latent_dim=64)
+    batch_size = 1
+    model = Autoencoder(base_channel_size=32, latent_dim=32)
     logger = DictLogger()
 
     # Configure the names of the output files here, these should contain enough information to help distinguish them
@@ -193,18 +193,20 @@ def train_SimpleAutoEncoder():
     
     for ind in randind:
         if ind < cutoff:
-            train_loader = np.dstack(dataset.data[ind])
+            train_loader = np.dstack(dataset.data[ind][0])
         else:
-            val_loader = np.dstack(dataset.data[ind])
-        datarand.append(dataset.data[ind])
+            val_loader = np.dstack(dataset.data[ind][0])
+        datarand.append(dataset.data[ind][0])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
+        
+        newarray = datarand[1]
 
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
     val_labels = torch.Tensor(labelsrand[cutoff:])
-    train_loader = torch.Tensor(train_loader)
-    val_loader = torch.Tensor(val_loader)
+    train_loader = torch.Tensor(train_loader).reshape(train_loader.shape[0], newarray.shape[0]+newarray.shape[1])
+    val_loader = torch.Tensor(val_loader).reshape(val_loader.shape[0],newarray.shape[0]+newarray.shape[1])
 
     # Todo: Investigate how the num_workers parameter here affects efficiency
     # train_loader = DataLoader(dataset_train, batch_size=batch_size)
