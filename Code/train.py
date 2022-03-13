@@ -212,7 +212,7 @@ def train_SimpleAutoEncoder():
                 train_loader = flatten_spec
             else:    
                 flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                train_loader.append(flatten_spec,axis=0)
+                train_loader = np.hstack((train_loader,flatten_spec))
                 # train_loader = np.dstack((train_loader,dataset.data[ind]))
         else:
             if len(val_loader) == 0:
@@ -220,7 +220,7 @@ def train_SimpleAutoEncoder():
                 val_loader = flatten_spec
             else:
                 flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                val_loader = flatten_spec
+                val_loader = np.hstack((train_loader,flatten_spec))
                 # val_loader = np.dstack((train_loader,dataset.data[ind]))
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
