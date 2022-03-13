@@ -208,20 +208,24 @@ def train_SimpleAutoEncoder():
     for ind in randind:
         if count < cutoff:
             if len(train_loader) == 0:
-                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                train_loader = flatten_spec
+                # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                # train_loader = flatten_spec
+                train_loader = dataset.data[ind]
             else:    
-                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                train_loader = np.vstack((train_loader,flatten_spec))
-                # train_loader = np.dstack((train_loader,dataset.data[ind]))
+                # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                # train_loader = np.vstack((train_loader,flatten_spec))
+                train_loader = np.dstack((train_loader,dataset.data[ind]))
         else:
             if len(val_loader) == 0:
                 flatten_spec = [j for sub in dataset.data[ind] for j in sub]
                 val_loader = flatten_spec
             else:
                 flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                val_loader = np.vstack((train_loader,flatten_spec))
+                val_loader = np.vstack((val_loader,flatten_spec))
                 # val_loader = np.dstack((train_loader,dataset.data[ind]))
+                
+        train_loader = dataset.data[:cutoff][:]
+        val_loader = dataset.data[cutoff:][:]
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
@@ -231,6 +235,8 @@ def train_SimpleAutoEncoder():
     
     print("train_loader shape")
     print(train_loader.shape)
+    print("val_loader shape")
+    print(val_loader.shape)
     print("newarray shape")
     print(newarray.shape)
     
