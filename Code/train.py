@@ -4,6 +4,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
+from sympy import permutedims
 import tensorflow as tf
 import torchvision.transforms as transforms
 from torch.utils.data import TensorDataset, DataLoader
@@ -207,14 +208,20 @@ def train_SimpleAutoEncoder():
     for ind in randind:
         if count < cutoff:
             if len(train_loader) == 0:
-                train_loader = dataset.data[ind]
+                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                train_loader = flatten_spec
             else:    
-                train_loader = np.dstack((train_loader,dataset.data[ind]))
+                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                train_loader.append(flatten_spec,axis=0)
+                # train_loader = np.dstack((train_loader,dataset.data[ind]))
         else:
             if len(val_loader) == 0:
-                val_loader = dataset.data[ind][0]
+                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                val_loader = flatten_spec
             else:
-                val_loader = np.dstack((train_loader,dataset.data[ind]))
+                flatten_spec = [j for sub in dataset.data[ind] for j in sub]
+                val_loader = flatten_spec
+                # val_loader = np.dstack((train_loader,dataset.data[ind]))
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
         srrand.append(dataset.sr[ind])
@@ -233,8 +240,8 @@ def train_SimpleAutoEncoder():
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
     val_labels = torch.Tensor(labelsrand[cutoff:])
-    train_loader = torch.Tensor(train_loader).reshape(train_loader.shape[0], newarray.shape[0]+newarray.shape[1])
-    val_loader = torch.Tensor(val_loader).reshape(val_loader.shape[0],newarray.shape[0]+newarray.shape[1])
+    train_loader = torch.Tensor(train_loader)
+    val_loader = torch.Tensor(val_loader)
 
     # Todo: Investigate how the num_workers parameter here affects efficiency
     # train_loader = DataLoader(dataset_train, batch_size=batch_size)
