@@ -112,7 +112,7 @@ class Encoder(nn.Module):
             nn.Conv2d(2*c_hid, 2*c_hid, kernel_size=3, padding=1, stride=2), # 32x39 => 16x19
             act_fn(),
             nn.Flatten(), # Image grid to single feature vector
-            nn.Linear(2*c_hid, latent_dim)
+            nn.Linear(2*20480, latent_dim)
         )
 
     def forward(self, x):
