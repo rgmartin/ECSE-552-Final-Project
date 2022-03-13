@@ -1,6 +1,8 @@
 import torch
-import pytorch_lightning as pl
+import torch.nn.functional as F
 import torchmetrics
+import torchvision
+import pytorch_lightning as pl
 
 
 class SimpleBinaryClassifier(pl.LightningModule):
@@ -80,3 +82,90 @@ class SimpleBinaryClassifier(pl.LightningModule):
     def configure_optimizers(self):
         optimizer = torch.optim.SGD(self.parameters(), lr=.1)
         return optimizer
+
+
+class BaselineResnetClassifier(pl.LightningModule):
+    """
+    Baseline model built on top of a pretrained ResNet50 architecture.
+    """
+
+    def __init__(self, num_classes):
+        super().__init__()
+
+        # Load, optionally download pre-trained Resnet.
+        self.resnet50 = torchvision.models.resnet50(pretrained=True)
+        self.fc = torch.nn.Linear(1000, num_classes)
+
+        # Log stuffs.
+        self.train_accuracy = torchmetrics.Accuracy()
+        self.test_accuracy = torchmetrics.Accuracy()
+        self.val_accuracy = torchmetrics.Accuracy()
+
+
+    def forward(self, x):
+        x = self.resnet50(x)
+        x = F.relu(x)
+        x = self.fc(x)
+
+        return F.softmax(x)
+
+    def training_step(self, batch, batch_idx):
+        x, y = batch
+        y_hat = self.forward(x)
+
+        loss = F.cross_entropy(y_hat, y)
+        self.log('train_loss', loss, on_step=False, on_epoch=True)
+
+        self.train_accuracy(y_hat, y)
+        self.log('train_acc_step', self.train_accuracy)
+
+        return loss
+
+    def validation_step(self, batch, batch_idx):
+        x, y = batch
+        y_hat = self.forward(x)
+
+        loss = F.cross_entropy(y_hat, y)
+        self.log('val_loss', loss, on_step=False, on_epoch=True)
+
+        self.val_accuracy(y_hat, y)
+        self.log('val_acc_step', self.val_accuracy)
+
+        return loss
+
+    def test_step(self, batch, batch_idx):
+        x, y = batch
+        y_hat = self.forward(x)
+
+        loss = F.cross_entropy(y_hat, y)
+        self.log('test_loss', loss, on_step=False, on_epoch=True)
+
+        self.test_accuracy(y_hat, y)
+        self.log('test_acc_step', self.test_accuracy)
+
+        return loss
+
+    def training_epoch_end(self, outs):
+        self.log('train_acc_epoch', self.train_accuracy)
+
+    def validation_epoch_end(self, outs):
+        self.log('val_acc_epoch', self.val_accuracy)
+
+    def test_epoch_end(self, outs):
+        self.log('test_acc_epoch', self.test_accuracy)
+
+    def configure_optimizers(self):
+        optimizer = torch.optim.SGD(self.parameters(), lr=.1)
+        return optimizer
+
+if __name__ == "__main__":
+
+    # Generate random data.
+    batch_size = 1
+    num_channels = 3
+    spectrogram_dimensions = [128, 128]
+
+    dummy_data = torch.rand([batch_size, num_channels, *spectrogram_dimensions])
+
+    model = BaselineResnetClassifier(6)
+    print(model(dummy_data))
