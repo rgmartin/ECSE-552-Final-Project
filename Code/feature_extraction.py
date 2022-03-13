@@ -214,8 +214,8 @@ def get_dataloaders_spectro(batch_size, num_workers=0,
             else:
                 val_dataset = np.concatenate((val_dataset,shapeddataset[ind]),axis=0)
     
-    train_dataset = np.expand_dims(train_dataset,axis=1)
-    val_dataset = np.expand_dims(val_dataset,axis=1)
+    # train_dataset = np.expand_dims(train_dataset,axis=1)
+    # val_dataset = np.expand_dims(val_dataset,axis=1)
     
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
