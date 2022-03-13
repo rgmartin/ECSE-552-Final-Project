@@ -193,9 +193,12 @@ def train_SimpleAutoEncoder():
     val_loader = []
     cutoff = int(np.round(len(dataset.data[:])*0.8))
     
+    print("cutoff")
     print(cutoff)
+    print("dataset length")
     print(len(dataset))
-    print(len(randind))
+    print("randind")
+    print(randind)
     
     count = 0
     for ind in randind:
@@ -215,10 +218,13 @@ def train_SimpleAutoEncoder():
         count = count + 1
         
     newarray = datarand[0][0]
+    
     print(len(a) for a in train_loader)
     print(len(a) for a in newarray)
     
+    print("train_loader shape")
     print(train_loader.shape)
+    print("newarray shape")
     print(newarray.shape)
     
     # it is necessary to reshape the tensors to be in a column format for calculations later
