@@ -12,6 +12,7 @@ from dict_logger import DictLogger
 from models import *
 from feature_extraction import *
 import random
+import time
 
 if 'COLAB_GPU' in os.environ:
     print('Running on CoLab')
@@ -171,8 +172,8 @@ def train_SimpleAutoEncoder():
 
     # Set the model/parameters for the training loop here
     max_epochs = 10
-    batch_size = 1
-    model = Autoencoder(num_input_channels=1, base_channel_size=32, latent_dim=32)
+    batch_size = 20
+    model = Autoencoder_1(num_input_channels=1, base_channel_size=32, latent_dim=32)
     logger = DictLogger()
 
     # Configure the names of the output files here, these should contain enough information to help distinguish them
@@ -249,27 +250,111 @@ def train_SimpleAutoEncoder():
     print("train_loader Tensor shape")
     print(train_loader.shape)
     
+    
+    
     # Todo: Investigate how the num_workers parameter here affects efficiency
     # train_loader = DataLoader(dataset_train, batch_size=batch_size)
     # val_loader = DataLoader(dataset_val, batch_size=batch_size)
 
-    profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_output_file)
+    # profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_output_file)
 
-    # Todo: Determine the impact and selection of the GPUs on Google Colab and make sure all tensors are on it
-    if 'COLAB_GPU' in os.environ:
-        trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
-    else:
-        trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
+    # # Todo: Determine the impact and selection of the GPUs on Google Colab and make sure all tensors are on it
+    # if 'COLAB_GPU' in os.environ:
+    #     trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
+    # else:
+    #     trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
 
-    trainer.fit(model, train_loader, val_loader)
+    # trainer.fit(model, train_loader, val_loader)
 
-    plot_logger_metrics(logger, image_output_file)
+    # plot_logger_metrics(logger, image_output_file)
 
     # this is only printed for verification purposes, hence why the file isn't saved
     # plot_layer_decision_boundaries(model.model, train_data.loc[:, ['x0', 'x1']].values, 'Training', train_data.shape[0] // 2)
 
+def train_mnsitauto():
+    CUDA_DEVICE_NUM = 3
+    DEVICE = torch.device(f'cuda:{CUDA_DEVICE_NUM}' if torch.cuda.is_available() else 'cpu')
+    print('Device:', DEVICE)
 
+    # Hyperparameters
+    RANDOM_SEED = 123
+    LEARNING_RATE = 0.0005
+    BATCH_SIZE = 32
+    NUM_EPOCHS = 20
+    train_loader, valid_loader, test_loader = get_dataloaders_mnist(
+    batch_size=BATCH_SIZE, 
+    num_workers=2, 
+    validation_fraction=0.)
+    
+    model = AutoEncoder()
+    model.to(DEVICE)
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=0.005)  
+    
+    log_dict = train_autoencoder_v1(num_epochs=NUM_EPOCHS, model=model, 
+                                optimizer=optimizer, device=DEVICE, 
+                                train_loader=train_loader,
+                                skip_epoch_stats=True,
+                                logging_interval=250)
+
+def train_autoencoder_v1(num_epochs, model, optimizer, device, 
+                         train_loader, loss_fn=None,
+                         logging_interval=100, 
+                         skip_epoch_stats=False,
+                         save_model=None):
+    
+    log_dict = {'train_loss_per_batch': [],
+                'train_loss_per_epoch': []}
+    
+    if loss_fn is None:
+        loss_fn = F.mse_loss
+
+    start_time = time.time()
+    for epoch in range(num_epochs):
+
+        model.train()
+        for batch_idx, (features, _) in enumerate(train_loader):
+
+            features = features.to(device)
+
+            # FORWARD AND BACK PROP
+            logits = model(features)
+            loss = loss_fn(logits, features)
+            optimizer.zero_grad()
+
+            loss.backward()
+
+            # UPDATE MODEL PARAMETERS
+            optimizer.step()
+
+            # LOGGING
+            log_dict['train_loss_per_batch'].append(loss.item())
+            
+            if not batch_idx % logging_interval:
+                print('Epoch: %03d/%03d | Batch %04d/%04d | Loss: %.4f'
+                      % (epoch+1, num_epochs, batch_idx,
+                          len(train_loader), loss))
+
+        if not skip_epoch_stats:
+            model.eval()
+            
+            with torch.set_grad_enabled(False):  # save memory during inference
+                
+                train_loss = compute_epoch_loss_autoencoder(
+                    model, train_loader, loss_fn, device)
+                print('***Epoch: %03d/%03d | Loss: %.3f' % (
+                      epoch+1, num_epochs, train_loss))
+                log_dict['train_loss_per_epoch'].append(train_loss.item())
+
+        print('Time elapsed: %.2f min' % ((time.time() - start_time)/60))
+
+    print('Total Training Time: %.2f min' % ((time.time() - start_time)/60))
+    if save_model is not None:
+        torch.save(model.state_dict(), save_model)
+    
+    return log_dict
 
 if __name__ == "__main__":
     # train_SimpleBinaryClassifier()
-    train_SimpleAutoEncoder()
+    # train_SimpleAutoEncoder()
+    train_mnsitauto()

@@ -152,7 +152,7 @@ class Decoder(nn.Module):
         return x
     
 
-class Autoencoder(pl.LightningModule):
+class Autoencoder_1(pl.LightningModule):
 
     def __init__(self, base_channel_size: int, latent_dim: int,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 128,height: int = 157):
         super().__init__()
@@ -202,3 +202,68 @@ class Autoencoder(pl.LightningModule):
     def test_step(self, batch, batch_idx):
         loss = self._get_reconstruction_loss(batch)
         self.log('test_loss', loss)
+
+
+class AutoEncoder(nn.Module):
+    def __init__(self):
+        super().__init__()
+        
+        self.encoder = nn.Sequential( #784
+                nn.Conv2d(1, 32, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(0.01),
+                nn.Conv2d(32, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(0.01),
+                nn.Conv2d(64, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(0.01),
+                nn.Conv2d(64, 64, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.Flatten(),
+                nn.Linear(3136, 2)
+        )
+        self.decoder = nn.Sequential(
+                torch.nn.Linear(2, 3136),
+                Reshape(-1, 64, 7, 7),
+                nn.ConvTranspose2d(64, 64, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(0.01),
+                nn.ConvTranspose2d(64, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),                
+                nn.LeakyReLU(0.01),
+                nn.ConvTranspose2d(64, 32, stride=(2, 2), kernel_size=(3, 3), padding=0),                
+                nn.LeakyReLU(0.01),
+                nn.ConvTranspose2d(32, 1, stride=(1, 1), kernel_size=(3, 3), padding=0), 
+                Trim(),  # 1x29x29 -> 1x28x28
+                nn.Sigmoid()
+                )
+
+    def forward(self, x):
+        x = self.encoder(x)
+        x = self.decoder(x)
+        return x
+    
+def compute_epoch_loss_autoencoder(model, data_loader, loss_fn, device):
+    model.eval()
+    curr_loss, num_examples = 0., 0
+    with torch.no_grad():
+        for features, _ in data_loader:
+            features = features.to(device)
+            logits = model(features)
+            loss = loss_fn(logits, features, reduction='sum')
+            num_examples += features.size(0)
+            curr_loss += loss
+
+        curr_loss = curr_loss / num_examples
+        return curr_loss
+    
+class Reshape(nn.Module):
+    def __init__(self, *args):
+        super().__init__()
+        self.shape = args
+
+    def forward(self, x):
+        return x.view(self.shape)
+
+
+class Trim(nn.Module):
+    def __init__(self, *args):
+        super().__init__()
+
+    def forward(self, x):
+        return x[:, :, :28, :28]
