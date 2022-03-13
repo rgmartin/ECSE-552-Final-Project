@@ -212,20 +212,20 @@ def train_SimpleAutoEncoder():
     for ind in randind:
         if count < cutoff:
             if len(train_loader) == 0:
-                train_loader = shapeddataset[ind]
+                train_loader = shapeddataset[ind][:,0:128]
             else:    
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
                 # train_loader = np.vstack((train_loader,flatten_spec))
-                train_loader = np.concatenate((train_loader,shapeddataset[ind]),axis=0)
+                train_loader = np.concatenate((train_loader,shapeddataset[ind][:,0:128]),axis=0)
         else:
             if len(val_loader) == 0:
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
-                val_loader = shapeddataset[ind]
+                val_loader = shapeddataset[ind][:,0:128]
             else:
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
                 # val_loader = np.vstack((val_loader,flatten_spec))
                 # val_loader = np.dstack((val_loader,shapeddataset[ind]))
-                val_loader = np.concatenate((val_loader,shapeddataset[ind]),axis=0)
+                val_loader = np.concatenate((val_loader,shapeddataset[ind][:,0:128]),axis=0)
                 
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
@@ -239,8 +239,6 @@ def train_SimpleAutoEncoder():
     print(train_loader.shape)
     print("val_loader shape")
     print(val_loader.shape)
-    print("newarray shape")
-    print(newarray.shape)
     
     # it is necessary to reshape the tensors to be in a column format for calculations later
     train_labels = torch.Tensor(labelsrand[:cutoff])
@@ -248,6 +246,9 @@ def train_SimpleAutoEncoder():
     train_loader = torch.Tensor(train_loader)
     val_loader = torch.Tensor(val_loader)
 
+    print("train_loader Tensor shape")
+    print(train_loader.shape)
+    
     # Todo: Investigate how the num_workers parameter here affects efficiency
     # train_loader = DataLoader(dataset_train, batch_size=batch_size)
     # val_loader = DataLoader(dataset_val, batch_size=batch_size)
