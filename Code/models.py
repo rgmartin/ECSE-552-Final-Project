@@ -168,6 +168,7 @@ class Autoencoder(pl.LightningModule):
         """
         The forward function takes in an image and returns the reconstructed image
         """
+        print(x.shape)
         z = self.encoder(x)
         x_hat = self.decoder(z)
         return x_hat
