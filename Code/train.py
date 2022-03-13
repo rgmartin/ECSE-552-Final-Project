@@ -273,7 +273,7 @@ def train_SimpleAutoEncoder():
 
 def train_mnsitauto():
     CUDA_DEVICE_NUM = 3
-    DEVICE = torch.device(f'cuda:{CUDA_DEVICE_NUM}' if torch.cuda.is_available() else 'cpu')
+    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
 
     # Hyperparameters
