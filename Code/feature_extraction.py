@@ -9,6 +9,7 @@ from torchvision import datasets
 from torch.utils.data import SubsetRandomSampler
 import os
 from tqdm import tqdm
+import random
 
 """
 Gets a melspectrogram using librosa libraty
@@ -132,8 +133,6 @@ def get_dataloaders_mnist(batch_size, num_workers=0,
                                    transform=train_transforms,
                                    download=True)
     
-    print(train_dataset.size())
-    
     valid_dataset = datasets.MNIST(root='data',
                                    train=True,
                                    transform=test_transforms)
@@ -175,6 +174,89 @@ def get_dataloaders_mnist(batch_size, num_workers=0,
         return train_loader, test_loader
     else:
         return train_loader, valid_loader, test_loader
+
+
+def get_dataloaders_spectro(batch_size, num_workers=0,
+                          validation_fraction=None,
+                          train_transforms=None, test_transforms=None):
+
+    if train_transforms is None:
+        train_transforms = transforms.ToTensor()
+
+    if test_transforms is None:
+        test_transforms = transforms.ToTensor()
+    data_folder_name = '/content/drive/MyDrive/ECSE-552-FP/Data/Data_lang/DE'
+    dataset = AudioDataset(data_folder_name)
+    
+    randind = list(range(len(dataset.data[:])))
+    random.shuffle(randind)
+    datarand = []
+    labelsrand = []
+    srrand = []
+    train_dataset = []
+    val_dataset = []
+    cutoff = int(np.round(len(dataset.data[:])*0.8))
+    
+    count = 0
+    shapeddataset = np.reshape(dataset.data,(len(dataset),1,dataset.data[0].shape[0],dataset.data[0].shape[1]))
+    
+    print(shapeddataset.shape)
+    
+    for ind in randind:
+        if count < cutoff:
+            if len(train_dataset) == 0:
+                train_dataset = shapeddataset[ind]
+            else:    
+                train_dataset = np.concatenate((train_dataset,shapeddataset[ind]),axis=0)
+        else:
+            if len(val_dataset) == 0:
+                val_dataset = shapeddataset[ind]
+            else:
+                val_dataset = np.concatenate((val_dataset,shapeddataset[ind]),axis=0)
+    
+    train_dataset = np.expand_dims(train_dataset,axis=1)
+    val_dataset = np.expand_dims(val_dataset,axis=1)
+    
+    # it is necessary to reshape the tensors to be in a column format for calculations later
+    train_labels = torch.Tensor(labelsrand[:cutoff])
+    val_labels = torch.Tensor(labelsrand[cutoff:])
+    train_dataset = torch.Tensor(train_dataset)
+    val_dataset = torch.Tensor(val_dataset)
+
+    if validation_fraction is not None:
+        num = int(validation_fraction * 60000)
+        train_indices = torch.arange(0, 60000 - num)
+        valid_indices = torch.arange(60000 - num, 60000)
+
+        train_sampler = SubsetRandomSampler(train_indices)
+        valid_sampler = SubsetRandomSampler(valid_indices)
+
+        valid_loader = DataLoader(dataset=val_dataset,
+                                  batch_size=batch_size,
+                                  num_workers=num_workers,
+                                  sampler=valid_sampler)
+
+        train_loader = DataLoader(dataset=train_dataset,
+                                  batch_size=batch_size,
+                                  num_workers=num_workers,
+                                  drop_last=True,
+                                  sampler=train_sampler)
+    else:
+        train_loader = DataLoader(dataset=train_dataset,
+                                  batch_size=batch_size,
+                                  num_workers=num_workers,
+                                  shuffle=True)
+
+    test_loader = DataLoader(dataset=val_dataset,
+                             batch_size=batch_size,
+                             num_workers=num_workers,
+                             shuffle=False)
+
+    if validation_fraction is None:
+        return train_loader, test_loader
+    else:
+        return train_loader, valid_loader, test_loader
+
 
 if __name__ == '__main__':
     # # 4. Display
