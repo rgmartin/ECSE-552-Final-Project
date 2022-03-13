@@ -279,7 +279,7 @@ def train_mnsitauto():
     # Hyperparameters
     RANDOM_SEED = 123
     LEARNING_RATE = 0.0005
-    BATCH_SIZE = 20
+    BATCH_SIZE = 1
     NUM_EPOCHS = 20
     train_loader, valid_loader, test_loader = get_dataloaders_spectro(
     batch_size=BATCH_SIZE, 
