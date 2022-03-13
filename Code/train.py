@@ -284,7 +284,7 @@ def train_mnsitauto():
     train_loader, valid_loader, test_loader = get_dataloaders_mnist(
     batch_size=BATCH_SIZE, 
     num_workers=2, 
-    validation_fraction=0.)
+    validation_fraction=0.2)
     
     model = AutoEncoder()
     model.to(DEVICE)

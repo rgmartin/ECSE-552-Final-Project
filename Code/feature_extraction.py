@@ -131,7 +131,9 @@ def get_dataloaders_mnist(batch_size, num_workers=0,
                                    train=True,
                                    transform=train_transforms,
                                    download=True)
-
+    
+    print(train_dataset.size())
+    
     valid_dataset = datasets.MNIST(root='data',
                                    train=True,
                                    transform=test_transforms)
@@ -152,14 +154,13 @@ def get_dataloaders_mnist(batch_size, num_workers=0,
                                   batch_size=batch_size,
                                   num_workers=num_workers,
                                   sampler=valid_sampler)
-        print(train_dataset.shape)
+
         train_loader = DataLoader(dataset=train_dataset,
                                   batch_size=batch_size,
                                   num_workers=num_workers,
                                   drop_last=True,
                                   sampler=train_sampler)
     else:
-        print(train_dataset.shape)
         train_loader = DataLoader(dataset=train_dataset,
                                   batch_size=batch_size,
                                   num_workers=num_workers,
