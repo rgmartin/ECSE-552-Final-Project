@@ -131,7 +131,7 @@ class Decoder(nn.Module):
         """
         super().__init__()
         c_hid = base_channel_size
-        self.linear = nn.Sequential(nn.Linear(latent_dim, 2*c_hid),act_fn())
+        self.linear = nn.Sequential(nn.Linear(latent_dim, 2*20480),act_fn())
         self.net = nn.Sequential(
             nn.ConvTranspose2d(2*c_hid, 2*c_hid, kernel_size=3, output_padding=1, padding=1, stride=2), # 4x4 => 8x8
             act_fn(),
