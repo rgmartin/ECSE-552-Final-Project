@@ -172,7 +172,7 @@ def train_SimpleAutoEncoder():
     # Set the model/parameters for the training loop here
     max_epochs = 10
     batch_size = 1
-    model = Autoencoder(base_channel_size=32, latent_dim=32)
+    model = Autoencoder(num_input_channels=1, base_channel_size=32, latent_dim=32)
     logger = DictLogger()
 
     # Configure the names of the output files here, these should contain enough information to help distinguish them
