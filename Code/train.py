@@ -286,8 +286,6 @@ def train_mnsitauto():
     num_workers=2, 
     validation_fraction=0.)
     
-    print(train_loader.shape)
-    
     model = AutoEncoder()
     model.to(DEVICE)
 
