@@ -193,6 +193,11 @@ def train_SimpleAutoEncoder():
     val_loader = []
     cutoff = int(np.round(len(dataset.data[:])*0.8))
     
+    print("Size Test")
+    print(len(dataset.data[0]))
+    print("Size Test2")
+    print(dataset.data[0][0].shape)
+    
     print("cutoff")
     print(cutoff)
     print("dataset length")
