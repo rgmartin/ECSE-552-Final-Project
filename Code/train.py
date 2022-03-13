@@ -279,17 +279,19 @@ def train_mnsitauto():
     # Hyperparameters
     RANDOM_SEED = 123
     LEARNING_RATE = 0.0005
-    BATCH_SIZE = 32
+    BATCH_SIZE = 20
     NUM_EPOCHS = 20
     train_loader, valid_loader, test_loader = get_dataloaders_mnist(
     batch_size=BATCH_SIZE, 
     num_workers=2, 
     validation_fraction=0.)
     
+    print(train_loader.shape)
+    
     model = AutoEncoder()
     model.to(DEVICE)
 
-    optimizer = torch.optim.Adam(model.parameters(), lr=0.005)  
+    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
     
     log_dict = train_autoencoder_v1(num_epochs=NUM_EPOCHS, model=model, 
                                 optimizer=optimizer, device=DEVICE, 

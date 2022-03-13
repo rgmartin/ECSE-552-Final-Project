@@ -217,7 +217,7 @@ class AutoEncoder(nn.Module):
                 nn.LeakyReLU(0.01),
                 nn.Conv2d(64, 64, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.Flatten(),
-                nn.Linear(3136, 2)
+                nn.Linear(3136, 32)
         )
         self.decoder = nn.Sequential(
                 torch.nn.Linear(2, 3136),
