@@ -161,7 +161,7 @@ class BaselineResnetClassifier(pl.LightningModule):
 if __name__ == "__main__":
 
     # Generate random data.
-    batch_size = 1
+    batch_size = 1 
     num_channels = 3
     spectrogram_dimensions = [128, 128]
 
