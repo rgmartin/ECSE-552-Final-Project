@@ -233,7 +233,8 @@ def train_SimpleAutoEncoder():
         count = count + 1
         
     newarray = dataset.data[0]
-    
+    train_loader = np.expand_dims(train_loader,axis=1)
+    val_loader = np.expand_dims(val_loader,axis=1)
     print("train_loader shape")
     print(train_loader.shape)
     print("val_loader shape")
