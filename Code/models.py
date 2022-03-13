@@ -107,7 +107,8 @@ class BaselineResnetClassifier(pl.LightningModule):
         x = F.relu(x)
         x = self.fc(x)
 
-        return F.softmax(x)
+        # Note: cross entropy loss applies softmax to output.
+        return x
 
     def training_step(self, batch, batch_idx):
         x, y = batch

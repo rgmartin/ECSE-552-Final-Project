@@ -89,7 +89,6 @@ class MelSpectrogramTransform():
         )
 
 
-
 def build_annotation_file(audio_dir, log_name="dataset_annotation.csv"):
 
     # Assuming that class is indicated by first subdirectory.
@@ -111,6 +110,9 @@ def build_annotation_file(audio_dir, log_name="dataset_annotation.csv"):
 
         df = df.append(datum, ignore_index=True)
 
+    # Convert unique labels into integers.
+    df['category'] = df['category'].factorize()[0]
+
     write_path = os.path.join(audio_dir, log_name)
     df.to_csv(write_path, index=False)
 
@@ -121,14 +123,15 @@ if __name__ == "__main__":
     # Build summary csv file.
     audio_dir = "Data/"
     build_annotation_file(audio_dir)
-
+    
+    dur_seconds = 10
     annotation_path = os.path.join(audio_dir, "dataset_annotation.csv")
-    my_dataset = AudioDataset(annotation_path, audio_dir)
+    my_dataset = AudioDataset(annotation_path, audio_dir, dur_seconds=dur_seconds)
 
     print(f"This dataset has {len(my_dataset)} entries.")
     
     x, label = my_dataset[1]
-    time = np.linspace(0, 5, len(x), endpoint=False)
+    time = np.linspace(0, dur_seconds, len(x), endpoint=False)
 
     plt.plot(time, x)
     plt.xlabel("Time (s)")
@@ -136,9 +139,11 @@ if __name__ == "__main__":
     plt.show()
 
     my_mel = MelSpectrogramTransform()
+
     my_spectrogram_dataset = AudioDataset(
         annotation_path, 
         audio_dir, 
+        dur_seconds=dur_seconds,
         transform=my_mel
     )
 
