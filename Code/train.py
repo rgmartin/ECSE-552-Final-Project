@@ -206,6 +206,9 @@ def train_SimpleAutoEncoder():
     
     count = 0
     shapeddataset = np.reshape(dataset.data,(len(dataset),1,dataset.data[0].shape[0],dataset.data[0].shape[1]))
+    
+    print(shapeddataset.shape)
+    
     for ind in randind:
         if count < cutoff:
             if len(train_loader) == 0:
@@ -213,7 +216,7 @@ def train_SimpleAutoEncoder():
             else:    
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
                 # train_loader = np.vstack((train_loader,flatten_spec))
-                train_loader = np.dstack((train_loader,shapeddataset[ind]))
+                train_loader = np.concatenate((train_loader,shapeddataset[ind]),axis=0)
         else:
             if len(val_loader) == 0:
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
@@ -221,7 +224,8 @@ def train_SimpleAutoEncoder():
             else:
                 # flatten_spec = [j for sub in dataset.data[ind] for j in sub]
                 # val_loader = np.vstack((val_loader,flatten_spec))
-                val_loader = np.dstack((val_loader,shapeddataset[ind]))
+                # val_loader = np.dstack((val_loader,shapeddataset[ind]))
+                val_loader = np.concatenate((val_loader,shapeddataset[ind]),axis=0)
                 
         datarand.append(dataset.data[ind])
         labelsrand.append(dataset.labels[ind])
