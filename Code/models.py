@@ -205,10 +205,10 @@ class Autoencoder_1(pl.LightningModule):
 
 
 class AutoEncoder(nn.Module):
-    def __init__(self,input_channels=1, output_channels=32, latent_count=32, act_val=0.01):
+    def __init__(self,input_channels=1, output_channels=32, latent_count=28, act_val=0.01):
         super().__init__()
-        originalxdims = 28
-        originalydims = 28
+        originalxdims = 128
+        originalydims = 157
         paddingmatrix = [1,1,1,1]
         stridematrix = [1,2,2,1]
         kernels = [3,3,3,3]
