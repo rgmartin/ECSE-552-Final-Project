@@ -8,7 +8,7 @@ import pytorch_lightning as pl
 import torch
 from torch.utils.data import DataLoader
 
-from audio_data_loader import AudioDataset, build_annotation_file
+from audio_data_loader import AudioDataset, MelSpectrogramTransform, build_annotation_file
 from dict_logger import DictLogger
 
 
@@ -91,9 +91,13 @@ def plot_logger_metrics(logger, filename, measurements_path, plot_filename):
 def train_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
 
     # Prepare and split dataset.
+    print("Preparing and splitting dataset...")
+    
     build_annotation_file(data_dir, log_name='dataset_annotation.csv')
     annotation_path = os.path.join(data_dir, "dataset_annotation.csv")
-    dataset = AudioDataset(annotation_path, data_dir, dur_seconds=dur_seconds)
+    transform = MelSpectrogramTransform()
+    dataset = AudioDataset(annotation_path, data_dir, dur_seconds=dur_seconds,
+        transform=transform)
 
     num_samples = len(dataset)
     num_train = np.floor(num_samples * 0.8).astype(int)
@@ -112,9 +116,11 @@ def train_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, 
         filename=profiler_filename)
 
+    print("Initializing trainer...")
     trainer = init_trainer(logger, max_epoch, profiler)
 
     # The main attraction: train the model.
+    print("Running model...")
     trainer.fit(model, train_loader, val_loader)
     plot_logger_metrics(logger, plot_filename)
 
@@ -124,5 +130,5 @@ if __name__ == "__main__":
 
     model = BaselineResnetClassifier(num_classes=6)
     data_dir = "Data/"
-    
+
     train_voxforge_classifier(model, data_dir=data_dir)

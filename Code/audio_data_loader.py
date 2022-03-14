@@ -92,7 +92,7 @@ class MelSpectrogramTransform():
 def build_annotation_file(audio_dir, log_name="dataset_annotation.csv"):
 
     # Assuming that class is indicated by first subdirectory.
-    CLASS_DIR_DEPTH = 1
+    CLASS_DIR_DEPTH = -3
 
     audio_pattern = os.path.join(audio_dir, "**/*.wav")
     all_filepaths = glob.glob(audio_pattern, recursive=True)
