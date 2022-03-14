@@ -214,7 +214,7 @@ class AutoEncoder(nn.Module):
         kernels = [3,3,3,3]
         condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
         print(condimsval)
-        self.encoder = nn.Sequential( #784
+        self.encoder = nn.Sequential(
                 nn.Conv2d(input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.LeakyReLU(act_val),
                 nn.Conv2d(output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
@@ -227,7 +227,7 @@ class AutoEncoder(nn.Module):
         )
         self.decoder = nn.Sequential(
                 torch.nn.Linear(latent_count, condimsval*2*output_channels),
-                Reshape(-1, 64, 7, 7),
+                Reshape(-1, 2*output_channels, math.sqrt(condimsval), math.sqrt(condimsval)),
                 nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.LeakyReLU(act_val),
                 nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),                
