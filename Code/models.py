@@ -213,7 +213,6 @@ class AutoEncoder(nn.Module):
         stridematrix = [1,2,2,1]
         kernels = [3,3,3,3]
         condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
-        print(condimsval)
         self.encoder = nn.Sequential(
                 nn.Conv2d(input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.LeakyReLU(act_val),

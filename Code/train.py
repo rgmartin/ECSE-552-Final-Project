@@ -359,7 +359,7 @@ def train_autoencoder_v1(num_epochs, model, optimizer, device,
 
 def train_autencoder_dataloader_test():
     CUDA_DEVICE_NUM = 3
-    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
+    DEVICE = torch.device(f'cpu' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
 
     # Hyperparameters
