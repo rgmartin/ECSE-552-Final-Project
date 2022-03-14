@@ -226,7 +226,7 @@ class AutoEncoder(nn.Module):
         )
         self.decoder = nn.Sequential(
                 torch.nn.Linear(latent_count, condimsval*2*output_channels),
-                # Reshape(-1, 64, 7, 7),
+                Reshape(-1, 64, 7, 7),
                 nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.LeakyReLU(act_val),
                 nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),                
