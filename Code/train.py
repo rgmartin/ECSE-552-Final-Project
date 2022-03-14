@@ -14,6 +14,9 @@ from feature_extraction import *
 import random
 import time
 
+from audio_data_loader import AudioDataset, MelSpectrogramTransform, build_annotation_file
+from dict_logger import DictLogger
+
 if 'COLAB_GPU' in os.environ:
     print('Running on CoLab')
     measurements_folder = '/content/drive/MyDrive/ECSE-552-FP/Measurements/'
@@ -355,7 +358,25 @@ def train_autoencoder_v1(num_epochs, model, optimizer, device,
     return log_dict
 
 def train_autencoder_dataloader_test():
-    model, data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""
+    CUDA_DEVICE_NUM = 3
+    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
+    print('Device:', DEVICE)
+
+    # Hyperparameters
+    RANDOM_SEED = 123
+    LEARNING_RATE = 0.0005
+    BATCH_SIZE = 10
+    batch_size=BATCH_SIZE
+    NUM_EPOCHS = 20
+    dur_seconds=5
+    comment=""
+    data_dir =  "Data/"
+    
+    model = AutoEncoder()
+    model.to(DEVICE)
+
+    optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
+    
     build_annotation_file(data_dir, log_name='dataset_annotation.csv')
     annotation_path = os.path.join(data_dir, "dataset_annotation.csv")
     transform = MelSpectrogramTransform()
@@ -380,12 +401,87 @@ def train_autencoder_dataloader_test():
         filename=profiler_filename)
 
     print("Initializing trainer...")
-    trainer = init_trainer(logger, max_epoch, profiler)
+    trainer = init_trainer(logger, NUM_EPOCHS, profiler)
 
     # The main attraction: train the model.
     print("Running model...")
     trainer.fit(model, train_loader, val_loader)
     plot_logger_metrics(logger, plot_filename)
+    
+def init_trainer(logger, max_epochs, profiler):
+    is_colab = 'COLAB_GPU' in os.environ
+
+    if is_colab:
+        trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, 
+            profiler=profiler)
+    else:
+        trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
+
+    return trainer
+
+
+def plot_logger_metrics(logger, filename, measurements_path, plot_filename):
+    f, axs = plt.subplots(1, 2, figsize=(15, 5))
+    font = {'size': 14}
+    matplotlib.rc('font', **font)
+
+    axs[0].plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
+    axs[0].set_title("Train/Val Loss")
+    axs[0].set_ylabel("Loss")
+    axs[0].plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+    axs[0].set_title('Classifer\nTrain/Val Loss Over Time')
+    axs[0].set_xlabel("Epochs")
+    axs[0].grid()
+
+    axs[1].plot(logger.metrics['train_acc_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
+    axs[1].set_title("Classifer\nTrain/Val Accuracy")
+    axs[1].set_ylabel("Accuracy")
+    axs[1].plot(logger.metrics['val_acc_epoch'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+    axs[1].set_title('Classifier\nTrain/Val Accuracy Over Time')
+    axs[1].set_xlabel("Epochs")
+    axs[1].grid()
+
+    plt.legend(loc='lower right')
+    plt.savefig(os.path.join(measurements_path, plot_filename))
+    plt.show()
+    
+def init_measurements_path():
+
+    is_colab = 'COLAB_GPU' in os.environ
+
+    if is_colab:
+        print('Running on Colab')
+        measurements_dir = '/content/drive/MyDrive/ECSE-552-FP/Measurements/'
+    else:
+        print('Not running on Colab')
+        measurements_dir = './Measurements/'
+
+    now = datetime.today().strftime("%b-%d-%Y")
+    measurements_path = os.path.join(measurements_dir, now)
+
+    if not os.path.isdir(measurements_dir):
+        try:
+            os.mkdir(measurements_dir)
+        except OSError as error:
+            print(error)
+
+    if not os.path.isdir(measurements_path):
+        try:
+            os.mkdir(measurements_path)
+        except OSError as error:
+            print(error)
+
+    return measurements_path
+
+
+def make_log_filenames(comment):
+    now = datetime.now().strftime("%H_%M_%S-")
+
+    profiler_filename = f"{comment}{now}profiler_output"
+    plot_filename = f"{comment}{now}Loss-Acc.png"
+
+    return profiler_filename, plot_filename
+
 
 if __name__ == "__main__":
     # train_SimpleBinaryClassifier()
