@@ -96,6 +96,7 @@ class MelSpectrogramTransform():
 
         # Convert to tensor. TODO: Maybe not here.
         x = torch.from_numpy(x)
+        return x
 
 
 
