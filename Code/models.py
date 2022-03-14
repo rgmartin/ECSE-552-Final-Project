@@ -205,30 +205,35 @@ class Autoencoder_1(pl.LightningModule):
 
 
 class AutoEncoder(nn.Module):
-    def __init__(self):
+    def __init__(self,input_channels=1, output_channels=32, latent_count=32, act_val=0.01):
         super().__init__()
-        
+        originalxdims = 28
+        originalydims = 28
+        paddingmatrix = [1,1,1,1]
+        stridematrix = [1,2,2,1]
+        kernels = [[3,3,3,3],[3,3,3,3]]
+        condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
         self.encoder = nn.Sequential( #784
-                nn.Conv2d(1, 32, stride=(1, 1), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(0.01),
-                nn.Conv2d(32, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(0.01),
-                nn.Conv2d(64, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(0.01),
-                nn.Conv2d(64, 64, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.Conv2d(input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
                 nn.Flatten(),
-                nn.Linear(3136, 32)
+                nn.Linear(condimsval*2*output_channels, latent_count)
         )
         self.decoder = nn.Sequential(
-                torch.nn.Linear(2, 3136),
-                Reshape(-1, 64, 7, 7),
-                nn.ConvTranspose2d(64, 64, stride=(1, 1), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(0.01),
-                nn.ConvTranspose2d(64, 64, stride=(2, 2), kernel_size=(3, 3), padding=1),                
-                nn.LeakyReLU(0.01),
-                nn.ConvTranspose2d(64, 32, stride=(2, 2), kernel_size=(3, 3), padding=0),                
-                nn.LeakyReLU(0.01),
-                nn.ConvTranspose2d(32, 1, stride=(1, 1), kernel_size=(3, 3), padding=0), 
+                torch.nn.Linear(latent_count, condimsval*2*output_channels),
+                # Reshape(-1, 64, 7, 7),
+                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),                
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(2*output_channels, output_channels, stride=(2, 2), kernel_size=(3, 3), padding=0),                
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(output_channels, input_channels, stride=(1, 1), kernel_size=(3, 3), padding=0), 
                 Trim(),  # 1x29x29 -> 1x28x28
                 nn.Sigmoid()
                 )
@@ -267,3 +272,15 @@ class Trim(nn.Module):
 
     def forward(self, x):
         return x[:, :, :28, :28]
+    
+def ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels):
+    newxdims = 0
+    newydims = 0
+    for i in range(len(paddingmatrix)):
+        if newxdims == 0:
+            newxdims += int((originalxdims+2*paddingmatrix[i]-kernels[i,0])/stridematrix[i]+1)
+            newydims += int((originalydims+2*paddingmatrix[i]-kernels[i,1])/stridematrix[i]+1)
+        else: 
+            newxdims += int((newxdims+2*paddingmatrix[i]-kernels[i,0])/stridematrix[i]+1)
+            newydims += int((newydims+2*paddingmatrix[i]-kernels[i,1])/stridematrix[i]+1)
+    return newxdims*newydims
