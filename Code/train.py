@@ -355,6 +355,7 @@ def train_autoencoder_v1(num_epochs, model, optimizer, device,
     return log_dict
 
 def train_autencoder_dataloader_test():
+    model, data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""
     build_annotation_file(data_dir, log_name='dataset_annotation.csv')
     annotation_path = os.path.join(data_dir, "dataset_annotation.csv")
     transform = MelSpectrogramTransform()
