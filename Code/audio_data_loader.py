@@ -4,6 +4,7 @@ import librosa
 import numpy as np
 import os
 import pandas as pd
+import torch
 from torch.utils.data import Dataset
 
 class AudioDataset(Dataset):
@@ -40,6 +41,7 @@ class AudioDataset(Dataset):
         if self.transform:
             x = self.transform(x)
 
+        label = torch.tensor(label)
         return x, label
 
     def _enforce_mono(self, x):
@@ -80,13 +82,21 @@ class MelSpectrogramTransform():
         self.n_mels = n_mels
 
     def __call__(self, x):
-        return librosa.feature.melspectrogram(
+        x =  librosa.feature.melspectrogram(
             y=x, 
             sr=self.sr, 
             n_fft=self.n_fft,
             hop_length=self.hop_length,
             n_mels=self.n_mels
         )
+
+        # Copy to three channel dimensions.
+        x = x[None, :, :]
+        x = x.repeat(3, 0)
+
+        # Convert to tensor. TODO: Maybe not here.
+        x = torch.from_numpy(x)
+
 
 
 def build_annotation_file(audio_dir, log_name="dataset_annotation.csv"):
