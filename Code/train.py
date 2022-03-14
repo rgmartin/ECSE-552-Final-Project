@@ -486,4 +486,5 @@ def make_log_filenames(comment):
 if __name__ == "__main__":
     # train_SimpleBinaryClassifier()
     # train_SimpleAutoEncoder()
-    train_mnsitauto()
+    # train_mnsitauto()
+    train_autencoder_dataloader_test()
