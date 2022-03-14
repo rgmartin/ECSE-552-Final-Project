@@ -370,7 +370,7 @@ def train_autencoder_dataloader_test():
     NUM_EPOCHS = 20
     dur_seconds=5
     comment=""
-    data_dir =  "Data/"
+    data_dir =  "/content/drive/MyDrive/ECSE-552-FP/Data/Data_lang"
     
     model = AutoEncoder()
     model.to(DEVICE)
