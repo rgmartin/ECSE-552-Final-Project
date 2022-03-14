@@ -275,13 +275,9 @@ class Trim(nn.Module):
         return x[:, :, :28, :28]
     
 def ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels):
-    newxdims = 0
-    newydims = 0
+    newxdims = originalxdims
+    newydims = originalydims
     for i in range(len(paddingmatrix)):
-        if newxdims == 0:
-            newxdims += int((originalxdims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
-            newydims += int((originalydims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
-        else: 
-            newxdims += int((newxdims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
-            newydims += int((newydims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
+        newxdims = int((newxdims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
+        newydims = int((newydims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
     return newxdims*newydims
