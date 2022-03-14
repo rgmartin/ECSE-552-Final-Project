@@ -211,7 +211,7 @@ class AutoEncoder(nn.Module):
         originalydims = 28
         paddingmatrix = [1,1,1,1]
         stridematrix = [1,2,2,1]
-        kernels = [[3,3,3,3],[3,3,3,3]]
+        kernels = [3,3,3,3]
         condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
         self.encoder = nn.Sequential( #784
                 nn.Conv2d(input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
@@ -278,9 +278,9 @@ def ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kerne
     newydims = 0
     for i in range(len(paddingmatrix)):
         if newxdims == 0:
-            newxdims += int((originalxdims+2*paddingmatrix[i]-kernels[i,0])/stridematrix[i]+1)
-            newydims += int((originalydims+2*paddingmatrix[i]-kernels[i,1])/stridematrix[i]+1)
+            newxdims += int((originalxdims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
+            newydims += int((originalydims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
         else: 
-            newxdims += int((newxdims+2*paddingmatrix[i]-kernels[i,0])/stridematrix[i]+1)
-            newydims += int((newydims+2*paddingmatrix[i]-kernels[i,1])/stridematrix[i]+1)
+            newxdims += int((newxdims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
+            newydims += int((newydims+2*paddingmatrix[i]-kernels[i])/stridematrix[i]+1)
     return newxdims*newydims
