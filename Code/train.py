@@ -354,6 +354,38 @@ def train_autoencoder_v1(num_epochs, model, optimizer, device,
     
     return log_dict
 
+def train_autencoder_dataloader_test():
+    build_annotation_file(data_dir, log_name='dataset_annotation.csv')
+    annotation_path = os.path.join(data_dir, "dataset_annotation.csv")
+    transform = MelSpectrogramTransform()
+    dataset = AudioDataset(annotation_path, data_dir, dur_seconds=dur_seconds,
+        transform=transform)
+
+    num_samples = len(dataset)
+    num_train = np.floor(num_samples * 0.8).astype(int)
+    num_val = num_samples - num_train
+
+    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+
+    # Set up logs.
+    measurements_path = init_measurements_path()
+    profiler_filename, plot_filename = make_log_filenames(comment)
+
+    logger = DictLogger()
+    profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, 
+        filename=profiler_filename)
+
+    print("Initializing trainer...")
+    trainer = init_trainer(logger, max_epoch, profiler)
+
+    # The main attraction: train the model.
+    print("Running model...")
+    trainer.fit(model, train_loader, val_loader)
+    plot_logger_metrics(logger, plot_filename)
+
 if __name__ == "__main__":
     # train_SimpleBinaryClassifier()
     # train_SimpleAutoEncoder()
