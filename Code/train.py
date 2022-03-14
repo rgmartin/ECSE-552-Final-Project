@@ -273,7 +273,7 @@ def train_SimpleAutoEncoder():
 
 def train_mnsitauto():
     CUDA_DEVICE_NUM = 3
-    DEVICE = torch.device(f'cpu' if torch.cuda.is_available() else 'cpu')
+    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
 
     # Hyperparameters
@@ -281,7 +281,7 @@ def train_mnsitauto():
     LEARNING_RATE = 0.0005
     BATCH_SIZE = 1
     NUM_EPOCHS = 20
-    train_loader, valid_loader, test_loader = get_dataloaders_mnist(
+    train_loader, valid_loader, test_loader = get_dataloaders_spectro(
     batch_size=BATCH_SIZE, 
     num_workers=2, 
     validation_fraction=0.)
