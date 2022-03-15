@@ -62,7 +62,7 @@ def init_trainer(logger, max_epochs, profiler):
     return trainer
 
 
-def plot_logger_metrics(logger, filename, measurements_path, plot_filename):
+def plot_logger_metrics(logger, measurements_path, plot_filename):
     f, axs = plt.subplots(1, 2, figsize=(15, 5))
     font = {'size': 14}
     matplotlib.rc('font', **font)
@@ -122,7 +122,7 @@ def train_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_
     # The main attraction: train the model.
     print("Running model...")
     trainer.fit(model, train_loader, val_loader)
-    plot_logger_metrics(logger, plot_filename)
+    plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
 if __name__ == "__main__":
