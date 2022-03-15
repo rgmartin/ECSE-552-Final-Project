@@ -6,9 +6,10 @@ import numpy as np
 import pandas as pd
 import pytorch_lightning as pl
 import torch
+import torchaudio
 from torch.utils.data import DataLoader
 
-from audio_data_loader import AudioDataset, MelSpectrogramTransform, build_annotation_file
+from audio_data_loader import AudioDataset, build_annotation_file
 from dict_logger import DictLogger
 
 
@@ -62,7 +63,7 @@ def init_trainer(logger, max_epochs, profiler):
     return trainer
 
 
-def plot_logger_metrics(logger, filename, measurements_path, plot_filename):
+def plot_logger_metrics(logger, measurements_path, plot_filename):
     f, axs = plt.subplots(1, 2, figsize=(15, 5))
     font = {'size': 14}
     matplotlib.rc('font', **font)
@@ -95,7 +96,13 @@ def train_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_
     
     build_annotation_file(data_dir, log_name='dataset_annotation.csv')
     annotation_path = os.path.join(data_dir, "dataset_annotation.csv")
-    transform = MelSpectrogramTransform()
+
+    transform = torchaudio.transforms.MelSpectrogram(
+        sample_rate=16000,
+        n_fft=400,
+        hop_length=160,
+        n_mels=64,
+    )
     dataset = AudioDataset(annotation_path, data_dir, dur_seconds=dur_seconds,
         transform=transform)
 
@@ -122,7 +129,7 @@ def train_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_
     # The main attraction: train the model.
     print("Running model...")
     trainer.fit(model, train_loader, val_loader)
-    plot_logger_metrics(logger, plot_filename)
+    plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
 if __name__ == "__main__":
