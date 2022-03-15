@@ -1,18 +1,19 @@
 from email.mime import audio
 import glob
-import librosa
 import numpy as np
 import os
 import pandas as pd
 import torch
+import torchaudio
 from torch.utils.data import Dataset
 
 class AudioDataset(Dataset):
 
     def __init__(
         self, 
-        annotation_path: str, 
+        annotation_path: str,
         audio_dir: str, 
+        device,
         dur_seconds: float = 5.0,
         target_sr: int = 16000,
         transform = None,
@@ -23,6 +24,7 @@ class AudioDataset(Dataset):
         self.target_sr = target_sr
         self.target_dur_samples = np.round(dur_seconds * target_sr).astype(int)
 
+        self.device = device
         self.transform = transform
 
     def __len__(self):
@@ -31,11 +33,15 @@ class AudioDataset(Dataset):
     def __getitem__(self, index: int):
         audio_path = self._get_audio_path(index)
         label = self._get_label(index)
-        x, sr = librosa.load(audio_path)
+        x, sr = torchaudio.load(audio_path)
 
         # Signal conditioning.
         x = self._enforce_mono(x)
-        x = librosa.resample(x, orig_sr=sr, target_sr=self.target_sr)
+
+        if sr != self.target_sr:
+            resampler = torch.transforms.Resample(sr, self.target_sr)
+            x = resampler(x)
+
         x = self._enforce_duration(x)
 
         if self.transform:
@@ -74,29 +80,29 @@ class AudioDataset(Dataset):
         return x
 
 
-class MelSpectrogramTransform():
-    def __init__(self, sr=16000, n_fft=400, hop_length=160, n_mels=64):
-        self.sr = sr
-        self.n_fft = n_fft
-        self.hop_length = hop_length
-        self.n_mels = n_mels
+# class MelSpectrogramTransform():
+#     def __init__(self, sr=16000, n_fft=400, hop_length=160, n_mels=64):
+#         self.sr = sr
+#         self.n_fft = n_fft
+#         self.hop_length = hop_length
+#         self.n_mels = n_mels
 
-    def __call__(self, x):
-        x =  librosa.feature.melspectrogram(
-            y=x, 
-            sr=self.sr, 
-            n_fft=self.n_fft,
-            hop_length=self.hop_length,
-            n_mels=self.n_mels
-        )
+#     def __call__(self, x):
+#         x =  librosa.feature.melspectrogram(
+#             y=x, 
+#             sr=self.sr, 
+#             n_fft=self.n_fft,
+#             hop_length=self.hop_length,
+#             n_mels=self.n_mels
+#         )
 
-        # Copy to three channel dimensions.
-        x = x[None, :, :]
-        x = x.repeat(3, 0)
+#         # Copy to three channel dimensions.
+#         x = x[None, :, :]
+#         x = x.repeat(3, 0)
 
-        # Convert to tensor. TODO: Maybe not here.
-        x = torch.from_numpy(x)
-        return x
+#         # Convert to tensor. TODO: Maybe not here.
+#         x = torch.from_numpy(x)
+#         return x
 
 
 
@@ -149,7 +155,12 @@ if __name__ == "__main__":
     plt.ylabel("Amplitude")
     plt.show()
 
-    my_mel = MelSpectrogramTransform()
+    my_mel = torchaudio.transforms.MelSpectrogram(
+        sample_rate=16000,
+        n_fft=400,
+        hop_length=160,
+        n_mels=64,
+    )
 
     my_spectrogram_dataset = AudioDataset(
         annotation_path, 
