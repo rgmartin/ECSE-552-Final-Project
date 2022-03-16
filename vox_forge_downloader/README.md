@@ -12,3 +12,8 @@ You can additionally specify the amount of speaker directories to be downloaded 
 ```shell
 python downloader.py "voxforge-corpus" -n 20000 -w 15
 ```
+
+
+## Files
+- downloader.py and generator.py are different versions of the same file, please only use downloader.py as it is the most up to date
+- data_cleaner removes the /etc and un needed files in the obtained folders, so that less time is spend by the code seeking data.
