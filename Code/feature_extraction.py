@@ -6,6 +6,27 @@ from torch.utils.data import Dataset, DataLoader
 import os
 from tqdm import tqdm
 
+
+def enforce_duration(x, target_dur_samples):
+        # Truncate signal if too long. Otherwise repeat original signal, as per:
+        #
+        #   Pons, Jordi, Joan Serrà, and Xavier Serra. "Training neural audio
+        #       classifiers with few data." In ICASSP 2019-2019 IEEE
+        #       International Conference on Acoustics, Speech and Signal
+        #       Processing (ICASSP), pp. 16-20. IEEE, 2019.
+
+        if len(x) >= target_dur_samples:
+            x = x[:target_dur_samples]
+        else:
+            num_pad_samples = target_dur_samples - len(x)
+
+            # Loop if the array has to be repeated more than once.
+            while num_pad_samples > 0:
+                x = np.concatenate([x, x[:num_pad_samples]])
+                num_pad_samples = target_dur_samples - len(x)
+
+        return x
+
 """
 Gets a melspectrogram using librosa libraty
 
@@ -26,15 +47,13 @@ Returns:
 """
 
 
-def get_melspectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512, n_mels=128, fmin=20, fmax=8300,
-                          top_db=80, max_t=5):
+def get_melspectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512, n_mels=128, fmin=20, fmax=8300, top_db=80, max_t=5):
     wav, sr = librosa.load(file_path, sr=sr)
-    if wav.shape[0] < max_t * sr:
-        wav = np.pad(wav, int(np.ceil((max_t * sr - wav.shape[0]) / 2)), mode='reflect')
-    else:
-        wav = wav[:max_t * sr]
-    spec = librosa.feature.melspectrogram(y= wav, sr=sr, n_fft=n_fft,
-                                          hop_length=hop_length, n_mels=n_mels, fmin=fmin, fmax=fmax)
+
+    # remove the silence from the beginning/end of a file to get more speech content
+    wav, index = librosa.effects.trim(wav)
+    wav = enforce_duration(wav, max_t * sr)
+    spec = librosa.feature.melspectrogram(y=wav, sr=sr, n_fft=n_fft, hop_length=hop_length, n_mels=n_mels, fmin=fmin, fmax=fmax)
     spec_db = librosa.power_to_db(spec, top_db=top_db)
     return spec_db, sr
 
@@ -65,11 +84,9 @@ def display_spectogram(spec_db, sr, labels=None):
     for i in range(n_display):
         col_idx = int(i / ncols)
         row_idx = int(i % ncols)
-        img = librosa.display.specshow(spec_db[i], x_axis='time',
-                                       y_axis='mel', sr=sr[i],
-                                       fmax=8000, ax=axs[col_idx][row_idx])
+        img = librosa.display.specshow(spec_db[i], x_axis='time', y_axis='mel', sr=sr[i], fmax=8000, ax=axs[col_idx][row_idx])
         axs[col_idx][row_idx].set_title(labels[i])
-    fig.colorbar(img, ax=axs[0][2],  format='%+2.0f dB')
+    fig.colorbar(img, ax = axs[0][2],  format='%+2.0f dB')
     # ax.set(title='Mel-frequency spectogram')
     plt.tight_layout()
     plt.show()
@@ -115,6 +132,6 @@ class AudioDataset(Dataset):
 
 if __name__ == '__main__':
     # # 4. Display
-    data_folder_name = 'E:\Temp\Voice Data'
+    data_folder_name = 'Data'
     dataset = AudioDataset(data_folder_name)
     display_spectogram(list(dataset[:][0]), list(dataset.sr[:]), list(dataset[:][1]))
