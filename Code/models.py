@@ -92,7 +92,7 @@ class BaselineResnetClassifier(pl.LightningModule):
         super().__init__()
 
         # Load, optionally download pre-trained Resnet.
-        self.resnet50 = torchvision.models.resnet50(pretrained=True, num_classes = 1000)
+        self.resnet50 = torchvision.models.resnet50(pretrained=True, num_classes = 3)
         self.fc = torch.nn.Linear(1000, num_classes)
 
         # Log stuffs.
@@ -104,8 +104,8 @@ class BaselineResnetClassifier(pl.LightningModule):
         # convert the incoming data to three dimensions for processing due to the RGB expectation of the pre-trained
         # network
         x = self.resnet50(x.unsqueeze(1).repeat(1, 3, 1, 1))
-        x = F.relu(x)
-        x = self.fc(x)
+        #x = F.relu(x)
+        #x = self.fc(x)
 
         # Note: cross entropy loss applies softmax to output.
         return x
