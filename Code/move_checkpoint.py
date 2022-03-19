@@ -11,6 +11,7 @@ from feature_extraction import AudioDataset
 from dict_logger import DictLogger
 import json
 import pandas as pd
+import shutil
 
 def init_checkpoint_path():
 
@@ -50,7 +51,8 @@ def make_chk_filename(comment):
 
 
 def move_checkpoint(from_path, new_name):
-	to_path = init_checkpoint_path
-	file_name = make_chk_filename (new_name)
-	!cp from_path to_path
+  to_path = init_checkpoint_path()
+  file_name = make_chk_filename (new_name)
+  to_path = os.path.join(to_path, file_name)
+  shutil.copy(from_path, to_path)
 
