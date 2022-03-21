@@ -12,6 +12,7 @@ from dict_logger import DictLogger
 import json
 import pandas as pd
 import optuna
+from optuna.integration import PyTorchLightningPruningCallback
 
 
 def init_measurements_path():
@@ -197,6 +198,7 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
 
 
 # Hyperparameter tuning
+
 def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, comment=""):
     def objective (trial):
         
@@ -206,11 +208,10 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
 
 
         # Prepare and split dataset.
-        print(f"Preparing and splitting dataset...{max_t}")
+        print(f"Preparing and splitting dataset...")
         
         name = "Resnet50 Baseline"
         start_time = timeit.default_timer()
-        print(max_t)
         dataset = AudioDataset(data_dir, max_t = max_t )
         end_time = timeit.default_timer()
         print("Dataset creation in seconds: ", end_time-start_time)
@@ -236,8 +237,7 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
         #trainer = pl.Trainer(gpus=1, logger=True, max_epochs=max_epochs, profiler=profiler,
         #        callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],)
         trainer = pl.Trainer(
-          logger=True,
-          limit_val_batches=0.1,
+          logger=logger,
           checkpoint_callback=False,
           max_epochs=5,
           gpus=1 if torch.cuda.is_available() else None,
@@ -249,11 +249,12 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
         
         #plot_logger_metrics(logger, measurements_path, plot_filename)
 
-        hyperparameters = dict(t_max = t_max, batch_size=batch_size)
+        hyperparameters = dict(max_t = max_t, batch_size=batch_size)
         trainer.logger.log_hyperparams(hyperparameters)
         trainer.fit(model, train_loader, val_loader)
 
-        return trainer.callback_metrics["val_acc"].item()
+
+        return trainer.callback_metrics["val_acc_step"].item()
     
     study = optuna.create_study(direction="maximize")
     study.optimize(objective, n_trials=10, timeout=600)
@@ -268,6 +269,8 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
     print("  Params: ")
     for key, value in trial.params.items():
         print("    {}: {}".format(key, value))
+    
+
 
 
 
