@@ -199,17 +199,19 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
 # Hyperparameter tuning
 def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, comment=""):
     def objective (trial):
+        
+        # we optimize max_t and batch_size
+        max_t = trial.suggest_int("max_t", 1, 5)       
+        batch_size= trial.suggest_int('batch_size',10,20)
 
-        checkpoint_callback = pl.callbacks.ModelCheckpoint(
-            os.path.join('.', "trial_{}".format(trial.number)), monitor="accuracy"
-        )
 
         # Prepare and split dataset.
-        print("Preparing and splitting dataset...")
+        print(f"Preparing and splitting dataset...{max_t}")
         
         name = "Resnet50 Baseline"
         start_time = timeit.default_timer()
-        dataset = AudioDataset(data_dir, max_t = trial.suggest_uniform("max_t", 1, 5))
+        print(max_t)
+        dataset = AudioDataset(data_dir, max_t = max_t )
         end_time = timeit.default_timer()
         print("Dataset creation in seconds: ", end_time-start_time)
 
@@ -219,7 +221,7 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
 
         train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
 
-        batch_size= trial.suggest_int('batch_size',10,20)
+        
         train_loader = DataLoader(train_dataset, batch_size=batch_size)
         val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -231,30 +233,41 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
         profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
         print("Initializing trainer...")
-        trainer = init_trainer(logger, max_epoch, profiler)
+        #trainer = pl.Trainer(gpus=1, logger=True, max_epochs=max_epochs, profiler=profiler,
+        #        callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],)
+        trainer = pl.Trainer(
+          logger=True,
+          limit_val_batches=0.1,
+          checkpoint_callback=False,
+          max_epochs=5,
+          gpus=1 if torch.cuda.is_available() else None,
+          callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],
+        )  
 
         # The main attraction: train the model.
         print("Running model...")
-        trainer.fit(model, train_loader, val_loader)
+        
         #plot_logger_metrics(logger, measurements_path, plot_filename)
 
-        return logger.metrics[-1]["accuracy"]
+        hyperparameters = dict(t_max = t_max, batch_size=batch_size)
+        trainer.logger.log_hyperparams(hyperparameters)
+        trainer.fit(model, train_loader, val_loader)
 
+        return trainer.callback_metrics["val_acc"].item()
+    
+    study = optuna.create_study(direction="maximize")
+    study.optimize(objective, n_trials=10, timeout=600)
 
+    print("Number of finished trials: {}".format(len(study.trials)))
 
-study = optuna.create_study(direction="maximize")
-study.optimize(objective, n_trials=10, timeout=600)
+    print("Best trial:")
+    trial = study.best_trial
 
-print("Number of finished trials: {}".format(len(study.trials)))
+    print("  Value: {}".format(trial.value))
 
-print("Best trial:")
-trial = study.best_trial
-
-print("  Value: {}".format(trial.value))
-
-print("  Params: ")
-for key, value in trial.params.items():
-    print("    {}: {}".format(key, value))
+    print("  Params: ")
+    for key, value in trial.params.items():
+        print("    {}: {}".format(key, value))
 
 
 
