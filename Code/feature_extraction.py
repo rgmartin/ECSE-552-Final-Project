@@ -104,7 +104,7 @@ class AudioDataset(Dataset):
                   each subdirectory will be scanned for wav files and each of the files will be added to the dataset.
                   files from the same subdirectory will have the same ordinal label.
     """
-    def __init__(self, root_dir):
+    def __init__(self, root_dir, max_t):
         self.root_dir = root_dir
         self.data = []
         self.sr = []
@@ -118,7 +118,7 @@ class AudioDataset(Dataset):
                 for filename in files:
                     file_path = os.path.join(root, filename)
                     if filename.endswith('wav'):
-                        spec, sr = get_melspectrogram_db(file_path)
+                        spec, sr = get_melspectrogram_db(file_path, max_t = max_t)
                         # img = spec_to_image(spec)[np.newaxis,...]
                         self.data.append(spec)
                         self.labels.append(self.dirs.index(d))

@@ -166,7 +166,7 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
     
     name = "Resnet50 Baseline"
     start_time = timeit.default_timer()
-    dataset = AudioDataset(data_dir)
+    dataset = AudioDataset(data_dir, max_t = dur_seconds)
     end_time = timeit.default_timer()
     print("Dataset creation in seconds: ", end_time-start_time)
 
