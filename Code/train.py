@@ -11,6 +11,7 @@ from feature_extraction import AudioDataset
 from dict_logger import DictLogger
 import json
 import pandas as pd
+import optuna
 
 
 def init_measurements_path():
@@ -193,6 +194,69 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
     print("Running model...")
     trainer.fit(model, train_loader, val_loader)
     plot_logger_metrics(logger, measurements_path, plot_filename)
+
+
+# Hyperparameter tuning
+def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, comment=""):
+    def objective (trial):
+
+        checkpoint_callback = pl.callbacks.ModelCheckpoint(
+            os.path.join('.', "trial_{}".format(trial.number)), monitor="accuracy"
+        )
+
+        # Prepare and split dataset.
+        print("Preparing and splitting dataset...")
+        
+        name = "Resnet50 Baseline"
+        start_time = timeit.default_timer()
+        dataset = AudioDataset(data_dir, max_t = trial.suggest_uniform("max_t", 1, 5))
+        end_time = timeit.default_timer()
+        print("Dataset creation in seconds: ", end_time-start_time)
+
+        num_samples = len(dataset)
+        num_train = np.floor(num_samples * 0.8).astype(int)
+        num_val = num_samples - num_train
+
+        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+
+        batch_size= trial.suggest_int('batch_size',10,20)
+        train_loader = DataLoader(train_dataset, batch_size=batch_size)
+        val_loader = DataLoader(val_dataset, batch_size=batch_size)
+
+        # Set up logs.
+        measurements_path = init_measurements_path()
+        profiler_filename, plot_filename = make_log_filenames(name)
+
+        logger = DictLogger()
+        profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
+
+        print("Initializing trainer...")
+        trainer = init_trainer(logger, max_epoch, profiler)
+
+        # The main attraction: train the model.
+        print("Running model...")
+        trainer.fit(model, train_loader, val_loader)
+        #plot_logger_metrics(logger, measurements_path, plot_filename)
+
+        return logger.metrics[-1]["accuracy"]
+
+
+
+study = optuna.create_study(direction="maximize")
+study.optimize(objective, n_trials=10, timeout=600)
+
+print("Number of finished trials: {}".format(len(study.trials)))
+
+print("Best trial:")
+trial = study.best_trial
+
+print("  Value: {}".format(trial.value))
+
+print("  Params: ")
+for key, value in trial.params.items():
+    print("    {}: {}".format(key, value))
+
+
 
 
 if __name__ == "__main__":
