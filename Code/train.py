@@ -233,19 +233,21 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
         logger = DictLogger()
         profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-        print("Initializing trainer...")
-        #trainer = pl.Trainer(gpus=1, logger=True, max_epochs=max_epochs, profiler=profiler,
-        #        callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],)
+
+        checkpoint_callback = pl.callbacks.ModelCheckpoint(
+            monitor="val_acc_step",
+            dirpath='./Checkpoints',
+            mode = 'max',
+            filename='{epoch:02d}-{val_acc_step:.2f}'
+        )
+
         trainer = pl.Trainer(
-          logger=logger,
-          checkpoint_callback=False,
+          logger=logger,  
           max_epochs=5,
           gpus=1 if torch.cuda.is_available() else None,
-          callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],
+          callbacks=[checkpoint_callback],
         )  
 
-        # The main attraction: train the model.
-        print("Running model...")
         
         #plot_logger_metrics(logger, measurements_path, plot_filename)
 
