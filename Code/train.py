@@ -199,12 +199,12 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
 
 # Hyperparameter tuning
 
-def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, comment=""):
+def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
     def objective (trial):
         
         # we optimize max_t and batch_size
         max_t = trial.suggest_int("max_t", 1, 5)       
-        batch_size= trial.suggest_int('batch_size',10,20)
+        batch_size= trial.suggest_int('batch_size',6,64, log = True)
 
 
         # Prepare and split dataset.
@@ -254,7 +254,7 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
 
 
     study = optuna.create_study(direction="maximize")
-    study.optimize(objective, n_trials=3, timeout=600)
+    study.optimize(objective, n_trials=25)
 
     print("Number of finished trials: {}".format(len(study.trials)))
 
