@@ -226,28 +226,6 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
         train_loader = DataLoader(train_dataset, batch_size=batch_size)
         val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
-        # Set up logs.
-        measurements_path = init_measurements_path()
-        profiler_filename, plot_filename = make_log_filenames(name)
-
-        logger = DictLogger()
-        profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
-
-        print("Initializing trainer...")
-        #trainer = pl.Trainer(gpus=1, logger=True, max_epochs=max_epochs, profiler=profiler,
-        #        callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],)
-        trainer = pl.Trainer(
-          logger=logger,
-          checkpoint_callback=False,
-          max_epochs=5,
-          gpus=1 if torch.cuda.is_available() else None,
-          callbacks=[PyTorchLightningPruningCallback(trial, monitor="val_acc")],
-        )  
-
-        # The main attraction: train the model.
-        print("Running model...")
-        
-        #plot_logger_metrics(logger, measurements_path, plot_filename)
 
         hyperparameters = dict(max_t = max_t, batch_size=batch_size)
         trainer.logger.log_hyperparams(hyperparameters)
@@ -256,8 +234,27 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
 
         return trainer.callback_metrics["val_acc_step"].item()
     
+
+    logger = DictLogger()
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(
+            monitor="val_acc_step",
+            dirpath='./Checkpoints',
+            mode = 'max',
+            filename='{epoch:02d}-{val_acc_step:.2f}'
+        )
+        
+    trainer = pl.Trainer(
+          logger=logger,  
+          max_epochs=5,
+          gpus=1 if torch.cuda.is_available() else None,
+          callbacks=[checkpoint_callback
+          ],
+    )  
+
+
+
     study = optuna.create_study(direction="maximize")
-    study.optimize(objective, n_trials=10, timeout=600)
+    study.optimize(objective, n_trials=3, timeout=600)
 
     print("Number of finished trials: {}".format(len(study.trials)))
 
@@ -269,6 +266,8 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
     print("  Params: ")
     for key, value in trial.params.items():
         print("    {}: {}".format(key, value))
+
+    return trainer.checkpoint_callback.best_model_path, trial.params, study
     
 
 
