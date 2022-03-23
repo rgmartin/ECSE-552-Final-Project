@@ -247,7 +247,8 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
           logger=logger,  
           max_epochs=5,
           gpus=1 if torch.cuda.is_available() else None,
-          callbacks=[checkpoint_callback],
+          callbacks=[checkpoint_callback
+          ],
     )  
 
 
@@ -265,6 +266,8 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, d
     print("  Params: ")
     for key, value in trial.params.items():
         print("    {}: {}".format(key, value))
+
+    return trainer.checkpoint_callback.best_model_path, trial.params, study
     
 
 

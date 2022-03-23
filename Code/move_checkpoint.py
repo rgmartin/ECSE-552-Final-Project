@@ -1,3 +1,4 @@
+import pickle
 from datetime import datetime
 import timeit
 import os
@@ -49,10 +50,39 @@ def make_chk_filename(comment):
 
     return chk_filename
 
+def make_study_filename(comment):
+    now = datetime.now().strftime("%H_%M_%S-")
 
-def move_checkpoint(from_path, new_name):
+    study_filename = f"{comment}{now}.pkl"  
+
+    return study_filename
+
+
+
+def make_params_filename(comment):
+    now = datetime.now().strftime("%H_%M_%S-")
+
+    params_filename = f"{comment}{now}.txt"  
+
+    return params_filename
+
+
+def move_checkpoint(from_path,best_params_dict,study, new_name):
   to_path = init_checkpoint_path()
-  file_name = make_chk_filename (new_name)
-  to_path = os.path.join(to_path, file_name)
-  shutil.copy(from_path, to_path)
+  chk_file_name = make_chk_filename (new_name + '_chk_')
+  to_path_chk = os.path.join(to_path, chk_file_name)
+  shutil.copy(from_path, to_path_chk)
+
+  params_file_name = make_params_filename(new_name+'_params_')
+  to_path_params = os.path.join(to_path, params_file_name)
+  with open(to_path_params, 'w') as convert_file:
+     convert_file.write(json.dumps(best_params_dict))
+
+  study_file_name = make_study_filename(new_name+'_study_')
+  to_path_study = os.path.join(to_path, study_file_name)
+  with open(to_path_study, 'wb') as handle:
+    pickle.dump(study, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+
+
 
