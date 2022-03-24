@@ -10,83 +10,6 @@ from torchvision import transforms as transforms
 import torch.nn.functional as F
 import torch.optim as optim
 
-class SimpleBinaryClassifier(pl.LightningModule):
-    """
-    This model was chosen to be as simple as possible for two purposes:
-        1. To understand the architecture and interface for how to construct a model using PyTorch Lightning as shown in
-            tutorial #7.
-        2. To make it easier to test out the dataflow/workstream in terms of the connections between Google Colab and
-            Google Drive when proving it out.
-    """
-    def __init__(self, n_in, n_out, activation_fn):
-        super().__init__()
-
-        model = [
-            torch.nn.Linear(n_in, n_out),
-            activation_fn
-        ]
-
-        self.model = torch.nn.Sequential(*model)
-
-        self.train_accuracy = torchmetrics.Accuracy()
-        self.test_accuracy = torchmetrics.Accuracy()
-        self.val_accuracy = torchmetrics.Accuracy()
-
-    def forward(self, x):
-        x = self.model(x)
-        return x
-
-    def training_step(self, batch, batch_idx):
-        x, y = batch
-        y_hat = self.forward(x)
-
-        loss = torch.nn.functional.mse_loss(y_hat, y)
-        self.log('train_loss', loss, on_step=False, on_epoch=True)
-
-        self.train_accuracy(y_hat, y.type(torch.int))
-        self.log('train_acc_step', self.train_accuracy)
-
-        return loss
-
-    def validation_step(self, batch, batch_idx):
-        x, y = batch
-        y_hat = self.forward(x)
-
-        loss = torch.nn.functional.mse_loss(y_hat, y)
-        self.log('val_loss', loss, on_step=False, on_epoch=True)
-
-        self.val_accuracy(y_hat, y.type(torch.int))
-        self.log('val_acc_step', self.val_accuracy)
-
-        return loss
-
-    def test_step(self, batch, batch_idx):
-        x, y = batch
-        y_hat = self.forward(x)
-
-        loss = torch.nn.functional.mse_loss(y_hat, y)
-        self.log('test_loss', loss, on_step=False, on_epoch=True)
-
-        # The casting here should really be fixed earlier in terms of when the
-        # data is loaded but this is sufficient to prove things out from the
-        # data flow standpoint.
-        self.test_accuracy(y_hat, y.type(torch.int))
-        self.log('test_acc_step', self.test_accuracy)
-
-        return loss
-
-    def training_epoch_end(self, outs):
-        self.log('train_acc_epoch', self.train_accuracy)
-
-    def validation_epoch_end(self, outs):
-        self.log('val_acc_epoch', self.val_accuracy)
-
-    def test_epoch_end(self, outs):
-        self.log('test_acc_epoch', self.test_accuracy)
-
-    def configure_optimizers(self):
-        optimizer = torch.optim.SGD(self.parameters(), lr=.1)
-        return optimizer
 
 class Encoder(nn.Module):
 
@@ -152,7 +75,7 @@ class Decoder(nn.Module):
         return x
     
 
-class Autoencoder_1(pl.LightningModule):
+class MnistAutoencoder(pl.LightningModule):
 
     def __init__(self, base_channel_size: int = 16, latent_dim: int = 8,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 28,height: int = 28):
         super().__init__()
@@ -233,59 +156,6 @@ class Autoencoder_1(pl.LightningModule):
         loss = self._get_reconstruction_loss(batch)
         self.log('test_loss', loss)
 
-
-class AutoEncoder(nn.Module):
-    def __init__(self,input_channels=1, output_channels=32, latent_count=28, act_val=0.01):
-        super().__init__()
-        originalxdims = 128
-        originalydims = 157
-        paddingmatrix = [1,1,1,1]
-        stridematrix = [1,2,2,1]
-        kernels = [3,3,3,3]
-        condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
-        self.encoder = nn.Sequential(
-                nn.Conv2d(input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(act_val),
-                nn.Conv2d(output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(act_val),
-                nn.Conv2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(act_val),
-                nn.Conv2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
-                nn.Flatten(),
-                nn.Linear(condimsval*2*output_channels, latent_count)
-        )
-        self.decoder = nn.Sequential(
-                torch.nn.Linear(latent_count, condimsval*2*output_channels),
-                Reshape(-1, 2*output_channels, math.sqrt(condimsval), math.sqrt(condimsval)),
-                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
-                nn.LeakyReLU(act_val),
-                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),                
-                nn.LeakyReLU(act_val),
-                nn.ConvTranspose2d(2*output_channels, output_channels, stride=(2, 2), kernel_size=(3, 3), padding=0),                
-                nn.LeakyReLU(act_val),
-                nn.ConvTranspose2d(output_channels, input_channels, stride=(1, 1), kernel_size=(3, 3), padding=0), 
-                Trim(),  # 1x29x29 -> 1x28x28
-                nn.Sigmoid()
-                )
-
-    def forward(self, x):
-        x = self.encoder(x)
-        x = self.decoder(x)
-        return x
-    
-def compute_epoch_loss_autoencoder(model, data_loader, loss_fn, device):
-    model.eval()
-    curr_loss, num_examples = 0., 0
-    with torch.no_grad():
-        for features, _ in data_loader:
-            features = features.to(device)
-            logits = model(features)
-            loss = loss_fn(logits, features, reduction='sum')
-            num_examples += features.size(0)
-            curr_loss += loss
-
-        curr_loss = curr_loss / num_examples
-        return curr_loss
     
 class Reshape(nn.Module):
     def __init__(self, *args):
