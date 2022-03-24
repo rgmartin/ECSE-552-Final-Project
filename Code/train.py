@@ -36,18 +36,14 @@ if not os.path.isdir(measurements_path):
         print(error)
 
 
-def run_ae_train(batch_size=10):
-    CUDA_DEVICE_NUM = 3
+def run_ae_train(batch_size=10, max_t=5, data_dir="./data"):
+
     DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
 
-    # Hyperparameters
-    RANDOM_SEED = 123
+    # Hyperparameters.
     LEARNING_RATE = 0.0005
-    BATCH_SIZE = 1
     NUM_EPOCHS = 20
-
-    # TODO: Put dataloader in here somewhere.
 
     print(f"Preparing and splitting dataset...")
     dataset = AudioDataset(data_dir, max_t=max_t)

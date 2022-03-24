@@ -1,4 +1,5 @@
 .idea
+*.wav
 
 .DS_Store
 .vscode
