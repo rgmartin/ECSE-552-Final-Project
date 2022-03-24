@@ -154,7 +154,7 @@ class Decoder(nn.Module):
 
 class Autoencoder_1(pl.LightningModule):
 
-    def __init__(self, base_channel_size: int = 16, latent_dim: int = 4,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 28,height: int = 28):
+    def __init__(self, base_channel_size: int = 16, latent_dim: int = 8,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 28,height: int = 28):
         super().__init__()
         # Saving hyperparameters of autoencoder
         self.save_hyperparameters()
