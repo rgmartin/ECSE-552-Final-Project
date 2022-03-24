@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from torch.utils.data import TensorDataset, DataLoader
-from dict_logger import DictLogger
 from models import *
 from feature_extraction import *
+from feature_extraction import AudioDataset
 import random
 import time
 
-from audio_data_loader import AudioDataset, MelSpectrogramTransform, build_annotation_file
+
 from dict_logger import DictLogger
 
 if 'COLAB_GPU' in os.environ:
@@ -36,7 +36,7 @@ if not os.path.isdir(measurements_path):
         print(error)
 
 
-def run_mnist_ae_train():
+def run_ae_train(batch_size=10):
     CUDA_DEVICE_NUM = 3
     DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
@@ -46,16 +46,30 @@ def run_mnist_ae_train():
     LEARNING_RATE = 0.0005
     BATCH_SIZE = 1
     NUM_EPOCHS = 20
-    train_loader, valid_loader, test_loader = get_dataloaders_mnist(
-    batch_size=BATCH_SIZE, 
-    num_workers=2, 
-    validation_fraction=0.)
-    
+
+    # TODO: Put dataloader in here somewhere.
+
+    print(f"Preparing and splitting dataset...")
+    dataset = AudioDataset(data_dir, max_t=max_t)
+
+    num_samples = len(dataset)
+    num_train = np.floor(num_samples * 0.8).astype(int)
+    num_val = num_samples - num_train
+
+    train_dataset, val_dataset = torch.utils.data.random_split(dataset,
+                                                               [num_train,
+                                                                num_val])
+
+    train_loader = DataLoader(train_dataset, batch_size=batch_size)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+
+    # TODO: Replace with our new AE.
     model = MnistAutoencoder()
     model.to(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
-    
+
+    # TODO: Replace this too, obvs.
     log_dict = train_mnist_ae(num_epochs=NUM_EPOCHS, model=model,
                                 optimizer=optimizer, device=DEVICE, 
                                 train_loader=train_loader,
@@ -258,4 +272,4 @@ if __name__ == "__main__":
     # data_dir = "Data/"
     # train_voxforge_classifier(model, data_dir=data_dir)
 
-    run_mnist_ae_train()
+    run_ae_train()
