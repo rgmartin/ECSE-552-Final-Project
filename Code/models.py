@@ -154,13 +154,43 @@ class Decoder(nn.Module):
 
 class Autoencoder_1(pl.LightningModule):
 
-    def __init__(self, base_channel_size: int, latent_dim: int,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 128,height: int = 157):
+    def __init__(self, base_channel_size: int = 16, latent_dim: int = 4,encoder_class : object = Encoder,decoder_class : object = Decoder,num_input_channels: int = 1,width: int = 28,height: int = 28):
         super().__init__()
         # Saving hyperparameters of autoencoder
         self.save_hyperparameters()
+        output_channels = base_channel_size
+        originalxdims = width
+        originalydims = height
+        paddingmatrix = [1,1,1,1]
+        stridematrix = [1,2,2,1]
+        kernels = [3,3,3,3]
+        condimsval = ConvFlatDimcalc(originalxdims,originalydims,paddingmatrix,stridematrix,kernels)
+        act_val = 0.01
         # Creating encoder and decoder
-        self.encoder = encoder_class(num_input_channels, base_channel_size, latent_dim)
-        self.decoder = decoder_class(num_input_channels, base_channel_size, latent_dim)
+        self.encoder = nn.Sequential(
+                nn.Conv2d(num_input_channels, output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.Conv2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.Flatten(),
+                nn.Linear(condimsval*2*output_channels, latent_dim)
+        )
+        self.decoder = nn.Sequential(
+                torch.nn.Linear(latent_dim, condimsval*2*output_channels),
+                Reshape(-1, 2*output_channels, math.sqrt(condimsval), math.sqrt(condimsval)),
+                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(1, 1), kernel_size=(3, 3), padding=1),
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(2*output_channels, 2*output_channels, stride=(2, 2), kernel_size=(3, 3), padding=1),                
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(2*output_channels, output_channels, stride=(2, 2), kernel_size=(3, 3), padding=0),                
+                nn.LeakyReLU(act_val),
+                nn.ConvTranspose2d(output_channels, num_input_channels, stride=(1, 1), kernel_size=(3, 3), padding=0), 
+                Trim(),  # 1x29x29 -> 1x28x28
+                nn.Sigmoid()
+                )
         # Example input array needed for visualizing the graph of the network
         self.example_input_array = torch.zeros(2, num_input_channels, width, height)
 

@@ -284,12 +284,12 @@ def train_mnsitauto():
     LEARNING_RATE = 0.0005
     BATCH_SIZE = 1
     NUM_EPOCHS = 20
-    train_loader, valid_loader, test_loader = get_dataloaders_spectro(
+    train_loader, valid_loader, test_loader = get_dataloaders_mnist(
     batch_size=BATCH_SIZE, 
     num_workers=2, 
     validation_fraction=0.)
     
-    model = AutoEncoder()
+    model = Autoencoder_1()
     model.to(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
@@ -486,5 +486,5 @@ def make_log_filenames(comment):
 if __name__ == "__main__":
     # train_SimpleBinaryClassifier()
     # train_SimpleAutoEncoder()
-    # train_mnsitauto()
-    train_autencoder_dataloader_test()
+    train_mnsitauto()
+    # train_autencoder_dataloader_test()
