@@ -129,8 +129,6 @@ class AudioDataset(Dataset):
                     file_path = os.path.join(root, filename)
                     if filename.endswith('wav'):
                         spec, sr = get_melspectrogram_db(file_path, max_t=max_t)
-                        spec = spec[None, :, :]
-                        spec = spec.repeat(3, 0)
 
                         # img = spec_to_image(spec)[np.newaxis,...]
                         self.data.append(spec)
