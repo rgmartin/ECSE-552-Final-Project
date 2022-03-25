@@ -52,7 +52,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/ECSE-5
     num_train = np.floor(num_samples * 0.8).astype(int)
     num_val = num_samples - num_train
 
-    print(dataset.data.shape)
+    print(dataset.data[0].shape)
     print(num_train)
     print(num_val)
 
