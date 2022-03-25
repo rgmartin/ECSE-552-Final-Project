@@ -52,6 +52,10 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/ECSE-5
     num_train = np.floor(num_samples * 0.8).astype(int)
     num_val = num_samples - num_train
 
+    print(dataset.data.shape)
+    print(num_train)
+    print(num_val)
+
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
                                                                 num_val])
@@ -70,7 +74,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/ECSE-5
     model.to(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
-
+    
     trainer = pl.Trainer()
     trainer = pl.Trainer(max_epochs=5, gpus=1)
     trainer.fit(model, train_loader)#, DataLoader(val_loader))
