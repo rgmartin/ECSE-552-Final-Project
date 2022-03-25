@@ -71,12 +71,16 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/ECSE-5
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
 
+    trainer = pl.Trainer()
+    trainer = pl.Trainer(max_epochs=5, gpus=1)
+    trainer.fit(model, DataLoader(train_loader), DataLoader(val_loader))
+    
     # TODO: Replace this too, obvs.
-    log_dict = train_mel_ae(num_epochs=NUM_EPOCHS, model=model,
-                                optimizer=optimizer, device=DEVICE, 
-                                train_loader=train_loader,
-                                skip_epoch_stats=True,
-                                logging_interval=250)
+    # log_dict = train_mel_ae(num_epochs=NUM_EPOCHS, model=model,
+    #                             optimizer=optimizer, device=DEVICE, 
+    #                             train_loader=train_loader,
+    #                             skip_epoch_stats=True,
+    #                             logging_interval=250)
 
 
 def train_mel_ae(num_epochs, model, optimizer, device,
