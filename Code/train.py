@@ -58,7 +58,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/ECSE-5
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
-    print(train_dataset.dataset.shape)
+    # print(train_dataset.dataset.shape)
     # TODO: Replace with our new AE.
     model = Mel_ae(128, #height of the input
                    enc_type='resnet50', 
