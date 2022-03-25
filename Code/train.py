@@ -60,7 +60,13 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="./data"):
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
     # TODO: Replace with our new AE.
-    model = MnistAutoencoder()
+    model = Mel_ae(train_dataset.size[3], #height of the input
+                   enc_type='resnet50', 
+                   first_conv=False, 
+                   maxpool1=False, 
+                   enc_out_dim=100, 
+                   kl_coeff=0.1, 
+                   latent_dim=50)
     model.to(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
@@ -71,6 +77,64 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="./data"):
                                 train_loader=train_loader,
                                 skip_epoch_stats=True,
                                 logging_interval=250)
+
+
+def train_mel_ae(num_epochs, model, optimizer, device,
+                         train_loader, loss_fn=None,
+                         logging_interval=100, 
+                         skip_epoch_stats=False,
+                         save_model=None):
+    
+    log_dict = {'train_loss_per_batch': [],
+                'train_loss_per_epoch': []}
+    
+    if loss_fn is None:
+        loss_fn = F.mse_loss
+
+    start_time = time.time()
+    for epoch in range(num_epochs):
+
+        model.train()
+        for batch_idx, (features, _) in enumerate(train_loader):
+
+            features = features.to(device)
+
+            # FORWARD AND BACK PROP
+            logits = model(features)
+            loss = loss_fn(logits, features)
+            optimizer.zero_grad()
+
+            loss.backward()
+
+            # UPDATE MODEL PARAMETERS
+            optimizer.step()
+
+            # LOGGING
+            log_dict['train_loss_per_batch'].append(loss.item())
+            
+            if not batch_idx % logging_interval:
+                print('Epoch: %03d/%03d | Batch %04d/%04d | Loss: %.4f'
+                      % (epoch+1, num_epochs, batch_idx,
+                          len(train_loader), loss))
+
+        if not skip_epoch_stats:
+            model.eval()
+            
+            with torch.set_grad_enabled(False):  # save memory during inference
+                
+                train_loss = compute_epoch_loss_autoencoder(
+                    model, train_loader, loss_fn, device)
+                print('***Epoch: %03d/%03d | Loss: %.3f' % (
+                      epoch+1, num_epochs, train_loss))
+                log_dict['train_loss_per_epoch'].append(train_loss.item())
+
+        print('Time elapsed: %.2f min' % ((time.time() - start_time)/60))
+
+    print('Total Training Time: %.2f min' % ((time.time() - start_time)/60))
+    if save_model is not None:
+        torch.save(model.state_dict(), save_model)
+    
+    return log_dict
 
 
 def train_mnist_ae(num_epochs, model, optimizer, device,

@@ -1,3 +1,4 @@
+from json import encoder
 import os
 import json
 import math
@@ -6,9 +7,23 @@ import torch
 import torch.nn as nn
 import pytorch_lightning as pl
 import torchmetrics
+import torchvision
 from torchvision import transforms as transforms
 import torch.nn.functional as F
 import torch.optim as optim
+from pl_bolts.models.autoencoders import AE
+
+
+class Mel_ae(AE):
+
+    def init_encoder(self, hidden_dim, latent_dim, input_width, input_height):
+        
+        backbone = torchvision.models.resnet50(pretrained=True)
+        num_filters = backbone.fc.in_features
+        layers = list(backbone.children())[:-1]
+        encoder = nn.Sequential(*layers)
+        
+        return encoder.eval()
 
 
 class Encoder(nn.Module):
