@@ -239,7 +239,8 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
         num_train = np.floor(num_samples * 0.8).astype(int)
         num_val = num_samples - num_train
 
-        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val], 
+                                                        generator=torch.Generator().manual_seed(42))
 
         
         train_loader = DataLoader(train_dataset, batch_size=batch_size)
