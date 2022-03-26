@@ -13,6 +13,7 @@ import json
 import pandas as pd
 import optuna
 from optuna.integration import PyTorchLightningPruningCallback
+from models import BaselineResnetClassifier
 
 
 def init_measurements_path():
@@ -199,12 +200,30 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
 
 # Hyperparameter tuning
 
-def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
+def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
     def objective (trial):
         
+        model = BaselineResnetClassifier(num_classes=3)
+
+        logger = DictLogger()
+        checkpoint_callback = pl.callbacks.ModelCheckpoint(
+                monitor="val_acc_step",
+                dirpath='./Checkpoints',
+                mode = 'max',
+                filename='{epoch:02d}-{val_acc_step:.2f}'
+            )
+            
+        trainer = pl.Trainer(
+              logger=logger,  
+              max_epochs=5,
+              gpus=1 if torch.cuda.is_available() else None,
+              callbacks=[checkpoint_callback
+              ],
+        ) 
+        
         # we optimize max_t and batch_size
-        max_t = trial.suggest_int("max_t", 1, 5)       
-        batch_size= trial.suggest_int('batch_size',6,64, log = True)
+        max_t = trial.suggest_int("max_t", 1, 1)       
+        batch_size= trial.suggest_int('batch_size',64,64, log = True)
 
 
         # Prepare and split dataset.
@@ -233,23 +252,6 @@ def hp_tuning_voxforge_classifier(model, data_dir, max_epoch=10, batch_size=10, 
 
 
         return trainer.callback_metrics["val_acc_step"].item()
-    
-
-    logger = DictLogger()
-    checkpoint_callback = pl.callbacks.ModelCheckpoint(
-            monitor="val_acc_step",
-            dirpath='./Checkpoints',
-            mode = 'max',
-            filename='{epoch:02d}-{val_acc_step:.2f}'
-        )
-        
-    trainer = pl.Trainer(
-          logger=logger,  
-          max_epochs=5,
-          gpus=1 if torch.cuda.is_available() else None,
-          callbacks=[checkpoint_callback
-          ],
-    )  
 
 
 
