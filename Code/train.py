@@ -222,8 +222,8 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
         ) 
         
         # we optimize max_t and batch_size
-        max_t = trial.suggest_int("max_t", 1, 1)       
-        batch_size= trial.suggest_int('batch_size',64,64, log = True)
+        max_t = trial.suggest_int("max_t", 1, 5)       
+        batch_size= trial.suggest_int('batch_size',4,64, log = True)
 
 
         # Prepare and split dataset.
