@@ -14,6 +14,7 @@ import pandas as pd
 import optuna
 from optuna.integration import PyTorchLightningPruningCallback
 from models import BaselineResnetClassifier
+from pytorch_lightning.callbacks import EarlyStopping
 
 
 def init_measurements_path():
@@ -57,10 +58,14 @@ def make_log_filenames(comment):
 def init_trainer(logger, max_epochs, profiler):
     is_colab = 'COLAB_GPU' in os.environ
 
+    early_stopping = EarlyStopping('val_loss')
+
     if is_colab:
-        trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping], 
+          logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
-        trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
+        trainer = pl.Trainer(callbacks=[early_stopping],
+          logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
 
