@@ -71,7 +71,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     # dataset.cuda()
     
     print(dataset.data[0].shape)
-    [float(i) for i in test.labels]
+    [float(i) for i in dataset.labels]
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
                                                                 num_val])
