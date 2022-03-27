@@ -76,7 +76,6 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                                                                [num_train,
                                                                 num_val])
     
-    train_dataset = torch.utils.data.TensorDataset(train_dataset)
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
