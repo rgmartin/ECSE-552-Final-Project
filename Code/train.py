@@ -66,7 +66,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
             matrix.append(a) 
         matrix = np.expand_dims(matrix,0)
         rgb2grayimage=np.vstack([matrix, matrix, matrix])
-        dataset.data[image] = rgb2grayimage
+        dataset.data[image] = rgb2grayimage.astype(np.float128)
         
     # dataset.cuda()
     
@@ -76,6 +76,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                                                                [num_train,
                                                                 num_val],dtype=torch.float)
     
+    train_dataset = torch.utils.data.TensorDataset(train_dataset)
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
