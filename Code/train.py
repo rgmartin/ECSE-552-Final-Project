@@ -56,6 +56,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     print(num_train)
     print(num_val)
     
+    #trim image to be square 128X128
     for image in range(len(dataset.data)):
         matrix = []
         for i in range(128):          # A for loop for row entries 
@@ -68,13 +69,15 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
         dataset.data[image] = rgb2grayimage
     
     print(dataset.data[0].shape)
-        
+    
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
                                                                 num_val])
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
+    train_loader = train_loader.cuda()
+    val_loader = val_loader.cuda()
     # print(train_dataset.dataset.shape)
     # TODO: Replace with our new AE.
     model = Mel_ae(3, #height of the input
@@ -85,6 +88,8 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                    kl_coeff=0.1, 
                    latent_dim=10)
     model.to(DEVICE)
+    if torch.cuda.is_available():
+        model.cuda()
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
     
