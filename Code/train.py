@@ -67,6 +67,8 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
         matrix = np.expand_dims(matrix,0)
         rgb2grayimage=np.vstack([matrix, matrix, matrix])
         dataset.data[image] = rgb2grayimage
+        
+    dataset.cuda()
     
     print(dataset.data[0].shape)
     
@@ -76,8 +78,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
-    train_loader = train_loader.cuda()
-    val_loader = val_loader.cuda()
+
     # print(train_dataset.dataset.shape)
     # TODO: Replace with our new AE.
     model = Mel_ae(3, #height of the input
