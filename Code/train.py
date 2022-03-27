@@ -60,9 +60,9 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     #trim image to be square 128X128
     for image in range(len(dataset.data)):
         matrix = []
-        for i in range(128):          # A for loop for row entries 
+        for i in range(254):          # A for loop for row entries 
             a =[] 
-            for j in range(128):      # A for loop for column entries 
+            for j in range(254):      # A for loop for column entries 
                 a.append(int(dataset.data[image][i,j])) 
             matrix.append(a) 
         matrix = np.expand_dims(matrix,0)
