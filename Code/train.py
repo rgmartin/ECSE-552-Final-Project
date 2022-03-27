@@ -74,7 +74,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
-                                                                num_val])
+                                                                num_val],dtype=torch.float)
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
