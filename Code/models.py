@@ -92,7 +92,7 @@ class BaselineResnetClassifier(pl.LightningModule):
         super().__init__()
 
         # Load, optionally download pre-trained Resnet.
-        self.resnet50 = torchvision.models.resnet50(pretrained=True)
+        self.resnet50 = torchvision.models.resnet50(pretrained=True, num_classes = 1000)
         self.fc = torch.nn.Linear(1000, num_classes)
 
         # Log stuffs.
@@ -156,7 +156,7 @@ class BaselineResnetClassifier(pl.LightningModule):
         self.log('test_acc_epoch', self.test_accuracy)
 
     def configure_optimizers(self):
-        optimizer = torch.optim.SGD(self.parameters(), lr=.1)
+        optimizer = torch.optim.Adam(self.parameters())
         return optimizer
 
     # # Todo: Determine how to save the raw log information more easily on a per epoch basis for further analysis
