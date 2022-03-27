@@ -75,7 +75,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                    enc_type='resnet50', 
                    first_conv=False, 
                    maxpool1=False, 
-                   enc_out_dim=100, 
+                   enc_out_dim=2048, 
                    kl_coeff=0.1, 
                    latent_dim=10)
     model.to(DEVICE)
