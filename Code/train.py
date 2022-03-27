@@ -56,8 +56,11 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     print(num_train)
     print(num_val)
     
-    newdataset = dataset.data.unsqueeze(1).repeat(1, 3, 1, 1)
-    print(newdataset.shape) 
+    for image in dataset.data:
+        rgb2grayimage=np.dstack([dataset.data[image], dataset.data[image], dataset.data[image]])
+        dataset.data[image] = rgb2grayimage
+    
+    print(dataset.data[0].shape)
         
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
