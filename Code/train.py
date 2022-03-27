@@ -57,8 +57,13 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     print(num_val)
     
     for image in range(len(dataset.data)):
-        dataset.data[image] = np.expand_dims(dataset.data[image][:128,:128],0)
-        rgb2grayimage=np.vstack([dataset.data[image], dataset.data[image], dataset.data[image]])
+        matrix = []
+        for i in range(128):          # A for loop for row entries 
+            a =[] 
+            for j in range(128):      # A for loop for column entries 
+                a.append(int(dataset.data[image][i,j])) 
+            matrix.append(a) 
+        rgb2grayimage=np.vstack([matrix, matrix, matrix])
         dataset.data[image] = rgb2grayimage
     
     print(dataset.data[0].shape)
