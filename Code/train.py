@@ -36,7 +36,7 @@ if not os.path.isdir(measurements_path):
         print(error)
 
 
-def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datatest/"):
+def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datatest/DE_debug_set"):
 
     DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
