@@ -37,7 +37,7 @@ if not os.path.isdir(measurements_path):
 
 
 def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datatest/DE_debug_set"):
-
+    use_cuda = torch.cuda.is_available()
     DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
     print('Device:', DEVICE)
 
@@ -75,9 +75,6 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     train_dataset, val_dataset = torch.utils.data.random_split(dataset,
                                                                [num_train,
                                                                 num_val])
-
-    train_dataset = train_dataset.cuda()
-    val_dataset = val_dataset.cuda()
     
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
