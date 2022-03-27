@@ -68,7 +68,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
         rgb2grayimage=np.vstack([matrix, matrix, matrix])
         dataset.data[image] = rgb2grayimage
         
-    dataset.cuda()
+    # dataset.cuda()
     
     print(dataset.data[0].shape)
     
