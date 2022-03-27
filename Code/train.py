@@ -77,7 +77,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                    maxpool1=False, 
                    enc_out_dim=100, 
                    kl_coeff=0.1, 
-                   latent_dim=50)
+                   latent_dim=10)
     model.to(DEVICE)
 
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
