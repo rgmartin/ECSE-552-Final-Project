@@ -60,9 +60,9 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     #trim image to be square 128X128
     for image in range(len(dataset.data)):
         matrix = []
-        for i in range(150):          # A for loop for row entries 
+        for i in range(128):          # A for loop for row entries 
             a =[] 
-            for j in range(150):      # A for loop for column entries 
+            for j in range(128):      # A for loop for column entries 
                 a.append(int(dataset.data[image][i,j])) 
             matrix.append(a) 
         matrix = np.expand_dims(matrix,0)
@@ -86,10 +86,9 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                    enc_type='resnet50', 
                    first_conv=False, 
                    maxpool1=False, 
-                   enc_out_dim=2048, 
+                   enc_out_dim=1000, 
                    kl_coeff=0.1, 
-                   latent_dim=10,
-                   half=False)
+                   latent_dim=1)
     model.to(DEVICE)
     if torch.cuda.is_available():
         model.cuda()
