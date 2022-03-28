@@ -18,7 +18,7 @@ class Mel_ae(AE):
 
     def init_encoder(self, hidden_dim, latent_dim, input_width, input_height):
         
-        backbone = torchvision.models.resnet50(pretrained=True)
+        backbone = torchvision.models.resnet50(pretrained=True,num_classes = 1000)
         num_filters = backbone.fc.in_features
         layers = list(backbone.children())[:-1]
         encoder = nn.Sequential(*layers)
