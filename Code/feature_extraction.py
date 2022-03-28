@@ -47,7 +47,7 @@ Returns:
 
 
 def get_melspectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512,
-                          n_mels=150, fmin=20, fmax=8300, top_db=80, max_t=5):
+                          n_mels=128, fmin=20, fmax=8300, top_db=80, max_t=5):
     wav, sr = librosa.load(file_path, sr=sr)
 
     # remove the silence from the beginning/end of a file to get more speech content
