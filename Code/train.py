@@ -58,13 +58,15 @@ def make_log_filenames(comment):
 def init_trainer(logger, max_epochs, profiler):
     is_colab = 'COLAB_GPU' in os.environ
 
-    early_stopping = EarlyStopping('val_loss')
+    early_stopping = EarlyStopping('val_loss', verbose=True, patience=4)
+    early_stopping2= EarlyStopping(monitor="val_acc_epoch", min_delta=0.00,
+                                    patience=4, mode="max", stopping_threshold=0.945)
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping], 
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping,early_stopping2], 
           logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
-        trainer = pl.Trainer(callbacks=[early_stopping],
+        trainer = pl.Trainer(callbacks=[early_stopping,early_stopping2],
           logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
