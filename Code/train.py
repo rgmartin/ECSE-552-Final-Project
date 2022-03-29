@@ -68,8 +68,6 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
         matrix = np.expand_dims(matrix,0)
         rgb2grayimage=np.vstack([matrix, matrix, matrix])
         dataset.data[image] = rgb2grayimage.astype(np.float64)
-        
-    # dataset.cuda()
     
     print(dataset.data[0].shape)
     [float(i) for i in dataset.labels]
@@ -82,13 +80,13 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
 
     # print(train_dataset.dataset.shape)
     # TODO: Replace with our new AE.
-    model = Mel_ae(3, #height of the input
+    model = Mel_ae(128, #height of the input
                    enc_type='resnet50', 
                    first_conv=False, 
                    maxpool1=False, 
                    enc_out_dim=2048, 
                    kl_coeff=0.1, 
-                   latent_dim=10)
+                   latent_dim=20)
     model.to(DEVICE)
     if torch.cuda.is_available():
         model.cuda()
