@@ -86,7 +86,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
                    maxpool1=False, 
                    enc_out_dim=2048, 
                    kl_coeff=0.1, 
-                   latent_dim=5)
+                   latent_dim=3)
     model.to(DEVICE)
     if torch.cuda.is_available():
         model.cuda()
@@ -94,7 +94,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
     
     trainer = pl.Trainer()
-    trainer = pl.Trainer(max_epochs=5, gpus=1)
+    trainer = pl.Trainer(max_epochs=5, gpus=2)
     trainer.fit(model, train_loader)#, DataLoader(val_loader))
     
     # TODO: Replace this too, obvs.
