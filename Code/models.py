@@ -3,6 +3,7 @@ import torch.nn.functional as F
 import torchmetrics
 import torchvision
 import pytorch_lightning as pl
+from pl_bolts.models.autoencoders import AE
 
 
 class SimpleBinaryClassifier(pl.LightningModule):
@@ -166,6 +167,18 @@ class BaselineResnetClassifier(pl.LightningModule):
     #     with open(save_path, 'w') as f:
     #         json.dump(self.logger.metrics, f, indent=4)
 
+
+
+class Mel_ae(AE):
+
+    def init_encoder(self, hidden_dim, latent_dim, input_width, input_height):
+        
+        backbone = torchvision.models.resnet50(pretrained=True,num_classes = 1000)
+        num_filters = backbone.fc.in_features
+        layers = list(backbone.children())[:-1]
+        encoder = nn.Sequential(*layers)
+        
+        return encoder.eval()
 
 if __name__ == "__main__":
 
