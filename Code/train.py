@@ -13,7 +13,7 @@ import json
 import pandas as pd
 import optuna
 from optuna.integration import PyTorchLightningPruningCallback
-from models import BaselineResnetClassifier
+from models import BaselineResnetClassifier, Mel_ae
 from pytorch_lightning.callbacks import EarlyStopping
 
 
@@ -278,7 +278,64 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
     return trainer.checkpoint_callback.best_model_path, trial.params, study
     
 
+# Run the Autoencoder 
+def run_ae_train(batch_size=1, max_t=5, data_dir="/content/drive/MyDrive/datatest/DE_debug_set"): #Change the file location, Batch size < 10
+    use_cuda = torch.cuda.is_available()
+    torch.set_default_dtype(torch.float64)
+    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
+    print('Device:', DEVICE)
 
+    # Hyperparameters.
+    LEARNING_RATE = 0.0005
+    NUM_EPOCHS = 20
+
+    print(f"Preparing and splitting dataset...")
+    dataset = AudioDataset(data_dir, max_t=max_t)
+
+    num_samples = len(dataset)
+    num_train = np.floor(num_samples * 0.8).astype(int)
+    num_val = num_samples - num_train
+
+    print(len(dataset.data))#[0].shape)
+    print(num_train)
+    print(num_val)
+    
+    #trim image to be square 128X128
+    for image in range(len(dataset.data)):
+        matrix = []
+        for i in range(128):          # A for loop for row entries 
+            a =[] 
+            for j in range(128):      # A for loop for column entries 
+                a.append(int(dataset.data[image][i,j])) 
+            matrix.append(a) 
+        matrix = np.expand_dims(matrix,0)
+        rgb2grayimage=np.vstack([matrix, matrix, matrix])
+        dataset.data[image] = rgb2grayimage.astype(np.float64)
+    
+    [float(i) for i in dataset.labels]
+    train_dataset, val_dataset = torch.utils.data.random_split(dataset,
+                                                               [num_train,
+                                                                num_val])
+    
+    train_loader = DataLoader(train_dataset, batch_size=batch_size)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+
+    # print(train_dataset.dataset.shape)
+    # TODO: Replace with our new AE.
+    model = Mel_ae(128, #height of the input
+                   enc_type='resnet50', 
+                   first_conv=False, 
+                   maxpool1=False, 
+                   enc_out_dim=2048, 
+                   kl_coeff=0.1, 
+                   latent_dim=3)
+    model.to(DEVICE)
+    if torch.cuda.is_available():
+        model.cuda()
+    
+    trainer = pl.Trainer()
+    trainer = pl.Trainer(max_epochs=NUM_EPOCHS, gpus=1)
+    trainer.fit(model, train_loader, val_loader)
 
 
 
