@@ -94,7 +94,7 @@ def run_ae_train(batch_size=10, max_t=5, data_dir="/content/drive/MyDrive/datate
     optimizer = torch.optim.Adam(model.parameters(), lr=LEARNING_RATE)  
     
     trainer = pl.Trainer()
-    trainer = pl.Trainer(max_epochs=5, gpus=2)
+    trainer = pl.Trainer(max_epochs=5, gpus=1)
     trainer.fit(model, train_loader)#, DataLoader(val_loader))
     
     # TODO: Replace this too, obvs.
