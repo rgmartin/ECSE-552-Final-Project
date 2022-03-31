@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="ECSE-552 Final Project" company="" webLink="http://" view-date="2022-03-06" view-index="0" gantt-divider-location="429" resource-divider-location="300" version="3.2.3221" locale="en_US">
+<?xml version="1.0" encoding="UTF-8"?><project name="ECSE-552 Final Project" company="" webLink="http://" view-date="2022-03-24" view-index="0" gantt-divider-location="429" resource-divider-location="300" version="3.2.3221" locale="en_US">
     <description/>
     <view zooming-state="default:3" id="gantt-chart">
         <field id="tpd3" name="Name" width="200" order="0"/>
@@ -70,7 +70,7 @@
             </task>
         </task>
         <task id="13" name="Presentation Prep" color="#8cb6ce" meeting="false" start="2022-04-02" duration="1" complete="0" thirdDate="2022-03-06" thirdDate-constraint="0" expand="true"/>
-        <task id="2" name="Project Presentation (tentative)" color="#ff0033" meeting="true" start="2022-04-04" duration="0" complete="0" thirdDate="2022-04-07" thirdDate-constraint="0" expand="true"/>
+        <task id="2" name="Project Presentation (finalized)" color="#ff0033" meeting="true" start="2022-04-06" duration="0" complete="0" thirdDate="2022-04-07" thirdDate-constraint="0" expand="true"/>
         <task id="1" name="Final report deadline" color="#ff3333" meeting="true" start="2022-04-12" duration="0" complete="0" thirdDate="2022-04-07" thirdDate-constraint="0" expand="true"/>
         <task id="0" name="Peer-review deadline" color="#ff0033" meeting="true" start="2022-04-19" duration="0" complete="0" thirdDate="2022-03-01" thirdDate-constraint="0" expand="true"/>
     </tasks>
