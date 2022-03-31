@@ -27,27 +27,27 @@ def enforce_duration(x, target_dur_samples):
 
         return x
 
-"""
-Gets a melspectrogram using librosa libraty
 
-Args:
+def get_mel_spectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512, n_mels=128, fmin=20, fmax=8300, top_db=80, max_t=5, crop=None, rgb_expand=False):
+    """
+    Gets a mel spectrogram using librosa library
 
-    file_path: file of .wav file to process
-    sr: sample rate to load the audio. If none is specified, librosa will utilise native 44.1kHz
-    n_fft: how many samples are to be utilised per fft window
-    hop_length: number of samples not analysed between consecutive fft windows
-    n_mels: number of bins in which the spectogram is to be divided in the y-axis
-    fmin, fmax: minimum and maximum frequencies to be considered in the specogram (Hz)
-    top_db: highest intensity in db
-    max_t: length of time to which the audio will be cropped.
-    
-Returns:
-    spec_db: mel spectogram in db in the form of a np array.
-    sr: sampling rate utilized.
-"""
+    Args:
+        file_path: file of .wav file to process
+        sr: sample rate to load the audio. If none is specified, librosa will utilise native 44.1kHz
+        n_fft: how many samples are to be utilised per fft window
+        hop_length: number of samples not analysed between consecutive fft windows
+        n_mels: number of bins in which the spectrogram is to be divided in the y-axis
+        fmin, fmax: minimum and maximum frequencies to be considered in the spectrogram (Hz)
+        top_db: highest intensity in db
+        max_t: length of time to which the audio will be cropped.
+        crop: max number for the horizontal dimension of the final spectrogram
+        rgb_expand: add another axis and duplicate the images three times for RGB processing
 
-
-def get_melspectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512, n_mels=128, fmin=20, fmax=8300, top_db=80, max_t=5):
+    Returns:
+        spec_db: mel spectogram in db in the form of a np array.
+        sr: sampling rate utilized.
+    """
     wav, sr = librosa.load(file_path, sr=sr)
 
     # remove the silence from the beginning/end of a file to get more speech content
@@ -55,11 +55,22 @@ def get_melspectrogram_db(file_path, sr=None, n_fft=2048, hop_length=512, n_mels
     wav = enforce_duration(wav, max_t * sr)
     spec = librosa.feature.melspectrogram(y=wav, sr=sr, n_fft=n_fft, hop_length=hop_length, n_mels=n_mels, fmin=fmin, fmax=fmax)
     spec_db = librosa.power_to_db(spec, top_db=top_db)
+
+    if crop is not None:
+        # Todo: This "crop" hack is to make sure the images are square for the autoencoder, ultimately a better method
+        #   beyond cropping should be implemented as the analysis parameters and file properties could be used to calculate
+        #   the length of the spectrogram.
+        spec_db = spec_db[:, :crop]
+
+    if rgb_expand:
+        spec_db = np.expand_dims(spec_db, axis=0)
+        spec_db = np.repeat(spec_db, 3, 0)
+
     return spec_db, sr
 
 
-# todo implement transform to normalise the spectogram
 def spec_to_image(spec, eps=1e-6):
+    # Todo: implement transform to normalise the spectrogram
     mean = spec.mean()
     std = spec.std()
     spec_norm = (spec - mean) / (std + eps)
@@ -69,15 +80,15 @@ def spec_to_image(spec, eps=1e-6):
     return spec_scaled
 
 
-"""
-Displays several spectograms 
-Args:
-    spec_db: list of one or more spectograms (np.arrays of dimension 2) to be displayed( only the first six will be 
-    shown)
-    sr: sampling rate or rates, depending on how many spectogram are considered in spec_db
-    labels: labels to  be utilized in the same order as they are provided to annotate each spectogram.
-"""
-def display_spectogram(spec_db, sr, labels=None):
+def display_spectrogram(spec_db, sr, labels=None):
+    """
+    Displays several spectograms
+    Args:
+        spec_db: list of one or more spectograms (np.arrays of dimension 2) to be displayed( only the first six will be
+        shown)
+        sr: sampling rate or rates, depending on how many spectogram are considered in spec_db
+        labels: labels to  be utilized in the same order as they are provided to annotate each spectogram.
+    """
     ncols, nrows = 3, 2
     fig, axs = plt.subplots(nrows, ncols, figsize=(12, 9))
     n_display = min(ncols * nrows, len(spec_db))
@@ -91,12 +102,11 @@ def display_spectogram(spec_db, sr, labels=None):
     plt.tight_layout()
     plt.show()
 
-"""
-AudioDataset class is a child of pytorch's Dataset
-"""
+
 class AudioDataset(Dataset):
     """
     Creates an AudioDataset
+    AudioDataset class is a child of pytorch's Dataset
 
     Args:
         root_dir: directory where the audio files are to be read from the
@@ -104,7 +114,7 @@ class AudioDataset(Dataset):
                   each subdirectory will be scanned for wav files and each of the files will be added to the dataset.
                   files from the same subdirectory will have the same ordinal label.
     """
-    def __init__(self, root_dir, max_t):
+    def __init__(self, root_dir, max_t, rgb_expand, crop):
         self.root_dir = root_dir
         self.data = []
         self.sr = []
@@ -118,7 +128,7 @@ class AudioDataset(Dataset):
                 for filename in files:
                     file_path = os.path.join(root, filename)
                     if filename.endswith('wav'):
-                        spec, sr = get_melspectrogram_db(file_path, max_t = max_t)
+                        spec, sr = get_mel_spectrogram_db(file_path, max_t=max_t, crop=crop, rgb_expand=rgb_expand)
                         # img = spec_to_image(spec)[np.newaxis,...]
                         self.data.append(spec)
                         self.labels.append(self.dirs.index(d))
@@ -130,8 +140,8 @@ class AudioDataset(Dataset):
     def __getitem__(self, idx):
         return self.data[idx], self.labels[idx]
 
+
 if __name__ == '__main__':
-    # # 4. Display
     data_folder_name = 'Data'
     dataset = AudioDataset(data_folder_name)
-    display_spectogram(list(dataset[:][0]), list(dataset.sr[:]), list(dataset[:][1]))
+    display_spectrogram(list(dataset[:][0]), list(dataset.sr[:]), list(dataset[:][1]))

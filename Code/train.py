@@ -18,6 +18,7 @@ from pytorch_lightning.callbacks import EarlyStopping
 
 
 def init_measurements_path():
+    print("Creating measurements path...")
 
     is_colab = 'COLAB_GPU' in os.environ
 
@@ -46,6 +47,37 @@ def init_measurements_path():
     return measurements_path
 
 
+# def crop_images(dataset):
+#     # Todo: parametrize this and test it better
+#     for image in range(len(dataset.data)):
+#         matrix = []
+#         for i in range(128):  # A for loop for row entries
+#             a = []
+#             for j in range(128):  # A for loop for column entries
+#                 a.append(int(dataset.data[image][i, j]))
+#             matrix.append(a)
+#         matrix = np.expand_dims(matrix, 0)
+#         rgb2grayimage = np.vstack([matrix, matrix, matrix])
+#         dataset.data[image] = rgb2grayimage.astype(np.float32)
+
+
+def init_dataset(data_dir, dur_seconds, crop=None, rgb_expand=False):
+    print("Creating dataset")
+    start_time = timeit.default_timer()
+    dataset = AudioDataset(data_dir, dur_seconds, rgb_expand, crop)
+    end_time = timeit.default_timer()
+    print("Dataset creation in seconds: ", end_time - start_time)
+
+    return dataset
+
+
+def split_dataset(dataset, train_split=.8):
+    num_samples = len(dataset)
+    num_train = np.floor(num_samples * train_split).astype(int)
+    num_val = num_samples - num_train
+    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+    return train_dataset, val_dataset
+
 def make_log_filenames(comment):
     now = datetime.now().strftime("%H_%M_%S-")
 
@@ -56,6 +88,8 @@ def make_log_filenames(comment):
 
 
 def init_trainer(logger, max_epochs, profiler):
+    print("Initializing trainer...")
+
     is_colab = 'COLAB_GPU' in os.environ
 
     early_stopping = EarlyStopping('val_loss')
@@ -65,7 +99,7 @@ def init_trainer(logger, max_epochs, profiler):
           logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
-          logger=logger, max_epochs=max_epochs, profiler=profiler)
+          logger=logger, max_epochs=max_epochs, profiler=profiler, precision=32)
 
     return trainer
 
@@ -100,89 +134,11 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     plt.show()
     
 
-def train_SimpleBinaryClassifier():
-    from models import SimpleBinaryClassifier
-
-    def plot_layer_decision_boundaries(model: torch.nn.Sequential, X: np.ndarray, name: str, N: int):
-        def boundary(X1, X2, weights, bias):
-            X1 = weights[0, 0] * X1
-            X2 = weights[0, 1] * X2
-            return np.sign(X1 + X2 + bias)
-
-        x1 = np.linspace(-1, 1, 1000)
-        x2 = np.linspace(-1, 1, 1000)
-        X1_grid, X2_grid = np.meshgrid(x1, x2)
-        cs = plt.contourf(X1_grid, X2_grid,
-                          boundary(X1_grid, X2_grid, model[0].weight.detach(), model[0].bias.detach()),
-                          cmap='binary', levels=2)
-        plt.scatter(X[:N, 0], X[:N, 1], c='r', label='C1')
-        plt.scatter(X[N:, 0], X[N:, 1], c='b', label='C2')
-        i = 0
-        plt.title('Decision Boundary - {} Data'.format(name))
-        plt.legend()
-        plt.colorbar(cs, ticks=[-1, 1], label="Predicted Label")
-        plt.show()
-
-
-    # Set the model/parameters for the training loop here
-    max_epochs = 10
-    batch_size = 2
-    model = SimpleBinaryClassifier(2, 1, torch.nn.Sigmoid())
-    logger = DictLogger()
-
-    # Configure the names of the output files here, these should contain enough information to help distinguish them
-    # from other tests with different models/parameters to make sure we don't confuse data
-    name = "SBC_training_1-"
-    now = datetime.now().strftime("%H_%M_%S-")
-    profiler_output_file = name + now + "profiler_output"
-    image_output_file = name + now + "Loss-Acc.png"
-    measurements_path = init_measurements_path()
-
-    train_data = pd.read_csv('./test_data/synthetic_train_data.csv')
-    val_data = pd.read_csv('./test_data/synthetic_validation_data.csv')
-
-    # it is necessary to reshape the tensors to be in a column format for calculations later
-    train_labels = torch.Tensor(train_data.loc[:, 'label'].values).reshape((train_data.shape[0], 1))
-    val_labels = torch.Tensor(train_data.loc[:, 'label'].values).reshape((val_data.shape[0], 1))
-    dataset_train = TensorDataset(torch.Tensor(train_data.loc[:, ['x0', 'x1']].values), train_labels)
-    dataset_val = TensorDataset(torch.Tensor(val_data.loc[:, ['x0', 'x1']].values), val_labels)
-
-    # Todo: Investigate how the num_workers parameter here affects efficiency
-    train_loader = DataLoader(dataset_train, batch_size=batch_size)
-    val_loader = DataLoader(dataset_val, batch_size=batch_size)
-
-    profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_output_file)
-
-    # Todo: Determine the impact and selection of the GPUs on Google Colab and make sure all tensors are on it
-    if 'COLAB_GPU' in os.environ:
-        trainer = pl.Trainer(gpus=1, logger=logger, max_epochs=max_epochs, profiler=profiler)
-    else:
-        trainer = pl.Trainer(logger=logger, max_epochs=max_epochs, profiler=profiler)
-
-    trainer.fit(model, train_loader, val_loader)
-
-    plot_logger_metrics(logger, measurements_path, image_output_file)
-
-    # this is only printed for verification purposes, hence why the file isn't saved
-    plot_layer_decision_boundaries(model.model, train_data.loc[:, ['x0', 'x1']].values, 'Training', train_data.shape[0] // 2)
-
-
-def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, comment=""):
-
-    # Prepare and split dataset.
-    print("Preparing and splitting dataset...")
-    
+def train_baseline_resnet(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, train_split=.8, comment=""):
     name = "Resnet50 Baseline"
-    start_time = timeit.default_timer()
-    dataset = AudioDataset(data_dir, max_t = dur_seconds)
-    end_time = timeit.default_timer()
-    print("Dataset creation in seconds: ", end_time-start_time)
+    dataset = init_dataset(data_dir, dur_seconds)
 
-    num_samples = len(dataset)
-    num_train = np.floor(num_samples * 0.8).astype(int)
-    num_val = num_samples - num_train
-
-    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+    train_dataset, val_dataset = split_dataset(dataset, train_split)
 
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
@@ -194,7 +150,6 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    print("Initializing trainer...")
     trainer = init_trainer(logger, max_epoch, profiler)
 
     # The main attraction: train the model.
@@ -203,63 +158,78 @@ def train_voxforge_classifier(model, data_dir, max_epoch=5, batch_size=10, dur_s
     plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
-# Hyperparameter tuning
+def train_mel_ae(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, train_split=.8, comment=""):
+    name = "Mel AE"
+    dataset = init_dataset(data_dir, dur_seconds, model.input_height, rgb_expand=True)
 
+    train_dataset, val_dataset = split_dataset(dataset, train_split)
+    
+    train_loader = DataLoader(train_dataset, batch_size=batch_size)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size)
+
+    # Set up logs.
+    measurements_path = init_measurements_path()
+    profiler_filename, plot_filename = make_log_filenames(name)
+
+    # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
+    #  different "end" functions to facilitate this.
+    logger = DictLogger()
+    profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
+
+    trainer = init_trainer(logger, max_epoch, profiler)
+    trainer.fit(model, train_loader, val_loader)
+    # plot_logger_metrics(logger, measurements_path, plot_filename)
+
+
+# Hyperparameter tuning
 def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
-    def objective (trial):
-        
+    def objective(trial):
         model = BaselineResnetClassifier(num_classes=3)
 
         logger = DictLogger()
         checkpoint_callback = pl.callbacks.ModelCheckpoint(
-                monitor="val_acc_step",
-                dirpath='./Checkpoints',
-                mode = 'max',
-                filename='{epoch:02d}-{val_acc_step:.2f}'
-            )
-            
-        trainer = pl.Trainer(
-              logger=logger,  
-              max_epochs=5,
-              gpus=1 if torch.cuda.is_available() else None,
-              callbacks=[checkpoint_callback
-              ],
-        ) 
-        
-        # we optimize max_t and batch_size
-        max_t = trial.suggest_int("max_t", 1, 5)       
-        batch_size= trial.suggest_int('batch_size',4,64, log = True)
+            monitor="val_acc_step",
+            dirpath='./Checkpoints',
+            mode='max',
+            filename='{epoch:02d}-{val_acc_step:.2f}'
+        )
 
+        trainer = pl.Trainer(
+            logger=logger,
+            max_epochs=5,
+            gpus=1 if torch.cuda.is_available() else None,
+            callbacks=[checkpoint_callback
+                       ],
+        )
+
+        # we optimize max_t and batch_size
+        max_t = trial.suggest_int("max_t", 1, 5)
+        batch_size = trial.suggest_int('batch_size', 4, 64, log=True)
 
         # Prepare and split dataset.
         print(f"Preparing and splitting dataset...")
-        
+
         name = "Resnet50 Baseline"
         start_time = timeit.default_timer()
-        dataset = AudioDataset(data_dir, max_t = max_t )
+        dataset = AudioDataset(data_dir, max_t=max_t)
         end_time = timeit.default_timer()
-        print("Dataset creation in seconds: ", end_time-start_time)
+        print("Dataset creation in seconds: ", end_time - start_time)
 
         num_samples = len(dataset)
         num_train = np.floor(num_samples * 0.8).astype(int)
         num_val = num_samples - num_train
 
-        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val], 
-                                                        generator=torch.Generator().manual_seed(42))
+        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val],
+                                                                   generator=torch.Generator().manual_seed(42))
 
-        
         train_loader = DataLoader(train_dataset, batch_size=batch_size)
         val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
-
-        hyperparameters = dict(max_t = max_t, batch_size=batch_size)
+        hyperparameters = dict(max_t=max_t, batch_size=batch_size)
         trainer.logger.log_hyperparams(hyperparameters)
         trainer.fit(model, train_loader, val_loader)
 
-
         return trainer.callback_metrics["val_acc_step"].item()
-
-
 
     study = optuna.create_study(direction="maximize")
     study.optimize(objective, n_trials=25)
@@ -276,74 +246,19 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
         print("    {}: {}".format(key, value))
 
     return trainer.checkpoint_callback.best_model_path, trial.params, study
-    
-
-# Run the Autoencoder 
-def run_ae_train(batch_size=1, max_t=5, data_dir="/content/drive/MyDrive/datatest/DE_debug_set"): #Change the file location, Batch size < 10
-    use_cuda = torch.cuda.is_available()
-    torch.set_default_dtype(torch.float64)
-    DEVICE = torch.device(f'cuda' if torch.cuda.is_available() else 'cpu')
-    print('Device:', DEVICE)
-
-    # Hyperparameters.
-    LEARNING_RATE = 0.0005
-    NUM_EPOCHS = 20
-
-    print(f"Preparing and splitting dataset...")
-    dataset = AudioDataset(data_dir, max_t=max_t)
-
-    num_samples = len(dataset)
-    num_train = np.floor(num_samples * 0.8).astype(int)
-    num_val = num_samples - num_train
-
-    print(len(dataset.data))#[0].shape)
-    print(num_train)
-    print(num_val)
-    
-    #trim image to be square 128X128
-    for image in range(len(dataset.data)):
-        matrix = []
-        for i in range(128):          # A for loop for row entries 
-            a =[] 
-            for j in range(128):      # A for loop for column entries 
-                a.append(int(dataset.data[image][i,j])) 
-            matrix.append(a) 
-        matrix = np.expand_dims(matrix,0)
-        rgb2grayimage=np.vstack([matrix, matrix, matrix])
-        dataset.data[image] = rgb2grayimage.astype(np.float64)
-    
-    [float(i) for i in dataset.labels]
-    train_dataset, val_dataset = torch.utils.data.random_split(dataset,
-                                                               [num_train,
-                                                                num_val])
-    
-    train_loader = DataLoader(train_dataset, batch_size=batch_size)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size)
-
-    # print(train_dataset.dataset.shape)
-    # TODO: Replace with our new AE.
-    model = Mel_ae(128, #height of the input
-                   enc_type='resnet50', 
-                   first_conv=False, 
-                   maxpool1=False, 
-                   enc_out_dim=2048, 
-                   kl_coeff=0.1, 
-                   latent_dim=3)
-    model.to(DEVICE)
-    if torch.cuda.is_available():
-        model.cuda()
-    
-    trainer = pl.Trainer()
-    trainer = pl.Trainer(max_epochs=NUM_EPOCHS, gpus=1)
-    trainer.fit(model, train_loader, val_loader)
-
 
 
 if __name__ == "__main__":
-    # from models import BaselineResnetClassifier
-    #
-    # model = BaselineResnetClassifier(num_classes=3)
-    # data_dir = "E:\\Temp\\Voice Data"
+    from models import *
+    data_dir = "E:\\Temp\\Voice Data"
+    train_selector = "Mel AE"
+    # train_selector = "Baseline Resnet"
 
-    # train_voxforge_classifier(model, data_dir=data_dir)
-    train_SimpleBinaryClassifier()
+    if train_selector == "Baseline Resnet":
+        model = BaselineResnetClassifier(num_classes=3)
+        train_baseline_resnet(model, data_dir=data_dir)
+    elif train_selector == "Mel AE":
+        input_height = 128
+        model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
+                       kl_coeff=0.1, latent_dim=3)
+        train_mel_ae(model, data_dir, max_epoch=20, batch_size=10, dur_seconds=5)

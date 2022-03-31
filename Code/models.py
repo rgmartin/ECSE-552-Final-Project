@@ -85,6 +85,7 @@ class SimpleBinaryClassifier(pl.LightningModule):
         optimizer = torch.optim.SGD(self.parameters(), lr=.1)
         return optimizer
 
+
 class BaselineResnetClassifier(pl.LightningModule):
     """
     Baseline model built on top of a pretrained ResNet50 architecture.
@@ -161,25 +162,18 @@ class BaselineResnetClassifier(pl.LightningModule):
         optimizer = torch.optim.Adam(self.parameters())
         return optimizer
 
-    # # Todo: Determine how to save the raw log information more easily on a per epoch basis for further analysis
-    # def on_epoch_end(self):
-    #     # Save the logger data
-    #     save_path = os.path.join(self.logger.measurements_path, 'metrics.json')
-    #     with open(save_path, 'w') as f:
-    #         json.dump(self.logger.metrics, f, indent=4)
-
-
 
 class Mel_ae(AE):
-
+    # Todo: determine how logging interfaces with this as well as the metrics which we can observe...
     def init_encoder(self, hidden_dim, latent_dim, input_width, input_height):
-        
-        backbone = torchvision.models.resnet50(pretrained=True,num_classes = 1000)
+
+        backbone = torchvision.models.resnet50(pretrained=True, num_classes=1000)
         num_filters = backbone.fc.in_features
         layers = list(backbone.children())[:-1]
         encoder = nn.Sequential(*layers)
-        
+
         return encoder.eval()
+
 
 if __name__ == "__main__":
 
