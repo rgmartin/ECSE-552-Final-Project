@@ -47,6 +47,20 @@ def init_measurements_path():
     return measurements_path
 
 
+# def crop_images(dataset):
+#     # Todo: parametrize this and test it better
+#     for image in range(len(dataset.data)):
+#         matrix = []
+#         for i in range(128):  # A for loop for row entries
+#             a = []
+#             for j in range(128):  # A for loop for column entries
+#                 a.append(int(dataset.data[image][i, j]))
+#             matrix.append(a)
+#         matrix = np.expand_dims(matrix, 0)
+#         rgb2grayimage = np.vstack([matrix, matrix, matrix])
+#         dataset.data[image] = rgb2grayimage.astype(np.float32)
+
+
 def init_dataset(data_dir, dur_seconds, crop=None, rgb_expand=False):
     print("Creating dataset")
     start_time = timeit.default_timer()
@@ -63,6 +77,13 @@ def split_dataset(dataset, train_split=.8):
     num_val = num_samples - num_train
     train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
     return train_dataset, val_dataset
+
+
+def get_datasets(data_dir, dur_seconds, train_split=.8, crop=None, rgb_expand=False):
+    dataset = init_dataset(data_dir, dur_seconds, crop, rgb_expand)
+    train_dataset, val_dataset = split_dataset(dataset, train_split)
+    return train_dataset, val_dataset
+
 
 def make_log_filenames(comment):
     now = datetime.now().strftime("%H_%M_%S-")
@@ -81,17 +102,17 @@ def init_trainer(logger, max_epochs, profiler):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping], 
-          logger=logger, max_epochs=max_epochs, profiler=profiler)
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+                             logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
-          logger=logger, max_epochs=max_epochs, profiler=profiler, precision=32)
+                             logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
 
 
 def plot_logger_metrics(logger, measurements_path, plot_filename):
-    save_path = os.path.join(measurements_path, plot_filename+'-metrics.json')
+    save_path = os.path.join(measurements_path, plot_filename + '-metrics.json')
     with open(save_path, 'w') as f:
         json.dump(logger.metrics, f, indent=4)
 
@@ -118,14 +139,9 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     plt.legend(loc='lower right')
     plt.savefig(os.path.join(measurements_path, plot_filename))
     plt.show()
-    
 
-def train_baseline_resnet(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, train_split=.8, comment=""):
-    name = "Resnet50 Baseline"
-    dataset = init_dataset(data_dir, dur_seconds)
 
-    train_dataset, val_dataset = split_dataset(dataset, train_split)
-
+def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -138,18 +154,13 @@ def train_baseline_resnet(model, data_dir, max_epoch=5, batch_size=10, dur_secon
 
     trainer = init_trainer(logger, max_epoch, profiler)
 
-    # The main attraction: train the model.
-    print("Running model...")
     trainer.fit(model, train_loader, val_loader)
     plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
-def train_mel_ae(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, train_split=.8, comment=""):
+def train_mel_ae(model, train_dataset, val_dataset, max_epoch=5, batch_size=10):
     name = "Mel AE"
-    dataset = init_dataset(data_dir, dur_seconds, model.input_height, rgb_expand=True)
 
-    train_dataset, val_dataset = split_dataset(dataset, train_split)
-    
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -158,7 +169,8 @@ def train_mel_ae(model, data_dir, max_epoch=5, batch_size=10, dur_seconds=5, tra
     profiler_filename, plot_filename = make_log_filenames(name)
 
     # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
-    #  different "end" functions to facilitate this.
+    #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
+    #  this and allow these models to both be called with the same training function.
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
@@ -236,15 +248,20 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
 
 if __name__ == "__main__":
     from models import *
-    data_dir = "E:\\Temp\\Voice Data"
-    train_selector = "Mel AE"
-    # train_selector = "Baseline Resnet"
 
-    if train_selector == "Baseline Resnet":
+    data_dir = "E:\\Temp\\Voice Data"
+    model_name = "Mel AE"
+    # model_name = "Baseline Resnet"
+
+    if model_name == "Baseline Resnet":
         model = BaselineResnetClassifier(num_classes=3)
-        train_baseline_resnet(model, data_dir=data_dir)
-    elif train_selector == "Mel AE":
+        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
+                                                  rgb_expand=False)
+        train_model(model, model_name, train_dataset, val_dataset)
+    elif model_name == "Mel AE":
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
                        kl_coeff=0.1, latent_dim=3)
-        train_mel_ae(model, data_dir, max_epoch=20, batch_size=10, dur_seconds=5)
+        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=input_height,
+                                                  rgb_expand=True)
+        train_mel_ae(model, train_dataset, val_dataset, max_epoch=20, batch_size=10)
