@@ -47,26 +47,12 @@ def init_measurements_path():
     return measurements_path
 
 
-# def crop_images(dataset):
-#     # Todo: parametrize this and test it better
-#     for image in range(len(dataset.data)):
-#         matrix = []
-#         for i in range(128):  # A for loop for row entries
-#             a = []
-#             for j in range(128):  # A for loop for column entries
-#                 a.append(int(dataset.data[image][i, j]))
-#             matrix.append(a)
-#         matrix = np.expand_dims(matrix, 0)
-#         rgb2grayimage = np.vstack([matrix, matrix, matrix])
-#         dataset.data[image] = rgb2grayimage.astype(np.float32)
-
-
 def init_dataset(data_dir, dur_seconds, crop=None, rgb_expand=False):
     print("Creating dataset")
     start_time = timeit.default_timer()
     dataset = AudioDataset(data_dir, dur_seconds, rgb_expand, crop)
     end_time = timeit.default_timer()
-    print("Dataset creation in seconds: ", end_time - start_time)
+    print("\nDataset creation in seconds: ", end_time - start_time)
 
     return dataset
 
