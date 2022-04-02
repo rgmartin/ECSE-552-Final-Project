@@ -11,7 +11,7 @@ import json
 import optuna
 from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
-from sklearn.metrics import ConfusionMatrixDisplay
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 import pytorch_lightning as pl
 import torch
 
@@ -128,51 +128,25 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     plt.show()
 
 
-def plot_confusion_matrix(model, name, train_dataset, val_dataset, measurements_path, plot_time):
-    def generate_and_save_confusion_matrices(y_targ, y_pred, model_name, data_name, class_names, save_path, plot_time):
-        titles_options = [
-            (model_name + "\nConfusion Matrix - " + data_name, None),
-            (model_name + "\nConfusion Matrix - " + data_name, "true"),
-        ]
+def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_path, plot_time):
+    class_names = dataset.dataset.dirs
+    dataloader = DataLoader(dataset, batch_size=10)
 
-        for title, normalize in titles_options:
-            disp = ConfusionMatrixDisplay.from_predictions(
-                y_targ,
-                y_pred,
-                display_labels=class_names,
-                cmap=plt.cm.Blues,
-                normalize=normalize,
-            )
-            disp.ax_.set_title(title)
+    conf_mat = torch.zeros([len(class_names), len(class_names)])
+    for batch in dataloader:
+        x, y = batch
+        y_hat = model(x)
+        # convert the logit to a class prediction
+        y_hat = y_hat.softmax(dim=1)
+        y_hat = y_hat.argmax(dim=1)
+        conf_mat += confusion_matrix(y, y_hat, labels=list(range(len(class_names))))
 
-            save_filename = model_name + plot_time + "ConfMat" + "-" + data_name
-            if normalize:
-                save_filename = save_filename + "-norm"
-            else:
-                save_filename = save_filename + "-raw"
-            save_filename = save_filename + ".png"
-            plt.savefig(os.path.join(save_path, save_filename))
-
-    train_loader = DataLoader(train_dataset, batch_size=len(train_dataset))
-    val_loader = DataLoader(val_dataset, batch_size=len(val_dataset))
-
-    for full_set in train_loader:
-        x, y_train = full_set
-        y_hat_train = model(x)
-
-    for full_set in val_loader:
-        x, y_val = full_set
-        y_hat_val = model(x)
-
-    y_hat_train = y_hat_train.softmax(dim=1)
-    y_hat_val = y_hat_val.softmax(dim=1)
-
-    y_hat_train = y_hat_train.argmax(dim=1)
-    y_hat_val = y_hat_val.argmax(dim=1)
-
-    class_names = ["C0", "C1", "C2"]
-    generate_and_save_confusion_matrices(y_train, y_hat_train, name, "Training", class_names, measurements_path, plot_time)
-    generate_and_save_confusion_matrices(y_val, y_hat_val, name, "Valid", class_names, measurements_path, plot_time)
+    title = model_name + "\nConfusion Matrix - " + data_name
+    disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
+    save_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".png"
+    disp.plot(cmap=plt.cm.Blues)
+    disp.ax_.set_title(title)
+    plt.savefig(os.path.join(measurements_path, save_filename))
 
 
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
@@ -191,7 +165,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     if name == BASELINE_RESNET_NAME:
         plot_logger_metrics(logger, measurements_path, plot_filename)
-        #  plot_confusion_matrix(model, name, train_dataset, val_dataset, measurements_path, plot_time)
+        plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
+        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
     elif name == MEL_AE_NAME:
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
@@ -278,7 +253,7 @@ if __name__ == "__main__":
         model = BaselineResnetClassifier(num_classes=3)
         train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
                                                   rgb_expand=False)
-        train_model(model, model_name, train_dataset, val_dataset)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=5)
     elif model_name == MEL_AE_NAME:
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
