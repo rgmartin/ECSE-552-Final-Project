@@ -12,6 +12,8 @@ import optuna
 from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay
+import pytorch_lightning as pl
+import torch
 
 BASELINE_RESNET_NAME = "Baseline Resnet"
 MEL_AE_NAME = "Mel AE"
@@ -266,7 +268,7 @@ def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_sec
 
 
 if __name__ == "__main__":
-    from models import *
+    from models import BaselineResnetClassifier, Mel_ae
 
     data_dir = "E:\\Temp\\Voice Data"
     # model_name = MEL_AE_NAME
