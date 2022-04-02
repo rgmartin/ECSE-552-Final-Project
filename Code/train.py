@@ -9,6 +9,7 @@ from feature_extraction import AudioDataset
 from dict_logger import DictLogger
 import json
 import optuna
+from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay
 
@@ -59,7 +60,7 @@ def split_dataset(dataset, train_split=.8):
     num_samples = len(dataset)
     num_train = np.floor(num_samples * train_split).astype(int)
     num_val = num_samples - num_train
-    train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val])
+    train_dataset, val_dataset = random_split(dataset, [num_train, num_val])
     return train_dataset, val_dataset
 
 
