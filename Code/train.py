@@ -4,18 +4,16 @@ import os
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
-import pytorch_lightning as pl
-import torch
-from torch.utils.data import DataLoader, TensorDataset
+from torch.utils.data import DataLoader
 from feature_extraction import AudioDataset
 from dict_logger import DictLogger
 import json
-import pandas as pd
 import optuna
-from optuna.integration import PyTorchLightningPruningCallback
-from models import BaselineResnetClassifier, Mel_ae
 from pytorch_lightning.callbacks import EarlyStopping
+from sklearn.metrics import ConfusionMatrixDisplay
 
+BASELINE_RESNET_NAME = "Baseline Resnet"
+MEL_AE_NAME = "Mel AE"
 
 def init_measurements_path():
     print("Creating measurements path...")
@@ -77,7 +75,7 @@ def make_log_filenames(comment):
     profiler_filename = f"{comment}{now}profiler_output"
     plot_filename = f"{comment}{now}Loss-Acc.png"
 
-    return profiler_filename, plot_filename
+    return profiler_filename, plot_filename, now
 
 
 def init_trainer(logger, max_epochs, profiler):
@@ -127,13 +125,59 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     plt.show()
 
 
+def plot_confusion_matrix(model, name, train_dataset, val_dataset, measurements_path, plot_time):
+    def generate_and_save_confusion_matrices(y_targ, y_pred, model_name, data_name, class_names, save_path, plot_time):
+        titles_options = [
+            (model_name + "\nConfusion Matrix - " + data_name, None),
+            (model_name + "\nConfusion Matrix - " + data_name, "true"),
+        ]
+
+        for title, normalize in titles_options:
+            disp = ConfusionMatrixDisplay.from_predictions(
+                y_targ,
+                y_pred,
+                display_labels=class_names,
+                cmap=plt.cm.Blues,
+                normalize=normalize,
+            )
+            disp.ax_.set_title(title)
+
+            save_filename = model_name + plot_time + "ConfMat" + "-" + data_name
+            if normalize:
+                save_filename = save_filename + "-norm"
+            else:
+                save_filename = save_filename + "-raw"
+            save_filename = save_filename + ".png"
+            plt.savefig(os.path.join(save_path, save_filename))
+
+    train_loader = DataLoader(train_dataset, batch_size=len(train_dataset))
+    val_loader = DataLoader(val_dataset, batch_size=len(val_dataset))
+
+    for full_set in train_loader:
+        x, y_train = full_set
+        y_hat_train = model(x)
+
+    for full_set in val_loader:
+        x, y_val = full_set
+        y_hat_val = model(x)
+
+    y_hat_train = y_hat_train.softmax(dim=1)
+    y_hat_val = y_hat_val.softmax(dim=1)
+
+    y_hat_train = y_hat_train.argmax(dim=1)
+    y_hat_val = y_hat_val.argmax(dim=1)
+
+    class_names = ["C0", "C1", "C2"]
+    generate_and_save_confusion_matrices(y_train, y_hat_train, name, "Training", class_names, measurements_path, plot_time)
+    generate_and_save_confusion_matrices(y_val, y_hat_val, name, "Valid", class_names, measurements_path, plot_time)
+
+
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
-    # Set up logs.
     measurements_path = init_measurements_path()
-    profiler_filename, plot_filename = make_log_filenames(name)
+    profiler_filename, plot_filename, plot_time = make_log_filenames(name)
 
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
@@ -141,32 +185,20 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     trainer = init_trainer(logger, max_epoch, profiler)
 
     trainer.fit(model, train_loader, val_loader)
-    plot_logger_metrics(logger, measurements_path, plot_filename)
+
+    if name == BASELINE_RESNET_NAME:
+        plot_logger_metrics(logger, measurements_path, plot_filename)
+        plot_confusion_matrix(model, name, train_dataset, val_dataset, measurements_path, plot_time)
+    elif name == MEL_AE_NAME:
+        # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
+        #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
+        #  this and allow these models to both be called with the same training function.
+        pass
+        # plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
-def train_mel_ae(model, train_dataset, val_dataset, max_epoch=5, batch_size=10):
-    name = "Mel AE"
-
-    train_loader = DataLoader(train_dataset, batch_size=batch_size)
-    val_loader = DataLoader(val_dataset, batch_size=batch_size)
-
-    # Set up logs.
-    measurements_path = init_measurements_path()
-    profiler_filename, plot_filename = make_log_filenames(name)
-
-    # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
-    #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
-    #  this and allow these models to both be called with the same training function.
-    logger = DictLogger()
-    profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
-
-    trainer = init_trainer(logger, max_epoch, profiler)
-    trainer.fit(model, train_loader, val_loader)
-    # plot_logger_metrics(logger, measurements_path, plot_filename)
-
-
-# Hyperparameter tuning
 def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
+    # Hyperparameter tuning
     def objective(trial):
         model = BaselineResnetClassifier(num_classes=3)
 
@@ -236,18 +268,18 @@ if __name__ == "__main__":
     from models import *
 
     data_dir = "E:\\Temp\\Voice Data"
-    model_name = "Mel AE"
-    # model_name = "Baseline Resnet"
+    # model_name = MEL_AE_NAME
+    model_name = BASELINE_RESNET_NAME
 
-    if model_name == "Baseline Resnet":
+    if model_name == BASELINE_RESNET_NAME:
         model = BaselineResnetClassifier(num_classes=3)
         train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
                                                   rgb_expand=False)
         train_model(model, model_name, train_dataset, val_dataset)
-    elif model_name == "Mel AE":
+    elif model_name == MEL_AE_NAME:
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
                        kl_coeff=0.1, latent_dim=3)
         train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=input_height,
                                                   rgb_expand=True)
-        train_mel_ae(model, train_dataset, val_dataset, max_epoch=20, batch_size=10)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=20, batch_size=10)
