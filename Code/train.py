@@ -98,14 +98,17 @@ def init_trainer(logger, max_epochs, profiler):
     return trainer
 
 
-def plot_logger_metrics(logger, measurements_path, plot_filename):
+def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
     save_path = os.path.join(measurements_path, plot_filename + '-metrics.json')
     with open(save_path, 'w') as f:
         json.dump(logger.metrics, f, indent=4)
 
-    f, axs = plt.subplots(1, 2, figsize=(15, 5))
-    font = {'size': 14}
-    matplotlib.rc('font', **font)
+    if isAE:
+        f, axs = plt.subplots(1, 1, figsize=(15, 5))
+    else:
+        f, axs = plt.subplots(1, 2, figsize=(15, 5))
+        font = {'size': 14}
+        matplotlib.rc('font', **font)
 
     axs[0].plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
     axs[0].set_title("Train/Val Loss")
@@ -115,13 +118,14 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     axs[0].set_xlabel("Epochs")
     axs[0].grid()
 
-    axs[1].plot(logger.metrics['train_acc_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
-    axs[1].set_title("Classifer\nTrain/Val Accuracy")
-    axs[1].set_ylabel("Accuracy")
-    axs[1].plot(logger.metrics['val_acc_epoch'], lw=3, ms=10, marker='^', color='purple', label='Validation')
-    axs[1].set_title('Classifier\nTrain/Val Accuracy Over Time')
-    axs[1].set_xlabel("Epochs")
-    axs[1].grid()
+    if isAE == False:
+        axs[1].plot(logger.metrics['train_acc_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
+        axs[1].set_title("Classifer\nTrain/Val Accuracy")
+        axs[1].set_ylabel("Accuracy")
+        axs[1].plot(logger.metrics['val_acc_epoch'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+        axs[1].set_title('Classifier\nTrain/Val Accuracy Over Time')
+        axs[1].set_xlabel("Epochs")
+        axs[1].grid()
 
     plt.legend(loc='lower right')
     plt.savefig(os.path.join(measurements_path, plot_filename))
@@ -171,7 +175,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
         #  this and allow these models to both be called with the same training function.
-        pass
+        plot_logger_metrics(logger, measurements_path, plot_filename)
+        # pass
         # plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
@@ -258,6 +263,6 @@ if __name__ == "__main__":
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
                        kl_coeff=0.1, latent_dim=3)
-        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=input_height,
+        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8,
                                                   rgb_expand=True)
-        train_model(model, model_name, train_dataset, val_dataset, max_epoch=20, batch_size=10)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=10, batch_size=10)
