@@ -14,6 +14,7 @@ from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 import pytorch_lightning as pl
 import torch
+import pandas as pd
 
 BASELINE_RESNET_NAME = "Baseline Resnet"
 MEL_AE_NAME = "Mel AE"
@@ -129,8 +130,9 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
 
 
 def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_path, plot_time):
+    print("Generating Confusion Matrices")
     class_names = dataset.dataset.dirs
-    dataloader = DataLoader(dataset, batch_size=10)
+    dataloader = DataLoader(dataset, batch_size=16)
 
     conf_mat = torch.zeros([len(class_names), len(class_names)])
     for batch in dataloader:
@@ -143,10 +145,24 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
 
     title = model_name + "\nConfusion Matrix - " + data_name
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
-    save_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".png"
+    png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".png"
+    csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".csv"
     disp.plot(cmap=plt.cm.Blues)
     disp.ax_.set_title(title)
-    plt.savefig(os.path.join(measurements_path, save_filename))
+    plt.savefig(os.path.join(measurements_path, png_filename))
+    conf_mat_df = pd.DataFrame(conf_mat.numpy())
+    conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+
+    # normalize the data for another view
+    conf_mat = conf_mat/conf_mat.sum()
+    disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
+    png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".png"
+    csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".csv"
+    disp.plot(cmap=plt.cm.Blues)
+    disp.ax_.set_title(title)
+    plt.savefig(os.path.join(measurements_path, png_filename))
+    conf_mat_df = pd.DataFrame(conf_mat.numpy())
+    conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
 
 
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
@@ -165,7 +181,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     if name == BASELINE_RESNET_NAME:
         plot_logger_metrics(logger, measurements_path, plot_filename)
-        plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
+        # plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
         plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
     elif name == MEL_AE_NAME:
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
@@ -251,9 +267,9 @@ if __name__ == "__main__":
 
     if model_name == BASELINE_RESNET_NAME:
         model = BaselineResnetClassifier(num_classes=3)
-        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
+        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=3, train_split=.8, crop=None,
                                                   rgb_expand=False)
-        train_model(model, model_name, train_dataset, val_dataset, max_epoch=5)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=2)
     elif model_name == MEL_AE_NAME:
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
