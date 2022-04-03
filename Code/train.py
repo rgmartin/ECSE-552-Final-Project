@@ -1,23 +1,20 @@
+from constants import BASELINE_RESNET_NAME, MEL_AE_NAME
 from datetime import datetime
-import timeit
-import os
+from dict_logger import DictLogger
+from feature_extraction import AudioDataset
+import json
 import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+import pandas as pd
+import pytorch_lightning as pl
+import timeit
+import torch
 from torch.utils.data import DataLoader
-from feature_extraction import AudioDataset
-from dict_logger import DictLogger
-import json
-# import optuna
 from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
-import pytorch_lightning as pl
-import torch
-import pandas as pd
-
-BASELINE_RESNET_NAME = "Baseline Resnet"
-MEL_AE_NAME = "Mel AE"
 
 def init_measurements_path():
     print("Creating measurements path...")
@@ -191,77 +188,10 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
         # plot_logger_metrics(logger, measurements_path, plot_filename)
 
 
-def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
-    # Hyperparameter tuning
-    def objective(trial):
-        model = BaselineResnetClassifier(num_classes=3)
-
-        logger = DictLogger()
-        checkpoint_callback = pl.callbacks.ModelCheckpoint(
-            monitor="val_acc_step",
-            dirpath='./Checkpoints',
-            mode='max',
-            filename='{epoch:02d}-{val_acc_step:.2f}'
-        )
-
-        trainer = pl.Trainer(
-            logger=logger,
-            max_epochs=5,
-            gpus=1 if torch.cuda.is_available() else None,
-            callbacks=[checkpoint_callback
-                       ],
-        )
-
-        # we optimize max_t and batch_size
-        max_t = trial.suggest_int("max_t", 1, 5)
-        batch_size = trial.suggest_int('batch_size', 4, 64, log=True)
-
-        # Prepare and split dataset.
-        print(f"Preparing and splitting dataset...")
-
-        name = "Resnet50 Baseline"
-        start_time = timeit.default_timer()
-        dataset = AudioDataset(data_dir, max_t=max_t)
-        end_time = timeit.default_timer()
-        print("Dataset creation in seconds: ", end_time - start_time)
-
-        num_samples = len(dataset)
-        num_train = np.floor(num_samples * 0.8).astype(int)
-        num_val = num_samples - num_train
-
-        train_dataset, val_dataset = torch.utils.data.random_split(dataset, [num_train, num_val],
-                                                                   generator=torch.Generator().manual_seed(42))
-
-        train_loader = DataLoader(train_dataset, batch_size=batch_size)
-        val_loader = DataLoader(val_dataset, batch_size=batch_size)
-
-        hyperparameters = dict(max_t=max_t, batch_size=batch_size)
-        trainer.logger.log_hyperparams(hyperparameters)
-        trainer.fit(model, train_loader, val_loader)
-
-        return trainer.callback_metrics["val_acc_step"].item()
-
-    study = optuna.create_study(direction="maximize")
-    study.optimize(objective, n_trials=25)
-
-    print("Number of finished trials: {}".format(len(study.trials)))
-
-    print("Best trial:")
-    trial = study.best_trial
-
-    print("  Value: {}".format(trial.value))
-
-    print("  Params: ")
-    for key, value in trial.params.items():
-        print("    {}: {}".format(key, value))
-
-    return trainer.checkpoint_callback.best_model_path, trial.params, study
-
-
 if __name__ == "__main__":
     from models import BaselineResnetClassifier, Mel_ae
 
-    data_dir = "E:\\Temp\\Voice Data"
+    data_dir = "./Data"
     # model_name = MEL_AE_NAME
     model_name = BASELINE_RESNET_NAME
 

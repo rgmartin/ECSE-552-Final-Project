@@ -1,0 +1,2 @@
+BASELINE_RESNET_NAME = "Baseline Resnet"
+MEL_AE_NAME = "Mel AE"

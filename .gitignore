@@ -5,6 +5,7 @@
 *.ckpt
 *.png
 lightning_logs/
+Measurements/
 
 .DS_Store
 .vscode
