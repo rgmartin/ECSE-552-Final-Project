@@ -1,4 +1,5 @@
 from datetime import datetime
+from gc import callbacks
 import timeit
 import os
 import matplotlib
@@ -82,7 +83,7 @@ def make_log_filenames(comment):
     return profiler_filename, plot_filename, now
 
 
-def init_trainer(logger, max_epochs, profiler):
+def init_trainer(logger, max_epochs, profiler,checkpointer):
     print("Initializing trainer...")
 
     is_colab = 'COLAB_GPU' in os.environ
@@ -90,8 +91,12 @@ def init_trainer(logger, max_epochs, profiler):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-                             logger=logger, max_epochs=max_epochs, profiler=profiler)
+        if checkpointer == 0:
+            trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+                                logger=logger, max_epochs=max_epochs, profiler=profiler)
+        else: 
+            trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+                                logger=logger, max_epochs=max_epochs, profiler=profiler,callbacks=checkpointer)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
