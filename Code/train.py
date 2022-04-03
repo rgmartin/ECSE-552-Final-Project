@@ -166,7 +166,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     
     checkpoint_callback = ModelCheckpoint(
-    filepath= "{}/weights.ckpt".format(measurements_path),
+    filepath= measurements_path+"/weights.ckpt",
     save_best_only=False,
     save_weights_only = True,
     every_n_train_steps = 0,
