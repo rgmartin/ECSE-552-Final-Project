@@ -114,7 +114,7 @@ if __name__ == "__main__":
 
     elif model_name == PROTOTYPICAL_NAME:
 
-        model = PrototypicalResnetClassifier(num_classes=3, num_support=3)
+        model = PrototypicalResnetClassifier(num_classes=3, num_support=2)
         train_dataset, val_dataset = get_datasets(
             data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
             rgb_expand=False
