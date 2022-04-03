@@ -170,8 +170,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     save_best_only=False,
     save_weights_only = True,
     every_n_train_steps = 0,
-    verbose=True,
-    mode='min')
+    verbose=True)
     
     if name == MEL_AE_NAME:
         trainer = init_trainer(logger, max_epoch, profiler,checkpoint_callback)
