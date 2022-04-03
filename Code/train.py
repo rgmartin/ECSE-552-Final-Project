@@ -52,7 +52,6 @@ def init_trainer(logger, max_epochs, profiler):
     return trainer
 
 
-
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
