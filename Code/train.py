@@ -8,7 +8,7 @@ from torch.utils.data import DataLoader
 from feature_extraction import AudioDataset
 from dict_logger import DictLogger
 import json
-import optuna
+# import optuna
 from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
