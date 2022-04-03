@@ -121,21 +121,27 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
         json.dump(logger.metrics, f, indent=4)
 
     if isAE:
-        f, axs = plt.subplots(1, 1, figsize=(15, 5))
+        plt.plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
+        plt.set_title("Train/Val Loss")
+        plt.set_ylabel("Loss")
+        plt.plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+        plt.set_title('Classifer\nTrain/Val Loss Over Time')
+        plt.set_xlabel("Epochs")
+        plt.grid()
     else:
         f, axs = plt.subplots(1, 2, figsize=(15, 5))
         font = {'size': 14}
         matplotlib.rc('font', **font)
 
-    axs[0].plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
-    axs[0].set_title("Train/Val Loss")
-    axs[0].set_ylabel("Loss")
-    axs[0].plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
-    axs[0].set_title('Classifer\nTrain/Val Loss Over Time')
-    axs[0].set_xlabel("Epochs")
-    axs[0].grid()
+        axs[0].plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
+        axs[0].set_title("Train/Val Loss")
+        axs[0].set_ylabel("Loss")
+        axs[0].plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+        axs[0].set_title('Classifer\nTrain/Val Loss Over Time')
+        axs[0].set_xlabel("Epochs")
+        axs[0].grid()
 
-    if isAE == False:
+
         axs[1].plot(logger.metrics['train_acc_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
         axs[1].set_title("Classifer\nTrain/Val Accuracy")
         axs[1].set_ylabel("Accuracy")
