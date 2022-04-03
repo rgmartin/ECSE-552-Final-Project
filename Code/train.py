@@ -91,12 +91,12 @@ def init_trainer(logger, max_epochs, profiler,checkpointer):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        if checkpointer == 0:
-            trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-                                logger=logger, max_epochs=max_epochs, profiler=profiler)
-        else: 
-            trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-                                logger=logger, max_epochs=max_epochs, profiler=profiler,callbacks=checkpointer)
+        # if checkpointer == 0:
+            # trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+            #                     logger=logger, max_epochs=max_epochs, profiler=profiler)
+        # else: 
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+                            logger=logger, max_epochs=max_epochs, profiler=profiler, callbacks=checkpointer)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
