@@ -83,7 +83,7 @@ def make_log_filenames(comment):
     return profiler_filename, plot_filename, now
 
 
-def init_trainer(logger, max_epochs, profiler,checkpointer):
+def init_trainer(logger, max_epochs, profiler):
     print("Initializing trainer...")
 
     is_colab = 'COLAB_GPU' in os.environ
@@ -91,12 +91,8 @@ def init_trainer(logger, max_epochs, profiler,checkpointer):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        # if checkpointer == 0:
-            # trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-            #                     logger=logger, max_epochs=max_epochs, profiler=profiler)
-        # else: 
         trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-                            logger=logger, max_epochs=max_epochs, profiler=profiler, callbacks=checkpointer)
+                            logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
@@ -177,7 +173,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     verbose=True)
     
     if name == MEL_AE_NAME:
-        trainer = init_trainer(logger, max_epoch, profiler,checkpoint_callback)
+        trainer = init_trainer(logger, max_epoch, profiler)
+        trainer = trainer(callbacks=checkpoint_callback)
     else:
         trainer = init_trainer(logger, max_epoch, profiler)
 
