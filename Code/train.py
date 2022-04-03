@@ -14,6 +14,7 @@ from pytorch_lightning.callbacks import EarlyStopping
 from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 import pytorch_lightning as pl
 import torch
+from pytorch_lightning.callbacks import ModelCheckpoint
 
 BASELINE_RESNET_NAME = "Baseline Resnet"
 MEL_AE_NAME = "Mel AE"
@@ -163,7 +164,19 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    trainer = init_trainer(logger, max_epoch, profiler)
+    
+    checkpoint_callback = ModelCheckpoint(
+    filepath= "{}/weights.ckpt".format(measurements_path),
+    save_best_only=False,
+    save_weights_only = True,
+    every_n_train_steps = 0,
+    verbose=True,
+    mode='min')
+    
+    if name == MEL_AE_NAME:
+        trainer = init_trainer(logger, max_epoch, profiler,checkpoint_callback)
+    else:
+        trainer = init_trainer(logger, max_epoch, profiler)
 
     trainer.fit(model, train_loader, val_loader)
 
