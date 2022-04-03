@@ -164,9 +164,9 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    
+    checkpath = "/MyDrive/ECSE-552-FP/Checkpoints/weights.ckpt"
     checkpoint_callback = ModelCheckpoint(
-    filepath= measurements_path+"/weights.ckpt",
+    dirpath= checkpath,
     save_best_only=False,
     save_weights_only = True,
     every_n_train_steps = 0,
