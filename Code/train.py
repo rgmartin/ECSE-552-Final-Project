@@ -167,7 +167,6 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     checkpath = "/MyDrive/ECSE-552-FP/Checkpoints/AE/weights.ckpt"
     checkpoint_callback = ModelCheckpoint(
     dirpath= checkpath,
-    save_best_only=False,
     save_weights_only = True,
     every_n_train_steps = 0,
     verbose=True)
