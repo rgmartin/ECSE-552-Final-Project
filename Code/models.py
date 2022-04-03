@@ -190,15 +190,15 @@ class PrototypicalResnetClassifier(BaselineResnetClassifier):
         return torch.pow(queries - prototypes, 2).sum(2)
 
     def get_prototypes_and_queries(self, z, y):
-        # z is [batch_size, latent_dimension]
-        # y is list of integers.
+
+        device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
         embedding_dim = z.shape[1]
 
-        prototypes = torch.zeros([self.num_classes, embedding_dim])
+        prototypes = torch.zeros([self.num_classes, embedding_dim]).to(device)
 
         # Array to keep track of support set.
-        support_idx = torch.zeros_like(y)
+        support_idx = torch.zeros_like(y).to(device)
 
         # TODO: Optimize this.
         for label_idx in range(self.num_classes):
