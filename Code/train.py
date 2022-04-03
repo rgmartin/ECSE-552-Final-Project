@@ -99,6 +99,21 @@ def init_trainer(logger, max_epochs, profiler):
 
     return trainer
 
+def init_ae_trainer(logger, max_epochs, profiler,callbackcheckpoint):
+    print("Initializing trainer...")
+
+    is_colab = 'COLAB_GPU' in os.environ
+
+    early_stopping = EarlyStopping('val_loss')
+
+    if is_colab:
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+                            logger=logger, max_epochs=max_epochs, profiler=profiler,callbacks=callbackcheckpoint)
+    else:
+        trainer = pl.Trainer(callbacks=[early_stopping],
+                             logger=logger, max_epochs=max_epochs, profiler=profiler)
+
+    return trainer
 
 def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
     save_path = os.path.join(measurements_path, plot_filename + '-metrics.json')
@@ -173,8 +188,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     verbose=True)
     
     if name == MEL_AE_NAME:
-        trainer = init_trainer(logger, max_epoch, profiler)
-        trainer = trainer(callbacks=checkpoint_callback)
+        trainer = init_ae_trainer(logger, max_epoch, profiler,checkpoint_callback)
     else:
         trainer = init_trainer(logger, max_epoch, profiler)
 
