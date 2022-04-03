@@ -202,7 +202,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
         #  this and allow these models to both be called with the same training function.
-        plot_logger_metrics(logger, measurements_path, plot_filename)
+        plot_logger_metrics(logger, measurements_path, plot_filename,isAE=True)
         # pass
         # plot_logger_metrics(logger, measurements_path, plot_filename)
 
