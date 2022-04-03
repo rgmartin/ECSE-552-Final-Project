@@ -107,8 +107,8 @@ def init_ae_trainer(logger, max_epochs, profiler,callbackcheckpoint):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
-                            logger=logger, max_epochs=max_epochs, profiler=profiler,callbacks=callbackcheckpoint)
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=callbackcheckpoint,
+                            logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
