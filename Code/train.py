@@ -68,16 +68,17 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     trainer.fit(model, train_loader, val_loader)
 
-    if name == BASELINE_RESNET_NAME:
-        plot_logger_metrics(logger, measurements_path, plot_filename)
-        # plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
-        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
-    elif name == MEL_AE_NAME:
+    if name == MEL_AE_NAME:
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
         #  this and allow these models to both be called with the same training function.
         pass
         # plot_logger_metrics(logger, measurements_path, plot_filename)
+    else:
+        plot_logger_metrics(logger, measurements_path, plot_filename)
+        # plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
+        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
+
 
 
 if __name__ == "__main__":
