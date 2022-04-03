@@ -1,4 +1,6 @@
-from constants import BASELINE_RESNET_NAME, MEL_AE_NAME
+from pickle import PROTO
+from turtle import back
+from constants import BASELINE_RESNET_NAME, MEL_AE_NAME, PROTOTYPICAL_NAME
 from dict_logger import DictLogger
 from feature_extraction import AudioDataset
 import numpy as np
@@ -79,21 +81,43 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
 
 if __name__ == "__main__":
-    from models import BaselineResnetClassifier, Mel_ae
+    from models import (BaselineResnetClassifier, Mel_ae, 
+        PrototypicalResnetClassifier)
 
     data_dir = "./Data"
     # model_name = MEL_AE_NAME
-    model_name = BASELINE_RESNET_NAME
+    # model_name = BASELINE_RESNET_NAME
+    model_name = PROTOTYPICAL_NAME
 
     if model_name == BASELINE_RESNET_NAME:
+
         model = BaselineResnetClassifier(num_classes=3)
-        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=3, train_split=.8, crop=None,
-                                                  rgb_expand=False)
+        train_dataset, val_dataset = get_datasets(
+            data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None, 
+            rgb_expand=False
+        )
         train_model(model, model_name, train_dataset, val_dataset, max_epoch=2)
+
     elif model_name == MEL_AE_NAME:
+
         input_height = 128
-        model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
-                       kl_coeff=0.1, latent_dim=3)
-        train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=5, train_split=.8, crop=input_height,
-                                                  rgb_expand=True)
-        train_model(model, model_name, train_dataset, val_dataset, max_epoch=20, batch_size=10)
+        model = Mel_ae(
+            input_height, enc_type='resnet50', first_conv=False, maxpool1=False, 
+            enc_out_dim=2048, kl_coeff=0.1, latent_dim=3
+        )
+        train_dataset, val_dataset = get_datasets(
+            data_dir=data_dir, dur_seconds=5, train_split=.8, crop=input_height,
+            rgb_expand=True
+        )
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=20, 
+            batch_size=10)
+
+    elif model_name == PROTOTYPICAL_NAME:
+
+        model = PrototypicalResnetClassifier(num_classes=3, num_support=3)
+        train_dataset, val_dataset = get_datasets(
+            data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
+            rgb_expand=False
+        )
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=2, 
+            batch_size=25)
