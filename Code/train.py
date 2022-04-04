@@ -135,16 +135,18 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
 def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_path, plot_time):
     print("Generating Confusion Matrices")
     class_names = dataset.dataset.dirs
-    dataloader = DataLoader(dataset, batch_size=16)
+    dataloader = DataLoader(dataset, batch_size=128)
 
     conf_mat = torch.zeros([len(class_names), len(class_names)])
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model.to(device)
     for batch in dataloader:
         x, y = batch
-        y_hat = model(x)
+        y_hat = model(x.to(device))
         # convert the logit to a class prediction
         y_hat = y_hat.softmax(dim=1)
         y_hat = y_hat.argmax(dim=1)
-        conf_mat += confusion_matrix(y, y_hat, labels=list(range(len(class_names))))
+        conf_mat += confusion_matrix(y.cpu(), y_hat.cpu(), labels=list(range(len(class_names))))
 
     title = model_name + "\nConfusion Matrix - " + data_name
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
@@ -155,9 +157,11 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
     plt.savefig(os.path.join(measurements_path, png_filename))
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+    print(conf_mat)
 
     # normalize the data for another view
     conf_mat = conf_mat/conf_mat.sum()
+    print(conf_mat)
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
     png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".png"
     csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".csv"
@@ -166,6 +170,7 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
     plt.savefig(os.path.join(measurements_path, png_filename))
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+    return conf_mat
 
 
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10, early_stopping = True):
