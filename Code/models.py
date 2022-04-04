@@ -198,7 +198,7 @@ class PreTrainedResnetClassifier(pl.LightningModule):
         AEModel = AE.load_from_checkpoint(checkpath,input_height= 128, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
                        kl_coeff=0.1, latent_dim=3)
         # Load, optionally download pre-trained Resnet.
-        self.resnet50 = AEModel.Encoder()
+        self.resnet50 = AEModel.encoder()
         self.fc = torch.nn.Linear(1000, num_classes)
 
         # Log stuffs.
