@@ -174,6 +174,18 @@ class Mel_ae(AE):
 
         return encoder.eval()
     
+    def training_step(self, batch, batch_idx):
+        return self._common_step(batch, batch_idx, "train")
+
+    def validation_step(self, batch, batch_idx):
+        self._common_step(batch, batch_idx, "val")
+        
+    def _common_step(self, batch, batch_idx, stage: str):
+        x = self._prepare_batch(batch)
+        loss = F.mse_loss(x, self(x))
+        self.log(f"{stage}_loss", loss, on_step=True)
+        return 
+    
     
 class PreTrainedResnetClassifier(pl.LightningModule):
     """
