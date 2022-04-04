@@ -121,10 +121,10 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
         json.dump(logger.metrics, f, indent=4)
 
     if isAE:
-        plt.plot(logger.metrics['train_loss_epoch'], lw=3, ms=8, marker='o', color='orange', label='Train')
+        plt.plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
         plt.title("Train and Val Loss Over Time ")
         plt.ylabel("Loss")
-        plt.plot(logger.metrics['val_loss_epoch'], lw=3, ms=10, marker='^', color='purple', label='Validation')
+        plt.plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
         plt.xlabel("Epochs")
         plt.grid()
     else:
