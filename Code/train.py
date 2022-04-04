@@ -185,7 +185,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    checkpath = "./Checkpoints"
+    checkpath = "/content/drive/MyDrive/ECSE-552-FP/Checkpoints/AE/"
     checkpoint_callback = pl.callbacks.ModelCheckpoint(
     dirpath= checkpath,
     monitor='val_loss',
