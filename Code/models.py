@@ -199,6 +199,7 @@ class PreTrainedResnetClassifier(pl.LightningModule):
                        kl_coeff=0.1, latent_dim=3)
         # Load, optionally download pre-trained Resnet.
         self.resnet50 = AEModel.encoder
+        AEModel = []
         self.fc = torch.nn.Linear(2048, num_classes)
 
         # Log stuffs.
