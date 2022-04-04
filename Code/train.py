@@ -190,7 +190,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     dirpath= checkpath,
     monitor='val_loss',
     save_weights_only = True,
-    every_n_train_steps = 0,
+    every_n_train_steps = 45,
     filename='{epoch:02d}-{val_loss:.2f}')
     
     if name == MEL_AE_NAME:
