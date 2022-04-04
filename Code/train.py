@@ -188,9 +188,10 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     checkpath = "./Checkpoints"
     checkpoint_callback = pl.callbacks.ModelCheckpoint(
     dirpath= checkpath,
+    monitor='val_loss',
     save_weights_only = True,
     every_n_train_steps = 0,
-    filename='{epoch:02d}-{AE}')
+    filename='{epoch:02d}-{val_loss:.2f}')
     
     if name == MEL_AE_NAME:
         trainer = init_ae_trainer(logger, max_epoch, profiler,checkpoint_callback)
@@ -208,6 +209,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
         #  this and allow these models to both be called with the same training function.
         plot_logger_metrics(logger, measurements_path, plot_filename,isAE=True)
+        return trainer.callback_metrics['val_loss'].item()
         # pass
         # plot_logger_metrics(logger, measurements_path, plot_filename)
 
