@@ -82,18 +82,21 @@ def make_log_filenames(comment):
     return profiler_filename, plot_filename, now
 
 
-def init_trainer(logger, max_epochs, profiler):
+def init_trainer(logger, max_epochs, profiler, early_stopping = True):
     print("Initializing trainer...")
 
     is_colab = 'COLAB_GPU' in os.environ
 
-    early_stopping = EarlyStopping('val_loss')
+    if early_stopping:
+    	callbacks = [EarlyStopping('val_loss')]
+    else:
+    	callbacks = []
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=callbacks,
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
-        trainer = pl.Trainer(callbacks=[early_stopping],
+        trainer = pl.Trainer(callbacks=callbacks,
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
@@ -165,7 +168,7 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
 
 
-def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
+def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10, early_stopping = True):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -175,7 +178,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    trainer = init_trainer(logger, max_epoch, profiler)
+    trainer = init_trainer(logger, max_epoch, profiler, early_stopping)
 
     trainer.fit(model, train_loader, val_loader)
 
