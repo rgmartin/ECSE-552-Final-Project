@@ -132,10 +132,10 @@ def plot_logger_metrics(logger, measurements_path, plot_filename):
     plt.show()
 
 
-def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_path, plot_time):
+def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, measurements_path, plot_time):
     print("Generating Confusion Matrices")
     class_names = dataset.dataset.dirs
-    dataloader = DataLoader(dataset, batch_size=128)
+    dataloader = DataLoader(dataset, batch_size=batch_size)
 
     conf_mat = torch.zeros([len(class_names), len(class_names)])
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -168,6 +168,11 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
     plt.savefig(os.path.join(measurements_path, png_filename))
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+    
+    acc = 0
+    for i in range(conf_mat.shape[0]):
+      acc += conf_mat[i,i].numpy()
+    print("Accuracy: "+ str(round(acc*100, 2))+"%")
     return conf_mat
 
 
@@ -187,8 +192,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     if name == BASELINE_RESNET_NAME:
         plot_logger_metrics(logger, measurements_path, plot_filename)
-        # plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
-        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
+        # plot_confusion_matrix(model, name, train_dataset, "Training", batch_size, measurements_path, plot_time)
+        plot_confusion_matrix(model, name, val_dataset, "Validation", batch_size, measurements_path, plot_time)
     elif name == MEL_AE_NAME:
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
