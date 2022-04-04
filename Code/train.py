@@ -157,11 +157,9 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_pa
     plt.savefig(os.path.join(measurements_path, png_filename))
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
-    print(conf_mat)
 
     # normalize the data for another view
     conf_mat = conf_mat/conf_mat.sum()
-    print(conf_mat)
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
     png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".png"
     csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".csv"
