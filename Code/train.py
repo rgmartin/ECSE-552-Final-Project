@@ -107,7 +107,7 @@ def init_ae_trainer(logger, max_epochs, profiler,callbackcheckpoint):
     early_stopping = EarlyStopping('val_loss')
 
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=callbackcheckpoint,
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[callbackcheckpoint],
                             logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
         trainer = pl.Trainer(callbacks=[early_stopping],
@@ -185,11 +185,12 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    checkpath = "/MyDrive/ECSE-552-FP/Checkpoints/AE/weights.ckpt"
-    checkpoint_callback = ModelCheckpoint(
+    checkpath = "/MyDrive/ECSE-552-FP/Checkpoints/AE/"
+    checkpoint_callback = pl.callbacks.ModelCheckpoint(
     dirpath= checkpath,
     save_weights_only = True,
     every_n_train_steps = 0,
+    filename='{epoch:02d}-{AEstep:.2f}',
     verbose=True)
     
     if name == MEL_AE_NAME:
