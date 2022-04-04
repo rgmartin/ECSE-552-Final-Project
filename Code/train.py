@@ -190,8 +190,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     dirpath= checkpath,
     save_weights_only = True,
     every_n_train_steps = 0,
-    filename='{epoch:02d}-{AEstep:.2f}',
-    verbose=True)
+    filename='{epoch:02d}-{AE}')
     
     if name == MEL_AE_NAME:
         trainer = init_ae_trainer(logger, max_epoch, profiler,checkpoint_callback)
