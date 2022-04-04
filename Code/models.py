@@ -195,10 +195,10 @@ class PreTrainedResnetClassifier(pl.LightningModule):
     def __init__(self, num_classes,checkpath):
         super().__init__()
         
-        self.AEModel = AE.load_from_checkpoint(checkpath,input_height= 128, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
+        AEModel = AE.load_from_checkpoint(checkpath,input_height= 128, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
                        kl_coeff=0.1, latent_dim=3)
         # Load, optionally download pre-trained Resnet.
-        # self.resnet50 = AEModel.encoder()
+        self.resnet50 = AEModel.encoder
         self.fc = torch.nn.Linear(1000, num_classes)
 
         # Log stuffs.
@@ -209,7 +209,7 @@ class PreTrainedResnetClassifier(pl.LightningModule):
     def forward(self, x):
         # convert the incoming data to three dimensions for processing due to the RGB expectation of the pre-trained
         # network
-        x = self.AEModel.encoder(x.unsqueeze(1).repeat(1, 3, 1, 1))
+        x = self.resnet50(x.unsqueeze(1).repeat(1, 3, 1, 1))
         x = F.relu(x)
         x = self.fc(x)
 
