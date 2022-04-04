@@ -19,6 +19,7 @@ from pytorch_lightning.callbacks import ModelCheckpoint
 
 BASELINE_RESNET_NAME = "Baseline Resnet"
 MEL_AE_NAME = "Mel AE"
+PRETRAINED_RESNET_NAME = "Pretrained Resnet"
 
 def init_measurements_path():
     print("Creating measurements path...")
