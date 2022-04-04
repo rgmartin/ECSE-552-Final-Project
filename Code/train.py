@@ -122,7 +122,7 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
 
     if isAE:
         plt.plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
-        plt.title("Train/Val Loss")
+        plt.title("Train and Val Loss Over Time ")
         plt.ylabel("Loss")
         plt.plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
         plt.xlabel("Epochs")
