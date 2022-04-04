@@ -83,6 +83,15 @@ def move_checkpoint(from_path,best_params_dict,study, new_name):
   with open(to_path_study, 'wb') as handle:
     pickle.dump(study, handle, protocol=pickle.HIGHEST_PROTOCOL)
 
+ def move_raw_checkpoint (from_path, new_name):
+ 	to_path = init_checkpoint_path()
+	chk_file_name = make_chk_filename (new_name + '_chk_')
+	to_path_chk = os.path.join(to_path, chk_file_name)
+	shutil.copy(from_path, to_path_chk)
+
+
+
+
 
 
 
