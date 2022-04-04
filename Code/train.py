@@ -122,11 +122,10 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
 
     if isAE:
         plt.plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
-        plt.set_title("Train/Val Loss")
-        plt.set_ylabel("Loss")
+        plt.title("Train/Val Loss")
+        plt.ylabel("Loss")
         plt.plot(logger.metrics['val_loss'], lw=3, ms=10, marker='^', color='purple', label='Validation')
-        plt.set_title('Classifer\nTrain/Val Loss Over Time')
-        plt.set_xlabel("Epochs")
+        plt.xlabel("Epochs")
         plt.grid()
     else:
         f, axs = plt.subplots(1, 2, figsize=(15, 5))
