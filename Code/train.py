@@ -37,24 +37,26 @@ def get_datasets(data_dir, dur_seconds, train_split=.8, crop=None, rgb_expand=Fa
     return train_dataset, val_dataset
 
 
-def init_trainer(logger, max_epochs, profiler):
+def init_trainer(logger, max_epochs, profiler, do_early_stopping=True):
     print("Initializing trainer...")
 
     is_colab = 'COLAB_GPU' in os.environ
 
     early_stopping = EarlyStopping('val_loss')
 
+    callbacks = early_stopping if do_early_stopping else []
+
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=callbacks,
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
-        trainer = pl.Trainer(callbacks=[early_stopping],
+        trainer = pl.Trainer(callbacks=callbacks,
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
 
 
-def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
+def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10, do_early_stopping=True):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -64,7 +66,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     logger = DictLogger()
     profiler = pl.profiler.SimpleProfiler(dirpath=measurements_path, filename=profiler_filename)
 
-    trainer = init_trainer(logger, max_epoch, profiler)
+    trainer = init_trainer(logger, max_epoch, profiler, do_early_stopping)
 
     trainer.fit(model, train_loader, val_loader)
 
@@ -77,8 +79,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     else:
         plot_logger_metrics(logger, measurements_path, plot_filename)
         # plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
-        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
-
+        # plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
 
 
 if __name__ == "__main__":
@@ -120,5 +121,5 @@ if __name__ == "__main__":
             data_dir=data_dir, dur_seconds=5, train_split=.8, crop=None,
             rgb_expand=False
         )
-        train_model(model, model_name, train_dataset, val_dataset, max_epoch=2, 
-            batch_size=25)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=100, 
+            batch_size=30, do_early_stopping=False)
