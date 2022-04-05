@@ -11,7 +11,7 @@ import json
 import optuna
 from torch.utils.data import random_split
 from pytorch_lightning.callbacks import EarlyStopping
-from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix, roc_auc_score
 import pytorch_lightning as pl
 import torch
 import pandas as pd
@@ -190,6 +190,29 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, mea
     return conf_mat
 
 
+def get_auroc(model, dataset, batch_size):
+    # This is broken and needs to be fixed...
+    print("Calculating AUROC")
+    dataloader = DataLoader(dataset, batch_size=batch_size)
+    class_names = dataset.dataset.dirs
+
+    y_pop_hat = np.zeros([0,3])
+    y_pop_true = np.zeros([0,0], dtype=np.int64)
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model.to(device)
+    for batch in dataloader:
+        x, y = batch
+        y_hat = model(x.to(device))
+        # convert the logit to a class prediction
+        y_hat = y_hat.softmax(dim=1)
+        # y_hat = y_hat.argmax(dim=1)
+        y_pop_true = np.append(y_pop_true, y.numpy())
+        y_pop_hat = np.append(y_pop_hat, y_hat.detach().numpy())
+
+    auroc = roc_auc_score(y_pop_true, y_pop_hat, labels=class_names, multi_class="ovr")
+    print("AUROC = " + str(round(auroc, 4)))
+
+
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10, early_stopping = True):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
@@ -207,7 +230,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     if name == BASELINE_RESNET_NAME:
         plot_logger_metrics(logger, measurements_path, plot_filename)
         # plot_confusion_matrix(model, name, train_dataset, "Training", batch_size, measurements_path, plot_time)
-        plot_confusion_matrix(model, name, val_dataset, "Validation", batch_size, measurements_path, plot_time)
+        # plot_confusion_matrix(model, name, val_dataset, "Validation", batch_size, measurements_path, plot_time)
+        get_auroc(model, val_dataset, batch_size)
     elif name == MEL_AE_NAME:
         # Todo: Determine how the logger will interact with this particular model. Metrics might need to be added in the
         #  different "end" functions to facilitate this. A more generic "plot_logger_metrics" function would help achieve
@@ -296,7 +320,7 @@ if __name__ == "__main__":
         model = BaselineResnetClassifier(num_classes=3)
         train_dataset, val_dataset = get_datasets(data_dir=data_dir, dur_seconds=3, train_split=.8, crop=None,
                                                   rgb_expand=False)
-        train_model(model, model_name, train_dataset, val_dataset, max_epoch=2)
+        train_model(model, model_name, train_dataset, val_dataset, max_epoch=2, batch_size=10)
     elif model_name == MEL_AE_NAME:
         input_height = 128
         model = Mel_ae(input_height, enc_type='resnet50', first_conv=False, maxpool1=False, enc_out_dim=2048,
