@@ -88,9 +88,18 @@ def init_trainer(logger, max_epochs, profiler, early_stopping = True):
     is_colab = 'COLAB_GPU' in os.environ
 
     if early_stopping:
-    	callbacks = [EarlyStopping('val_loss')]
+    	callbacks = [EarlyStopping('val_loss', verbose=True, patience=50),  
+                    pl.callbacks.ModelCheckpoint(
+                    monitor="val_loss",
+                    dirpath='./Checkpoints',
+                    mode='min',
+                    filename='{epoch:02d}-{val_acc_step:.2f}')]
     else:
-    	callbacks = []
+    	callbacks = [pl.callbacks.ModelCheckpoint(
+                    monitor="val_loss",
+                    dirpath='./Checkpoints',
+                    mode='min',
+                    filename='{epoch:02d}-{val_acc_step:.2f}')]
 
     if is_colab:
         trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=callbacks,
@@ -158,8 +167,17 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, mea
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
 
+    # Print accuracy
+    corr = 0
+    for i in range(conf_mat.shape[0]):
+      corr += conf_mat[i,i].numpy()
+    acc = (corr/conf_mat.sum()).numpy()
+    print("Accuracy: "+ str(round(acc*100, 2))+"%")
+
     # normalize the data for another view
-    conf_mat = conf_mat/conf_mat.sum()
+    for j in range(conf_mat.shape[0]):
+      conf_mat[j] = conf_mat[j]/conf_mat[j].sum()
+    #conf_mat = conf_mat/conf_mat.sum()
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
     png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".png"
     csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".csv"
@@ -169,10 +187,6 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, mea
     conf_mat_df = pd.DataFrame(conf_mat.numpy())
     conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
     
-    acc = 0
-    for i in range(conf_mat.shape[0]):
-      acc += conf_mat[i,i].numpy()
-    print("Accuracy: "+ str(round(acc*100, 2))+"%")
     return conf_mat
 
 
@@ -200,6 +214,8 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
         #  this and allow these models to both be called with the same training function.
         pass
         # plot_logger_metrics(logger, measurements_path, plot_filename)
+    
+    return logger
 
 
 def hp_tuning_voxforge_classifier(data_dir, max_epoch=10, batch_size=10, dur_seconds=5, comment=""):
