@@ -88,7 +88,7 @@ def init_trainer(logger, max_epochs, profiler, early_stopping = True):
     is_colab = 'COLAB_GPU' in os.environ
 
     if early_stopping:
-    	callbacks = [EarlyStopping('val_loss', verbose=True, patience=50),  
+    	callbacks = [EarlyStopping('val_loss'),  
                     pl.callbacks.ModelCheckpoint(
                     monitor="val_loss",
                     dirpath='./Checkpoints',
