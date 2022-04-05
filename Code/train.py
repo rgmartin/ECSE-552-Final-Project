@@ -84,18 +84,30 @@ def make_log_filenames(comment):
     return profiler_filename, plot_filename, now
 
 
-def init_trainer(logger, max_epochs, profiler):
+def init_trainer(logger, max_epochs, profiler,early_stopping=True):
     print("Initializing trainer...")
 
     is_colab = 'COLAB_GPU' in os.environ
 
-    early_stopping = EarlyStopping('val_loss')
-
+    if early_stopping:
+        callbacks = [EarlyStopping('val_loss'),  
+                    pl.callbacks.ModelCheckpoint(
+                    monitor="val_loss",
+                    dirpath='./Checkpoints',
+                    mode='min',
+                    filename='{epoch:02d}-{val_acc_step:.2f}')]
+    else:
+        callbacks = [pl.callbacks.ModelCheckpoint(
+                    monitor="val_loss",
+                    dirpath='./Checkpoints',
+                    mode='min',
+                    filename='{epoch:02d}-{val_acc_step:.2f}')]
+    
     if is_colab:
-        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[early_stopping],
+        trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[callbacks],
                             logger=logger, max_epochs=max_epochs, profiler=profiler)
     else:
-        trainer = pl.Trainer(callbacks=[early_stopping],
+        trainer = pl.Trainer(callbacks=[callbacks],
                              logger=logger, max_epochs=max_epochs, profiler=profiler)
 
     return trainer
@@ -155,25 +167,53 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
     plt.show()
 
 
-def plot_confusion_matrix(model, model_name, dataset, data_name, measurements_path, plot_time):
+def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, measurements_path, plot_time):
+    print("Generating Confusion Matrices")
     class_names = dataset.dataset.dirs
-    dataloader = DataLoader(dataset, batch_size=10)
+    dataloader = DataLoader(dataset, batch_size=batch_size)
 
     conf_mat = torch.zeros([len(class_names), len(class_names)])
+    device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    model.to(device)
     for batch in dataloader:
         x, y = batch
-        y_hat = model(x)
+        y_hat = model(x.to(device))
         # convert the logit to a class prediction
         y_hat = y_hat.softmax(dim=1)
         y_hat = y_hat.argmax(dim=1)
-        conf_mat += confusion_matrix(y, y_hat, labels=list(range(len(class_names))))
+        conf_mat += confusion_matrix(y.cpu(), y_hat.cpu(), labels=list(range(len(class_names))))
 
     title = model_name + "\nConfusion Matrix - " + data_name
     disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
-    save_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".png"
+    png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".png"
+    csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-raw" + ".csv"
     disp.plot(cmap=plt.cm.Blues)
     disp.ax_.set_title(title)
-    plt.savefig(os.path.join(measurements_path, save_filename))
+    plt.savefig(os.path.join(measurements_path, png_filename))
+    conf_mat_df = pd.DataFrame(conf_mat.numpy())
+    conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+
+    # Print accuracy
+    corr = 0
+    for i in range(conf_mat.shape[0]):
+      corr += conf_mat[i,i].numpy()
+    acc = (corr/conf_mat.sum()).numpy()
+    print("Accuracy: "+ str(round(acc*100, 2))+"%")
+
+    # normalize the data for another view
+    for j in range(conf_mat.shape[0]):
+      conf_mat[j] = conf_mat[j]/conf_mat[j].sum()
+    #conf_mat = conf_mat/conf_mat.sum()
+    disp = ConfusionMatrixDisplay(conf_mat.numpy(), display_labels=class_names)
+    png_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".png"
+    csv_filename = model_name + plot_time + "ConfMat" + "-" + data_name + "-norm" + ".csv"
+    disp.plot(cmap=plt.cm.Blues)
+    disp.ax_.set_title(title)
+    plt.savefig(os.path.join(measurements_path, png_filename))
+    conf_mat_df = pd.DataFrame(conf_mat.numpy())
+    conf_mat_df.to_csv(os.path.join(measurements_path, csv_filename))
+    
+    return conf_mat
 
 
 def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
@@ -188,11 +228,11 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     checkpath = "/content/drive/MyDrive/ECSE-552-FP/Checkpoints/AE/"
     checkpoint_callback = pl.callbacks.ModelCheckpoint(
-    dirpath= checkpath,
-    monitor='val_loss',
-    save_weights_only = True,
-    every_n_train_steps = 45,
-    filename='{epoch:02d}-{val_loss:.2f}')
+        dirpath= checkpath,
+        monitor='val_loss',
+        save_weights_only = True,
+        every_n_train_steps = 45,
+        filename='{epoch:02d}-{val_loss:.2f}')
     
     if name == MEL_AE_NAME:
         trainer = init_ae_trainer(logger, max_epoch, profiler,checkpoint_callback)
