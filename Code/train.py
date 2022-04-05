@@ -121,6 +121,8 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
     with open(save_path, 'w') as f:
         json.dump(logger.metrics, f, indent=4)
 
+    font = {'size': 14}
+    matplotlib.rc('font', **font)
     if isAE:
         plt.plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
         plt.title("Train and Val Loss Over Time ")
@@ -130,8 +132,6 @@ def plot_logger_metrics(logger, measurements_path, plot_filename, isAE=False):
         plt.grid()
     else:
         f, axs = plt.subplots(1, 2, figsize=(15, 5))
-        font = {'size': 14}
-        matplotlib.rc('font', **font)
 
         axs[0].plot(logger.metrics['train_loss'], lw=3, ms=8, marker='o', color='orange', label='Train')
         axs[0].set_title("Train/Val Loss")
