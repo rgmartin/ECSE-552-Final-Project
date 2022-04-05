@@ -216,7 +216,7 @@ def plot_confusion_matrix(model, model_name, dataset, data_name, batch_size, mea
     return conf_mat
 
 
-def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10):
+def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size=10,early_stopping = True):
     train_loader = DataLoader(train_dataset, batch_size=batch_size)
     val_loader = DataLoader(val_dataset, batch_size=batch_size)
 
@@ -237,7 +237,7 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
     if name == MEL_AE_NAME:
         trainer = init_ae_trainer(logger, max_epoch, profiler,checkpoint_callback)
     else:
-        trainer = init_trainer(logger, max_epoch, profiler)
+        trainer = init_trainer(logger, max_epoch, profiler,early_stopping)
 
     trainer.fit(model, train_loader, val_loader)
 
