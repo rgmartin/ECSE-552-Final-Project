@@ -201,7 +201,11 @@ def train_model(model, name, train_dataset, val_dataset, max_epoch=5, batch_size
 
     trainer.fit(model, train_loader, val_loader)
 
-    if name == BASELINE_RESNET_NAME | name == PRETRAINED_RESNET_NAME:
+    if name == BASELINE_RESNET_NAME:
+        plot_logger_metrics(logger, measurements_path, plot_filename)
+        plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
+        plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
+    elif name == PRETRAINED_RESNET_NAME:
         plot_logger_metrics(logger, measurements_path, plot_filename)
         plot_confusion_matrix(model, name, train_dataset, "Training", measurements_path, plot_time)
         plot_confusion_matrix(model, name, val_dataset, "Validation", measurements_path, plot_time)
