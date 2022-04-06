@@ -97,11 +97,11 @@ def init_trainer(logger, max_epochs, profiler,early_stopping=True):
                     mode='min',
                     filename='{epoch:02d}-{val_acc_step:.2f}')]
     else:
-        callbacks = [pl.callbacks.ModelCheckpoint(
+        callbacks = pl.callbacks.ModelCheckpoint(
                     monitor="val_loss",
                     dirpath='./Checkpoints',
                     mode='min',
-                    filename='{epoch:02d}-{val_acc_step:.2f}')]
+                    filename='{epoch:02d}-{val_acc_step:.2f}')
     
     if is_colab:
         trainer = pl.Trainer(gpus=-1, auto_select_gpus=True, callbacks=[callbacks],
